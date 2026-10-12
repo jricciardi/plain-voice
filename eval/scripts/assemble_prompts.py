@@ -17,7 +17,7 @@ from pathlib import Path
 
 SEED = 20261012
 ROOT = Path(__file__).resolve().parents[1]
-DRAFTS = ROOT.parents[2] / "prompt-drafts"
+DRAFTS = ROOT / "prompts" / "sources"
 OUT = ROOT / "prompts"
 
 ORIGINAL = [
@@ -117,14 +117,18 @@ def main():
         body = "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows)
         (OUT / f"multiturn_{name}.jsonl").write_text(body)
         hashes[f"multiturn_{name}.jsonl"] = hashlib.sha256(body.encode()).hexdigest()
-    (OUT / "SHA256SUMS").write_text("".join(f"{h}  {n}\n" for n, h in sorted(hashes.items())))
+    sums = "".join(f"{h}  {n}\n" for n, h in sorted(hashes.items()))
+    recorded = OUT / "SHA256SUMS"
+    if recorded.exists():
+        print("matches pre-registered hashes" if recorded.read_text() == sums else "WARNING: differs from prompts/SHA256SUMS")
+    else:
+        recorded.write_text(sums)
     for name, rows in sets.items():
         cats = defaultdict(int)
         for r in rows:
             cats[r["category"]] += 1
         print(f"{name:6s} {len(rows):3d}  {dict(sorted(cats.items()))}")
     print("multiturn", {k: [r["id"] for r in v] for k, v in multiturn.items()})
-    print((OUT / "SHA256SUMS").read_text())
 
 
 if __name__ == "__main__":

@@ -114,6 +114,19 @@ def test_format_compliance():
     assert tells.format_compliance(three, {"format_request": {"type": "n_options", "count": 3}}) is True
 
 
+def test_match_positions_point_at_the_counted_text():
+    reply = ("If you want low stress, pick the cabin \u2014 it's close.\n\n| Item | Note |\n|---|---|\n| **A** | x \u2014 y |\n\n"
+             "This **really** matters. Crucial point: it\u2019s not cheap, it\u2019s fast.\n\n" + "Plain filler sentence here. " * 16 + "\n\nIf you want, I can draft the email.")
+    found = tells.matches(reply, P)
+    for name, text, start, end in found:
+        assert start >= 0 and reply[start:end] == text, (name, text, start)
+    offers = [f for f in found if f[0] == "offer_closer"]
+    assert len(offers) == 1 and offers[0][2] > reply.index("draft") - 40, offers
+    ems = [f for f in found if f[0] == "em_dash"]
+    assert len(ems) == 1 and ems[0][2] < reply.index("|"), ems  # the dash inside the table row isn't counted
+    assert any(f[0] == "listed_vocab" and f[1] == "Crucial" for f in found)
+
+
 def test_matches_have_positions():
     found = tells.matches("Great question \u2014 truly.", P)
     names = [f[0] for f in found]

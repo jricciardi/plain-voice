@@ -11,7 +11,8 @@ import numpy as np
 import pandas as pd
 
 warnings.filterwarnings("ignore")
-ROOT = Path(__file__).resolve().parents[1]
+import os
+ROOT = Path(os.environ.get("PV_EVAL_ROOT") or Path(__file__).resolve().parents[1])
 RES = ROOT / "results"
 RNG = np.random.default_rng(20261012)
 FAMS = ["Claude", "GPT", "Gemini", "Grok", "MAI"]
@@ -148,6 +149,7 @@ def multiturn_section(df, out):
     mt = df[df.set == "multiturn"]
     if mt.empty:
         return
+    mt = mt.assign(turn=mt.turn.astype(int))
     out["multiturn_by_turn"] = mt.groupby(["turn", "cond"]).tells_total.mean().unstack().round(2).to_dict()
     c = mt[mt.cond == "C-skill-v1"]
     if len(c) > 5:

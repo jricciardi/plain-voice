@@ -31,12 +31,19 @@ def parse_batch(path, rids):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--manifest", default=str(ROOT / "manifest.json"))
+    ap.add_argument("--out", default=str(ROOT / "results" / "replies.jsonl"))
+    args = ap.parse_args()
     prompts = {}
-    for name in ("test1", "dev"):
+    for name in ("test1", "dev", "test2"):
         for p in read_jsonl(ROOT / "prompts" / f"{name}.jsonl"):
             prompts[p["id"]] = p
-    convos = {c["id"]: c for c in read_jsonl(ROOT / "prompts" / "multiturn_test1.jsonl")}
-    jobs = json.loads((ROOT / "manifest.json").read_text())
+    convos = {}
+    for name in ("multiturn_test1", "multiturn_test2"):
+        convos.update({c["id"]: c for c in read_jsonl(ROOT / "prompts" / f"{name}.jsonl")})
+    jobs = json.loads(Path(args.manifest).read_text())
     rows, missing = [], []
     for j in jobs:
         if j["kind"] == "batch":
@@ -69,9 +76,8 @@ def main():
                 rows.append({"set": "multiturn", "model": j["model"], "family": family(j["model"]), "cond": j["cond"],
                              "rep": 1, "batch": None, "position": None, "prompt_id": j["convo"], "category": "multiturn",
                              "source": "drafted-gpt", "turn": n, "text": text, **tells.score(text, p)})
-    out = ROOT / "results"
-    out.mkdir(exist_ok=True)
-    with open(out / "replies.jsonl", "w") as f:
+    Path(args.out).parent.mkdir(exist_ok=True)
+    with open(args.out, "w") as f:
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     print(f"replies: {len(rows)} | missing: {len(missing)}")

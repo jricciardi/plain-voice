@@ -17,7 +17,7 @@ labeling a random sample of matches.
 
 import re
 
-SUITE_VERSION = "2.1"
+SUITE_VERSION = "2.2"
 
 # ---------------------------------------------------------------- helpers
 
@@ -29,13 +29,28 @@ def _words(text):
     return re.findall(r"[A-Za-z][A-Za-z'\-]*", _norm(text))
 
 
+def _mask(m):
+    """Blank out a match but keep its length and line breaks, so positions still line up."""
+    return re.sub(r"[^\n]", " ", m.group(0))
+
+
 def _strip_code(text):
-    return re.sub(r"```.*?```", " ", text, flags=re.S)
+    return re.sub(r"```.*?```", _mask, text, flags=re.S)
 
 
 def _prose(text):
-    """Text with code blocks and table rows removed. Table cells aren't prose."""
-    return re.sub(r"(?m)^\s*\|.*\|\s*$", " ", _strip_code(text))
+    """Text with code blocks and table rows blanked out. Table cells aren't prose."""
+    return re.sub(r"(?m)^[ \t]*\|.*\|[ \t]*$", _mask, _strip_code(text))
+
+
+class _M(str):
+    """A matched string that remembers where it sits in the reply."""
+
+
+def _mk(s, start, end):
+    o = _M(s)
+    o.pos, o.endpos = start, end
+    return o
 
 
 VOCAB_CLAUDE = [
@@ -68,8 +83,18 @@ def tell(name, section):
     return deco
 
 
-def _rx_all(pattern, text, flags=0):
-    return [m.group(0) for m in re.finditer(pattern, text, flags)]
+def _rx_all(pattern, text, flags=0, offset=0):
+    return [_mk(m.group(0), m.start() + offset, m.end() + offset) for m in re.finditer(pattern, text, flags)]
+
+
+def _head(t, n):
+    s = t.lstrip()
+    return s[:n], len(t) - len(s)
+
+
+def _tail(t, n):
+    s = t.rstrip()
+    return s[-n:], max(0, len(s) - n)
 
 
 # ---------------------------------------------------------------- punctuation and cadence
@@ -110,18 +135,18 @@ def _shorthand(t, c):
 
 @tell("stock_opener", "phrases")
 def _stock_opener(t, c):
-    head = t.lstrip()[:80]
-    return _rx_all(r"(?i)^[\W_]*(?:certainly|of course|absolutely|sure(?: thing)?|happy to help|i'd be happy to|i'd love to|great|hey there|hi there)\b[!,.]?", head)
+    head, off = _head(t, 80)
+    return _rx_all(r"(?i)^[\W_]*(?:certainly|of course|absolutely|sure(?: thing)?|happy to help|i'd be happy to|i'd love to|great|hey there|hi there)\b[!,.]?", head, offset=off)
 
 
 @tell("praise_opener", "phrases")
 def _praise_opener(t, c):
-    head = t.lstrip()[:220]
+    head, off = _head(t, 220)
     return _rx_all(
         r"(?i)\b(?:great question|good question|excellent question|love (?:this|that|it)|what a (?:great|lovely)|"
         r"(?:great|strong|nice|solid|excellent|good|lovely) (?:start|opener|opening|draft|idea|instinct|question|foundation)|"
         r"(?:it's|this is|that's) (?:a |an )?(?:great|strong|solid|excellent|fantastic|good|really good) (?:start|opening|opener|draft|question|idea|hook|place)|"
-        r"congrats|congratulations)\b", head)
+        r"congrats|congratulations)\b", head, offset=off)
 
 
 @tell("reframe", "phrases")
@@ -143,8 +168,8 @@ def _signpost(t, c):
 
 @tell("draft_preamble", "phrases")
 def _draft_preamble(t, c):
-    head = t.lstrip()[:120]
-    return _rx_all(r"(?i)^[\W_]*here(?:'s| is) (?:a|an|your|the|my) (?:quick |short |clean |polished |revised |updated |possible |draft |simple )*(?:draft|version|rewrite|revision|update|email|message|post|take|option|summary|breakdown)\b", _norm(head))
+    head, off = _head(t, 120)
+    return _rx_all(r"(?i)^[\W_]*here(?:'s| is) (?:a|an|your|the|my) (?:quick |short |clean |polished |revised |updated |possible |draft |simple )*(?:draft|version|rewrite|revision|update|email|message|post|take|option|summary|breakdown)\b", _norm(head), offset=off)
 
 
 @tell("filler_adverb", "phrases")
@@ -209,7 +234,7 @@ def _scare_quotes(t, c):
         inner = m.group(1).lower()
         if inner in c["prompt_lower"]:
             continue
-        out.append(m.group(0))
+        out.append(_mk(m.group(0), m.start(), m.end()))
     return out
 
 
@@ -239,17 +264,17 @@ def _padding(t, c):
 
 @tell("offer_closer", "phrases")
 def _offer_closer(t, c):
-    tail = t.rstrip()[-380:]
+    tail, off = _tail(t, 380)
     return _rx_all(
         r"(?i)\bif you(?:'d| would)? (?:want|like)\b|\bwant me to\b|\bwould you like\b|\bdo you want me to\b|"
         r"\blet me know if\b|\bhappy to (?:help|adjust|tweak|expand|dig|go|walk|draft|write|refine|rework|share|put)\b|"
-        r"\bi can also\b|\bfeel free to\b|\bshall i\b|\bjust say the word\b|\bif (?:it|that) helps, i can\b", _norm(tail))
+        r"\bi can also\b|\bfeel free to\b|\bshall i\b|\bjust say the word\b|\bif (?:it|that) helps, i can\b", _norm(tail), offset=off)
 
 
 @tell("hope_closer", "phrases")
 def _hope_closer(t, c):
-    tail = t.rstrip()[-220:]
-    return _rx_all(r"(?i)\bhope (?:this|that) helps\b|\bgood luck\b|\bbest of luck\b|\byou(?:'ve)? got this\b|\bhappy (?:writing|planning|travels|traveling|coding|budgeting)\b|\bcheers\b", _norm(tail))
+    tail, off = _tail(t, 220)
+    return _rx_all(r"(?i)\bhope (?:this|that) helps\b|\bgood luck\b|\bbest of luck\b|\byou(?:'ve)? got this\b|\bhappy (?:writing|planning|travels|traveling|coding|budgeting)\b|\bcheers\b", _norm(tail), offset=off)
 
 
 @tell("recap", "phrases")
@@ -266,7 +291,7 @@ def _listed_vocab(t, c):
     for w in VOCAB_CLAUDE + VOCAB_AI + VOCAB_BROCHURE:
         if w in c["prompt_lower"]:
             continue
-        out += [w] * len(re.findall(rf"(?<![\w-]){re.escape(w)}(?![\w-])", low))
+        out += [_mk(t[m.start():m.end()], m.start(), m.end()) for m in re.finditer(rf"(?<![\w-]){re.escape(w)}(?![\w-])", low)]
     out += _rx_all(r"(?m)(?:^|(?<=[.!?]\s))Additionally,", t)
     return out
 
@@ -301,15 +326,17 @@ def _bold_inline(t, c):
     body = _prose(t)
     spans = _rx_all(r"\*\*[^*\n]{1,120}\*\*", body)
     raw = dict(c, format=None)
-    headerish = len(_bold_header_line(body, raw)) + len(_bold_label(body, raw))
-    return spans[headerish:] if len(spans) > headerish else []
+    heads = _bold_header_line(body, raw) + _bold_label(body, raw)
+    n = max(0, len(spans) - len(heads))
+    inline = [s for s in spans if not any(h.pos < s.endpos and s.pos < h.endpos for h in heads)]
+    return (inline + [s for s in spans if s not in inline])[:n] if n else []
 
 
 @tell("emoji", "structure")
 def _emoji(t, c):
     if c["format"] == "checklist_emoji":
         return []
-    return EMOJI.findall(t)
+    return [_mk(m.group(0), m.start(), m.end()) for m in EMOJI.finditer(t)]
 
 
 @tell("horizontal_rule", "structure")
@@ -405,12 +432,9 @@ def matches(reply, prompt):
     c = context_for(prompt)
     found = []
     for name, (section, fn) in TELLS.items():
-        used = {}
         for m in fn(t, c):
-            start = t.find(m, used.get(m, 0)) if m in t else -1
-            if start >= 0:
-                used[m] = start + len(m)
-            found.append((name, m, start, start + len(m) if start >= 0 else -1))
+            start, end = getattr(m, "pos", -1), getattr(m, "endpos", -1)
+            found.append((name, t[start:end] if start >= 0 else str(m), start, end))
     return found
 
 

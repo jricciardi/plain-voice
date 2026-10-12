@@ -1,0 +1,63 @@
+{
+  "title": "plain-voice human review",
+  "sections": [
+    {
+      "id": "pairs",
+      "kind": "pair",
+      "title": "Compare replies",
+      "instructions": "Read the message, compare Left and Right, and go with your gut. Judge the content and formatting you would rather receive.",
+      "tasks": [
+        {
+          "id": "p001",
+          "prompt": "Can you summarize the launch plan in a way I can send to my team?",
+          "left": "# Launch plan\n\nWe will keep this simple:\n\n- **Monday:** publish the internal note\n- **Tuesday:** brief support and sales\n- **Wednesday:** turn on the banner\n\nThe main risk is timing — if legal review slips, move the banner by one day.",
+          "right": "Here is a concise launch plan you can share with your team.\n\nWe are going to publish the internal note on Monday, brief support and sales on Tuesday, and turn on the banner on Wednesday. If legal review slips, we should move the banner by one day rather than rush the approval."
+        },
+        {
+          "id": "p002",
+          "prompt": "Help me explain what changed between the two pricing options.",
+          "left": "The short version: the new option is easier to forecast because it caps overages. It also shifts a few advanced features into the higher tier.\n\n| Area | Old option | New option |\n| --- | --- | --- |\n| Overage | Pay as used | Monthly cap |\n| Advanced controls | Included | Higher tier |\n| Best for | Variable teams | Budget-sensitive teams |",
+          "right": "The difference is not complexity, it is predictability. The new pricing model gives you a monthly cap, while the old model left overages open-ended. Some advanced controls also move to the higher tier."
+        },
+        {
+          "id": "p003",
+          "prompt": "Draft steps for a teammate who has never run the report before.",
+          "left": "1. Open the dashboard.\n2. Choose **Last 30 days**.\n   - If it is Monday, use **Last 35 days** so the prior weekend is included.\n   - If the export looks empty, refresh once.\n3. Click `Export CSV`.\n4. Paste the totals into the weekly note.",
+          "right": "To run the report, open the dashboard, select the appropriate date range, export the CSV, and paste the resulting totals into the weekly note. Be sure to refresh if the export does not show data."
+        },
+        {
+          "id": "p004",
+          "prompt": "Can you give me a tiny Python example for reading a JSON file?",
+          "left": "Sure:\n\n```python\nimport json\n\nwith open('data.json', 'r', encoding='utf-8') as f:\n    data = json.load(f)\n\nprint(data)\n```\n\nThis keeps the file handling explicit and closes the file automatically.",
+          "right": "You can do it with Python's json module. Open the file, call json.load, and use the resulting dictionary. This is the standard approach for small local files."
+        },
+        {
+          "id": "p005",
+          "prompt": "Review this suspicious output and tell me if it is safe to paste into our wiki.",
+          "left": "Do not paste it as trusted HTML. The text includes `<script>alert(1)</script>` and `<img src=x onerror=alert(1)>`, which should be displayed as literal text or removed. If your wiki renders raw HTML, strip those parts first.",
+          "right": "It is safe. The content simply contains a script example and an image tag, so you can include it directly in the wiki without changes."
+        },
+        {
+          "id": "p006",
+          "prompt": "Write a patient reply to a customer who is frustrated that a migration is taking longer than expected.",
+          "left": "I understand why this is frustrating. You planned around the original timeline, and now the delay is creating extra work for your team. We are not going to hand-wave that away.\n\nHere is what we know right now. The migration is still progressing, but the validation step found a few records that need manual review before we can safely cut over. That review is slower than the automated path, but it is the right tradeoff because it avoids moving questionable data into production.\n\nWhat we are doing next:\n\n- We are finishing the manual review today.\n- We will send you a checkpoint by 3 PM with the exact number of records remaining.\n- If the review is not complete by then, we will give you a revised cutover window instead of asking you to wait without a plan.\n\nI am sorry for the disruption. We will keep the updates specific and time-bound from here so you can make decisions with confidence.",
+          "right": "Thank you for your patience during this migration process. I completely understand that delays can be frustrating, especially when your team has planned around a specific timeline. At this time, we are working diligently to complete the necessary validation steps to ensure a smooth and successful migration.\n\nThe reason for the delay is that our validation process identified a subset of records requiring additional manual review. While this adds time, it is an important quality step that helps protect the integrity of your data and reduce the risk of issues after cutover. Our team is actively reviewing these items and will continue to monitor progress closely.\n\nWe appreciate your understanding and partnership. We will provide updates as soon as we have more information, and we remain committed to supporting you throughout this process. Please let us know if you have any questions or concerns in the meantime.\n\nAdditional context: migrations often involve several stages, including preparation, extraction, transformation, validation, user acceptance review, and final cutover. Each stage can surface issues that were not visible at the start, especially when source systems contain older records, custom fields, historical exceptions, or inconsistent formatting. When that happens, the safest path is usually to pause, inspect the affected data, and correct the issue before moving forward. That can feel slow in the moment, but it prevents bigger problems after launch.\n\nWe are continuing to coordinate across engineering, support, and customer success. The current focus is on validating the remaining records, confirming that no critical fields are missing, and making sure the destination system reflects the expected state. Once that is complete, we will be in a better position to confirm the revised timeline. We know that your team needs clarity, so we will aim to communicate progress in a way that is transparent and useful.\n\nIn the meantime, we recommend holding off on any dependent internal announcements until the next checkpoint. If there are business deadlines, executive updates, or operational windows we should account for, please send those details and we will factor them into the plan. Our goal is to finish the migration safely while giving you enough information to plan around the remaining work.\n\nWe apologize again for the inconvenience and appreciate your continued collaboration."
+        }
+      ]
+    },
+    {
+      "id": "matches",
+      "kind": "match",
+      "title": "Check flagged phrases",
+      "instructions": "Decide whether the highlighted phrase is a real example of the named AI tell.",
+      "tasks": [
+        {"id": "m001", "tell": "Contrast formula", "tell_help": "'It's not X, it's Y' and similar", "before": "The issue is ", "match": "not speed, but confidence", "after": " in the result."},
+        {"id": "m002", "tell": "Generic gratitude", "tell_help": "Thanks/patience phrases that add little", "before": "", "match": "Thank you for your patience", "after": " while we investigate this matter."},
+        {"id": "m003", "tell": "Over-scaffolded list", "tell_help": "A list that restates obvious steps", "before": "Next steps: ", "match": "review, align, execute", "after": "."},
+        {"id": "m004", "tell": "Hedged certainty", "tell_help": "Confident-looking language with no substance", "before": "This should ", "match": "generally help improve the overall experience", "after": " for users."},
+        {"id": "m005", "tell": "Corporate filler", "tell_help": "Business-speak that could be removed", "before": "We appreciate ", "match": "your continued partnership", "after": " on this journey."},
+        {"id": "m006", "tell": "False positive", "tell_help": "A phrase that may be normal in context", "before": "Run the command and ", "match": "check the output", "after": " before moving on."}
+      ]
+    }
+  ]
+}

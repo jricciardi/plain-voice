@@ -72,3 +72,8 @@ A 12-job pilot checked the prompt template, output parsing and multi-turn mechan
 - Tell suite v2.1. Table rows no longer count toward em dashes, shorthand or bold, because cells in a table the user asked for aren't prose. "~" for "approximately" moved to the unscored watch list, since the skill doesn't name it. "Takeaway:" was added to the answer labels as a reworded form of the skill's "Key takeaways:" example.
 - Run order. Jobs now run with test-1 repeat 1 first and slow models first, so human review can start sooner. No job's content changed.
 - The pilot's replies are kept, since they came from the same prompts as the main run.
+
+## Changes during analysis (2026-10-12)
+
+- Tell suite v2.2. Version 2.1 sometimes reported a match at the wrong place in the reply: it located matches by searching for the first occurrence of the matched text, even when the pattern had only looked at the start or end of the reply. Counting was never affected; rescoring all 8,040 single-turn replies with v2.2 gives identical counts. What was affected: the first round of LLM precision labels and the human phrase checks. Both were rebuilt with correct positions before the human review began, and the superseded files are kept in `judgments/superseded/` and `human/superseded/`.
+- Generation recovered from two workflow interruptions. Every job validates its own output, so no reply was lost or duplicated.

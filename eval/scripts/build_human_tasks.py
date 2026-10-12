@@ -123,14 +123,14 @@ def main():
     for name in top:
         for r, m, start, end in rng.sample(found[name], min(2, len(found[name]))):
             t = r["text"]
-            matches.append({"tell": name, "tell_help": TELL_HELP.get(name, name), "before": t[max(0, start - 140):start],
-                            "match": t[start:end], "after": t[end:end + 140],
-                            "_key": {"model": r["model"], "cond": r["cond"], "prompt_id": r["prompt_id"], "start": start}})
+            matches.append({"tell": name.replace("_", " ").replace("md ", "markdown ").capitalize(), "tell_help": TELL_HELP.get(name, name),
+                            "before": t[max(0, start - 140):start], "match": t[start:end], "after": t[end:end + 140],
+                            "_key": {"model": r["model"], "cond": r["cond"], "prompt_id": r["prompt_id"], "start": start, "tell": name}})
     rng.shuffle(matches)
     mtasks = []
     for i, m in enumerate(matches, 1):
-        tid = f"m{i:03d}"
-        key[tid] = m.pop("_key") | {"tell": m["tell"]}
+        tid = f"m{i + 100:03d}"  # m101+: the first build had wrong match positions
+        key[tid] = m.pop("_key")
         mtasks.append({"id": tid, **m})
 
     doc = {
