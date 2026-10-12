@@ -75,7 +75,7 @@ Five of the models then answered the same prompts with a draft of the skill appl
 <summary>Counts by tell, five models, 40 replies each way</summary>
 
 | Tell | Without skill | With skill |
-|---|---:|---:|
+| --- | ---: | ---: |
 | Em dashes | 55 | 5 |
 | Markdown headers | 12 | 0 |
 | Bold spans | 88 | 0 |

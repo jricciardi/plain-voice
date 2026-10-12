@@ -36,8 +36,8 @@ Exploratory: which sections matter (ablations F1 to F6), whether the effect fade
 
 ## Measures
 
-- Tell counts from suite v2.0 (`scripts/tells.py`): 30 patterns grouped by the skill's sections (17 phrase, 8 structure, 4 punctuation, 1 vocabulary list). Formatting the user asked for and words the user used first aren't counted. Precision is measured by labeling a random sample of matches (two LLM labelers from different families, plus a human subset).
-- Watch list, not scored: spaced en dashes, spaced hyphens, semicolons, parentheticals, connective adverbs, hedges, hashtags.
+- Tell counts from suite v2.1 (`scripts/tells.py`; see the amendments below): 30 patterns grouped by the skill's sections (17 phrase, 8 structure, 4 punctuation, 1 vocabulary list). Formatting the user asked for and words the user used first aren't counted. Precision is measured by labeling a random sample of matches (two LLM labelers from different families, plus a human subset).
+- Watch list, not scored: spaced en dashes, spaced hyphens, semicolons, parentheticals, connective adverbs, hedges, hashtags, "~" for approximately.
 - Length, sentence length and contractions per 100 words.
 - Blind pairwise LLM judges: two judges per pair, never from the writer's family, with sides randomized. They answer the same two questions as the human: which reply they'd rather receive, and which sounds more like stock AI.
 - Fidelity graders for prompts with required facts: missing facts and invented facts.
@@ -64,3 +64,11 @@ One rater (the skill's author) reviews about 40 blind pairs from test-1 repeat 1
 ## Iteration protocol
 
 After the human review, the skill is revised using the dev set, the human feedback and test-1 results. Because test-1 informs the revision, it can't confirm it. The revised skill is scored once on sealed test-2 against no skill and v1.
+
+## Amendments before the main run (2026-10-12)
+
+A 12-job pilot checked the prompt template, output parsing and multi-turn mechanics. It produced skill-condition replies only (the one no-skill pilot batch didn't finish), so no comparison between conditions was visible. Based on it, before any main-run reply was generated:
+
+- Tell suite v2.1. Table rows no longer count toward em dashes, shorthand or bold, because cells in a table the user asked for aren't prose. "~" for "approximately" moved to the unscored watch list, since the skill doesn't name it. "Takeaway:" was added to the answer labels as a reworded form of the skill's "Key takeaways:" example.
+- Run order. Jobs now run with test-1 repeat 1 first and slow models first, so human review can start sooner. No job's content changed.
+- The pilot's replies are kept, since they came from the same prompts as the main run.

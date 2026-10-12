@@ -152,6 +152,23 @@ def main():
     for j in jobs:
         if j["kind"] == "batch":
             Path(j["out_path"]).parent.mkdir(parents=True, exist_ok=True)
+
+    # Run order (doesn't change any job). Tier 1 is everything the human review and the judges
+    # need (test-1 repeat 1, main conditions), slowest models first, so review can start early.
+    # Tier 2 interleaves models, weighting slow ones toward the front so all models finish together.
+    speed = {"claude-opus-5.5": 12, "gpt-6.1-sol": 6, "claude-haiku-5.5": 5, "grok-4.7": 3, "gemini-3.8-flash": 2,
+             "gemini-3.7-flash": 2, "grok-4.5": 1.7, "mai-code-1.1-flash": 1, "gpt-5.5": 1, "gpt-5-mini": 1}
+    tier1 = [j for j in jobs if j["set"] == "test1" and j["rep"] == 1]
+    tier1.sort(key=lambda j: (-speed[j["model"]], MAIN_CONDS.index(j["cond"]), j["batch"]))
+    rest = [j for j in jobs if not (j["set"] == "test1" and j["rep"] == 1)]
+    seen = {}
+    keyed = []
+    for j in rest:
+        k = seen.get(j["model"], 0)
+        seen[j["model"]] = k + 1
+        weight = speed[j["model"]] ** 0.5 * (1.5 if j["kind"] == "multiturn" else 1.0)
+        keyed.append((k / weight, j["id"], j))
+    jobs = tier1 + [j for _, _, j in sorted(keyed, key=lambda x: (x[0], x[1]))]
     (ROOT / "manifest.json").write_text(json.dumps(jobs, ensure_ascii=False))
     (ROOT / "ablation_subset.json").write_text(json.dumps([p["id"] for p in subset]))
     kinds = {}

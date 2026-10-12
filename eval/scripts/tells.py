@@ -17,7 +17,7 @@ labeling a random sample of matches.
 
 import re
 
-SUITE_VERSION = "2.0"
+SUITE_VERSION = "2.1"
 
 # ---------------------------------------------------------------- helpers
 
@@ -31,6 +31,11 @@ def _words(text):
 
 def _strip_code(text):
     return re.sub(r"```.*?```", " ", text, flags=re.S)
+
+
+def _prose(text):
+    """Text with code blocks and table rows removed. Table cells aren't prose."""
+    return re.sub(r"(?m)^\s*\|.*\|\s*$", " ", _strip_code(text))
 
 
 VOCAB_CLAUDE = [
@@ -71,7 +76,7 @@ def _rx_all(pattern, text, flags=0):
 
 @tell("em_dash", "punctuation")
 def _em_dash(t, c):
-    return _rx_all("\u2014", t)
+    return _rx_all("\u2014", _prose(t))
 
 
 @tell("answer_label", "punctuation")
@@ -80,7 +85,7 @@ def _answer_label(t, c):
         return []
     return _rx_all(
         r"(?im)^[\s>*_#-]*(?:short answer|long answer|bottom line|tl;?\s?dr|key takeaways?|my take|my recommendation|"
-        r"rule of thumb|the short version|in short|verdict|quick take|the gist|the upshot|my decision rule|next steps)\b[*_\s]*:", t)
+        r"rule of thumb|the short version|in short|verdict|quick take|the gist|the upshot|my decision rule|next steps|(?:the )?takeaway)\b[*_\s]*:", t)
 
 
 @tell("fragment_reveal", "punctuation")
@@ -94,12 +99,11 @@ def _fragment_reveal(t, c):
 
 @tell("shorthand", "punctuation")
 def _shorthand(t, c):
-    body = _strip_code(t)
+    body = _prose(t)
     ok = {"and/or", "his/her", "he/she", "km/h", "w/o", "n/a", "input/output", "read/write", "24/7", "client/server", "pros/cons"}
     slashes = [m for m in _rx_all(r"\b[a-z]{3,}/[a-z]{3,}\b", body) if m.lower() not in ok]
     arrows = _rx_all("\u2192|\u21d2|(?<![<-])->(?!>)", body)
-    tildes = _rx_all(r"(?<![\w~])~\s?\d", body)
-    return slashes + arrows + tildes
+    return slashes + arrows
 
 
 # ---------------------------------------------------------------- phrases
@@ -280,21 +284,21 @@ def _md_header(t, c):
 def _bold_header_line(t, c):
     if c["format"] in ("headers_bullets", "outline", "bold_terms", "schedule"):
         return []
-    return _rx_all(r"(?m)^\s*(?:\d+[.)]\s*)?\*\*[^*\n]{2,80}\*\*:?\s*$", _strip_code(t))
+    return _rx_all(r"(?m)^\s*(?:\d+[.)]\s*)?\*\*[^*\n]{2,80}\*\*:?\s*$", _prose(t))
 
 
 @tell("bold_label", "structure")
 def _bold_label(t, c):
     if c["format"] in ("bold_terms", "schedule"):
         return []
-    return _rx_all(r"(?m)^\s*(?:[-*\u2022]|\d+[.)])?\s*\*\*[^*\n]{1,60}?(?::\*\*|\*\*\s*:)", _strip_code(t))
+    return _rx_all(r"(?m)^\s*(?:[-*\u2022]|\d+[.)])?\s*\*\*[^*\n]{1,60}?(?::\*\*|\*\*\s*:)", _prose(t))
 
 
 @tell("bold_inline", "structure")
 def _bold_inline(t, c):
     if c["format"] in ("bold_terms", "headers_bullets", "outline"):
         return []
-    body = _strip_code(t)
+    body = _prose(t)
     spans = _rx_all(r"\*\*[^*\n]{1,120}\*\*", body)
     raw = dict(c, format=None)
     headerish = len(_bold_header_line(body, raw)) + len(_bold_label(body, raw))
@@ -339,6 +343,7 @@ WATCH = {
     "connective_adverb": r"(?i)(?:^|(?<=[.!?]\s))(?:notably|moreover|furthermore|ultimately|in essence|that said|in fact|indeed)\b",
     "hedge": r"(?i)\b(?:might|may|could|perhaps|possibly|probably|generally|typically|often|usually)\b",
     "hashtag": r"(?<![\w#])#[A-Za-z][\w]+",
+    "tilde_approx": r"(?<![\w~])~\s?\$?\d",
 }
 
 

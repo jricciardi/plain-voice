@@ -14,7 +14,8 @@ def s(reply, prompt=P):
 def test_em_dash_and_shorthand():
     r = s("It works \u2014 mostly. Costs ~20% more, tight/stressful, and IC \u2192 EM. Use and/or.")
     assert r["tell_em_dash"] == 1
-    assert r["tell_shorthand"] == 3  # tight/stressful, arrow, ~20 (and/or allowed)
+    assert r["tell_shorthand"] == 2  # tight/stressful and the arrow (and/or allowed; ~ is watch-only)
+    assert r["watch_tilde_approx"] == 1
 
 
 def test_openers_and_closers():
@@ -87,6 +88,16 @@ def test_option_menu_and_emoji():
     assert r["tell_option_menu"] == 2 and r["tell_emoji"] == 1
     r2 = s("Option 1: formal\n\nOption 2: casual", {"text": "give me two versions", "format_request": {"type": "n_options", "count": 2}})
     assert r2["tell_option_menu"] == 0
+
+
+def test_table_cells_are_not_prose():
+    reply = "| Option | Cost |\n|---|---|\n| **Cabin** | ~$900 \u2014 cheap/easy |\n\nPick the **cabin** \u2014 it's 20 \u2192 22 min closer."
+    r = s(reply, {"text": "put it in a table", "format_request": {"type": "table"}})
+    assert r["tell_bold_inline"] == 1 and r["tell_em_dash"] == 1 and r["tell_shorthand"] == 1 and r["tell_table"] == 0
+
+
+def test_takeaway_label():
+    assert s("**Takeaway:** the demo moves.")["tell_answer_label"] == 1
 
 
 def test_metrics():
