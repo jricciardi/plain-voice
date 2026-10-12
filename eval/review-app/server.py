@@ -134,7 +134,9 @@ class ReviewHandler(BaseHTTPRequestHandler):
         try:
             if self.path.startswith("/api/responses/"):
                 task_id = unquote(self.path[len("/api/responses/"):])
-                if not task_id or task_id not in self.server.task_ids:
+                # Re-read the tasks file so a rebuilt task set is accepted without a restart.
+                valid = collect_task_ids(load_json(self.server.tasks_path, {"sections": []}))
+                if not task_id or task_id not in valid:
                     self.send_json(400, {"error": "unknown task id"})
                     return
                 body = self.read_json_body()

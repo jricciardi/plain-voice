@@ -1,0 +1,405 @@
+{
+  "meta": {
+    "finished_at": "2026-10-12T22:09:37.218Z",
+    "rater_name": "jay",
+    "started_at": "2026-10-12T21:35:52.011Z"
+  },
+  "responses": {
+    "p001": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 64482,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T21:36:58+00:00",
+      "tags": []
+    },
+    "p002": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 31580,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T21:37:30+00:00",
+      "tags": []
+    },
+    "p003": {
+      "ai_like": "right",
+      "flag": false,
+      "ms_on_task": 37960,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T21:38:09+00:00",
+      "tags": []
+    },
+    "p004": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 59928,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T21:39:09+00:00",
+      "tags": []
+    },
+    "p005": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 34415,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:39:43+00:00",
+      "tags": []
+    },
+    "p006": {
+      "ai_like": "right",
+      "flag": false,
+      "ms_on_task": 34060,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T21:40:22+00:00",
+      "tags": []
+    },
+    "p007": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 12992,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T21:40:35+00:00",
+      "tags": []
+    },
+    "p008": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 56664,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:41:32+00:00",
+      "tags": []
+    },
+    "p009": {
+      "ai_like": "right",
+      "flag": false,
+      "ms_on_task": 34129,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T21:42:06+00:00",
+      "tags": []
+    },
+    "p010": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 39996,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T21:42:47+00:00",
+      "tags": []
+    },
+    "p011": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 47495,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T21:43:34+00:00",
+      "tags": []
+    },
+    "p012": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 28664,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:44:03+00:00",
+      "tags": []
+    },
+    "p013": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 47179,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T21:44:51+00:00",
+      "tags": []
+    },
+    "p014": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 19796,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:45:11+00:00",
+      "tags": []
+    },
+    "p015": {
+      "ai_like": "right",
+      "flag": false,
+      "ms_on_task": 11379,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T21:45:23+00:00",
+      "tags": []
+    },
+    "p016": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 10580,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:45:34+00:00",
+      "tags": []
+    },
+    "p017": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 62347,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T21:46:36+00:00",
+      "tags": []
+    },
+    "p018": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 38062,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:47:15+00:00",
+      "tags": []
+    },
+    "p019": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 63628,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T21:48:19+00:00",
+      "tags": []
+    },
+    "p020": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 36828,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T21:49:01+00:00",
+      "tags": []
+    },
+    "p021": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 30395,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:49:32+00:00",
+      "tags": []
+    },
+    "p022": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 64263,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:50:36+00:00",
+      "tags": []
+    },
+    "p023": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 32228,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T21:51:09+00:00",
+      "tags": []
+    },
+    "p024": {
+      "ai_like": "right",
+      "flag": false,
+      "ms_on_task": 51065,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:52:00+00:00",
+      "tags": []
+    },
+    "p025": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 43961,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:52:44+00:00",
+      "tags": []
+    },
+    "p026": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 27579,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:53:12+00:00",
+      "tags": []
+    },
+    "p027": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 34597,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:53:47+00:00",
+      "tags": []
+    },
+    "p028": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 27178,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T21:54:15+00:00",
+      "tags": []
+    },
+    "p029": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 56464,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T21:55:12+00:00",
+      "tags": []
+    },
+    "p030": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 17580,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:55:29+00:00",
+      "tags": []
+    },
+    "p031": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 26513,
+      "note": "the prompt is stilted and so both feel stilted and weird",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:56:40+00:00",
+      "tags": []
+    },
+    "p032": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 39178,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:57:19+00:00",
+      "tags": []
+    },
+    "p033": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 58164,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T21:58:18+00:00",
+      "tags": []
+    },
+    "p034": {
+      "ai_like": "right",
+      "flag": false,
+      "ms_on_task": 69762,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T22:00:12+00:00",
+      "tags": []
+    },
+    "p035": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 54426,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T22:01:07+00:00",
+      "tags": []
+    },
+    "p036": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 18664,
+      "note": "the whole prompt feels like it's not real, so this one is hard to judge",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T22:01:47+00:00",
+      "tags": []
+    },
+    "p037": {
+      "ai_like": "right",
+      "flag": false,
+      "ms_on_task": 15779,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T22:02:03+00:00",
+      "tags": []
+    },
+    "p038": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 70611,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T22:03:14+00:00",
+      "tags": []
+    },
+    "p039": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 35881,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T22:04:32+00:00",
+      "tags": []
+    },
+    "p040": {
+      "ai_like": "left",
+      "flag": false,
+      "ms_on_task": 42630,
+      "note": "",
+      "prefer": "right",
+      "saved_at": "2026-10-12T22:05:16+00:00",
+      "tags": []
+    },
+    "p041": {
+      "ai_like": "right",
+      "flag": false,
+      "ms_on_task": 26895,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T22:03:41+00:00",
+      "tags": []
+    },
+    "p042": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 18629,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T21:55:48+00:00",
+      "tags": []
+    },
+    "p043": {
+      "ai_like": "right",
+      "flag": false,
+      "ms_on_task": 41897,
+      "note": "",
+      "prefer": "left",
+      "saved_at": "2026-10-12T21:59:02+00:00",
+      "tags": []
+    },
+    "p044": {
+      "ai_like": "same",
+      "flag": false,
+      "ms_on_task": 14564,
+      "note": "",
+      "prefer": "tie",
+      "saved_at": "2026-10-12T22:03:56+00:00",
+      "tags": []
+    }
+  }
+}

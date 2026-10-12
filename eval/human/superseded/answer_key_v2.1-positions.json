@@ -1,0 +1,622 @@
+{
+ "p001": {
+  "model": "mai-code-1.1-flash",
+  "family": "MAI",
+  "prompt_id": "sta-08",
+  "category": "status_update",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p002": {
+  "model": "gpt-6.1-sol",
+  "family": "GPT",
+  "prompt_id": "sta-08",
+  "category": "status_update",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p003": {
+  "model": "gemini-3.7-flash",
+  "family": "Gemini",
+  "prompt_id": "gen-03",
+  "category": "genre_trap",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p004": {
+  "model": "claude-opus-5.5",
+  "family": "Claude",
+  "prompt_id": "gen-10",
+  "category": "genre_trap",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p005": {
+  "model": "grok-4.7",
+  "family": "Grok",
+  "prompt_id": "gen-08",
+  "category": "genre_trap",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p006": {
+  "model": "gemini-3.7-flash",
+  "family": "Gemini",
+  "prompt_id": "wrd-10",
+  "category": "user_words",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p007": {
+  "model": "gpt-5-mini",
+  "family": "GPT",
+  "prompt_id": "wc-39",
+  "category": "factual",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p008": {
+  "model": "claude-opus-5.5",
+  "family": "Claude",
+  "prompt_id": "wc-32",
+  "category": "factual",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p009": {
+  "model": "grok-4.7",
+  "family": "Grok",
+  "prompt_id": "wrd-01",
+  "category": "user_words",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p010": {
+  "model": "mai-code-1.1-flash",
+  "family": "MAI",
+  "prompt_id": "wc-13",
+  "category": "tech",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p011": {
+  "model": "gpt-5.5",
+  "family": "GPT",
+  "prompt_id": "wc-17",
+  "category": "explain",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p012": {
+  "model": "claude-haiku-5.5",
+  "family": "Claude",
+  "prompt_id": "wc-03",
+  "category": "email",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p013": {
+  "model": "mai-code-1.1-flash",
+  "family": "MAI",
+  "prompt_id": "sum-08",
+  "category": "summary",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p014": {
+  "model": "grok-4.7",
+  "family": "Grok",
+  "prompt_id": "wc-28",
+  "category": "feedback",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p015": {
+  "model": "gemini-3.7-flash",
+  "family": "Gemini",
+  "prompt_id": "wc-27",
+  "category": "email",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p016": {
+  "model": "mai-code-1.1-flash",
+  "family": "MAI",
+  "prompt_id": "wrd-10",
+  "category": "user_words",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p017": {
+  "model": "grok-4.5",
+  "family": "Grok",
+  "prompt_id": "wc-14",
+  "category": "howto",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p018": {
+  "model": "gemini-3.7-flash",
+  "family": "Gemini",
+  "prompt_id": "wc-29",
+  "category": "tech",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p019": {
+  "model": "claude-haiku-5.5",
+  "family": "Claude",
+  "prompt_id": "wrd-03",
+  "category": "user_words",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p020": {
+  "model": "gpt-6.1-sol",
+  "family": "GPT",
+  "prompt_id": "wrd-03",
+  "category": "user_words",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p021": {
+  "model": "grok-4.7",
+  "family": "Grok",
+  "prompt_id": "sum-05",
+  "category": "summary",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p022": {
+  "model": "gpt-5.5",
+  "family": "GPT",
+  "prompt_id": "wc-45",
+  "category": "howto",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p023": {
+  "model": "gemini-3.8-flash",
+  "family": "Gemini",
+  "prompt_id": "sta-09",
+  "category": "status_update",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p024": {
+  "model": "claude-haiku-5.5",
+  "family": "Claude",
+  "prompt_id": "wc-34",
+  "category": "advice",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p025": {
+  "model": "grok-4.5",
+  "family": "Grok",
+  "prompt_id": "wc-32",
+  "category": "factual",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p026": {
+  "model": "gemini-3.8-flash",
+  "family": "Gemini",
+  "prompt_id": "wc-44",
+  "category": "tech",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p027": {
+  "model": "claude-opus-5.5",
+  "family": "Claude",
+  "prompt_id": "wc-52",
+  "category": "email",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p028": {
+  "model": "gpt-6.1-sol",
+  "family": "GPT",
+  "prompt_id": "wc-25",
+  "category": "explain",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p029": {
+  "model": "gemini-3.8-flash",
+  "family": "Gemini",
+  "prompt_id": "wc-17",
+  "category": "explain",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p030": {
+  "model": "grok-4.5",
+  "family": "Grok",
+  "prompt_id": "wc-18",
+  "category": "advice",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p031": {
+  "model": "claude-haiku-5.5",
+  "family": "Claude",
+  "prompt_id": "wc-28",
+  "category": "feedback",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p032": {
+  "model": "gpt-5-mini",
+  "family": "GPT",
+  "prompt_id": "gen-04",
+  "category": "genre_trap",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p033": {
+  "model": "grok-4.5",
+  "family": "Grok",
+  "prompt_id": "wc-25",
+  "category": "explain",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p034": {
+  "model": "claude-opus-5.5",
+  "family": "Claude",
+  "prompt_id": "wrd-06",
+  "category": "user_words",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p035": {
+  "model": "gemini-3.8-flash",
+  "family": "Gemini",
+  "prompt_id": "wrd-06",
+  "category": "user_words",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p036": {
+  "model": "gpt-5-mini",
+  "family": "GPT",
+  "prompt_id": "wc-03",
+  "category": "email",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p037": {
+  "model": "gpt-5-mini",
+  "family": "GPT",
+  "prompt_id": "sum-02",
+  "category": "summary",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p038": {
+  "model": "gpt-5.5",
+  "family": "GPT",
+  "prompt_id": "wc-41",
+  "category": "advice",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": null
+ },
+ "p039": {
+  "model": "gpt-6.1-sol",
+  "family": "GPT",
+  "prompt_id": "wc-27",
+  "category": "email",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p040": {
+  "model": "gpt-5.5",
+  "family": "GPT",
+  "prompt_id": "wc-39",
+  "category": "factual",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "right",
+  "repeat_of": null
+ },
+ "p041": {
+  "model": "claude-haiku-5.5",
+  "family": "Claude",
+  "prompt_id": "wrd-03",
+  "category": "user_words",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": "p019"
+ },
+ "p042": {
+  "model": "mai-code-1.1-flash",
+  "family": "MAI",
+  "prompt_id": "wrd-10",
+  "category": "user_words",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "left",
+  "repeat_of": "p016"
+ },
+ "p043": {
+  "model": "claude-opus-5.5",
+  "family": "Claude",
+  "prompt_id": "wc-32",
+  "category": "factual",
+  "comparison": "C-skill-v1 vs D-placebo",
+  "skill_side": "left",
+  "repeat_of": "p008"
+ },
+ "p044": {
+  "model": "grok-4.7",
+  "family": "Grok",
+  "prompt_id": "wc-28",
+  "category": "feedback",
+  "comparison": "C-skill-v1 vs A-none",
+  "skill_side": "right",
+  "repeat_of": "p014"
+ },
+ "m001": {
+  "model": "grok-4.5",
+  "cond": "A-none",
+  "prompt_id": "wc-14",
+  "start": 1095,
+  "tell": "shorthand"
+ },
+ "m002": {
+  "model": "gemini-3.7-flash",
+  "cond": "A-none",
+  "prompt_id": "wc-22",
+  "start": 1283,
+  "tell": "md_header"
+ },
+ "m003": {
+  "model": "claude-haiku-5.5",
+  "cond": "C-skill-v1",
+  "prompt_id": "wc-03",
+  "start": 853,
+  "tell": "offer_closer"
+ },
+ "m004": {
+  "model": "gemini-3.8-flash",
+  "cond": "C-skill-v1",
+  "prompt_id": "wc-12",
+  "start": 207,
+  "tell": "scare_quotes"
+ },
+ "m005": {
+  "model": "gemini-3.7-flash",
+  "cond": "D-placebo",
+  "prompt_id": "wrd-05",
+  "start": 774,
+  "tell": "option_menu"
+ },
+ "m006": {
+  "model": "mai-code-1.1-flash",
+  "cond": "D-placebo",
+  "prompt_id": "wc-48",
+  "start": 98,
+  "tell": "filler_adverb"
+ },
+ "m007": {
+  "model": "gpt-6.1-sol",
+  "cond": "A-none",
+  "prompt_id": "fmt-06",
+  "start": 664,
+  "tell": "emoji"
+ },
+ "m008": {
+  "model": "claude-opus-5.5",
+  "cond": "A-none",
+  "prompt_id": "fmt-04",
+  "start": 2056,
+  "tell": "listed_vocab"
+ },
+ "m009": {
+  "model": "claude-opus-5.5",
+  "cond": "A-none",
+  "prompt_id": "gen-08",
+  "start": 2319,
+  "tell": "horizontal_rule"
+ },
+ "m010": {
+  "model": "claude-opus-5.5",
+  "cond": "A-none",
+  "prompt_id": "wc-17",
+  "start": 166,
+  "tell": "scare_quotes"
+ },
+ "m011": {
+  "model": "gemini-3.8-flash",
+  "cond": "D-placebo",
+  "prompt_id": "wc-52",
+  "start": 858,
+  "tell": "option_menu"
+ },
+ "m012": {
+  "model": "gemini-3.7-flash",
+  "cond": "A-none",
+  "prompt_id": "wc-09",
+  "start": 312,
+  "tell": "horizontal_rule"
+ },
+ "m013": {
+  "model": "claude-opus-5.5",
+  "cond": "D-placebo",
+  "prompt_id": "wc-22",
+  "start": 428,
+  "tell": "bold_inline"
+ },
+ "m014": {
+  "model": "grok-4.7",
+  "cond": "A-none",
+  "prompt_id": "wc-43",
+  "start": 940,
+  "tell": "em_dash"
+ },
+ "m015": {
+  "model": "grok-4.5",
+  "cond": "A-none",
+  "prompt_id": "wc-41",
+  "start": 439,
+  "tell": "shorthand"
+ },
+ "m016": {
+  "model": "gpt-6.1-sol",
+  "cond": "A-none",
+  "prompt_id": "wc-17",
+  "start": 1281,
+  "tell": "answer_label"
+ },
+ "m017": {
+  "model": "claude-opus-5.5",
+  "cond": "A-none",
+  "prompt_id": "wc-52",
+  "start": 666,
+  "tell": "emoji"
+ },
+ "m018": {
+  "model": "gemini-3.8-flash",
+  "cond": "E-original",
+  "prompt_id": "gen-04",
+  "start": 913,
+  "tell": "signpost"
+ },
+ "m019": {
+  "model": "gemini-3.8-flash",
+  "cond": "A-none",
+  "prompt_id": "wc-39",
+  "start": 983,
+  "tell": "md_header"
+ },
+ "m020": {
+  "model": "gpt-6.1-sol",
+  "cond": "A-none",
+  "prompt_id": "fmt-07",
+  "start": 16,
+  "tell": "bold_label"
+ },
+ "m021": {
+  "model": "gpt-5-mini",
+  "cond": "C-skill-v1",
+  "prompt_id": "wrd-10",
+  "start": 102,
+  "tell": "contrast_formula"
+ },
+ "m022": {
+  "model": "claude-opus-5.5",
+  "cond": "D-placebo",
+  "prompt_id": "fmt-07",
+  "start": 1083,
+  "tell": "answer_label"
+ },
+ "m023": {
+  "model": "claude-opus-5.5",
+  "cond": "A-none",
+  "prompt_id": "gen-05",
+  "start": 609,
+  "tell": "signpost"
+ },
+ "m024": {
+  "model": "grok-4.5",
+  "cond": "C-skill-v1",
+  "prompt_id": "wc-13",
+  "start": 212,
+  "tell": "offer_closer"
+ },
+ "m025": {
+  "model": "mai-code-1.1-flash",
+  "cond": "A-none",
+  "prompt_id": "wc-28",
+  "start": 34,
+  "tell": "filler_adverb"
+ },
+ "m026": {
+  "model": "gemini-3.7-flash",
+  "cond": "A-none",
+  "prompt_id": "wc-48",
+  "start": 1089,
+  "tell": "listed_vocab"
+ },
+ "m027": {
+  "model": "claude-haiku-5.5",
+  "cond": "A-none",
+  "prompt_id": "gen-10",
+  "start": 11,
+  "tell": "contrast_formula"
+ },
+ "m028": {
+  "model": "claude-haiku-5.5",
+  "cond": "A-none",
+  "prompt_id": "fmt-06",
+  "start": 474,
+  "tell": "bold_inline"
+ },
+ "m029": {
+  "model": "claude-opus-5.5",
+  "cond": "A-none",
+  "prompt_id": "wc-29",
+  "start": 581,
+  "tell": "bold_label"
+ },
+ "m030": {
+  "model": "claude-opus-5.5",
+  "cond": "A-none",
+  "prompt_id": "wrd-03",
+  "start": 204,
+  "tell": "bold_header_line"
+ },
+ "m031": {
+  "model": "gemini-3.7-flash",
+  "cond": "D-placebo",
+  "prompt_id": "wc-29",
+  "start": 331,
+  "tell": "bold_header_line"
+ },
+ "m032": {
+  "model": "gpt-5-mini",
+  "cond": "D-placebo",
+  "prompt_id": "gen-04",
+  "start": 175,
+  "tell": "em_dash"
+ }
+}

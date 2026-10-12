@@ -77,3 +77,38 @@ A 12-job pilot checked the prompt template, output parsing and multi-turn mechan
 
 - Tell suite v2.2. Version 2.1 sometimes reported a match at the wrong place in the reply: it located matches by searching for the first occurrence of the matched text, even when the pattern had only looked at the start or end of the reply. Counting was never affected; rescoring all 8,040 single-turn replies with v2.2 gives identical counts. What was affected: the first round of LLM precision labels and the human phrase checks. Both were rebuilt with correct positions before the human review began, and the superseded files are kept in `judgments/superseded/` and `human/superseded/`.
 - Generation recovered from two workflow interruptions. Every job validates its own output, so no reply was lost or duplicated.
+- The review server checked answer IDs against the task list it read at startup. It was started before the phrase checks were rebuilt, so it rejected those 32 saves; the 44 pair answers saved normally. The app kept the rejected answers and included them in its exported copy. That export is the record: it matches the server on all 44 pairs and adds the 32 phrase checks. The server now re-reads the task list on every save.
+
+## Human review: what happened
+
+The rater reported fatigue a few pairs in, ties that meant "both bad" about as often as "both fine", and some prompts that felt unreal or advice he disagreed with. The data shows the same: ties rose from 4 of the first 15 pairs to 16 of the last 29, and preference matched itself on only 2 of 4 repeated pairs, while stock-AI calls matched on all 4. Two prompts he flagged as stilted were real WildChat messages. The preference results are reported as planned but weighted lightly.
+
+# Round 2: skill v2 on sealed test-2
+
+Written 2026-10-12, before any test-2 reply was generated. Test-2 was sealed until now; its hashes are in `prompts/SHA256SUMS`.
+
+## What changed in v2 and why
+
+v2 (`conditions/H-skill-v2.md`) is v1 with two edits, chosen on the dev set and on test-1 (see [TUNING.md](TUNING.md)):
+
+1. "Lists only when the content is a list, and then use one: steps, options, action items, dates." Judges preferred no-skill replies on summaries, how-tos and format requests, mostly for scannability.
+2. "...but never a fact, name, date or step the user gave or asked for." v1 missed slightly more required facts than no skill.
+
+Two other candidate edits (no offer as the closing step; use the user's word instead of a synonym) had no measurable effect and were dropped. The bold-label rule stays: the rater's phrase checks marked three bolded list items as not tells, but the judges, who matched the rater's stock-AI calls 92% of the time when both picked a side, often cite bold as chatbot style.
+
+## Design
+
+- Conditions: A no skill, C skill v1, H skill v2. Multi-turn: A and H.
+- Models: the same 10. Prompts: test-2's 35 messages and 2 eight-turn conversations. Two repeats, each with its own prompt order in 3 batches shared across conditions.
+- Measures: tell suite v2.2; blind pairwise judges (two per pair, never from the writer's family) on repeat 1 for v2 against no skill and against v1; fidelity and format graders on repeat 1 for all three conditions.
+- No new human review. The rater's stock-AI judgments validated the judges for that question; preference proved unreliable for both the rater and the judges, so it's reported but not used for decisions.
+
+## Hypotheses (confirmatory) and the shipping rule
+
+1. Tells: v2 has at most half the tells of no skill in every family.
+2. Stock-AI judgments: judges find the v2 reply less like stock AI than the no-skill reply in more than 75% of decisive pairs overall, and more than 60% in every family.
+3. No regression from v1: judges find the v2 reply more AI-like than the v1 reply in at most 55% of decisive pairs, and v2's tells are at most 1.15 times v1's overall.
+4. Fidelity: v2's missing-fact rate is no more than 1 point above no skill's and no higher than v1's, and v2 doesn't invent more details per reply than no skill.
+5. Format: v2 follows explicit format requests at least 95% of the time.
+
+v2 ships if hypotheses 1, 3, 4 and 5 hold. Otherwise v1 stays. Preference, length, reuse of the user's words and the multi-turn trend are reported as exploratory.

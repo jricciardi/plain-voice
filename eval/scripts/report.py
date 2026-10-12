@@ -156,6 +156,13 @@ def main():
     if fg:
         md += ["## Explicit format requests (graders)", "", table(["Condition", "Followed fully", "Partly or not"], [[CNAME.get(c, c), ci(f["yes"], pct=True), f["partly_or_no"]] for c, f in fg.items()]), ""]
     pp = s.get("pattern_precision_llm", {})
+    rb = s.get("robustness")
+    if rb:
+        md += ["## Robustness: noisy patterns removed or down-weighted", "",
+               f"High-precision tells (labeled precision at least 75%): {', '.join(rb['high_precision_tells'])}.", "",
+               table(["Family", "High-precision only: vs placebo", "vs no skill", "Precision-weighted: vs placebo", "vs no skill"],
+                     [[f, ci(rb["tells_high_precision"][f]["C/D"]), ci(rb["tells_high_precision"][f]["C/A"]), ci(rb["tells_weighted"][f]["C/D"]), ci(rb["tells_weighted"][f]["C/A"])]
+                      for f in FAMS + ["All"] if f in rb["tells_high_precision"]]), ""]
     if pp:
         md += ["## Pattern precision (LLM labelers)", "", f"Labeler agreement: {s.get('labeler_agreement', 'n/a')}.", "",
                table(["Tell", "Precision", "Labels"], [[t, ci(v["precision"], pct=True), v["labels"]] for t, v in sorted(pp.items(), key=lambda x: x[1]["precision"][0])]), ""]
@@ -169,7 +176,10 @@ def main():
             md += [f"Self-consistency on repeated pairs: preference {100 * h['self_consistency_prefer']:.0f}%, AI-like {100 * h['self_consistency_ai_like']:.0f}%.", ""]
         ja = h.get("judge_agreement_with_human", {})
         if ja:
-            md += ["Judge agreement with the human:", "", table(["Judge", "Pairs", "Same preference", "Same AI-like call"], [[k, v["n"], f"{100 * v['prefer_agreement']:.0f}%", f"{100 * v['ai_like_agreement']:.0f}%"] for k, v in ja.items()]), ""]
+            pct = lambda x: "n/a" if x is None else f"{100 * x:.0f}%"
+            md += ["Judge agreement with the human. Raw agreement counts ties, which the human used on 40% of pairs and the judges almost never did; the decisive columns use only pairs where both picked a side.", "",
+                   table(["Judge", "Pairs", "Same preference (raw)", "Same AI-like call (raw)", "Same preference (decisive)", "Same AI-like call (decisive)"],
+                         [[k, v["n"], pct(v["prefer_agreement"]), pct(v["ai_like_agreement"]), f"{pct(v.get('prefer_agreement_decisive'))} of {v.get('n_prefer_decisive', 0)}", f"{pct(v.get('ai_like_agreement_decisive'))} of {v.get('n_ai_like_decisive', 0)}"] for k, v in ja.items()]), ""]
         if h.get("pattern_precision_human_overall"):
             md += [f"Human-checked pattern precision overall: {ci(h['pattern_precision_human_overall'], pct=True)}.", ""]
     (RES / "TABLES.md").write_text("\n".join(md))

@@ -321,14 +321,39 @@ def human_section(out, pj):
             for judge, g in pj[pj.human_overlap].groupby("judge"):
                 m = g.merge(hp2[["pair_id", "prefer", "ai_like"]], on="pair_id", suffixes=("_j", "_h"))
                 if len(m):
+                    pd_ = m[(m.prefer_h != "tie") & (m.prefer_j != "tie")]
+                    ad_ = m[(m.ai_like_h != "same") & (m.ai_like_j != "same")]
                     agree[judge] = {"n": int(len(m)), "prefer_agreement": round(float((m.prefer_j == m.prefer_h).mean()), 3),
-                                    "ai_like_agreement": round(float((m.ai_like_j == m.ai_like_h).mean()), 3)}
+                                    "ai_like_agreement": round(float((m.ai_like_j == m.ai_like_h).mean()), 3),
+                                    "prefer_agreement_decisive": round(float((pd_.prefer_j == pd_.prefer_h).mean()), 3) if len(pd_) else None,
+                                    "ai_like_agreement_decisive": round(float((ad_.ai_like_j == ad_.ai_like_h).mean()), 3) if len(ad_) else None,
+                                    "n_prefer_decisive": int(len(pd_)), "n_ai_like_decisive": int(len(ad_))}
             res["judge_agreement_with_human"] = agree
     if matches:
         md = pd.DataFrame(matches)
         res["pattern_precision_human"] = {t: wilson(int((g.verdict == "yes").sum()), int(g.verdict.isin(["yes", "no"]).sum())) for t, g in md.groupby("tell")}
         res["pattern_precision_human_overall"] = wilson(int((md.verdict == "yes").sum()), int(md.verdict.isin(["yes", "no"]).sum()))
     out["human"] = res
+
+
+def robustness_section(df, out):
+    """Re-estimate the main ratios with precision-weighted counts and with high-precision tells only."""
+    prec = out.get("pattern_precision_llm")
+    if not prec:
+        return
+    t1 = df[(df.set == "test1") & (df.cond.isin(MAIN))].copy()
+    p = {k: v["precision"][0] for k, v in prec.items() if v["labels"] >= 8}
+    high = [k for k, v in p.items() if v >= 0.75]
+    t1["tells_high_precision"] = t1[[f"tell_{k}" for k in high]].sum(axis=1)
+    t1["tells_weighted"] = sum(t1[f"tell_{k}"] * v for k, v in p.items())
+    res = {"high_precision_tells": sorted(high)}
+    for col in ("tells_high_precision", "tells_weighted"):
+        rows = {}
+        for fam in FAMS + ["All"]:
+            sub = t1 if fam == "All" else t1[t1.family == fam]
+            rows[fam] = {f"C/{d.split('-')[0]}": boot_ratio(sub, "C-skill-v1", d, col=col) for d in ("D-placebo", "A-none", "E-original")}
+        res[col] = rows
+    out["robustness"] = res
 
 
 def main():
@@ -345,6 +370,7 @@ def main():
     if not dev.empty:
         out["dev_mean_tells"] = dev.groupby(["family", "cond"]).tells_total.mean().unstack().round(2).to_dict()
     pj = judgments_section(out)
+    robustness_section(df, out)
     human_section(out, pj)
     (RES / "summary.json").write_text(json.dumps(out, indent=1, default=lambda o: o if not isinstance(o, (np.integer, np.floating)) else o.item()))
     print(json.dumps({k: out[k] for k in ("n_replies", "replies_by_set")}, indent=1))

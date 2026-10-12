@@ -1,0 +1,489 @@
+{
+  "meta": {
+    "rater_name": "jay",
+    "started_at": "2026-10-12T21:35:52.011Z",
+    "finished_at": "2026-10-12T22:09:37.218Z"
+  },
+  "responses": {
+    "p001": {
+      "prefer": "left",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 64482
+    },
+    "p002": {
+      "prefer": "left",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 31580
+    },
+    "p003": {
+      "prefer": "right",
+      "ai_like": "right",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 37960
+    },
+    "p004": {
+      "prefer": "left",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 59928
+    },
+    "p005": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 34415
+    },
+    "p006": {
+      "prefer": "left",
+      "ai_like": "right",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 34060
+    },
+    "p007": {
+      "prefer": "right",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 12992
+    },
+    "p008": {
+      "prefer": "tie",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 56664
+    },
+    "p009": {
+      "prefer": "left",
+      "ai_like": "right",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 34129
+    },
+    "p010": {
+      "prefer": "right",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 39996
+    },
+    "p011": {
+      "prefer": "right",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 47495
+    },
+    "p012": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 28664
+    },
+    "p013": {
+      "prefer": "right",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 47179
+    },
+    "p014": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 19796
+    },
+    "p015": {
+      "prefer": "left",
+      "ai_like": "right",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 11379
+    },
+    "p016": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 10580
+    },
+    "p017": {
+      "prefer": "left",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 62347
+    },
+    "p018": {
+      "prefer": "tie",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 38062
+    },
+    "p019": {
+      "prefer": "right",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 63628
+    },
+    "p020": {
+      "prefer": "right",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 36828
+    },
+    "p021": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 30395
+    },
+    "p022": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 64263
+    },
+    "p023": {
+      "prefer": "left",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 32228
+    },
+    "p024": {
+      "prefer": "tie",
+      "ai_like": "right",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 51065
+    },
+    "p025": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 43961
+    },
+    "p026": {
+      "prefer": "tie",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 27579
+    },
+    "p027": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 34597
+    },
+    "p028": {
+      "prefer": "right",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 27178
+    },
+    "p029": {
+      "prefer": "right",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 56464
+    },
+    "p030": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 17580
+    },
+    "p042": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 18629
+    },
+    "p031": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "the prompt is stilted and so both feel stilted and weird",
+      "tags": [],
+      "ms_on_task": 26513
+    },
+    "p032": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 39178
+    },
+    "p033": {
+      "prefer": "right",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 58164
+    },
+    "p043": {
+      "prefer": "left",
+      "ai_like": "right",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 41897
+    },
+    "p034": {
+      "prefer": "left",
+      "ai_like": "right",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 69762
+    },
+    "p035": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 54426
+    },
+    "p036": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "the whole prompt feels like it's not real, so this one is hard to judge",
+      "tags": [],
+      "ms_on_task": 18664
+    },
+    "p037": {
+      "prefer": "left",
+      "ai_like": "right",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 15779
+    },
+    "p038": {
+      "prefer": "right",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 70611
+    },
+    "p041": {
+      "prefer": "tie",
+      "ai_like": "right",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 26895
+    },
+    "p044": {
+      "prefer": "tie",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 14564
+    },
+    "p039": {
+      "prefer": "left",
+      "ai_like": "same",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 35881
+    },
+    "p040": {
+      "prefer": "right",
+      "ai_like": "left",
+      "flag": false,
+      "note": "",
+      "tags": [],
+      "ms_on_task": 42630
+    },
+    "m101": {
+      "verdict": "yes",
+      "ms_on_task": 34201
+    },
+    "m102": {
+      "verdict": "yes",
+      "ms_on_task": 12940
+    },
+    "m103": {
+      "verdict": "no",
+      "ms_on_task": 17389
+    },
+    "m104": {
+      "verdict": "unsure",
+      "ms_on_task": 5411
+    },
+    "m105": {
+      "verdict": "unsure",
+      "ms_on_task": 3227
+    },
+    "m106": {
+      "verdict": "yes",
+      "ms_on_task": 7528
+    },
+    "m107": {
+      "verdict": "yes",
+      "ms_on_task": 4878
+    },
+    "m108": {
+      "verdict": "yes",
+      "ms_on_task": 4661
+    },
+    "m109": {
+      "verdict": "unsure",
+      "ms_on_task": 5761
+    },
+    "m110": {
+      "verdict": "unsure",
+      "ms_on_task": 6611
+    },
+    "m111": {
+      "verdict": "unsure",
+      "ms_on_task": 5696
+    },
+    "m112": {
+      "verdict": "unsure",
+      "ms_on_task": 3812
+    },
+    "m113": {
+      "verdict": "unsure",
+      "ms_on_task": 1995
+    },
+    "m114": {
+      "verdict": "unsure",
+      "ms_on_task": 7362
+    },
+    "m115": {
+      "verdict": "no",
+      "ms_on_task": 3361
+    },
+    "m116": {
+      "verdict": "yes",
+      "ms_on_task": 9745
+    },
+    "m117": {
+      "verdict": "yes",
+      "ms_on_task": 9645
+    },
+    "m118": {
+      "verdict": "yes",
+      "ms_on_task": 14379
+    },
+    "m119": {
+      "verdict": "unsure",
+      "ms_on_task": 12828
+    },
+    "m120": {
+      "verdict": "unsure",
+      "ms_on_task": 8128
+    },
+    "m121": {
+      "verdict": "yes",
+      "ms_on_task": 2662
+    },
+    "m122": {
+      "verdict": "no",
+      "ms_on_task": 5561
+    },
+    "m123": {
+      "verdict": "yes",
+      "ms_on_task": 4179
+    },
+    "m124": {
+      "verdict": "yes",
+      "ms_on_task": 10978
+    },
+    "m125": {
+      "verdict": "yes",
+      "ms_on_task": 3078
+    },
+    "m126": {
+      "verdict": "yes",
+      "ms_on_task": 6879
+    },
+    "m127": {
+      "verdict": "yes",
+      "ms_on_task": 2045
+    },
+    "m128": {
+      "verdict": "no",
+      "ms_on_task": 13461
+    },
+    "m129": {
+      "verdict": "no",
+      "ms_on_task": 5495
+    },
+    "m130": {
+      "verdict": "no",
+      "ms_on_task": 2195
+    },
+    "m131": {
+      "verdict": "no",
+      "ms_on_task": 9728
+    },
+    "m132": {
+      "verdict": "unsure",
+      "ms_on_task": 4461
+    }
+  }
+}
