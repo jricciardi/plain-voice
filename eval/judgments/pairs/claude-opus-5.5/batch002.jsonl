@@ -1,0 +1,15 @@
+{"item": "j03132", "prefer": "2", "ai_like": "1", "reason": "Reply 2 tries a calm conversation before escalating and gives a usable script, while Reply 1 jumps to escalation and ends on slogan lines like 'Your job is not to absorb chaos.'"}
+{"item": "j02671", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is warmer and better organized with clear asks, while Reply 1 flatly restates each note; Reply 2's intro-plus-bullets layout is slightly closer to assistant format."}
+{"item": "j02976", "prefer": "2", "ai_like": "2", "reason": "Reply 1 garbles the tradition ('2:00 a.m.', 'taking a break to do the same'), while Reply 2 is correct but padded with generic gratitude filler."}
+{"item": "j00767", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is a clean, accurate dated list, while Reply 2 wraps the same facts in emoji headers, bold, and a stock preamble."}
+{"item": "j00669", "prefer": "2", "ai_like": "2", "reason": "Reply 2 adds gas estimates, hidden Denver costs, and a takeaway that helps decide, despite heavy chatbot formatting and totals that leave out the gas it lists."}
+{"item": "j00755", "prefer": "1", "ai_like": "1", "reason": "Both are accurate, but Reply 1 also covers no-resend and recovery time, though its 'Here is the TL;DR' preamble and bold bullets read as stock AI."}
+{"item": "j03180", "prefer": "2", "ai_like": "2", "reason": "Reply 2 opens with validation and gives concrete steps that protect the friendship, though its 'The key is' and 'That doesn't mean... It means...' lines are more formulaic."}
+{"item": "j02648", "prefer": "1", "ai_like": "2", "reason": "Reply 1 sticks to the given facts with a stronger title, while Reply 2 invents details about the criticism and ends on preachy aphorisms."}
+{"item": "j02501", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is a ready-to-send email that explains each option, while Reply 1 adds a preamble, bolding, and a second version."}
+{"item": "j02434", "prefer": "2", "ai_like": "same", "reason": "Reply 2 reads more fluently than Reply 1's awkward 'chemical and chemical raw materials sales', and both lean on similar polished triplets."}
+{"item": "j03041", "prefer": "2", "ai_like": "same", "reason": "Reply 2 avoids repeating 'supplies' and uses the more standard 'have already left', and both are plain corrections."}
+{"item": "j00912", "prefer": "2", "ai_like": "2", "reason": "Reply 2 supplies the passage text and a short lighting liturgy that are practical to use, though its headers, bold, and rules are classic chatbot formatting."}
+{"item": "j02115", "prefer": "2", "ai_like": "2", "reason": "Reply 2 adds a useful economic-versus-cultural summary, but its bolding, wrap-up line, and closing question are typical assistant moves."}
+{"item": "j02840", "prefer": "2", "ai_like": "2", "reason": "Reply 2 names more tools and sets realistic expectations, and it leans harder on 'X, not Y' fragments and aphoristic closers."}
+{"item": "j02368", "prefer": "1", "ai_like": "same", "reason": "Both are accurate and plain, but Reply 1 also explains why alerts missed it and lists the follow-ups."}

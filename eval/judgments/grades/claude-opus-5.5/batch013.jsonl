@@ -1,0 +1,12 @@
+{"item": "g00530", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00592", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00439", "facts": ["present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g01431", "facts": ["present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g01143", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00775", "facts": ["present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00796", "facts": ["present", "present", "present", "present", "present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g01159", "facts": ["present", "present", "present", "present", "present", "present", "missing", "missing"], "invented": [], "format": "n/a"}
+{"item": "g00328", "facts": ["present", "present", "present", "present", "present"], "invented": ["aligning currencies and date formats across both reports", "matching on unique identifiers such as order IDs, transaction references and amounts", "timing differences as a type of variance", "investigating processing fee misalignments, refunds and chargebacks", "recording adjusting entries", "internal control compliance as a purpose of the report"], "format": "n/a"}
+{"item": "g01320", "facts": ["present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00695", "facts": ["present", "present", "present", "present", "present"], "invented": ["the humor felt deliberate to the reviewer"], "format": "n/a"}
+{"item": "g00728", "facts": ["present", "present", "missing", "present", "present"], "invented": ["claims it logged 1 todo"], "format": "n/a"}

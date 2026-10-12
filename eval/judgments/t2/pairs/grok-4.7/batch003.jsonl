@@ -1,0 +1,15 @@
+{"item": "j00052", "prefer": "1", "ai_like": "same", "reason": "Reply 1 is more precise that the duplicate check has no named owner, and both summaries read similarly plain."}
+{"item": "j00514", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives a direct, hedged answer, while Reply 2 overclaims and uses a bold numbered explainer."}
+{"item": "j00647", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is a usable polite nudge, while Reply 2 has broken apostrophes and Reply 1 still sounds more like a template email."}
+{"item": "j00437", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is the short bold glossary requested, while Reply 1 adds congratulations and a closing offer."}
+{"item": "j00730", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is a shorter, more natural Slack farewell that still thanks Otto and Grace by name."}
+{"item": "j01350", "prefer": "2", "ai_like": "same", "reason": "Reply 2's rewrite is tighter and less repetitive, and both critiques use the same stock frame."}
+{"item": "j00280", "prefer": "2", "ai_like": "1", "reason": "Reply 2 keeps the unnamed weekly work as real leadership, while Reply 1 slips into stock recommendation phrasing."}
+{"item": "j00155", "prefer": "1", "ai_like": "2", "reason": "Reply 1 matches the requested I/A/1 outline and is easier to fill in, while Reply 2 reads like a default markdown outline."}
+{"item": "j00892", "prefer": "2", "ai_like": "1", "reason": "Reply 2 stays faithful to the notes, while Reply 1 invents priority levels in a generic action table."}
+{"item": "j00077", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives one usable caption with the item name, while Reply 2 offers unrequested options."}
+{"item": "j00394", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is more complete and better sourced, but its bold textbook sections are much more stock AI."}
+{"item": "j00358", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is one clean caption, while Reply 1 dumps emoji-sorted options in a marketing-bot voice."}
+{"item": "j00220", "prefer": "1", "ai_like": "same", "reason": "The lines are nearly identical, and silky is a slightly better word for a crepe caption."}
+{"item": "j00442", "prefer": "1", "ai_like": "2", "reason": "Reply 1 sticks to the real story, while Reply 2 adds a chatbot preamble and invented results."}
+{"item": "j01318", "prefer": "2", "ai_like": "1", "reason": "Reply 2 correctly separates January operational changes from April pricing, while Reply 1's effective-now frame muddies the timing."}

@@ -1,0 +1,15 @@
+{"item": "j00779", "prefer": "1", "ai_like": "1", "reason": "Reply 1 adds morphology-based identification and quantitative temperature calibration that Reply 2 skips, though its headers and dividers are classic chatbot formatting."}
+{"item": "j01533", "prefer": "2", "ai_like": "1", "reason": "Reply 2 uses the stated 16:00 SAST and stays tight, while Reply 1 leaves the time as placeholders and repeats its ask in a templated close."}
+{"item": "j02905", "prefer": "1", "ai_like": "1", "reason": "Reply 1's where/in/out/ATP layout maps directly onto flashcards, while Reply 2 bolds odd phrases like 'oxygen indirectly' and tacks on a redundant term list."}
+{"item": "j01770", "prefer": "2", "ai_like": "same", "reason": "Both are clear, but Reply 2's employee analogy and contrast with if-then rules explain the mechanism slightly better, and both end on a similar tidy moral."}
+{"item": "j02717", "prefer": "2", "ai_like": "2", "reason": "Reply 2 keeps the user's 'Actually' that Reply 1 silently dropped, and its appended explanatory note is the more assistant-like touch."}
+{"item": "j02130", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is tighter and more elevated, while Reply 1 pads with 'genuinely amusing' and says the enjoyment point twice."}
+{"item": "j02735", "prefer": "2", "ai_like": "2", "reason": "Reply 2's recipe and employee analogies suit a layman better, but its punchy fragments and aphoristic closer are a recognizable AI flourish."}
+{"item": "j02677", "prefer": "2", "ai_like": "same", "reason": "Nearly identical, but Reply 2 keeps that the sync lag is elevated and doesn't repeat the timestamp."}
+{"item": "j00899", "prefer": "tie", "ai_like": "same", "reason": "Both turn the paragraph into essentially the same six clean steps with comparable specificity."}
+{"item": "j02821", "prefer": "1", "ai_like": "1", "reason": "Reply 1 gives complete, signed templates with a named handover contact and practical advice, though its bold headers and coaching wrap-up read more chatbot-like."}
+{"item": "j01652", "prefer": "1", "ai_like": "same", "reason": "Reply 1 records Greg's unkept promise and asks for exactly a repair date, while Reply 2 invents repeated requests and softens the ask to an inspection."}
+{"item": "j02284", "prefer": "2", "ai_like": "2", "reason": "Reply 2 adds gas and door-to-door time for a truer total-cost comparison despite a muddled opener, and its bold 'Quick read' and hedged ranges feel more templated."}
+{"item": "j02548", "prefer": "1", "ai_like": "1", "reason": "Reply 1 gives a usable one-pager hierarchy and the repurposing angle, but its bolded numbered list, reframe opener, and 'Bottom line' are stock AI style."}
+{"item": "j02057", "prefer": "tie", "ai_like": "1", "reason": "Both accurately capture every date and lead with the training day, but Reply 1's headers and heavy bolding are more chatbot-styled than Reply 2's plain list."}
+{"item": "j01335", "prefer": "2", "ai_like": "same", "reason": "Reply 2 keeps the elderly-cat GPS positioning that Reply 1 drops, though both invent preorder details in similar casual copy."}

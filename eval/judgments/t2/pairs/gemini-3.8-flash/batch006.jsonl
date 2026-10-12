@@ -1,0 +1,15 @@
+{"item": "j00877", "prefer": "2", "ai_like": "2", "reason": "Reply 2's structured bold headers make it easier for a manager to scan quickly, though the formatting is more characteristic of chatbots."}
+{"item": "j01221", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides clean, practical advice without the heavy bold formatting and conversational filler of Reply 2."}
+{"item": "j01160", "prefer": "2", "ai_like": "2", "reason": "Reply 2's bulleted list is much easier to read in Slack than Reply 1's dense paragraph block."}
+{"item": "j00206", "prefer": "2", "ai_like": "1", "reason": "Reply 2 delivers thoughtful, focused insight in natural prose, whereas Reply 1 reads like an exhaustive AI-generated guide with bold headers and bullet points."}
+{"item": "j00739", "prefer": "1", "ai_like": "same", "reason": "Both replies are nearly identical in style, but Reply 1 includes a quick opening header suitable for a Slack message."}
+{"item": "j00666", "prefer": "1", "ai_like": "2", "reason": "Reply 1 flows better as marketing copy, whereas Reply 2 clumsily inserts transition words like 'Moreover' and 'In addition'."}
+{"item": "j01094", "prefer": "1", "ai_like": "2", "reason": "Reply 1 explains the concept clearly in natural prose, while Reply 2 defaults to typical AI formatting with bold bullet points and a formulaic summary."}
+{"item": "j00020", "prefer": "2", "ai_like": "same", "reason": "Both follow instructions well, but Reply 2 uses cleaner glossary formatting and slightly crisper definitions."}
+{"item": "j00769", "prefer": "1", "ai_like": "2", "reason": "Reply 1 offers straightforward advice in natural paragraphs, while Reply 2 relies on bullet points and a generic AI-style concluding disclaimer."}
+{"item": "j00696", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives an immediate, direct answer, whereas Reply 2 mistakenly echoes the user's prompt."}
+{"item": "j00164", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is ready to copy and post with a natural LinkedIn shoutout, whereas Reply 1 appends unnecessary assistant advisory text."}
+{"item": "j01112", "prefer": "1", "ai_like": "2", "reason": "Reply 1 answers directly and conversationally in clean prose, whereas Reply 2 uses formulaic bolded headers and bulleted lists."}
+{"item": "j01167", "prefer": "1", "ai_like": "same", "reason": "Both are natural and appropriately informal, but Reply 1 includes a warm greeting and sign-off suitable for a newsletter."}
+{"item": "j00987", "prefer": "1", "ai_like": "same", "reason": "Reply 1 includes crucial beginner-friendly tips, such as taking a reference photo and trimming excess chain, that make the repair easier for a novice."}
+{"item": "j00793", "prefer": "2", "ai_like": "1", "reason": "Reply 2 explains the recommendation in clear, natural prose, while Reply 1 relies on excessive bolding and repetitive summaries."}

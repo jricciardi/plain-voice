@@ -1,0 +1,15 @@
+{"item": "j02349", "prefer": "2", "ai_like": "1", "reason": "Reply 2 reads like a natural email, while Reply 1 overuses bold headers and styling."}
+{"item": "j02031", "prefer": "1", "ai_like": "1", "reason": "Reply 1's structured bullet format is much easier to scan during an active incident, despite its heavy bolding."}
+{"item": "j01773", "prefer": "1", "ai_like": "same", "reason": "Reply 1 gives a clearer explanation of how neural network settings differ from simple rules."}
+{"item": "j01426", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is more thorough by including important scientific caveats and calibration details."}
+{"item": "j00228", "prefer": "1", "ai_like": "2", "reason": "Reply 1 offers practical, realistic workplace strategies, whereas Reply 2 gives a generic list with a stock ending offer."}
+{"item": "j03170", "prefer": "1", "ai_like": "same", "reason": "Reply 1 provides the full text of a traditional Advent scripture passage for immediate reading."}
+{"item": "j01822", "prefer": "2", "ai_like": "1", "reason": "Reply 2 explains the counting system clearly with a simple example without relying on excessive bold text."}
+{"item": "j00008", "prefer": "1", "ai_like": "1", "reason": "Reply 1 breaks down each stage with clear input, output, and location fields designed for flashcards."}
+{"item": "j02043", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides a concise TL;DR in plain prose, whereas Reply 2 creates a detailed, repetitive outline."}
+{"item": "j03050", "prefer": "2", "ai_like": "same", "reason": "Reply 2 directly addresses the misconception that Vercel is only useful when deploying Next.js."}
+{"item": "j01656", "prefer": "2", "ai_like": "1", "reason": "Reply 2 integrates the specs smoothly into casual, engaging copy rather than dropping into a spec bullet list."}
+{"item": "j01479", "prefer": "2", "ai_like": "same", "reason": "Reply 2 is clean, professional, and includes a practical reference for listing the specific invoices."}
+{"item": "j02670", "prefer": "2", "ai_like": "2", "reason": "Reply 2 organizes the notes into a coherent email, whereas Reply 1 is choppy and abrupt."}
+{"item": "j02217", "prefer": "2", "ai_like": "1", "reason": "Reply 2 strikes a warm, casual tone suitable for a social message, while Reply 1 feels heavy."}
+{"item": "j01416", "prefer": "2", "ai_like": "same", "reason": "Reply 2 includes helpful specifics like the day of the week and confidential coat requests."}

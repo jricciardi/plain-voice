@@ -1,0 +1,15 @@
+{"item": "j01845", "prefer": "tie", "ai_like": "same", "reason": "Both correctly say the blades are rigid plastic with rubber only on the mounts, and the differences are negligible."}
+{"item": "j00651", "prefer": "2", "ai_like": "2", "reason": "Reply 2 actually covers inputs, outputs, the link reaction and a summary table, though its heavy LaTeX and formatting are classic chatbot style."}
+{"item": "j02476", "prefer": "1", "ai_like": "2", "reason": "Reply 1 explains the core race-versus-state difference in clear prose, while Reply 2 pads it into a bold numbered list with a garbled Lateran line."}
+{"item": "j02058", "prefer": "1", "ai_like": "2", "reason": "Both are accurate and complete, but Reply 1 leads with the childcare day and adds weekdays, while Reply 2 leans on bolding."}
+{"item": "j02722", "prefer": "1", "ai_like": "same", "reason": "The corrections are identical, and Reply 1 adds a brief useful note about the plural."}
+{"item": "j00804", "prefer": "2", "ai_like": "2", "reason": "Reply 2's cake-machine analogy suits a layman better, though its Imagine/bold-bullets/In-short format is stock AI."}
+{"item": "j01835", "prefer": "1", "ai_like": "2", "reason": "The advice is nearly identical, but Reply 1 has more concrete tactics, and Reply 2's sympathetic opener and reframing close feel templated."}
+{"item": "j03197", "prefer": "1", "ai_like": "same", "reason": "Reply 1 gives a more decisive, client-specific recommendation, but both rely on the same not-X-but-Y framing."}
+{"item": "j03013", "prefer": "2", "ai_like": "same", "reason": "Reply 2 keeps the key numbers and notes the API stayed up, while Reply 1 wrongly says events were never sent."}
+{"item": "j03068", "prefer": "2", "ai_like": "2", "reason": "The lists are similar, but Reply 1 overstates that foreclosures are usually cash deals, and Reply 2's em-dash contrasts read more machine-made."}
+{"item": "j01178", "prefer": "2", "ai_like": "2", "reason": "Reply 2 follows federal format better with a header, announcement number and duty mapping, despite inventing six years of service."}
+{"item": "j01451", "prefer": "1", "ai_like": "same", "reason": "Reply 1's plain black-box image is clearer than Reply 2's muddled cookbook analogy."}
+{"item": "j02428", "prefer": "2", "ai_like": "2", "reason": "Reply 2's numbered steps, links and upload option help a novice more, though its formatting is more chatbot-like."}
+{"item": "j02093", "prefer": "2", "ai_like": "2", "reason": "Reply 2's rule-based contrast and concrete loan questions explain it better, but its bolded takeaway is a chatbot habit."}
+{"item": "j02488", "prefer": "2", "ai_like": "1", "reason": "Both wrongly call the blades soft, but Reply 1 adds more errors and hedging, plus chatbot bolding and a 'So:' summary."}

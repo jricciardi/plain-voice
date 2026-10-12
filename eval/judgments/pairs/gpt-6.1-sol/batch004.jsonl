@@ -1,0 +1,15 @@
+{"item":"j03017","prefer":"1","ai_like":"2","reason":"Reply 1 preserves the actionable details, while Reply 2 substitutes generic operational framing and invents changes the thread never established."}
+{"item":"j00199","prefer":"2","ai_like":"1","reason":"Reply 2 provides a smoother, ready-to-use review without Reply 1's distracting explanation of how it interpreted the request."}
+{"item":"j00610","prefer":"1","ai_like":"1","reason":"Reply 1 explains the metric, supplies a board pitch, and flags the uncertain baseline, although its presentation is more templated."}
+{"item":"j02550","prefer":"1","ai_like":"2","reason":"Reply 1 makes the engineer-versus-room choice clear, while Reply 2 overpackages the advice with slogans and a sprawling service list."}
+{"item":"j00637","prefer":"2","ai_like":"2","reason":"Reply 2 has a punchier badge-friendly opening and meets the limit, though its appended word-count note feels assistant-like."}
+{"item":"j01270","prefer":"1","ai_like":"2","reason":"Reply 1 gives a focused explanation and repair steps, whereas Reply 2 adds false precision, technical-sounding embellishments, and sweeping reassurance."}
+{"item":"j00736","prefer":"1","ai_like":"2","reason":"Reply 1 includes every requested detail without Reply 2's exaggerated enthusiasm or invented signup portal."}
+{"item":"j03009","prefer":"1","ai_like":"same","reason":"Both use familiar summary framing, but Reply 1 avoids Reply 2's misleading suggestion that the entire system was nonfunctional."}
+{"item":"j00508","prefer":"1","ai_like":"same","reason":"Both sound similarly conversational, but Reply 1 gives more balanced historical context without Reply 2's strained frontier analogy."}
+{"item":"j00085","prefer":"2","ai_like":"2","reason":"Reply 2 supplies a complete client-ready email with all the facts, although its partnership sign-off is boilerplate."}
+{"item":"j02755","prefer":"1","ai_like":"2","reason":"Reply 1 is concise and closer to the supplied role, while Reply 2 adds unconfirmed duties and unnecessary profile-writing advice."}
+{"item":"j03029","prefer":"2","ai_like":"1","reason":"Reply 2 covers the request without Reply 1's repetition or unsupported claim that remote work saves the company money."}
+{"item":"j03176","prefer":"2","ai_like":"1","reason":"Reply 2 offers warmer reassurance and concrete steps without Reply 1's stock reframing and speculation about hidden beauty work."}
+{"item":"j00571","prefer":"2","ai_like":"1","reason":"Reply 2 cleanly improves the paragraph, while Reply 1 adds a long edit log and an unnecessary follow-up offer."}
+{"item":"j02575","prefer":"1","ai_like":"2","reason":"Reply 1's staged exit for the brothers is more practical, while Reply 2 leans on startup jargon and motivational metaphors."}

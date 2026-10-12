@@ -1,0 +1,15 @@
+{"item": "j02324", "prefer": "2", "ai_like": "2", "reason": "Reply 2 provides a richer and more complete conference abstract, though its phrasing carries more typical chatbot flourishes."}
+{"item": "j00293", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives tailored, perceptive business advice without leaning on generic consulting bullet points."}
+{"item": "j02624", "prefer": "2", "ai_like": "1", "reason": "Reply 2 reads like a natural email, whereas Reply 1 stiltedly recites prompt details line by line."}
+{"item": "j01596", "prefer": "1", "ai_like": "same", "reason": "Reply 1 provides clean and direct instructions without awkward grammatical echoes."}
+{"item": "j00437", "prefer": "1", "ai_like": "same", "reason": "Reply 1 immediately answers the core question about data loss in the very first sentence."}
+{"item": "j00161", "prefer": "1", "ai_like": "2", "reason": "The chef analogy in Reply 1 explains intuitive yet inscrutable reasoning much better to a layman."}
+{"item": "j00357", "prefer": "2", "ai_like": "same", "reason": "Reply 2 addresses the leading coefficient in step 1 and formats each step clearly for a student."}
+{"item": "j02169", "prefer": "tie", "ai_like": "same", "reason": "Both replies give the exact same accurate, concise correction."}
+{"item": "j02681", "prefer": "2", "ai_like": "1", "reason": "Reply 2 effectively tailors the summary for an executive by clarifying the exact decision needed."}
+{"item": "j02109", "prefer": "2", "ai_like": "2", "reason": "Reply 2 remains succinct while reading as a more complete and professional LinkedIn bio."}
+{"item": "j02288", "prefer": "1", "ai_like": "2", "reason": "Reply 1 clearly labels each algebraic operation and avoids awkward raw LaTeX notation."}
+{"item": "j01537", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is clean and polite, whereas Reply 2 contains corrupted character encoding and awkward syntax."}
+{"item": "j02902", "prefer": "2", "ai_like": "same", "reason": "Reply 2 neatly separates the performance review, the hiring ask, and the closing for an all-hands audience."}
+{"item": "j00554", "prefer": "1", "ai_like": "same", "reason": "Reply 1 explains the functional reason why fan blades cannot be made of flexible rubber."}
+{"item": "j02652", "prefer": "2", "ai_like": "1", "reason": "Reply 2 sounds like a genuine, warm message from a local business owner rather than a clipped checklist."}

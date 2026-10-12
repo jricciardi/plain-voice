@@ -1,0 +1,15 @@
+{"item":"j00558","prefer":"1","ai_like":"same","reason":"Reply 1 explains both types of rubber mounting parts and adds a useful clearance detail, with essentially the same tone."}
+{"item":"j02503","prefer":"2","ai_like":"1","reason":"Reply 2 gives the customer a clear choice and a sensible no-response fallback without repeating the options."}
+{"item":"j01021","prefer":"2","ai_like":"1","reason":"Reply 2 is easier to memorize and sounds more personal, though its precise three-hour wait is an invented detail."}
+{"item":"j00627","prefer":"2","ai_like":"1","reason":"Reply 2 gives the diagnosis and repair steps at the requested depth without Reply 1's checklist-heavy presentation."}
+{"item":"j02724","prefer":"2","ai_like":"1","reason":"Reply 2 clearly separates framework choice from hosting without the scolding tone or exaggerated claims about static Next.js."}
+{"item":"j00672","prefer":"2","ai_like":"1","reason":"Reply 2 clearly separates transport extras from lodging costs, while Reply 1 misleadingly implies gas is included in $900."}
+{"item":"j02605","prefer":"1","ai_like":"1","reason":"Reply 1 compares the known costs more reliably, despite its report-like tone; Reply 2 adds unsupported kayak and baggage assumptions."}
+{"item":"j00684","prefer":"2","ai_like":"2","reason":"Reply 2 clearly makes Friday the confirmation deadline and records the previous conversations, though its presentation is more templated."}
+{"item":"j01257","prefer":"2","ai_like":"1","reason":"Reply 2 defines active borrowers precisely and adds a useful loan-volume metric, while Reply 1 reads more like a generic checklist."}
+{"item":"j02520","prefer":"1","ai_like":"1","reason":"Reply 1 supplies an actual day-by-day plan and more explicit tools, though compliance should come before the first send."}
+{"item":"j02776","prefer":"2","ai_like":"2","reason":"Reply 2 better conveys the intended formal register and controversial humor, although its phrasing is conspicuously stiff."}
+{"item":"j00694","prefer":"2","ai_like":"1","reason":"Reply 2 is more candid and practical, while Reply 1 leans on inspirational clichés; both are shorter than requested."}
+{"item":"j02981","prefer":"tie","ai_like":"2","reason":"Both are equally usable, but Reply 2 adds a redundant introduction that sounds more like chatbot scaffolding."}
+{"item":"j02973","prefer":"1","ai_like":"same","reason":"Reply 1 uses the sensible 2 p.m. closing time and includes a subject; both sound like standard holiday emails."}
+{"item":"j00742","prefer":"2","ai_like":"1","reason":"Reply 2 is a cleaner operational update and avoids Reply 1's unsupported claim that the worker lag is actively catching up."}

@@ -1,0 +1,15 @@
+{"item": "j00566", "prefer": "1", "ai_like": "1", "reason": "Reply 1 provides complete, well-written templates for each possible handover scenario."}
+{"item": "j01543", "prefer": "2", "ai_like": "1", "reason": "Reply 2 formats the process in a clean, numbered list without conversational filler."}
+{"item": "j01366", "prefer": "2", "ai_like": "same", "reason": "Reply 2 keeps the message brief and avoids the corrupted character artifact in Reply 1."}
+{"item": "j03222", "prefer": "2", "ai_like": "1", "reason": "Reply 2 offers concrete, actionable guidance on mitigating risk while getting the business ready."}
+{"item": "j00080", "prefer": "1", "ai_like": "1", "reason": "Reply 1 uses cleaner markdown formatting for a team channel despite its conversational intro."}
+{"item": "j01585", "prefer": "2", "ai_like": "same", "reason": "Reply 2 breaks down clear, distinct selling points that are easy to translate into a one-pager."}
+{"item": "j01650", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides natural, ready-to-send messages without unnecessary conversational preamble."}
+{"item": "j00644", "prefer": "1", "ai_like": "2", "reason": "Reply 1 reads like seasoned, authentic advice with deep practical knowledge of trade and union dynamics."}
+{"item": "j00123", "prefer": "1", "ai_like": "1", "reason": "Reply 1 helpfully prioritizes upcoming deadlines chronologically with the most urgent items first."}
+{"item": "j02004", "prefer": "1", "ai_like": "same", "reason": "Reply 1 offers a stronger title and addresses specific operational challenges relevant to parks staff."}
+{"item": "j01603", "prefer": "2", "ai_like": "same", "reason": "Reply 2 is punchy and grammatically sound, avoiding the misplaced comma in Reply 1."}
+{"item": "j02570", "prefer": "2", "ai_like": "1", "reason": "Reply 2 provides the exact same bio text without an inaccurate word count annotation."}
+{"item": "j00168", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is easier to scan and covers a wider range of practical risks."}
+{"item": "j02751", "prefer": "2", "ai_like": "same", "reason": "Reply 2 provides clearer navigation guidance and points out the Mac keyboard shortcut conflict."}
+{"item": "j01321", "prefer": "1", "ai_like": "1", "reason": "Reply 1 writes out every algebraic step explicitly to satisfy the user's grading requirement."}

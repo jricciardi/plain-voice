@@ -1,0 +1,15 @@
+{"item": "j00534", "prefer": "2", "ai_like": "1", "reason": "Reply 2 formats the information cleanly without excessive and unnecessary nested bullet points."}
+{"item": "j00788", "prefer": "1", "ai_like": "1", "reason": "Reply 1 answers the user's specific questions directly and concisely in a scannable structure."}
+{"item": "j00753", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides a casual text that reads like an authentic message rather than stiff, formal phrasing."}
+{"item": "j00480", "prefer": "2", "ai_like": "2", "reason": "Reply 2 groups action items by owner clearly, whereas Reply 1 begins with an odd hallucinated note."}
+{"item": "j00920", "prefer": "2", "ai_like": "2", "reason": "Reply 2 offers sharper strategic insights and provides a concrete three-sentence pitch for the one-pager."}
+{"item": "j00995", "prefer": "1", "ai_like": "1", "reason": "Reply 1 uses clear headings that directly address the specific questions asked in the prompt."}
+{"item": "j00498", "prefer": "1", "ai_like": "2", "reason": "Reply 1 bases its advice on the library's actual numbers rather than using generic tech-startup jargon."}
+{"item": "j00541", "prefer": "1", "ai_like": "2", "reason": "Reply 1 formats the math cleanly in plain text and clearly explains every individual algebraic step."}
+{"item": "j00697", "prefer": "1", "ai_like": "same", "reason": "Reply 1 helpfully addresses both using PowerPoint Online and switching to Google Slides."}
+{"item": "j01002", "prefer": "2", "ai_like": "1", "reason": "Reply 2 captures the key details accurately without hallucinating an incorrect day of the week."}
+{"item": "j00087", "prefer": "1", "ai_like": "2", "reason": "Reply 1 focuses directly on the one-pager pitch rather than padding the answer with generic consulting advice."}
+{"item": "j00207", "prefer": "2", "ai_like": "2", "reason": "Reply 2 highlights crucial real-world trade realities like builder payment delays and working capital."}
+{"item": "j00878", "prefer": "1", "ai_like": "same", "reason": "Reply 1 offers a better title and a well-balanced summary suitable for a conference program."}
+{"item": "j00014", "prefer": "1", "ai_like": "2", "reason": "Reply 1 notices the timing conflict between the trial end and the decision date, offering practical advice."}
+{"item": "j00648", "prefer": "1", "ai_like": "2", "reason": "Reply 1 shows every intermediate step separately and includes a verification check to ensure no points are lost."}

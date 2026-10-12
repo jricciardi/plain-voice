@@ -1,0 +1,15 @@
+{"item": "j01035", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is punchier and avoids the generic corporate jargon added by Reply 2."}
+{"item": "j00032", "prefer": "1", "ai_like": "2", "reason": "Reply 1 reads like a genuine casual email rather than an AI template with bullet points and conversational preamble."}
+{"item": "j00062", "prefer": "1", "ai_like": "same", "reason": "Reply 1 clearly separates the main decision, assigned action items, and unresolved questions."}
+{"item": "j00747", "prefer": "2", "ai_like": "1", "reason": "Reply 2 jumps straight into the table and gives grounded analysis without the chatty intro and formulaic tie-breaker wrap-up of Reply 1."}
+{"item": "j00720", "prefer": "2", "ai_like": "1", "reason": "Reply 2 writes in a natural, unforced voice without the bolded keywords and formulaic formatting of Reply 1."}
+{"item": "j00021", "prefer": "2", "ai_like": "same", "reason": "Reply 2 provides cleaner, easier-to-follow steps without offering confusing alternative methods at the end."}
+{"item": "j00039", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is heartfelt, concise, and easy to memorize, whereas Reply 2 leans on canned wedding speech cliches."}
+{"item": "j00842", "prefer": "2", "ai_like": "1", "reason": "Reply 2 has a friendlier tone and helpful context for runners while keeping the announcement clear and readable."}
+{"item": "j00873", "prefer": "1", "ai_like": "same", "reason": "Reply 1 has sharper prose and frames the operational risk trade-off with exceptional clarity."}
+{"item": "j00504", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives practical, structured advice on what to put on the one-pager, whereas Reply 1 is an unfocused block of marketing buzzwords."}
+{"item": "j00522", "prefer": "2", "ai_like": "1", "reason": "Reply 2 uses practical minute-by-minute timestamps and concise talking points suited for an all-hands talk track."}
+{"item": "j00104", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides direct, practical tradesman-oriented advice without the boilerplate AI structure and trailing questions of Reply 2."}
+{"item": "j00438", "prefer": "1", "ai_like": "same", "reason": "Reply 1 provides clean, conventional algebra steps that match standard classroom notation."}
+{"item": "j00872", "prefer": "1", "ai_like": "same", "reason": "Reply 1 is beautifully written with genuine emotional resonance and great rhythm for speaking."}
+{"item": "j00927", "prefer": "2", "ai_like": "same", "reason": "Both sound remarkably natural, but Reply 2 gives a slightly more thorough explanation of flash rust and the full reseasoning process."}

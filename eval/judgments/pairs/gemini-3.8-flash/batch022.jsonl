@@ -1,0 +1,15 @@
+{"item": "j01897", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives practical advice in a grounded, natural voice without Reply 1's heavy formatting and bulleted metrics."}
+{"item": "j02691", "prefer": "1", "ai_like": "same", "reason": "Reply 1 puts the most crucial reassurance right up front and keeps the summary focused on the user's specific questions."}
+{"item": "j00602", "prefer": "2", "ai_like": "1", "reason": "Reply 2 provides a natural, direct draft without Reply 1's categorized list, emojis, and boilerplate tips."}
+{"item": "j02850", "prefer": "1", "ai_like": "1", "reason": "Reply 1 offers genuine emotional depth and perceptive guidance, whereas Reply 2 is dismissively brief."}
+{"item": "j01657", "prefer": "2", "ai_like": "1", "reason": "Reply 2 writes a charming, casual email as requested, whereas Reply 1 falls back on a bulleted product spec list."}
+{"item": "j00573", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides a clean, coherent rewrite without the parenthetical clutter added in Reply 2."}
+{"item": "j02499", "prefer": "2", "ai_like": "1", "reason": "Reply 2 provides the exact ready-to-send email needed, whereas Reply 1 offers a menu of multiple templates."}
+{"item": "j02079", "prefer": "1", "ai_like": "2", "reason": "Reply 1 delivers direct, conversational technical advice without Reply 2's excessive headings and markdown structure."}
+{"item": "j02133", "prefer": "1", "ai_like": "same", "reason": "Reply 1 is more concise and avoids the slight redundancy present in Reply 2."}
+{"item": "j02277", "prefer": "2", "ai_like": "same", "reason": "Reply 2 organizes the notes cleanly without inventing extra commentary not present in the original."}
+{"item": "j02967", "prefer": "2", "ai_like": "1", "reason": "Reply 2 feels realistic and grounded for a municipal parks talk, avoiding the buzzwords and formulaic framing in Reply 1."}
+{"item": "j02367", "prefer": "1", "ai_like": "same", "reason": "Reply 1 is easier to parse quickly because it breaks the reassurance and details into distinct short paragraphs."}
+{"item": "j02032", "prefer": "2", "ai_like": "2", "reason": "Reply 2 uses the labeled, scannable bullet format best suited for a live Slack incident channel."}
+{"item": "j00444", "prefer": "1", "ai_like": "1", "reason": "Reply 1 helpfully separates immediate action items from general dates, making it much easier for a busy parent to prioritize."}
+{"item": "j01573", "prefer": "2", "ai_like": "2", "reason": "Reply 2 correctly drafts a reply to the friend's post, whereas Reply 1 mistakenly writes a tweet about the user's own slump."}

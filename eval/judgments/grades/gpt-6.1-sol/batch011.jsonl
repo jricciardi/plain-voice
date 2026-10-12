@@ -1,0 +1,12 @@
+{"item":"g01188","facts":[],"invented":[],"format":"yes"}
+{"item":"g00314","facts":["present","present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00170","facts":["present","present"],"invented":[],"format":"n/a"}
+{"item":"g00583","facts":["present","present","missing","present"],"invented":[],"format":"n/a"}
+{"item":"g00479","facts":["present","present","present","present","present"],"invented":["The writer uses both automated and manual transaction matching.","The writer posts adjusting entries.","The reconciliation report includes match rates."],"format":"n/a"}
+{"item":"g01256","facts":[],"invented":["The Denver stay has no built-in activities for the children."],"format":"yes"}
+{"item":"g00535","facts":["present","present","present","present","missing","present","missing"],"invented":[],"format":"n/a"}
+{"item":"g00496","facts":["present","present","present","present","present","present","missing"],"invented":["The incident update is timestamped 14:10 UTC; the user supplied that time only for the severity downgrade."],"format":"n/a"}
+{"item":"g00261","facts":[],"invented":[],"format":"yes"}
+{"item":"g00330","facts":["present","present"],"invented":[],"format":"yes"}
+{"item":"g00108","facts":["present","present"],"invented":[],"format":"yes"}
+{"item":"g00174","facts":["present","present","present","present","present"],"invented":[],"format":"n/a"}

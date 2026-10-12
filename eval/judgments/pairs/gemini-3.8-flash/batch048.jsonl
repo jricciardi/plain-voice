@@ -1,0 +1,15 @@
+{"item": "j02176", "prefer": "1", "ai_like": "1", "reason": "Providing separate templates for each scenario is much more practical and professional than asking the customer to decide on overtime."}
+{"item": "j01956", "prefer": "1", "ai_like": "2", "reason": "Reply 1 cleanly formats the notes without inventing pedantic next steps about unrecorded billing periods."}
+{"item": "j02576", "prefer": "2", "ai_like": "1", "reason": "Reply 2 offers especially smart, pragmatic trade advice, including having one brother peel off first to manage risk."}
+{"item": "j02926", "prefer": "2", "ai_like": "1", "reason": "Reply 1 mistakenly calls the most expensive option the smartest financially and ends with unnecessary chatbot offer boilerplate."}
+{"item": "j00432", "prefer": "1", "ai_like": "1", "reason": "Reply 1 provides a well-structured, scannable summary that directly highlights the key answers requested."}
+{"item": "j01710", "prefer": "1", "ai_like": "1", "reason": "Reply 1 uses helpful bolding and a timestamp header that make incident status changes easy to scan in a Slack channel."}
+{"item": "j01548", "prefer": "2", "ai_like": "same", "reason": "Reply 2 provides a richer and more complete technical explanation while honoring the single-paragraph constraint."}
+{"item": "j00200", "prefer": "1", "ai_like": "2", "reason": "Reply 1 improves the review naturally, whereas Reply 2 adds unnecessary conversational meta-commentary at the end."}
+{"item": "j01485", "prefer": "2", "ai_like": "2", "reason": "Reply 2 understands the request for elevated language and produces a genuinely sophisticated review."}
+{"item": "j02715", "prefer": "1", "ai_like": "same", "reason": "Reply 1 is exceptionally clear, logical, and explains how local sediment records build evidence for global temperature shifts without unnecessary jargon."}
+{"item": "j02918", "prefer": "1", "ai_like": "2", "reason": "Reply 1 accurately organizes the notes, whereas Reply 2 introduces redundant phrasing and unnecessary corporate filler."}
+{"item": "j02417", "prefer": "2", "ai_like": "same", "reason": "Reply 2 provides concrete everyday examples that make the explanation significantly more relatable and clearer for a layman."}
+{"item": "j02487", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides a clean, natural answer without the exaggerated bolding and repetitive summary of Reply 2."}
+{"item": "j00368", "prefer": "1", "ai_like": "1", "reason": "Reply 1 strikes an engaging, warm, and natural tone for existing customers, whereas Reply 2 is bare and clinical."}
+{"item": "j01398", "prefer": "2", "ai_like": "same", "reason": "Reply 2 captures key operational nuances, including maintaining disposable packaging as a fallback and investigating root causes if returns are low."}

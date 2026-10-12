@@ -1,0 +1,15 @@
+{"item": "j01560", "prefer": "1", "ai_like": "same", "reason": "Reply 1 provides the scripture text and helpful guidance on pacing for reading aloud."}
+{"item": "j02600", "prefer": "2", "ai_like": "1", "reason": "Reply 2 stays faithful to the provided notes rather than inventing extra action items."}
+{"item": "j00474", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives clear, practical audio automation steps without chatty conversational filler."}
+{"item": "j01852", "prefer": "2", "ai_like": "same", "reason": "Reply 2 provides a concise, polite script along with a useful response if the teacher pushes back."}
+{"item": "j00240", "prefer": "1", "ai_like": "2", "reason": "Reply 1 reads like direct human advice rather than a templated bulleted coaching framework."}
+{"item": "j02750", "prefer": "1", "ai_like": "same", "reason": "Reply 1 is clearer, better structured, and more direct."}
+{"item": "j02582", "prefer": "1", "ai_like": "same", "reason": "Reply 1 offers tighter, more practical presenter notes for a company-wide audience."}
+{"item": "j00633", "prefer": "1", "ai_like": "1", "reason": "Reply 1 provides genuinely punchy badge copy options that fit the character and length constraints."}
+{"item": "j00396", "prefer": "1", "ai_like": "2", "reason": "Reply 1 honors the request to keep it short without adding melodramatic filler or excessive bolding."}
+{"item": "j02223", "prefer": "1", "ai_like": "same", "reason": "Reply 1 offers a more practical north star and actionable ideas for a volunteer coordinator."}
+{"item": "j01516", "prefer": "2", "ai_like": "same", "reason": "Reply 2 includes practical tactics to protect immediate focus alongside the escalation steps."}
+{"item": "j01998", "prefer": "2", "ai_like": "same", "reason": "Reply 2 hits the target word count closely while maintaining a grounded, authentic tone."}
+{"item": "j03083", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is more succinct and avoids repetitive corporate buzzwords."}
+{"item": "j01353", "prefer": "2", "ai_like": "same", "reason": "Reply 2 adheres closer to the requested length and develops the firm's experience more thoroughly."}
+{"item": "j00143", "prefer": "tie", "ai_like": "same", "reason": "Both replies provide clean, natural grammatical corrections."}

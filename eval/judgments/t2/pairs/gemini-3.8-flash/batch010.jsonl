@@ -1,0 +1,15 @@
+{"item": "j00116", "prefer": "2", "ai_like": "same", "reason": "Reply 2 explains the general concept more clearly with a helpful contrast before detailing the chess research."}
+{"item": "j01137", "prefer": "2", "ai_like": "1", "reason": "Reply 2 follows the requested one-to-two sentence constraint per term, whereas Reply 1 writes lengthy paragraphs."}
+{"item": "j00008", "prefer": "2", "ai_like": "same", "reason": "Reply 2 describes the parts more clearly for a beginner and offers immediate troubleshooting for chain slack."}
+{"item": "j00224", "prefer": "2", "ai_like": "1", "reason": "Reply 2 provides more realistic mileage figures grounded in reported fleet degradation rather than aspirational CEO quotes."}
+{"item": "j00894", "prefer": "2", "ai_like": "2", "reason": "Reply 2's structured bullets are much easier to scan right before a phone call, though its formatting is more stereotypically AI."}
+{"item": "j00063", "prefer": "1", "ai_like": "same", "reason": "Reply 1 better explains the formal structure of a syllogism and the role of the shared middle term."}
+{"item": "j00039", "prefer": "2", "ai_like": "same", "reason": "Reply 2 correctly interprets 'pushed' as a schedule delay, whereas Reply 1 mistakenly claims the release went out on Thursday."}
+{"item": "j01299", "prefer": "tie", "ai_like": "same", "reason": "Both replies mistakenly interpret 'pushed' as released rather than delayed, making them essentially tied."}
+{"item": "j00889", "prefer": "2", "ai_like": "1", "reason": "Reply 2 sticks accurately to the meeting notes without fabricating priority levels like Reply 1 does in its table."}
+{"item": "j01238", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides helpful common examples of valid reasons and practical advice on keeping consular correspondence direct."}
+{"item": "j00738", "prefer": "1", "ai_like": "same", "reason": "Reply 1's bulleted list is cleaner and more standard for a multi-point Slack update than loose paragraphs."}
+{"item": "j00744", "prefer": "2", "ai_like": "1", "reason": "Reply 2 formats the reminders as bullets for easier scanning and avoids adding unprompted praise."}
+{"item": "j00015", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides page-length allocations and a solid working thesis to directly anchor a 10-page research paper."}
+{"item": "j01023", "prefer": "1", "ai_like": "same", "reason": "Reply 1 drafts a complete email including a subject line, greeting, and sign-off, whereas Reply 2 omits email formatting."}
+{"item": "j00816", "prefer": "2", "ai_like": "1", "reason": "Reply 2 explains the concept more cohesively and highlights the key experimental finding regarding memory for structured versus random positions."}

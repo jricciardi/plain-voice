@@ -1,0 +1,15 @@
+{"item": "j00601", "prefer": "2", "ai_like": "1", "reason": "Reply 1 contains an internal system artifact ('Logged todo.') and unnecessary boilerplate, whereas Reply 2 is a clean draft."}
+{"item": "j01022", "prefer": "1", "ai_like": "1", "reason": "Reply 1 provides a clean, well-structured email layout, though its heavy bolding and subheadings sound noticeably AI-generated."}
+{"item": "j00630", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is clear and well-formatted, whereas Reply 2 contains corrupted character encoding."}
+{"item": "j00231", "prefer": "2", "ai_like": "same", "reason": "Both provide exceptional academic editing, but Reply 2's revised draft is slightly tighter and flows more naturally."}
+{"item": "j01071", "prefer": "2", "ai_like": "2", "reason": "Reply 2 provides a more substantive critique that directly addresses the decision-making context, though its structure is more AI-like."}
+{"item": "j00853", "prefer": "1", "ai_like": "same", "reason": "Reply 1 provides grounded case studies and detailed planning considerations in a clean, readable outline format."}
+{"item": "j01274", "prefer": "1", "ai_like": "same", "reason": "Reply 1 offers a tighter, more cohesive structure that aligns directly with the requested seminar paper requirements."}
+{"item": "j01029", "prefer": "2", "ai_like": "1", "reason": "Reply 2 properly distinguishes actionable tasks from context, whereas Reply 1 clutters action items with decisions and heavy AI bolding."}
+{"item": "j01064", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides a realistic, grounded estimate and explanation, whereas Reply 2 cites overly optimistic mileage figures."}
+{"item": "j00810", "prefer": "2", "ai_like": "2", "reason": "Reply 2 provides more thorough and practical methodological advice, though its dense header formatting is unmistakably AI-style."}
+{"item": "j00732", "prefer": "1", "ai_like": "2", "reason": "Reply 1 feels warm and natural for Slack, while Reply 2 relies on generic farewell clichés."}
+{"item": "j00261", "prefer": "1", "ai_like": "2", "reason": "Reply 1 explains complex critical thinking concepts in clear prose, whereas Reply 2 defaults to formulaic AI lists and bold headers."}
+{"item": "j00213", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives sensible, direct advice without the patronizing chatbot coaching tone and open-ended questions of Reply 2."}
+{"item": "j00086", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gets straight to the drafted message without Reply 1's unnecessary chatbot disclaimer."}
+{"item": "j00648", "prefer": "1", "ai_like": "same", "reason": "Reply 1 is polite and usable, whereas Reply 2 suffers from corrupted null-character encoding throughout."}

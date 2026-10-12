@@ -1,0 +1,15 @@
+{"item": "j00454", "prefer": "2", "ai_like": "1", "reason": "Reply 2 stays closer to the given facts and sounds more like a student, while Reply 1's moralizing closer is stock essay-bot."}
+{"item": "j00778", "prefer": "tie", "ai_like": "same", "reason": "The two captions are identical."}
+{"item": "j00371", "prefer": "1", "ai_like": "same", "reason": "Both critiques are sharp, but only Reply 1's rewrite actually fixes the inconsistent author spelling."}
+{"item": "j00700", "prefer": "1", "ai_like": "2", "reason": "Reply 1 keeps the quiet-service tension without echoing the prompt, while Reply 2 pastes the request and uses stock recommendation-letter lines."}
+{"item": "j01327", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is warmer and more careful about small, safe trust steps, while Reply 1 reads like a generic advice checklist."}
+{"item": "j01383", "prefer": "2", "ai_like": "same", "reason": "Reply 2 answers when to assume and when not to more directly, which was the core of the question."}
+{"item": "j00659", "prefer": "1", "ai_like": "1", "reason": "Reply 1 gives more useful transcription examples, though its bullets and trailing rule feel more templated."}
+{"item": "j00263", "prefer": "2", "ai_like": "same", "reason": "Reply 2 adds the ladder of inference, confidence checks, and confirmation bias without losing the practical when-to-assume guidance."}
+{"item": "j00226", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is one sendable note that mentions the promise, while Reply 2's option menu is the more generic chatbot move."}
+{"item": "j00053", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is the more usable pre-call brief, with a clear ask and a heads-up that the noon deadline has passed."}
+{"item": "j00610", "prefer": "1", "ai_like": "1", "reason": "Reply 1 lists owners and dates cleanly, while Reply 2 ends with a stray logged-todos line that does not belong."}
+{"item": "j00412", "prefer": "2", "ai_like": "2", "reason": "Reply 2 gives the same go-ahead but names the real cost of waiting, a conflicting filing and wasted labels, instead of overclaiming that filing later cannot affect rights."}
+{"item": "j01263", "prefer": "1", "ai_like": "2", "reason": "Reply 1 keeps the six-withdrawal limit and the small dollar gap, while Reply 2 invents branch access for Kestrel and drops that constraint from the table."}
+{"item": "j00599", "prefer": "2", "ai_like": "1", "reason": "Reply 2 makes the Thursday-to-Monday delay clearer, while Reply 1's pushed-Thursday line can be read as already shipped."}
+{"item": "j00772", "prefer": "1", "ai_like": "same", "reason": "Reply 1 names Subversion and separates real version control from file-sync history, which more completely answers the question."}

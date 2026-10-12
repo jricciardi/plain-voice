@@ -30,3 +30,7 @@ Judges rated the four-edit candidate even with v1 (50% on targeted test-1 prompt
 ## Final v2
 
 v1 plus the list edit and the fidelity edit. The bold-label rule stays as written: three phrase checks from a fatigued session weren't enough to override the author's rule, given that the judges treat bold as chatbot style.
+
+## Outcome
+
+v2 didn't ship. On sealed test-2 it failed the tells bar for MAI (as v1 also did on those prompts) and missed more required facts than v1, mostly on one advice prompt. It matched v1 on everything else. v1 stays, unchanged. See [RESULTS.md](RESULTS.md).

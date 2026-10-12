@@ -1,0 +1,15 @@
+{"item": "j03000", "prefer": "1", "ai_like": "1", "reason": "Reply 1 makes the incident facts easier to scan, though its greeting and closing feel more templated."}
+{"item": "j02847", "prefer": "2", "ai_like": "1", "reason": "Reply 2 supplies a usable verse and acknowledges differing traditions, while Reply 1 sounds more formulaic."}
+{"item": "j01227", "prefer": "1", "ai_like": "same", "reason": "Reply 1 explains shared kernel memory and the performance tradeoff more fully, with much the same textbook tone."}
+{"item": "j01135", "prefer": "2", "ai_like": "1", "reason": "Reply 2 adds auction payment deadlines and avoids the absolute inspection claim, while Reply 1 feels more canned."}
+{"item": "j00012", "prefer": "1", "ai_like": "1", "reason": "Reply 1 covers the requested inputs and ATP caveat more fully, though Reply 2 uses a more natural conversational voice."}
+{"item": "j00862", "prefer": "2", "ai_like": "1", "reason": "Reply 2 answers the main question directly, while Reply 1's elaborate period-by-period taxonomy feels more generated."}
+{"item": "j00825", "prefer": "1", "ai_like": "2", "reason": "Reply 1 stays closer to the supplied background, while Reply 2 adds unsupported global experience and more corporate jargon."}
+{"item": "j03081", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is tighter and closer to the brief, while Reply 2 relies on stock phrases such as 'intersection of'."}
+{"item": "j02430", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives practical browser steps and handles view-only files, while Reply 2 feels more like a generic help snippet."}
+{"item": "j02557", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is deployable without fragile add-ons, while Reply 2's templated plan overstates Google Forms' slot-limiting abilities."}
+{"item": "j00891", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives direct notices without making staffing the customer's decision, while Reply 2 has more templated filler."}
+{"item": "j00582", "prefer": "1", "ai_like": "2", "reason": "Reply 1 explains the same tradeoffs in more natural language, while Reply 2 has a more formulaic textbook cadence."}
+{"item": "j00903", "prefer": "2", "ai_like": "1", "reason": "Reply 2 explains fault isolation concretely, while Reply 1 uses inflated phrasing and stronger blanket claims."}
+{"item": "j00958", "prefer": "1", "ai_like": "2", "reason": "Reply 1 preserves all the details without Reply 2's redundant 'streamline' and 'eliminate bottlenecks' phrasing."}
+{"item": "j02527", "prefer": "2", "ai_like": "2", "reason": "Reply 2 describes Isaiah 40 more accurately and explains lectionary options, though its polished list feels more chatbot-like."}

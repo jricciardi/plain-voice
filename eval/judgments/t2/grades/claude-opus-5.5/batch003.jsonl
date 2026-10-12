@@ -1,0 +1,12 @@
+{"item": "g00350", "facts": ["present", "present", "present", "present", "present", "present", "present", "missing"], "invented": [], "format": "n/a"}
+{"item": "g00206", "facts": ["present", "present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00353", "facts": ["present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00423", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00227", "facts": ["present", "present", "present", "present", "present", "present"], "invented": ["Expense report deadline given as Friday, October 16 (weekday not provided by the user)"], "format": "n/a"}
+{"item": "g00281", "facts": [], "invented": ["Kestrel Point Bank access guessed as 'Online + branches? (verify)' (user gave no access details for Kestrel)"], "format": "yes"}
+{"item": "g00131", "facts": ["present", "present", "present", "present", "present", "present", "present", "present"], "invented": ["Advice to set up an automated log export before January 1, 2027 (notice gives no such timing or automation)", "Claim that no administrative or transition fees are being added (notice only says no separate migration fee)"], "format": "n/a"}
+{"item": "g00314", "facts": ["present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00173", "facts": ["present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00522", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00344", "facts": [], "invented": ["Calgary's downtown office vacancy attributed to energy-sector changes", "Calgary public incentive program for office conversions"], "format": "yes"}
+{"item": "g00143", "facts": [], "invented": ["Webinar billed as a live demo of setting up recurring invoices (user only mentioned a 30-minute webinar with live Q&A)"], "format": "yes"}

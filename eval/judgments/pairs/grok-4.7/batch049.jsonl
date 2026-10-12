@@ -1,0 +1,15 @@
+{"item": "j00346", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is tighter and flags the monthly-price assumption the notes never stated, while Reply 1 pads the same wiki with extra invented next steps."}
+{"item": "j01031", "prefer": "1", "ai_like": "1", "reason": "Reply 1 stays closer to the firm's actual rule by keeping numbers out of prompts, even though its false-choice ending sounds more like stock thought leadership."}
+{"item": "j00598", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is warmer and more speakable, while Reply 2 reads like a structured advice article with a counselor closer."}
+{"item": "j00865", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is the more complete comparison, but its numbered headers, bold labels, and summary block are textbook chatbot formatting."}
+{"item": "j01757", "prefer": "2", "ai_like": "2", "reason": "Reply 2 better untangles Astro versus Next.js and hosting, though the bold bullets and either-is-valid closer are more assistant-like."}
+{"item": "j00118", "prefer": "2", "ai_like": "same", "reason": "Reply 2 is the clearer catch-up, with owners and constraints separated so the missed thread is easy to act on."}
+{"item": "j00058", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is a shorter, more memorizable toast that stays with the given story, while Reply 2 adds coaching and invented sentiment."}
+{"item": "j02107", "prefer": "2", "ai_like": "same", "reason": "Reply 2 names PowerPoint for the web, gives the right Google Slides menu, and warns that formatting can change."}
+{"item": "j00838", "prefer": "1", "ai_like": "same", "reason": "Reply 1's subject and date placeholders make the follow-up easier to act on than Reply 2's ambiguous status-update subject."}
+{"item": "j01679", "prefer": "2", "ai_like": "1", "reason": "Reply 2's title and abstract are more specific to parks staff, while Reply 1 leans on a generic attendees-will-leave-with-a-framework close."}
+{"item": "j01225", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is the cleaner single paragraph the request asked for, while Reply 2 bold-labels the same contrast like a textbook."}
+{"item": "j00728", "prefer": "tie", "ai_like": "2", "reason": "Both cleanups are equally usable, but Reply 2's bold section labels feel more like a formatted template."}
+{"item": "j00023", "prefer": "1", "ai_like": "2", "reason": "Reply 1 does not invent a monthly rate for every vendor and flags the uncertain CSV note, while Reply 2 states both as fact."}
+{"item": "j01849", "prefer": "2", "ai_like": "2", "reason": "Reply 2 gives several true reasons to choose from, which matters because the teacher asked for one, even though the option list is more stock."}
+{"item": "j01495", "prefer": "1", "ai_like": "same", "reason": "Reply 1's notes on ice makers, compressors, and warranties are more useful for side-by-sides than Reply 2's generic Energy Star advice."}

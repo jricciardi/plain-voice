@@ -1,0 +1,15 @@
+{"item": "j02233", "prefer": "1", "ai_like": "1", "reason": "Reply 1 provides a much clearer, actionable dispatch board and departure checklist that is easy for a coordinator to implement immediately."}
+{"item": "j00579", "prefer": "1", "ai_like": "same", "reason": "Reply 1 covers the technical trade-offs with slightly richer detail and historical context while strictly respecting the single-paragraph constraint."}
+{"item": "j00045", "prefer": "1", "ai_like": "2", "reason": "Reply 1 feels genuinely casual and conversational without falling into formulaic bullet points."}
+{"item": "j00339", "prefer": "1", "ai_like": "2", "reason": "Reply 1 includes all key changes in the TL;DR and avoids unnecessary post-announcement assistant chatter."}
+{"item": "j01491", "prefer": "1", "ai_like": "1", "reason": "Reply 1 provides much more substantive and helpful guidance on refrigerator reliability and common failure points."}
+{"item": "j00456", "prefer": "1", "ai_like": "2", "reason": "Reply 1 explains the science thoroughly in engaging, cohesive prose rather than an over-structured textbook outline with tables and bullets."}
+{"item": "j01378", "prefer": "2", "ai_like": "1", "reason": "Reply 2 includes a proper greeting and avoids Reply 1's nonsensical closing request to confirm receipt of assets that have not yet been provided."}
+{"item": "j02313", "prefer": "1", "ai_like": "2", "reason": "Reply 1 delivers a beautifully written, heartfelt toast that is easy to memorize without clunky phrasing or unnecessary meta-commentary."}
+{"item": "j00075", "prefer": "1", "ai_like": "same", "reason": "Reply 1 has a warmer, more community-oriented tone fitting an independent local hardware store owner."}
+{"item": "j02152", "prefer": "1", "ai_like": "1", "reason": "Reply 1 provides a clear, structured comparison table alongside crucial nuance regarding Italian Fascism's racial policies."}
+{"item": "j01405", "prefer": "2", "ai_like": "1", "reason": "Reply 2 clearly organizes the takeaways and action items by owner, whereas Reply 1 includes a bizarre hallucinated system message about logging todos."}
+{"item": "j00315", "prefer": "2", "ai_like": "same", "reason": "Reply 2 is punchier by leading with the active verb 'fixes' rather than the passive 'helps fix'."}
+{"item": "j02950", "prefer": "1", "ai_like": "2", "reason": "Reply 1 feels more grounded in real bakery operations and delivers the requested facts with genuine conviction rather than generic corporate buzzwords."}
+{"item": "j03019", "prefer": "2", "ai_like": "same", "reason": "Reply 2 accurately preserves the specific operational deadlines and correctly clarifies that the registration cap is 150 rather than confusingly stating the cap was removed."}
+{"item": "j01797", "prefer": "2", "ai_like": "same", "reason": "Reply 2 provides sharper, more concrete parallels for both idioms and concludes with a clear summary."}

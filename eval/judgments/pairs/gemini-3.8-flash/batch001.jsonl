@@ -1,0 +1,15 @@
+{"item": "j02005", "prefer": "2", "ai_like": "2", "reason": "Reply 2 includes a friendly greeting suitable for a neighborhood store, though its bold text and phrasing sound slightly more like an AI assistant."}
+{"item": "j00039", "prefer": "2", "ai_like": "2", "reason": "Reply 2 writes natural, practical messages without inventing a calendar date like Reply 1 does, though its conversational intro is typical AI style."}
+{"item": "j01957", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides a clean, readable comparison without Reply 2's excessive bolding and safety-lecture padding."}
+{"item": "j00510", "prefer": "1", "ai_like": "2", "reason": "Reply 1 offers a clear, direct template without the conversational filler and corporate cliches of Reply 2."}
+{"item": "j02157", "prefer": "1", "ai_like": "1", "reason": "Reply 1 provides a sharper, more comprehensive ideological comparison, though its concluding paragraph uses a standard chatbot summary formula."}
+{"item": "j02465", "prefer": "1", "ai_like": "same", "reason": "Reply 1 properly includes the formal headers and vacancy announcement references expected in federal application packages."}
+{"item": "j00093", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is clear and concise without the cheerleader preamble, bold category tags, and invented date found in Reply 2."}
+{"item": "j02187", "prefer": "1", "ai_like": "same", "reason": "Reply 1 adds specific accounting domain terminology that makes the reconciliation process much more actionable."}
+{"item": "j01951", "prefer": "1", "ai_like": "2", "reason": "Reply 1 organizes the notes cleanly without Reply 2's repetitive, robotic complaints about missing billing intervals."}
+{"item": "j01704", "prefer": "2", "ai_like": "same", "reason": "Reply 2 has slightly cleaner phrasing and a more concise subject line, while both share similar AI-style bolding patterns."}
+{"item": "j02421", "prefer": "1", "ai_like": "2", "reason": "Reply 1 offers direct, pragmatic prose instead of Reply 2's generic bolded listicle and formulaic closing disclaimer."}
+{"item": "j02966", "prefer": "1", "ai_like": "2", "reason": "Reply 1 sticks closely to the actual experiment described in the prompt rather than inventing a prairie restoration project."}
+{"item": "j02935", "prefer": "2", "ai_like": "same", "reason": "Reply 2 is polished and professional, avoiding the awkward placeholder spacing and overly alarmed subject line of Reply 1."}
+{"item": "j01686", "prefer": "2", "ai_like": "2", "reason": "Reply 2 feels more personal and authentic for a longstanding store owner, though its bolded text is distinctly AI-like."}
+{"item": "j01633", "prefer": "2", "ai_like": "same", "reason": "Reply 2 accurately reflects the uncertainty around CSV exports rather than stating lack of support as a confirmed fact."}

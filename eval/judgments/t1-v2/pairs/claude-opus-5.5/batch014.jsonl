@@ -1,0 +1,15 @@
+{"item": "j00868", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is warmer, has a stronger close and gives useful delivery notes, while Reply 2 clumsily repeats facts from the prompt and adds a claim about closures nobody asked for."}
+{"item": "j00368", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is a tight, accurate summary, while Reply 2 runs nearly as long as the original under heavy headers and bold."}
+{"item": "j00880", "prefer": "2", "ai_like": "2", "reason": "Reply 2 offers two good titles and a stronger hook, though its fragments, contrasts and punchy closer read as more machine-made."}
+{"item": "j00997", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gets the 150 cap, replay, blog and invite-list points right, while Reply 2 garbles the cap and invents a 'main issue' diagnosis."}
+{"item": "j00357", "prefer": "2", "ai_like": "1", "reason": "Reply 2 has a plainer title and invents fewer details, while Reply 1 piles made-up results under a buzzword colon title."}
+{"item": "j00470", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is a clean, accurate paragraph, while Reply 1 opens with a stray 'Logged 1 todo.' and adds boilerplate risks and next-steps sections."}
+{"item": "j00869", "prefer": "2", "ai_like": "1", "reason": "Reply 2 turns the tow-truck story into a moving point about who Priya is, while Reply 1 retells it flatly and tacks on coaching notes."}
+{"item": "j00506", "prefer": "2", "ai_like": "2", "reason": "Reply 2 deals with both the double booking and the route that never left and adds a one-page runbook, though its chirpy opener, bullets and stray todo line feel bot-like."}
+{"item": "j00261", "prefer": "1", "ai_like": "same", "reason": "Reply 1 keeps the voluntary participation, disposable fallback and separate-approval points that Reply 2 drops, and both read as similar plain prose."}
+{"item": "j00796", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives every item in one clean list, while Reply 2 repeats the same dates across a table and two more lists."}
+{"item": "j00399", "prefer": "1", "ai_like": "1", "reason": "Reply 1 gives a fuller strategy and a ready one-pager outline, though its heavy markdown and 'white-glove' sales language are classic chatbot."}
+{"item": "j00633", "prefer": "2", "ai_like": "same", "reason": "The two are nearly identical, but Reply 2's body repeats the Nov 7 date and the new meeting spot, so it stands on its own."}
+{"item": "j00213", "prefer": "1", "ai_like": "1", "reason": "Reply 1 lists the inputs, outputs and ATP counts for each stage as the student asked, though its bullets with every term bolded look more machine-made."}
+{"item": "j00929", "prefer": "tie", "ai_like": "same", "reason": "The two replies are identical."}
+{"item": "j00525", "prefer": "1", "ai_like": "1", "reason": "Both are solid, but Reply 1 explains oxygen's role and adds a flashcard recap, though in a more formulaic tutor style."}

@@ -1,0 +1,15 @@
+{"item": "j02921", "prefer": "1", "ai_like": "2", "reason": "Reply 1 stays faithful to the notes, while Reply 2 pads entries with invented judgments like 'good fit for our current needs' and ends on an off-tone first-person line."}
+{"item": "j02858", "prefer": "2", "ai_like": "2", "reason": "Reply 2 offers several ready-to-send options with useful guidance, though its options-plus-coaching format reads more like a chatbot than Reply 1's single plain message."}
+{"item": "j02024", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is warmer and thanks volunteers for the adoption win, but its heavy bolding and 'Great news' framing are stock AI email style."}
+{"item": "j01872", "prefer": "2", "ai_like": "2", "reason": "Reply 2 covers more of the requested topics and tools (SPF/DKIM, Klaviyo, e-commerce, B2B), but in a long header-heavy format typical of chatbots."}
+{"item": "j01172", "prefer": "1", "ai_like": "same", "reason": "Both give similar brand advice in plain prose, but Reply 1 adds a budget pick and practical ice-maker reliability advice."}
+{"item": "j00785", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives a clean, correct fix with clear notes, while Reply 2 over-formats with option headers and broken LaTeX arrows."}
+{"item": "j01647", "prefer": "2", "ai_like": "1", "reason": "Reply 2 adds a subject line and tighter wording, while Reply 1's 'plan accordingly and have a clear record' line feels like prompt context pasted into the letter."}
+{"item": "j02525", "prefer": "2", "ai_like": "1", "reason": "Both list fitting passages, but Reply 2 is cleaner and broader while Reply 1 leans on bold headers, dashes, and an unsupported 'many families use' claim."}
+{"item": "j00762", "prefer": "1", "ai_like": "1", "reason": "Reply 1 captures more decisions (no re-registration, no overflow, consent chase) despite its bold-header AI formatting, and Reply 2 misstates June's caption deadline."}
+{"item": "j01374", "prefer": "2", "ai_like": "2", "reason": "Reply 2 states the delay cause accurately and closes like a real client email, though its scattered bolding feels more templated."}
+{"item": "j00911", "prefer": "2", "ai_like": "same", "reason": "The plans are nearly interchangeable in style, but Reply 2 gets hands-on with tools earlier and ends by building a real test campaign."}
+{"item": "j02764", "prefer": "1", "ai_like": "1", "reason": "Reply 1 explains both phrases with more context, including that the stereotype is dated, though its string of 'it does not mean' negations reads more crafted."}
+{"item": "j00924", "prefer": "1", "ai_like": "2", "reason": "Reply 1's short options sound genuine and invite a reply, while Reply 2's headers, emoji, and cheery cliches are stock chatbot style."}
+{"item": "j02740", "prefer": "1", "ai_like": "same", "reason": "Both explain it plainly in similar voices, but Reply 1 also covers why the opacity matters and how people cope with it."}
+{"item": "j02247", "prefer": "1", "ai_like": "same", "reason": "Reply 1's 'fixes discharge-planning bottlenecks' delivers the requested punch, while Reply 2 is clean but barely changes the original wording."}

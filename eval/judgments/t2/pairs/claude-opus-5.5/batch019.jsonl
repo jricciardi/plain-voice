@@ -1,0 +1,15 @@
+{"item": "j00983", "prefer": "2", "ai_like": "2", "reason": "Reply 2 better answers the request to add other comparison factors and ends with a clear verdict, though its bolded bullet lists and fit row feel more templated."}
+{"item": "j00927", "prefer": "tie", "ai_like": "2", "reason": "The two messages are nearly identical, and Reply 2's bracketed [Name] placeholder is a typical chatbot template marker."}
+{"item": "j00651", "prefer": "2", "ai_like": "2", "reason": "Reply 2 keeps the separate citations and more of the original content, whereas Reply 1 over-condenses and merges both sources into one citation."}
+{"item": "j00519", "prefer": "2", "ai_like": "same", "reason": "Both correctly name siot as the usual substitute, but Reply 1's tema example comes from German Thema, not an English th, so Reply 2 is more accurate."}
+{"item": "j00717", "prefer": "2", "ai_like": "1", "reason": "Both are accurate, but Reply 2 is a tighter glossary while Reply 1 restates each term in wordier, more formulaic sentences."}
+{"item": "j00843", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives a conditional recommendation, compares Kestrel too, and notes the $5 share is a deposit, while Reply 1 leans on a stock bullet checklist."}
+{"item": "j00789", "prefer": "tie", "ai_like": "2", "reason": "The critiques and revisions are nearly equivalent, but Reply 2 adds bolding, a blockquote, and a filler closing line."}
+{"item": "j00345", "prefer": "2", "ai_like": "2", "reason": "Reply 2 offers validation, more depth, and a concrete script, but its headers, dividers, and acknowledgment opener are classic chatbot style."}
+{"item": "j00825", "prefer": "2", "ai_like": "1", "reason": "Reply 2 really unpacks where to look and why, flags misleading cues, and suggests a sharp question for the contractor, while Reply 1 is a bare bullet checklist."}
+{"item": "j00746", "prefer": "1", "ai_like": "2", "reason": "Reply 1 reads like a real newsletter and includes a chaperone call to action, while Reply 2 mostly re-lists the notes with heavy bolding."}
+{"item": "j01013", "prefer": "2", "ai_like": "2", "reason": "Reply 2 has a stronger hook and a growth arc built on studying the failure, though it stacks AI-essay moves like em-dash lists and a less-about-X-than-Y line."}
+{"item": "j01061", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives concrete mileage, year, and degradation figures, while Reply 1 hedges vaguely under bold headers and has a typo."}
+{"item": "j00381", "prefer": "1", "ai_like": "1", "reason": "Reply 1 covers more climate factors like humidity monitoring, pre-cooling, and ventilation, but its headers, dividers, and guide framing are textbook chatbot formatting."}
+{"item": "j00920", "prefer": "tie", "ai_like": "same", "reason": "Both captions are the same minimal rewording and differ only by the word topped."}
+{"item": "j01036", "prefer": "2", "ai_like": "2", "reason": "Reply 2 also recaps the agent's own pending warehouse check and gives a clear call checklist, though its opener and repeated recap feel more chatbot-like."}

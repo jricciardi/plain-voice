@@ -1,0 +1,15 @@
+{"item": "j00482", "prefer": "1", "ai_like": "2", "reason": "Reply 1 explains the missing major premise and Descartes' intuition point accurately and briefly, while Reply 2 pads it with headers and some shaky claims."}
+{"item": "j01317", "prefer": "1", "ai_like": "2", "reason": "Reply 1 makes clear nothing changes immediately, while Reply 2 calls the January changes 'effective now' and misfiles the unchanged uptime terms under renewal."}
+{"item": "j00962", "prefer": "1", "ai_like": "1", "reason": "Reply 1 answers all three questions more fully with good examples, though its headers, table, and bolded takeaway are classic chatbot formatting."}
+{"item": "j00777", "prefer": "tie", "ai_like": "same", "reason": "The two replies are identical."}
+{"item": "j00994", "prefer": "2", "ai_like": "2", "reason": "Reply 2 gives a deeper I/A/1 scaffold with a working thesis and counterargument responses, though its markdown title and headers look more machine-made."}
+{"item": "j00512", "prefer": "2", "ai_like": "same", "reason": "Both catch the repetition, citation, and grammar problems, but Reply 2's revision stays faithful while Reply 1's adds an unsupported forecasting claim."}
+{"item": "j00885", "prefer": "2", "ai_like": "2", "reason": "Reply 2 reads like a finished newsletter item with a title and sign-off, though its bolded labels are more chatbot-like."}
+{"item": "j00531", "prefer": "2", "ai_like": "same", "reason": "Both are solid and identically structured, but Reply 2 adds concrete search tactics such as including taxonomic synonyms."}
+{"item": "j00423", "prefer": "2", "ai_like": "same", "reason": "The tables are nearly identical, but Reply 2 invents fewer details and keeps the user's own specifics like the 10-minute branch."}
+{"item": "j00710", "prefer": "tie", "ai_like": "2", "reason": "Both offer three short, non-salesy options of similar quality; Reply 2 just adds a stock preamble and bolding."}
+{"item": "j00470", "prefer": "2", "ai_like": "2", "reason": "Reply 2 states the de-duplication rule faithfully and adds useful context for someone who missed the call, but its headers and bold labels are more chatbot-styled."}
+{"item": "j01204", "prefer": "1", "ai_like": "2", "reason": "Both give similar figures, but Reply 1 is more measured and explains the degradation pattern, while Reply 2 overstates high-mileage evidence and ends on a generic hedge."}
+{"item": "j01156", "prefer": "2", "ai_like": "1", "reason": "Reply 2 shows the work through vivid detail and ends on an engineering-minded hook, while Reply 1 closes with a stiff, prompt-echoing statement of intent."}
+{"item": "j01091", "prefer": "2", "ai_like": "same", "reason": "Both are strong, but Reply 2 adds practical checks like taxonomic synonyms and data repositories plus advice for modeling with few points."}
+{"item": "j00609", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is more complete with the 60-shop cap and context, while Reply 1 omits the cap and ends with an irrelevant, miscounted 'Logged 5 todos.' line."}

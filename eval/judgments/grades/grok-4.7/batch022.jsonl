@@ -1,0 +1,12 @@
+{"item": "g00302", "facts": [], "invented": ["Lake cabin gas cost of about $40-$60", "Beach condo gas cost of about $120-$150", "Canoeing", "S'mores", "Nature walks", "Fishing", "Boardwalk and coastal attractions", "Cousins", "Denver Zoo", "Science Museum", "Red Rocks", "Mountain day-trips", "Rental car, Uber, and eating-out expenses", "Fewer nearby dining and entertainment options"], "format": "yes"}
+{"item": "g00418", "facts": ["present", "present", "present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g01457", "facts": ["present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00006", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00614", "facts": ["present", "present", "wrong", "missing", "present", "present", "present"], "invented": ["Vendor appointments", "Availability during normal office hours"], "format": "n/a"}
+{"item": "g00523", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00589", "facts": ["present", "present", "present"], "invented": ["The shift ends today", "Staying until 17:00 SAST", "Sending an update with results by 17:00 SAST", "Turnover to an incoming shift team"], "format": "n/a"}
+{"item": "g00654", "facts": ["present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00690", "facts": ["present", "missing", "missing", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00176", "facts": ["present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00510", "facts": ["present", "present", "wrong", "present"], "invented": [], "format": "n/a"}
+{"item": "g00531", "facts": ["present", "present", "present", "present", "present", "present"], "invented": ["The warehouse return edge case was resolved"], "format": "n/a"}

@@ -1,0 +1,15 @@
+{"item": "j00930", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is padded and heavily formatted but adds a board pitch and supporting metrics that the thinner Reply 1 lacks."}
+{"item": "j00882", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives the reasons and a usable script concisely, while Reply 2 wraps the same advice in headers, dividers and templates."}
+{"item": "j02184", "prefer": "2", "ai_like": "2", "reason": "Both fix the text, but Reply 2 adds useful specifics like matching on transaction IDs, with bolded step labels that feel more templated."}
+{"item": "j02285", "prefer": "2", "ai_like": "2", "reason": "Reply 2 shows dividing every term by 2 and has a correct check (Reply 1's drops the square), but its 'Absolutely' opener and bold styling feel more chatbot."}
+{"item": "j01115", "prefer": "1", "ai_like": "1", "reason": "Reply 1 corrects the misconception that Vercel is only for Next.js, which Reply 2 misses, though Reply 1 uses typical headers and upbeat framing."}
+{"item": "j03084", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is shorter as asked, while Reply 2 piles on buzzwords like 'at the intersection of' and 'tailored solutions'."}
+{"item": "j02969", "prefer": "2", "ai_like": "1", "reason": "Reply 2 stays closer to the facts, naming the council criticism and the 25-minute slot, while Reply 1 invents details and leans on stock phrasing like 'not just X, but Y'."}
+{"item": "j01563", "prefer": "1", "ai_like": "1", "reason": "Both are similar, but Reply 1 adds concrete steps and suggests a counselor, though its 'I hear you' opener is classic chatbot."}
+{"item": "j02332", "prefer": "tie", "ai_like": "same", "reason": "The two emails are nearly identical in content, length and tone."}
+{"item": "j03181", "prefer": "1", "ai_like": "1", "reason": "Reply 2 misreads the situation and drafts a message as if the user were the drained one, while Reply 1 gives fitting messages in a more stock-AI voice."}
+{"item": "j02786", "prefer": "2", "ai_like": "same", "reason": "Both are plain and practical, but Reply 2's letter ties real postal duties to management support work more convincingly."}
+{"item": "j01142", "prefer": "2", "ai_like": "same", "reason": "Reply 2 covers both PowerPoint for the web and Google Slides, which suits the ambiguous request better, and both are plain step lists."}
+{"item": "j03023", "prefer": "2", "ai_like": "2", "reason": "Reply 2 keeps more actionable details like no shoes or bedding, the dietary-option check and correct weekdays, though it opens with a chatbot-style 'Absolutely'."}
+{"item": "j02462", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is a fuller federal-format letter with a header and duty mapping, but it is padded with stock phrases like 'operational excellence'."}
+{"item": "j01254", "prefer": "2", "ai_like": "1", "reason": "Reply 2 makes the same core recommendation plainly and still gives the board a volume metric, without Reply 1's headers, acronym and salesy pitch."}

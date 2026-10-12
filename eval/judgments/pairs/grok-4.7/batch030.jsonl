@@ -1,0 +1,15 @@
+{"item": "j01370", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is ready to paste without a redundant title, while Reply 2 restates the task as a header."}
+{"item": "j03052", "prefer": "1", "ai_like": "2", "reason": "Reply 1 answers the Vercel question more directly, while Reply 2 pads the same advice with extra framing."}
+{"item": "j01583", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives a concrete package and tiers for the one-pager, while Reply 1 is a generic bullet outline."}
+{"item": "j00630", "prefer": "2", "ai_like": "same", "reason": "Reply 2 adds a rust check and practical seasoning tips, and neither reply has a distinctly stock voice."}
+{"item": "j00682", "prefer": "2", "ai_like": "1", "reason": "Reply 2 names the actual Friday date and is less template-stiff, while Reply 1 leaves a date placeholder."}
+{"item": "j03027", "prefer": "1", "ai_like": "2", "reason": "Reply 1 avoids Reply 2's wrong weekday and the stock Absolutely opener while still capturing the deadlines."}
+{"item": "j02101", "prefer": "tie", "ai_like": "same", "reason": "Both cover the same foreclosure risks clearly, with only small differences in emphasis."}
+{"item": "j01801", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is tighter and more natural, while Reply 1 piles on polite filler."}
+{"item": "j01552", "prefer": "1", "ai_like": "2", "reason": "Reply 1 names concrete tools throughout and does not end with a chatbot follow-up offer."}
+{"item": "j00568", "prefer": "2", "ai_like": "2", "reason": "Reply 2 covers briefing and a no-reply default, though its bold template reads more like stock AI."}
+{"item": "j00523", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is direct and flags the lawsuit issues, while Reply 1 uses a heavier rundown-and-bottom-line format."}
+{"item": "j00844", "prefer": "1", "ai_like": "1", "reason": "Reply 1 better matches the request for more sustained language, though that elevated tone also sounds more generated."}
+{"item": "j00388", "prefer": "1", "ai_like": "same", "reason": "Reply 1 reads more like the firm's own blog, with sharper examples, and neither sounds like generic chatbot prose."}
+{"item": "j01838", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is tighter and equally actionable, while Reply 2's bold step list feels more templated."}
+{"item": "j01076", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is a true short TLDR of what broke and that nothing was lost, without a formatted brief."}

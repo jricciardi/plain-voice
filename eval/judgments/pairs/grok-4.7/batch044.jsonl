@@ -1,0 +1,15 @@
+{"item": "j01472", "prefer": "1", "ai_like": "2", "reason": "Reply 1 answers the analogies directly, while Reply 2's bullets and stereotype lecture sound more templated."}
+{"item": "j00175", "prefer": "1", "ai_like": "same", "reason": "Reply 1 better covers PowerPoint for the web, including opening the file and duplicating a slide."}
+{"item": "j00040", "prefer": "1", "ai_like": "same", "reason": "Reply 1 keeps \"this Friday\" and asks for a written record, while Reply 2 invents October 16."}
+{"item": "j01820", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is tighter and invents fewer admin duties, while Reply 2 is longer and more formulaic."}
+{"item": "j01960", "prefer": "1", "ai_like": "1", "reason": "Reply 1's cost gaps and conditional pick help the decision more, though the writeup is more templated."}
+{"item": "j01978", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is a plainer casual note with every fact, while Reply 1 leans into marketing copy."}
+{"item": "j00574", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is the stronger practical rewrite, but its coached opener and length sound more generated."}
+{"item": "j01069", "prefer": "2", "ai_like": "same", "reason": "Reply 2 reads slightly more like a Slack incident note and states the cause more cleanly."}
+{"item": "j00294", "prefer": "1", "ai_like": "2", "reason": "Reply 1 treats the one-pager as the format and stays concrete, while Reply 2 uses a ranked-list template and misreads the ask."}
+{"item": "j03111", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is a bit more formally federal and less stuffed with buzzwords than Reply 2."}
+{"item": "j00608", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives the same north-star advice without Reply 1's long coaching-memo structure."}
+{"item": "j00409", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is the email you'd send, with the same Saturday check and less filler than Reply 2."}
+{"item": "j01261", "prefer": "2", "ai_like": "1", "reason": "Reply 2 stays accurate, while Reply 1 invents a DC studio and reads like a consultant outline."}
+{"item": "j00259", "prefer": "1", "ai_like": "same", "reason": "Reply 1 is the fuller single paragraph requested, and both read like textbook explanations."}
+{"item": "j01697", "prefer": "2", "ai_like": "1", "reason": "Reply 2 reads like a client email, while Reply 1 is a labeled checklist."}

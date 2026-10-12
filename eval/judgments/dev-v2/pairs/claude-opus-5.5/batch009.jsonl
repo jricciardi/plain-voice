@@ -1,0 +1,15 @@
+{"item": "j01029", "prefer": "1", "ai_like": "2", "reason": "Reply 1 engages with the user's boredom, while Reply 2 leans on a canned 'not X, it's Y' line and an offer-to-help closer."}
+{"item": "j01052", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is concise and faithful, while Reply 2 pads with formal phrasing and invents that the last bug is being worked on."}
+{"item": "j00291", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is a faithful, natural rewrite, while Reply 2 adds clichés, a 'Recommended' label and embellished facts like operations being paused."}
+{"item": "j00531", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is warmer and more personal for a love letter, though its sensory flourishes and invented details read more like stock AI."}
+{"item": "j00814", "prefer": "2", "ai_like": "2", "reason": "Reply 2 offers more concrete, relatable lessons and an engagement close, though it stacks more aphoristic 'X, not Y' lines."}
+{"item": "j00560", "prefer": "2", "ai_like": "1", "reason": "Reply 2 answers both questions decisively with a one-feature title, while Reply 1 hedges, crams two features into the title and leans on listing clichés."}
+{"item": "j00590", "prefer": "2", "ai_like": "1", "reason": "Reply 2's numbered lessons are concrete and scannable, while Reply 1 strings abstract sentence fragments that read like stock LinkedIn copy."}
+{"item": "j00729", "prefer": "1", "ai_like": "same", "reason": "Both are accurate, but Reply 1 separates what changes from what stays the same, which directly addresses the user's confusion."}
+{"item": "j00681", "prefer": "2", "ai_like": "2", "reason": "Reply 2 gives more concrete help for blanking on conflict questions, though it needlessly restates what the company makes."}
+{"item": "j00404", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is concise and faithful, while Reply 2 adds a preamble, stock pleasantries and overreaches with 'formal proceedings'."}
+{"item": "j00308", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is more romantic and persuasive, though its lush, polished phrasing is more typical of AI writing."}
+{"item": "j00494", "prefer": "1", "ai_like": "2", "reason": "Reply 1 names Astoria's real landmarks accurately despite some clunky lines, while Reply 2 is smoother but generic and calls Cannon Beach 'minutes away'."}
+{"item": "j01060", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is tighter and more executive-ready, while Reply 1 is wordier and opens with a 'clean 3-bullet update' preamble."}
+{"item": "j00977", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is warm, direct and uses his mathematics, while Reply 2 oddly recites both their ages."}
+{"item": "j00452", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is more complete for first-time campers, though its closing offer of a printable version is a stock chatbot tic."}

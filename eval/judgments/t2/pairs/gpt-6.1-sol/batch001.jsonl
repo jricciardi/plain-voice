@@ -1,0 +1,15 @@
+{"item":"j00511","prefer":"1","ai_like":"same","reason":"Reply 1 preserves the original meaning more faithfully, though both use a similar checklist-and-rewrite template."}
+{"item":"j00109","prefer":"1","ai_like":"1","reason":"Reply 1 covers sparse-data modeling and uncertainty more reliably, although its sectioned checklist sounds more templated."}
+{"item":"j00312","prefer":"2","ai_like":"1","reason":"Reply 2 feels more natural for Slack, while Reply 1 reads like a formal farewell email."}
+{"item":"j00301","prefer":"1","ai_like":"2","reason":"Reply 1 stays closer to Joon's story, while Reply 2 adds unsupported details and a formulaic LinkedIn lesson."}
+{"item":"j00067","prefer":"2","ai_like":"2","reason":"Reply 2 offers better validation and more targeted therapy suggestions, though its counseling cadence feels more scripted."}
+{"item":"j00066","prefer":"1","ai_like":"1","reason":"Reply 1 adds medical support for constant anxiety, while its stacked reassurance and bold headings feel more templated."}
+{"item":"j00121","prefer":"2","ai_like":"2","reason":"Reply 2 adds concrete examples and useful cautions about stacked assumptions, but its heavily signposted format sounds more chatbot-like."}
+{"item":"j01074","prefer":"1","ai_like":"2","reason":"Reply 1 recommends evidence-based troubleshooting, while Reply 2 uses polished boilerplate to promote disabling SysMain without demonstrated benefit."}
+{"item":"j01194","prefer":"1","ai_like":"1","reason":"Reply 1 gives practical first steps and addresses insecurity thoughtfully, though its repeated motivational metaphors sound more AI-written."}
+{"item":"j00421","prefer":"1","ai_like":"2","reason":"Both invent access details, but Reply 1 does so less and avoids Reply 2's unverified insurance claims and boilerplate."}
+{"item":"j01384","prefer":"1","ai_like":"same","reason":"Reply 1 answers when to assume more directly, while both use similarly polished, generic explanatory language."}
+{"item":"j00025","prefer":"2","ai_like":"2","reason":"Reply 2 has a clearer donation call and avoids assuming last year's gift was $40, although its donor language is more formulaic."}
+{"item":"j00492","prefer":"2","ai_like":"1","reason":"Reply 2 explains centralized versus distributed options more clearly, while Reply 1 oversells simplicity in uniformly promotional language."}
+{"item":"j00541","prefer":"1","ai_like":"1","reason":"Reply 1 supplies useful examples without claiming every conclusion fails when an assumption is wrong, but its textbook-like presentation feels more templated."}
+{"item":"j00558","prefer":"1","ai_like":"1","reason":"Both fabricate details, but Reply 1 fabricates less while using more cliched leadership rhetoric."}

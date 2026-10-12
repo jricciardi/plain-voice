@@ -1,0 +1,15 @@
+{"item": "j00005", "prefer": "2", "ai_like": "1", "reason": "Reply 2 fits an all-hands better and flags the questions tradeoff, while Reply 1 reads more like a coaching template."}
+{"item": "j00229", "prefer": "2", "ai_like": "1", "reason": "Reply 2 handles a PM who misprioritizes and when to escalate, while Reply 1 is a more generic numbered script."}
+{"item": "j01756", "prefer": "2", "ai_like": "2", "reason": "Reply 2 explains the GitHub Pages limit and gives a clearer stack choice, though the bold decision list is more template-like."}
+{"item": "j01453", "prefer": "2", "ai_like": "2", "reason": "Reply 2's input-output image is clearer for a layman, even though its why-and-what-helps close is more generic."}
+{"item": "j00299", "prefer": "1", "ai_like": "1", "reason": "Reply 1 covers a Saturday no-show with a backup check, even though the setup steps sound more coached."}
+{"item": "j01232", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is a more logical 15-day curriculum, but its titled daily lessons sound more like a generated course outline."}
+{"item": "j00151", "prefer": "1", "ai_like": "2", "reason": "Reply 1 more clearly says to keep Vercel, while Reply 2's host list is more templated and miscalls Pages the simpler setup."}
+{"item": "j00310", "prefer": "1", "ai_like": "1", "reason": "Reply 1 explains why warm oiling failed and how to tell the pan is fine, in a slightly more lecture-like way."}
+{"item": "j00545", "prefer": "2", "ai_like": "1", "reason": "Reply 2 adds corporatism and the historians' split in plainer prose, while Reply 1's five-point list is more textbook."}
+{"item": "j02021", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is the same professional note without inventing a Friday date, while Reply 1's bold highlights feel more generated."}
+{"item": "j02204", "prefer": "2", "ai_like": "2", "reason": "Reply 2's note that Advent readings vary by tradition is the useful extra, despite the bolder scripture styling."}
+{"item": "j02060", "prefer": "2", "ai_like": "1", "reason": "Reply 2 covers every requested point in a shorter email a manager would read, while Reply 1 over-explains in a formal template voice."}
+{"item": "j00733", "prefer": "2", "ai_like": "1", "reason": "Reply 2 ties the delay to the new date in a plainer client voice, while Reply 1 adds stock cheer and awkward phrasing."}
+{"item": "j01376", "prefer": "tie", "ai_like": "same", "reason": "The two status notes are interchangeable in content and equally templated."}
+{"item": "j00112", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is the tighter TLDR and isolates that nothing was lost, though Short version is a chatbot tic."}

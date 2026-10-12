@@ -1,0 +1,12 @@
+{"item":"g00048","facts":["present","present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00167","facts":["present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00163","facts":["present","present","present","present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g01170","facts":["present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00591","facts":["present","present","present","present","present"],"invented":["Dates, transaction IDs, and currency amounts are checked for alignment.","Transactions are matched by order ID and payment reference.","Timing differences are flagged during matching.","Reconciliation includes making ledger adjustment entries and documenting root causes.","The summary reports matched totals, variances, and adjustments specifically to finance stakeholders."],"format":"n/a"}
+{"item":"g01057","facts":["present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g01134","facts":["missing","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00400","facts":["present","present","missing"],"invented":["The AP exam is this spring, specifically in May.","The student has reviewed college plans and credit requirements for next year or next fall.","The AP credit will not apply to the student's intended degree.","The student has enjoyed the class.","The student commits to continuing to work hard and staying fully engaged with coursework through the end of the year."],"format":"n/a"}
+{"item":"g01335","facts":["present","present","present","present","present","present","present"],"invented":["The pilot is low-risk.","The pilot is intended to test whether the program is profitable enough to scale."],"format":"n/a"}
+{"item":"g00128","facts":["present","present","present","missing","present","present","present"],"invented":["The writer will be fully available during working hours for calls, messages, and meetings.","The writer will keep deliverables on schedule."],"format":"n/a"}
+{"item":"g01288","facts":[],"invented":["Construction has blocked the library steps."],"format":"yes"}
+{"item":"g00354","facts":["present"],"invented":[],"format":"n/a"}

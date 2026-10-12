@@ -1,0 +1,15 @@
+{"item": "j00559", "prefer": "1", "ai_like": "2", "reason": "Reply 1 decisively answers the questions and adheres to the single-feature constraint without generic marketing fluff."}
+{"item": "j00517", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives solid, sensible advice, whereas Reply 2 nonsensically suggests cleaning fuel injectors on a 1953 car."}
+{"item": "j00631", "prefer": "2", "ai_like": "1", "reason": "Reply 2 has a more natural, reassuring tone and practical advice, while Reply 1 relies on heavy bold formatting and generic structuring."}
+{"item": "j00050", "prefer": "1", "ai_like": "same", "reason": "Reply 1 groups the update logically into launch progress, operational issue, and financials."}
+{"item": "j00020", "prefer": "1", "ai_like": "2", "reason": "Reply 1 explains the science naturally in clear prose, whereas Reply 2 uses stock chatbot headers, bullets, and unprompted trivia."}
+{"item": "j00933", "prefer": "1", "ai_like": "same", "reason": "Both give punchy, opinionated advice, but Reply 1 articulates the technical trade-offs slightly more clearly."}
+{"item": "j00505", "prefer": "1", "ai_like": "same", "reason": "Reply 1 explicitly notes the previous $50 threshold, making the actual policy change much clearer."}
+{"item": "j00963", "prefer": "2", "ai_like": "same", "reason": "Reply 2 is more professionally polished and includes practical details like placeholders and asking for available meeting times."}
+{"item": "j00744", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides the same sound mechanical advice in clean prose without the excessive bolding and chatbot follow-up questions of Reply 2."}
+{"item": "j00105", "prefer": "2", "ai_like": "1", "reason": "Reply 2 captures the evocative atmosphere of the street and includes the neighborhood name, whereas Reply 1 reads like a flat checklist."}
+{"item": "j00033", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives sharp, accurate editorial critique, while Reply 2 hallucinates a repeated word that does not exist."}
+{"item": "j01043", "prefer": "1", "ai_like": "2", "reason": "Reply 1 suggests a more authentic personal hook, whereas Reply 2 uses formulaic praise and generic corporate buzzwords."}
+{"item": "j00750", "prefer": "2", "ai_like": "same", "reason": "Reply 2 is slightly more informative by mentioning crispbreads and how to verify ingredients on labels."}
+{"item": "j00751", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides a clean, direct answer without Reply 2 heavy bolding and list formatting."}
+{"item": "j00511", "prefer": "2", "ai_like": "same", "reason": "Reply 2 explicitly highlights that no general availability date is promised, which directly addresses the support team concern."}

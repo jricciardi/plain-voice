@@ -1,0 +1,12 @@
+{"item": "g00132", "facts": ["missing", "present", "missing", "missing", "missing", "present"], "invented": ["The fear was likely formed very early in life", "The user lacked resources and resilience when the defense was first built"], "format": "n/a"}
+{"item": "g00393", "facts": ["missing", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00405", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00057", "facts": ["present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00548", "facts": ["present", "present", "present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00156", "facts": ["present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00108", "facts": ["present", "present", "present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00402", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00021", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00366", "facts": ["present", "present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00243", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00246", "facts": ["present", "present", "present", "wrong", "present"], "invented": ["no regressions seen so far", "Android release was pushed on Thursday"], "format": "n/a"}

@@ -1,0 +1,15 @@
+{"item": "j00953", "prefer": "2", "ai_like": "same", "reason": "Reply 2 explains why oiling warm doesn't help and gives fuller fix steps; both share the same plain register."}
+{"item": "j02960", "prefer": "2", "ai_like": "2", "reason": "Reply 1 contradicts the no-numbers rule by implying AI use with human review; Reply 2 is accurate but even more buzzword-laden."}
+{"item": "j01439", "prefer": "2", "ai_like": "1", "reason": "Reply 2 explains Pages' static-only limit and Vercel's multi-framework support, while Reply 1 ends with a stray 'Logged 1 todo.' artifact."}
+{"item": "j02147", "prefer": "1", "ai_like": "2", "reason": "Both are accurate, but Reply 1 adds the Egyptian-derived early Hebrew signs while Reply 2 bolds and restates its short answer."}
+{"item": "j02356", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is concise and faithful, while Reply 1 over-structures the update with redundant summary, timeline and root-cause sections."}
+{"item": "j02404", "prefer": "2", "ai_like": "2", "reason": "Reply 2 better explains why Next fit Pages poorly and that Vercel works with Astro, though its stiff bulleted style feels more templated."}
+{"item": "j02531", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives more concrete advice like not collecting proof or pulling away, while Reply 2 uses bold-lead bullets and a stock closing line."}
+{"item": "j02639", "prefer": "1", "ai_like": "2", "reason": "Reply 1 sounds like a real ops director with practical detail, while Reply 2 leans on stacked staccato aphorisms."}
+{"item": "j01940", "prefer": "1", "ai_like": "1", "reason": "Reply 1 covers more quiz terms like chemiosmosis plus the ATP-count caveat, but its heavy headers and bolding are more chatbot-styled."}
+{"item": "j01800", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is slightly more courteous and polished, though it leans more on stock email phrases."}
+{"item": "j01029", "prefer": "2", "ai_like": "1", "reason": "Reply 1 invents a '20% less time' statistic amid stock phrasing, while Reply 2 is plainer and sticks closer to the brief."}
+{"item": "j02977", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is paste-ready with clearly separated sections, while Reply 1 adds a chatbot-style 'Here's a cleaner version' preamble."}
+{"item": "j02252", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is more thorough, adding a written partnership agreement with the brother, but its bold numbered list is more templated."}
+{"item": "j02297", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is warm and clear with a call to action, while Reply 1's bolded specs and quips read like stock marketing copy."}
+{"item": "j01707", "prefer": "2", "ai_like": "2", "reason": "Both are faithful, but Reply 2 adds a correctly inferred 14:15 UTC timestamp and scannable bolding at the cost of more templated formatting."}

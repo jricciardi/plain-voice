@@ -1,0 +1,12 @@
+{"item": "g00079", "facts": [], "invented": [], "format": "yes"}
+{"item": "g01268", "facts": ["present", "wrong", "present"], "invented": [], "format": "n/a"}
+{"item": "g00507", "facts": ["present", "present"], "invented": [], "format": "n/a"}
+{"item": "g01217", "facts": [], "invented": ["A weekly view is available to share with attendees after the presentation."], "format": "yes"}
+{"item": "g00576", "facts": ["present", "present", "present", "present", "present", "present", "wrong"], "invented": ["The writer's work hours and availability will remain fully consistent."], "format": "n/a"}
+{"item": "g00580", "facts": ["present"], "invented": [], "format": "n/a"}
+{"item": "g00285", "facts": ["present", "present", "present", "present", "present"], "invented": ["Some viewers have already given the film unfavorable ratings."], "format": "n/a"}
+{"item": "g00590", "facts": ["present", "present", "present"], "invented": ["The shift ends today.", "An incoming shift team will take over at 16:00 SAST with detailed notes or full documentation and continue immediately without interruption.", "The writer will send the customer an update with results by 17:00 SAST."], "format": "n/a"}
+{"item": "g00348", "facts": ["missing", "missing", "present", "present", "missing", "missing", "missing", "missing"], "invented": [], "format": "n/a"}
+{"item": "g00462", "facts": ["missing", "present", "present", "present", "present", "present", "missing", "missing"], "invented": ["The missing environment variable is literally named `queue-prefix`."], "format": "n/a"}
+{"item": "g01211", "facts": ["present", "present", "present"], "invented": ["The shift ends today.", "The writer will hand over the case before logging off with notes on its status and action plan.", "Nothing on the case will be left waiting on the writer.", "The writer will send an update once the action plan is complete.", "A colleague will take over after the writer logs off if anything else comes in."], "format": "n/a"}
+{"item": "g00472", "facts": ["present", "present", "present", "present"], "invented": [], "format": "n/a"}

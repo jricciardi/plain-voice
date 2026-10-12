@@ -1,0 +1,15 @@
+{"item": "j00699", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is a complete letter near 200 words despite oddly echoing the prompt, while Reply 2 is a short unformatted paragraph with invented details."}
+{"item": "j00807", "prefer": "1", "ai_like": "2", "reason": "Reply 1 adds clear transitions while staying faithful to the original, whereas Reply 2 rewrites more and tacks on a generic brand-extension closer."}
+{"item": "j01301", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is a ready-to-send, scannable email with a subject line, though its closing is stock filler, while Reply 1 crams everything into one paragraph."}
+{"item": "j01151", "prefer": "2", "ai_like": "same", "reason": "Reply 2 identifies Otto as the manager and adds a touch of warmth, while Reply 1's thanks is ambiguous and curt; neither sounds especially machine-made."}
+{"item": "j01096", "prefer": "1", "ai_like": "1", "reason": "Both are accurate, but Reply 1 gives more concrete chess examples and the causal layer, closing with a stock isn't-X-it's-Y line."}
+{"item": "j01138", "prefer": "1", "ai_like": "2", "reason": "Reply 1 sticks to the requested short 1-2 sentence definitions accurately, while Reply 2 runs long with a disclaimer preamble and a follow-up offer."}
+{"item": "j00897", "prefer": "1", "ai_like": "1", "reason": "Reply 1 answers the what-do-we-do question most directly with clear timing sections, though its heavy headers and bolding read as chatbot style."}
+{"item": "j00579", "prefer": "1", "ai_like": "1", "reason": "Reply 1's definitions are a bit fuller and more useful (escrow account, PMI removal, float-down), and it ends with a stock follow-up offer."}
+{"item": "j01364", "prefer": "1", "ai_like": "2", "reason": "Reply 1 offers slightly more practical detail like bedding and a troubleshooting step, while Reply 2 ends on a tidy triplet tagline."}
+{"item": "j00489", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is more complete, adding Jujutsu and clear recommendations, but its headers, rules, and hype phrasing are classic chatbot style."}
+{"item": "j01055", "prefer": "2", "ai_like": "2", "reason": "Reply 2 gives more concrete, actionable steps, though it leans harder on reassuring not-X-but-Y lines and a tidy closing."}
+{"item": "j00975", "prefer": "2", "ai_like": "same", "reason": "Both say keep the name, but Reply 2 more directly addresses the burnt-food misunderstanding rather than suggesting adding Bakery."}
+{"item": "j00662", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is more thorough with labeled categories and a timing tip, though its labeled-bullet format is more templated."}
+{"item": "j00878", "prefer": "1", "ai_like": "1", "reason": "Reply 1's Done/Investigating/Schedule/Blocker labels make it easier to skim, though the bolded labels feel more chatbot-formatted."}
+{"item": "j00459", "prefer": "2", "ai_like": "2", "reason": "Reply 2's bullets are quicker to scan, but its invented sprint intro line sounds more like stock AI than Reply 1's natural prose."}

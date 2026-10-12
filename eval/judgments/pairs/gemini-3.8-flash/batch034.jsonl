@@ -1,0 +1,15 @@
+{"item": "j00611", "prefer": "1", "ai_like": "1", "reason": "Reply 1 provides a more thorough and actionable roadmap for pitching the board, though its formatting is more typical of AI."}
+{"item": "j02426", "prefer": "2", "ai_like": "2", "reason": "Reply 2 provides clear step-by-step instructions and clarifies terminology, though its multi-option layout is distinctly AI-generated."}
+{"item": "j01627", "prefer": "2", "ai_like": "1", "reason": "Reply 2 includes all key details in its TL;DR and sounds much more like an authentic community run organizer."}
+{"item": "j01590", "prefer": "1", "ai_like": "2", "reason": "Reply 1 offers a cleaner, more practical immediate fix with Google Forms, while Reply 2 suffers from awkward inline numbering."}
+{"item": "j01747", "prefer": "2", "ai_like": "same", "reason": "Both explain the science clearly, but Reply 2 better addresses the global aspect by explaining how multi-site records are synthesized."}
+{"item": "j00332", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is exceptionally well organized for study flashcards with its clear breakdown and summary table, despite its classic AI structure."}
+{"item": "j01480", "prefer": "2", "ai_like": "same", "reason": "Reply 2 strikes a more realistic professional tone with an existing contact than the overly formal greeting in Reply 1."}
+{"item": "j00522", "prefer": "2", "ai_like": "1", "reason": "Reply 2 delivers the essential brand insights concisely without the formulaic section headers and generic tips in Reply 1."}
+{"item": "j00485", "prefer": "2", "ai_like": "same", "reason": "Reply 2 grounds the explanation effectively by contrasting AI with traditional software and using the intuitive wolf-versus-husky example."}
+{"item": "j02943", "prefer": "1", "ai_like": "2", "reason": "Reply 1 keeps the announcement natural and casual, whereas Reply 2 leans heavily on generic marketing clichés."}
+{"item": "j02270", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is easier to skim in a group chat and captures the running-club tone, though its labeled list format is more AI-like."}
+{"item": "j00596", "prefer": "1", "ai_like": "2", "reason": "Reply 1 offers warm, nuanced advice in natural prose, avoiding Reply 2's clinical bullet points and stock coaching follow-up."}
+{"item": "j00038", "prefer": "1", "ai_like": "2", "reason": "Reply 1 creates a natural contrast between email and text without the harsh tone or hallucinated date found in Reply 2."}
+{"item": "j01309", "prefer": "2", "ai_like": "1", "reason": "Reply 2 captures all notes accurately and avoids the prompt-leakage artifact present at the end of Reply 1."}
+{"item": "j01359", "prefer": "2", "ai_like": "1", "reason": "Reply 2 provides a more grounded, fitting conference title and includes the speaker's official affiliation."}

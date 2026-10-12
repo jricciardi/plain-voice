@@ -1,0 +1,15 @@
+{"item": "j00629", "prefer": "2", "ai_like": "2", "reason": "Reply 2 provides a helpful paper-towel test and clear restoration steps, though its headers feel more machine-generated."}
+{"item": "j01365", "prefer": "2", "ai_like": "same", "reason": "Reply 2 accurately reflects the prompt without mistakenly characterizing closing at 2 p.m. as staying open late."}
+{"item": "j00149", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives clear, conversational advice without Reply 1's formulaic bullet points and intro."}
+{"item": "j02271", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is clean and scannable for a group chat, whereas Reply 2 overuses bolding mid-sentence."}
+{"item": "j01840", "prefer": "2", "ai_like": "1", "reason": "Reply 2 explains why rubber would be unsuitable and avoids Reply 1's excessive bolding."}
+{"item": "j00192", "prefer": "2", "ai_like": "same", "reason": "Reply 2 includes an invoice number placeholder and phrases the request more naturally."}
+{"item": "j01728", "prefer": "2", "ai_like": "same", "reason": "Reply 2 includes all assigned owners, including Emil's task regarding recording consent."}
+{"item": "j02146", "prefer": "1", "ai_like": "2", "reason": "Reply 1 reads like cohesive prose, while Reply 2 redundantly repeats its summary with chatbot-style bolding."}
+{"item": "j00288", "prefer": "2", "ai_like": "1", "reason": "Reply 2 provides actionable strategic levers and board targets rather than trailing off into conversational AI prompts."}
+{"item": "j01333", "prefer": "2", "ai_like": "1", "reason": "Reply 2 sounds genuinely casual and direct, whereas Reply 1 relies on a formulaic bulleted spec sheet."}
+{"item": "j01885", "prefer": "2", "ai_like": "1", "reason": "Reply 2 offers grounded, human observations instead of a generic list of self-help bullet points."}
+{"item": "j02703", "prefer": "2", "ai_like": "same", "reason": "Reply 2 organizes the upcoming dates and deadlines in a much more intuitive chronological sequence."}
+{"item": "j01383", "prefer": "1", "ai_like": "2", "reason": "Reply 2 accidentally includes leaked tool text at the end."}
+{"item": "j02300", "prefer": "1", "ai_like": "1", "reason": "Reply 1 has much better copy and a stronger hook for cat owners, despite its templated markdown formatting."}
+{"item": "j01791", "prefer": "2", "ai_like": "same", "reason": "Reply 2 reads smoothly without repeating 'focus on' across both short paragraphs."}

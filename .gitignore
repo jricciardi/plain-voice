@@ -1,3 +1,4 @@
 eval/raw/
-eval/judgments/
+eval/judge_manifest*.json
+eval/judgments/superseded/judge_manifest_v2.1-positions.json
 __pycache__/

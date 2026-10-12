@@ -1,0 +1,15 @@
+{"item": "j00296", "prefer": "2", "ai_like": "1", "reason": "Reply 2 correctly understands the one-pager as collateral rather than a capability to leverage, and offers stronger strategic positioning."}
+{"item": "j03010", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is a cohesive and concise summary, whereas Reply 2 repeats itself under multiple separate headers."}
+{"item": "j01968", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides clean step-by-step math without unnecessary mid-sentence bolding or redundant steps."}
+{"item": "j01980", "prefer": "1", "ai_like": "same", "reason": "Reply 1 has slightly smoother phrasing and includes the company name in the sign-off."}
+{"item": "j02442", "prefer": "2", "ai_like": "same", "reason": "Reply 2 explains the specific cultural and political reasons why Poland in particular gets compared to Texas."}
+{"item": "j00081", "prefer": "1", "ai_like": "same", "reason": "Reply 1 uses standard standup formatting without awkward extra vertical spacing between headers and bullets."}
+{"item": "j01644", "prefer": "2", "ai_like": "1", "reason": "Reply 2 uses clean mathematical typesetting and divides by 2 first, directly addressing the user's main point of confusion."}
+{"item": "j01332", "prefer": "2", "ai_like": "1", "reason": "Reply 2 has a much more natural, conversational tone, whereas Reply 1 relies on clichéd marketing lines and an emoji."}
+{"item": "j00032", "prefer": "1", "ai_like": "1", "reason": "Reply 1 gives clearer guidance targeted directly at the user's specific worry about the leading coefficient."}
+{"item": "j02067", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is much easier to read and study from, though its structured list is more characteristic of AI."}
+{"item": "j00282", "prefer": "2", "ai_like": "1", "reason": "Reply 2 provides a message ready to send without awkward template placeholders."}
+{"item": "j03187", "prefer": "2", "ai_like": "same", "reason": "Reply 2 calculates the current active borrower percentage and gives a concrete target to propose to the board."}
+{"item": "j00191", "prefer": "2", "ai_like": "same", "reason": "Reply 2 is more concise and helpfully includes a placeholder for invoice numbers."}
+{"item": "j02151", "prefer": "2", "ai_like": "1", "reason": "Reply 2 provides slightly more historical detail and nuance without being wordy."}
+{"item": "j02982", "prefer": "2", "ai_like": "1", "reason": "Reply 2 doesn't include conversational filler echoing the prompt, making it immediately copy-paste ready."}

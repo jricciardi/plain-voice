@@ -1,0 +1,12 @@
+{"item":"g00375","facts":[],"invented":["Tessaline's $9/user and Owlgate's $19/user prices are monthly rates.","Dana is responsible for scheduling the second demo.","Marcus is awaiting the SLA document.","The team will finalize Owlgate testing before the October 30 trial cutoff."],"format":"yes"}
+{"item":"g01358","facts":[],"invented":["The self-serve help center drove faster responses and more efficient support operations.","Peak demand is outpacing coverage on weekends."],"format":"yes"}
+{"item":"g01141","facts":["present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00068","facts":["missing","present","present"],"invented":[],"format":"n/a"}
+{"item":"g01201","facts":["present","present","present","missing","present"],"invented":["GitHub Pages only serves static files, can host statically exported Next.js sites, is free, and supports custom domains.","Normal Next.js applications require server features for rendering, API routes, and image optimization; Astro ships very little JavaScript and also deploys to Vercel.","Vercel offers a preview link on every push, is free at portfolio scale, and allows adding a contact form without moving the site."],"format":"n/a"}
+{"item":"g00288","facts":["missing","present","present"],"invented":["The user's AP exam is in May.","Schools order AP exams in the fall, usually by mid-November, and later cancellation often incurs a fee."],"format":"n/a"}
+{"item":"g00364","facts":["present","missing","missing","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00482","facts":["present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00195","facts":["present","present","present","present","present"],"invented":["The brand-asset deadline is Friday, October 16.","The staging dates are assumed to be in 2026, with October 24 identified as a Saturday."],"format":"n/a"}
+{"item":"g00441","facts":["present","present","present"],"invented":["The shift ends today.","An incoming engineer will take over the case immediately.","If the customer does not respond before 16:00 SAST, the writer will hand over the case to the next engineer with no delay in support."],"format":"n/a"}
+{"item":"g00570","facts":["present","present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00065","facts":["present","present","present","present","present"],"invented":[],"format":"n/a"}

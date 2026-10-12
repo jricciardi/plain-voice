@@ -1,0 +1,15 @@
+{"item": "j00503", "prefer": "2", "ai_like": "1", "reason": "Reply 2 matches the early-then-slow degradation curve and real charging factors better than Reply 1's steeper first-100k loss."}
+{"item": "j00377", "prefer": "1", "ai_like": "2", "reason": "Reply 1 answers directly, while Reply 2 pads the same point with heavy formatting and a shaky historical claim."}
+{"item": "j00083", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is more honest that Model Y long-term data is thin and places capacity loss at a more realistic mileage."}
+{"item": "j00917", "prefer": "1", "ai_like": "1", "reason": "Reply 1 works as an actual short caption, while Reply 2 is only a plain restatement of the item."}
+{"item": "j01374", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is clearer and less repetitive, and it avoids Reply 2's clumsy repeated phrasing."}
+{"item": "j00550", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives the same straight answer without Reply 2's long formatted legal memo."}
+{"item": "j00532", "prefer": "1", "ai_like": "same", "reason": "Reply 1 gives a concrete way to search the papers, which is what the user said they were about to do."}
+{"item": "j00809", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is the more complete modeling protocol, with search terms, metadata, and bias checks a modeler can use."}
+{"item": "j00310", "prefer": "1", "ai_like": "2", "reason": "Reply 1 stays short and sticks to the requested facts, while Reply 2 adds unasked sentiment."}
+{"item": "j00808", "prefer": "1", "ai_like": "2", "reason": "Reply 1 adds transitions while keeping the original pitch, whereas Reply 2 invents new claims."}
+{"item": "j00676", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is concrete and clean, while Reply 2 has a corrupted character and vaguer jargon."}
+{"item": "j00317", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is paste-ready and faithful, while Reply 2 adds a weekly header and says the work was shipped."}
+{"item": "j00269", "prefer": "2", "ai_like": "1", "reason": "Reply 2 flags the Salvation Army Red Kettle collision and a concrete filing path that Reply 1 misses."}
+{"item": "j01391", "prefer": "1", "ai_like": "2", "reason": "Reply 1 at least separates an inventory print from selling, while Reply 2 wrongly treats filing as required before printing."}
+{"item": "j00628", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives warmer, more complete next steps instead of deferring them with an offer to help later."}

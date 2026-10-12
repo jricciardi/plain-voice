@@ -1,0 +1,15 @@
+{"item": "j01300", "prefer": "2", "ai_like": "same", "reason": "Nearly identical and both misread 'pushed', but Reply 2's 'webhooks in staging' and 'Blocker:' label read slightly cleaner."}
+{"item": "j00338", "prefer": "1", "ai_like": "1", "reason": "Reply 1 adds useful details like the protected rate, existing logs and backups, though its bold-and-divider layout is classic chatbot formatting."}
+{"item": "j01174", "prefer": "1", "ai_like": "2", "reason": "Both cover the facts, but Reply 1 is tighter and adds the corrected invoice, while Reply 2 pads with an 'as I write this' aside and a three-things script."}
+{"item": "j01037", "prefer": "1", "ai_like": "2", "reason": "Reply 1 covers everything compactly, while Reply 2 piles on headings, a table, heavy bolding and a repetitive bottom line."}
+{"item": "j00801", "prefer": "1", "ai_like": "1", "reason": "Reply 1 gives more concrete climate targets like humidity ranges, though its stray 'Yes' opener and bolded parallel paragraphs feel templated."}
+{"item": "j01228", "prefer": "2", "ai_like": "1", "reason": "Reply 2's transitions follow the logic of the copy, whereas Reply 1 bolts on stock connectors like 'In particular' and 'Furthermore'."}
+{"item": "j00362", "prefer": "2", "ai_like": "1", "reason": "Reply 2 answers concisely and accurately, while Reply 1 is a heavily formatted listicle with some shaky cycle-count claims."}
+{"item": "j00944", "prefer": "1", "ai_like": "2", "reason": "Reply 1 stays on climate with clear humidity thresholds, while Reply 2 uses the familiar intro-bullets-outro chatbot layout."}
+{"item": "j00854", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is a copy-ready traditional outline with a sharper thesis and named programs to research, while Reply 1 leans on markdown headings."}
+{"item": "j01085", "prefer": "1", "ai_like": "2", "reason": "Reply 1 reads more smoothly ('so that you can enjoy'), while Reply 2's bolded 'Moreover' and 'In addition' insertions feel mechanical."}
+{"item": "j00872", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is cleaner and avoids Reply 1's 'Otto for your support' pronoun slip, though its closing gratitude line is generic."}
+{"item": "j00614", "prefer": "1", "ai_like": "1", "reason": "Reply 1 keeps key context like the shop opening and the rescheduled installer, though its labeled sections and canned script feel templated."}
+{"item": "j00759", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is more complete and states plainly what happens if you do nothing, but its exhaustive bullet sections feel more machine-made."}
+{"item": "j00909", "prefer": "1", "ai_like": "1", "reason": "Reply 1 explains each option's trade-offs without assuming a personal project, though its hedged opener and bold labels are stock style."}
+{"item": "j00513", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is concise and well calibrated, while Reply 2's numbered bold reasons and 'zero impact' hype read as stock AI."}

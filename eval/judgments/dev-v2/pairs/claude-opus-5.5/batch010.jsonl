@@ -1,0 +1,15 @@
+{"item": "j00500", "prefer": "1", "ai_like": "1", "reason": "Reply 2 invents details like the vendor 'expediting further installs', while Reply 1 stays faithful; Reply 1's label-prefixed bullets look more templated."}
+{"item": "j00633", "prefer": "2", "ai_like": "1", "reason": "Reply 2's doctor-specific hooks (charting, on call, residency match) sell better, while Reply 1 leans on generic copy like 'deserves a little off-duty comfort'."}
+{"item": "j00458", "prefer": "1", "ai_like": "1", "reason": "Reply 1 gives a concrete model answer and a line to buy time when blanking, though its invented stats and stock closer feel more machine-made."}
+{"item": "j00758", "prefer": "1", "ai_like": "same", "reason": "Both give the same vacancy-led plan in the same voice, but Reply 1's candidate-first pitch and clear fee terms are more actionable."}
+{"item": "j00261", "prefer": "1", "ai_like": "2", "reason": "Nearly identical advice, but Reply 1 names the real risk and gives concrete modularization tips, while Reply 2 stacks more stock lists like 'without friction'."}
+{"item": "j00279", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is a plain, text-ready message, while Reply 1 uses bold markdown, bullets and exclamation-heavy chatbot framing that suits SMS poorly."}
+{"item": "j00549", "prefer": "1", "ai_like": "2", "reason": "Reply 2 opens with a 'Good move' affirmation and confusingly suggests a team card as if the team were giving the gift."}
+{"item": "j00596", "prefer": "2", "ai_like": "1", "reason": "Reply 2 fixes just the weak third sentence with two tight options and clear guidance, while Reply 1's rewrite piles on em dashes and triads."}
+{"item": "j00734", "prefer": "1", "ai_like": "same", "reason": "Both are faithful in the same style, but Reply 1 keeps support-relevant points like not treating the beta as a launch and features not being enableable."}
+{"item": "j00994", "prefer": "2", "ai_like": "same", "reason": "Both share the same clipped style, but Reply 2 is more nuanced about the pre-1991 span and more specific about the modern sound."}
+{"item": "j00321", "prefer": "1", "ai_like": "1", "reason": "Reply 1 covers more ground, including themes and distribution, though its labeled sections are more formulaic; both wrongly cast the Black Keys as electronic."}
+{"item": "j00976", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is more accurate that bran muffins aren't primarily bran, though its cute metaphors and wrap-up line read more AI-polished."}
+{"item": "j00662", "prefer": "2", "ai_like": "1", "reason": "The lists are nearly identical, but Reply 2 adds useful things to avoid while Reply 1 ends with a chatbot offer that asks the manager's gender."}
+{"item": "j00368", "prefer": "1", "ai_like": "2", "reason": "Reply 2 is a stock LinkedIn listicle with bold headers, cliches and engagement bait, while Reply 1 reads like a genuine reflection."}
+{"item": "j00723", "prefer": "1", "ai_like": "1", "reason": "Same content, but Reply 1's bold labels help a VP skim, at the cost of a more templated look."}

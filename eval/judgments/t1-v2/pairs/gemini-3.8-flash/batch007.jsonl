@@ -1,0 +1,15 @@
+{"item": "j00752", "prefer": "2", "ai_like": "2", "reason": "Reply 2 explicitly shows the division step and verification that help prevent losing points for skipped work."}
+{"item": "j00715", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is a clean, practical operational plan that avoids the heavy corporate formatting of Reply 2."}
+{"item": "j00595", "prefer": "2", "ai_like": "same", "reason": "Reply 2 clearly explains how to use PowerPoint Online without the desktop app as well as a Google Slides fallback."}
+{"item": "j00201", "prefer": "2", "ai_like": "1", "reason": "Reply 2 adds an actual punchy hook while Reply 1 just repeats the prompt text almost verbatim."}
+{"item": "j00420", "prefer": "2", "ai_like": "1", "reason": "Reply 1 includes a bizarre trailing system prompt artifact ('Logged 1 todo.')."}
+{"item": "j00709", "prefer": "1", "ai_like": "2", "reason": "Reply 1 offers concrete positioning copy and actionable advice tailored to a small podcast studio."}
+{"item": "j00009", "prefer": "2", "ai_like": "1", "reason": "Reply 2 has a cleaner, more readable TL;DR and helpfully explains what a no-drop group means."}
+{"item": "j00684", "prefer": "1", "ai_like": "1", "reason": "Reply 1 immediately answers the critical data-loss question upfront and organizes the key facts clearly."}
+{"item": "j00939", "prefer": "2", "ai_like": "1", "reason": "Reply 2 provides a concise, realistic outline for an all-hands instead of over-padded corporate bullet points."}
+{"item": "j00559", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is heartfelt, natural to deliver aloud, and avoids the sentimental clichés in Reply 2."}
+{"item": "j00666", "prefer": "1", "ai_like": "same", "reason": "Reply 1 makes a sharper, more practical argument about how accounting firms should set concrete operational boundaries for AI."}
+{"item": "j00457", "prefer": "2", "ai_like": "1", "reason": "Reply 1 contradicts the prompt by suggesting the assistant help with phrasing for emails with numbers, whereas Reply 2 respects the rule."}
+{"item": "j00843", "prefer": "1", "ai_like": "2", "reason": "Reply 1 uses bullet points that are much easier to scan quickly in a group chat than Reply 2's paragraphs."}
+{"item": "j00445", "prefer": "1", "ai_like": "2", "reason": "Reply 1 has a standard, natural launch flow, whereas Reply 2's request for users to reply to get a link feels clumsy."}
+{"item": "j00553", "prefer": "1", "ai_like": "2", "reason": "Reply 1 feels authentic, focused, and appropriately timed for a spoken speech rather than overly padded."}

@@ -1,0 +1,15 @@
+{"item": "j01242", "prefer": "1", "ai_like": "1", "reason": "Reply 1 gives warmer, more complete guidance for an emotional question, though its validating opener and bolded numbered list are classic chatbot style."}
+{"item": "j03100", "prefer": "2", "ai_like": "1", "reason": "Reply 2 stays close to the original review, while Reply 1 invents praise for performances and pacing and leans on stock lines like 'very much its own thing'."}
+{"item": "j01236", "prefer": "2", "ai_like": "2", "reason": "Reply 2 adds more passages plus a ready-to-use reading and liturgy, though its headers and bold formatting are typical chatbot output."}
+{"item": "j02723", "prefer": "1", "ai_like": "1", "reason": "Both give sound advice, but Reply 1 explains the tradeoffs more fully and commits to a recommendation, with slightly more punchy 'not X, it's Y' flourishes."}
+{"item": "j01976", "prefer": "2", "ai_like": "2", "reason": "Reply 2 has a more engaging hook for a launch email, but its 'Meet X' intro, bolded specs, and tagline sign-off are stock marketing-bot style."}
+{"item": "j02660", "prefer": "2", "ai_like": "same", "reason": "Reply 2 keeps the scannable bullets that suit a team channel, and both are minimal cleanups with no real AI flourishes."}
+{"item": "j00987", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is faithful and concise, while Reply 2 adds a preamble, an invented title, extra next steps, and heavy formatting."}
+{"item": "j02456", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is more thorough, correctly flags LG and Samsung reliability concerns, and adds useful buying tips, though its tiered headers and closing offer are stock chatbot."}
+{"item": "j02512", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is clearer and adds concrete examples despite using three paragraphs, while Reply 1 crams everything into dense, em-dash-laden run-on sentences."}
+{"item": "j01724", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is a tighter tl;dr that covers what broke, confirms no data loss, and lists the fixes, though its bolded figures feel chatbot-like."}
+{"item": "j02833", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is more detailed and flows better, but beats like 'The line is blurrier now' feel more AI-crafted than Reply 1's plain, choppy sentences."}
+{"item": "j02006", "prefer": "1", "ai_like": "1", "reason": "Reply 1's greeting makes it a bit warmer, though its 'loved ones', em dash, and exclamation point read more AI than Reply 2's plainer version."}
+{"item": "j01488", "prefer": "1", "ai_like": "2", "reason": "Reply 1 polishes the review faithfully, while Reply 2 invents an 'uneven' criticism that undercuts the five-star rave and adds stock phrasing."}
+{"item": "j01380", "prefer": "2", "ai_like": "2", "reason": "Reply 1 ends with a stray 'Logged 1 todo.' line that doesn't belong in the email, while Reply 2 is clean though its em dashes and cheer feel more chatbot-like."}
+{"item": "j00936", "prefer": "1", "ai_like": "1", "reason": "Reply 1 offers more concrete one-pager material like batch recording days and a section outline, but its headers, table, and 'Key Takeaway' are classic AI formatting."}

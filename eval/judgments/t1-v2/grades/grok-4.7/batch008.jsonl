@@ -1,0 +1,12 @@
+{"item": "g00129", "facts": ["present"], "invented": [], "format": "n/a"}
+{"item": "g00312", "facts": ["present", "present"], "invented": [], "format": "yes"}
+{"item": "g00123", "facts": ["missing", "present", "present", "present", "present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00447", "facts": ["present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00736", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00465", "facts": ["present", "present", "present", "present", "present", "missing"], "invented": [], "format": "n/a"}
+{"item": "g00740", "facts": [], "invented": [], "format": "yes"}
+{"item": "g00303", "facts": [], "invented": ["cold water in spring", "weather-dependent", "all meals cooked by you", "time with cousins", "city museums", "mountain trips", "possible car rental"], "format": "yes"}
+{"item": "g00357", "facts": ["missing", "missing", "present", "present", "missing", "missing", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00764", "facts": ["present", "present"], "invented": [], "format": "yes"}
+{"item": "g00405", "facts": ["present", "present", "present", "present", "present", "missing"], "invented": [], "format": "n/a"}
+{"item": "g00138", "facts": ["present", "present", "present", "present", "present"], "invented": ["matching by order ID", "dates and amounts must agree", "causes such as timing differences, refunds, payment fees, or data entry errors"], "format": "n/a"}

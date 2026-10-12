@@ -1,0 +1,12 @@
+{"item":"g00196","facts":["present","present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00304","facts":[],"invented":[],"format":"yes"}
+{"item":"g00571","facts":["missing","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00166","facts":["present","present","present","present","present","present"],"invented":["The shelter has a portal for volunteer sign-ups.","The new check-in tablet is used to log volunteers' hours.","The sender's title is Volunteer Coordinator."],"format":"n/a"}
+{"item":"g00598","facts":["present","present"],"invented":[],"format":"n/a"}
+{"item":"g00232","facts":["present"],"invented":[],"format":"n/a"}
+{"item":"g00037","facts":[],"invented":[],"format":"yes"}
+{"item":"g00052","facts":["present","wrong"],"invented":[],"format":"n/a"}
+{"item":"g00634","facts":["present","present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00061","facts":[],"invented":["Linux is the best-known monolithic kernel example and supports loading and unloading drivers without a reboot.","seL4 has a full correctness proof.","Mach was an early microkernel that was slower than monolithic designs.","Windows NT and Apple's XNU are hybrid kernels.","XNU is the kernel behind macOS and iOS."],"format":"yes"}
+{"item":"g00178","facts":["present","present","missing","present"],"invented":["The sender commits to providing additional information, purchase order references, or supporting documentation right away."],"format":"n/a"}
+{"item":"g00100","facts":["present","present","present","present"],"invented":[],"format":"n/a"}

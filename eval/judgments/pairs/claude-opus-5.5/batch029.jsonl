@@ -1,0 +1,15 @@
+{"item": "j02494", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives a clean, ready-to-use message and reasons that fit, while Reply 2's nested placeholder, bolded tips and closing offer make it feel like a template."}
+{"item": "j01109", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives one clean correction with accurate notes, while Reply 1 pads with options and shows broken arrow formatting."}
+{"item": "j00969", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is a fuller outline with an opener and a built-up hiring case, despite some invented details, while Reply 2 is accurate but thin."}
+{"item": "j02033", "prefer": "2", "ai_like": "2", "reason": "Reply 2's labeled bullets are easier to scan in an incident channel, while Reply 1 is accurate but plain prose."}
+{"item": "j02627", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is more concrete and ends with a real call to action, while Reply 2 repeats itself and mechanically recites prompt details like 'about ninety of you'."}
+{"item": "j02846", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives a clear pairing with a brief why for each passage, while Reply 1 is useful but trails into filler reassurances and caveats."}
+{"item": "j02953", "prefer": "2", "ai_like": "2", "reason": "Reply 2 introduces Dev and fits the time limit, though both are generic and Reply 2 leans harder on stock tricolons and 'not just X, but Y'."}
+{"item": "j02705", "prefer": "1", "ai_like": "1", "reason": "Reply 1 expands on each point the user asked for and adds a useful framing tip, though its meta preface and contrast lines sound more machine-written."}
+{"item": "j01505", "prefer": "2", "ai_like": "same", "reason": "Both wrongly imply Phoenicians used letter numerals, but Reply 2 adds accurate detail on additive values and avoids conflating them with gematria."}
+{"item": "j02350", "prefer": "1", "ai_like": "1", "reason": "The emails are nearly identical, but Reply 1's labels make the asks easier to scan, though its heavy bolding looks more chatbot-made."}
+{"item": "j00918", "prefer": "1", "ai_like": "1", "reason": "Reply 1 is warmer and more thorough despite its formulaic headers, while Reply 2 is terse and mostly advises avoiding the thought."}
+{"item": "j01694", "prefer": "tie", "ai_like": "same", "reason": "The replies are identical apart from apostrophe style."}
+{"item": "j02920", "prefer": "2", "ai_like": "1", "reason": "Reply 2 stays faithful to the notes, while Reply 1 invents an 'easy implementation path' and misreads the finance demo."}
+{"item": "j00947", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives a coherent setup with per-van slots and a day-of check-in, while Reply 1's steps are muddled, though both overstate Google Forms."}
+{"item": "j01196", "prefer": "1", "ai_like": "same", "reason": "Reply 1 also covers how to handle the PM's lack of technical knowledge and how to escalate constructively, which Reply 2 skips."}

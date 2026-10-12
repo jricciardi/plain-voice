@@ -73,7 +73,7 @@ def main():
                 ptxt = convo["turns"][n - 1]
                 fmt = {"type": "table"} if fr_turn == n and re.search(r"(?i)table", ptxt) else ({"type": "headers_bullets"} if fr_turn == n else None)
                 p = {"text": ptxt, "format_request": fmt}
-                rows.append({"set": "multiturn", "model": j["model"], "family": family(j["model"]), "cond": j["cond"],
+                rows.append({"set": j["set"], "model": j["model"], "family": family(j["model"]), "cond": j["cond"],
                              "rep": 1, "batch": None, "position": None, "prompt_id": j["convo"], "category": "multiturn",
                              "source": "drafted-gpt", "turn": n, "text": text, **tells.score(text, p)})
     Path(args.out).parent.mkdir(exist_ok=True)

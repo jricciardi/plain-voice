@@ -1,0 +1,15 @@
+{"item":"j01002","prefer":"1","ai_like":"2","reason":"Reply 1 tackles the leading coefficient immediately and avoids Reply 2's generic introduction."}
+{"item":"j02771","prefer":"2","ai_like":"2","reason":"Reply 2 better matches the requested formal register, though its prefatory framing feels more chatbot-like."}
+{"item":"j01062","prefer":"2","ai_like":"same","reason":"Reply 2 leads with the urgent staffing need and stays closer to the notes, while both use similar email boilerplate."}
+{"item":"j02662","prefer":"1","ai_like":"2","reason":"Reply 1 is directly usable; Reply 2 adds stock framing and an unsupported claim about the client's sandbox."}
+{"item":"j02394","prefer":"tie","ai_like":"same","reason":"The replies are identical and make the same grammatical corrections."}
+{"item":"j02679","prefer":"1","ai_like":"same","reason":"Reply 1 avoids calling 14:45 thirty minutes after 14:10, and both otherwise sound like standard incident updates."}
+{"item":"j00295","prefer":"1","ai_like":"2","reason":"Reply 1 correctly treats the one-pager as a sales tool; Reply 2 misreads it and uses a more templated ranking."}
+{"item":"j01038","prefer":"tie","ai_like":"same","reason":"Both use conventional abstract language and invent a two-year timeline and financial measurements absent from the prompt."}
+{"item":"j02263","prefer":"1","ai_like":"same","reason":"Reply 1 gives a more coherent ATP tally and clearer pyruvate-oxidation totals, though both use the same flashcard-template style."}
+{"item":"j03036","prefer":"2","ai_like":"2","reason":"Reply 2 explains pollen identification and abundance more clearly, though its bolding and promotional phrasing feel more stock."}
+{"item":"j00291","prefer":"1","ai_like":"2","reason":"Reply 1 checks the uncertain borrowing baseline before setting targets; Reply 2 treats it as confirmed and offers a generic doubling goal."}
+{"item":"j00325","prefer":"2","ai_like":"2","reason":"Reply 2 better connects results to the hiring request and translates jargon, though its bolded storytelling template is more chatbot-like."}
+{"item":"j00546","prefer":"2","ai_like":"2","reason":"Reply 2 makes the main historical differences easier to compare, although its numbered survey reads more like a standard chatbot explainer."}
+{"item":"j02568","prefer":"2","ai_like":"1","reason":"Reply 2 fits the badge cleanly without Reply 1's invented slogan or incorrect word count."}
+{"item":"j00430","prefer":"1","ai_like":"2","reason":"Reply 1 puts the requested budget and unapproved status first, while Reply 2 adds a stock preface and retains more detail."}

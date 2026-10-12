@@ -1,0 +1,12 @@
+{"item": "g00990", "facts": ["present"], "invented": [], "format": "n/a"}
+{"item": "g00138", "facts": ["present", "present", "present"], "invented": ["Claims the applicant meets the announcement qualifications and that the résumé already details experience for each requirement", "Daily mail route with a number of delivery points, planning around time-sensitive mail, and keeping scan and delivery records", "Raises problems with the supervisor promptly", "Resolves missed deliveries and damaged packages on the spot and follows up until the customer has an answer"], "format": "n/a"}
+{"item": "g00978", "facts": ["present", "present", "present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00780", "facts": ["missing", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00876", "facts": ["present", "present", "present", "present", "present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00847", "facts": ["present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00337", "facts": [], "invented": [], "format": "yes"}
+{"item": "g01465", "facts": ["present", "present", "present", "present", "present"], "invented": ["Matches transactions on date, order number, amount, and status", "Investigates timing differences, system-specific classifications, and posting exceptions", "Documents the root cause of each discrepancy", "Summary report highlights reconciled amounts, open exceptions, and actions taken"], "format": "n/a"}
+{"item": "g00197", "facts": ["present", "present", "present", "present", "present", "present", "present"], "invented": [], "format": "n/a"}
+{"item": "g00443", "facts": ["present", "missing", "present", "present", "present"], "invented": ["Cleans the datasets and aligns columns", "Also looks for amount mismatches", "Summary report shows reconciled totals and documented adjustments"], "format": "n/a"}
+{"item": "g00537", "facts": ["present", "present", "present", "present", "present", "present", "present", "present"], "invented": ["October 22, 2026 is a Thursday"], "format": "n/a"}
+{"item": "g00413", "facts": [], "invented": ["Next step to confirm a CSV export roadmap"], "format": "yes"}

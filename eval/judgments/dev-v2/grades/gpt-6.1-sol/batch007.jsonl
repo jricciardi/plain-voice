@@ -1,0 +1,12 @@
+{"item":"g00097","facts":["present","present","present","present","present","present","missing"],"invented":["Splitting a purchase into multiple small transactions is prohibited."],"format":"n/a"}
+{"item":"g00334","facts":["present","present","present","wrong","present","present","present","present"],"invented":["Friday is the target for obtaining an ETA once the vendor responds."],"format":"n/a"}
+{"item":"g00004","facts":["present","present","present","present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00052","facts":["present","present","present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00364","facts":["present","present","present","wrong","present","present","present","present"],"invented":["The vendor's ETA for the rate-limit increase is Friday."],"format":"n/a"}
+{"item":"g00175","facts":["missing","present","missing","present"],"invented":["A stock 1953 Ford uses a 6-volt positive-ground electrical system."],"format":"n/a"}
+{"item":"g00022","facts":["present","present","present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00361","facts":[],"invented":[],"format":"yes"}
+{"item":"g00016","facts":[],"invented":[],"format":"yes"}
+{"item":"g00325","facts":["missing","present","present","present"],"invented":["The car's battery will be dead."],"format":"n/a"}
+{"item":"g00067","facts":["present","present","present","present","present","present","present"],"invented":[],"format":"n/a"}
+{"item":"g00172","facts":["present","missing","present","present","present","present","missing"],"invented":["Splitting transactions to stay under $25 is prohibited."],"format":"n/a"}

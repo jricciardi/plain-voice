@@ -1,0 +1,15 @@
+{"item": "j00363", "prefer": "2", "ai_like": "same", "reason": "Reply 2 includes a helpful offer to coordinate access for the technician, making the formal email more practical."}
+{"item": "j01975", "prefer": "2", "ai_like": "1", "reason": "Reply 2 reads naturally without the aggressive bolding and formulaic marketing tropes found in Reply 1."}
+{"item": "j03154", "prefer": "1", "ai_like": "2", "reason": "Reply 1 cleans up typos and grammar faithfully without padding the text with generic corporate filler like Reply 2."}
+{"item": "j02164", "prefer": "2", "ai_like": "1", "reason": "Reply 2 is cleanly formatted and provides an exact model example without the distracting bold text of Reply 1."}
+{"item": "j01384", "prefer": "2", "ai_like": "1", "reason": "Reply 1 erroneously outputs an internal system message ('Logged 1 todo.'), while Reply 2 provides a clean draft."}
+{"item": "j02689", "prefer": "2", "ai_like": "same", "reason": "Reply 2 immediately answers whether data was lost and flows more smoothly than Reply 1's fragmented phrasing."}
+{"item": "j03022", "prefer": "1", "ai_like": "2", "reason": "Reply 1 groups related reminders logically and includes the note about book care, whereas Reply 2 fragments points and uses an eager AI opening."}
+{"item": "j02663", "prefer": "2", "ai_like": "2", "reason": "Reply 2 provides a complete, client-ready email with an appropriate closing, while Reply 1 is overly blunt and lacks sign-offs."}
+{"item": "j03031", "prefer": "2", "ai_like": "1", "reason": "Reply 2 rephrases the awkward user expression 'undergoing my marriage' into natural professional English."}
+{"item": "j00074", "prefer": "1", "ai_like": "same", "reason": "Reply 1 strikes the right warm, appreciative tone for a long-standing local business while staying suitably brief."}
+{"item": "j02355", "prefer": "2", "ai_like": "1", "reason": "Reply 2 organizes the update into clean incident response sections without Reply 1's awkward inline mid-sentence bolding."}
+{"item": "j01962", "prefer": "2", "ai_like": "same", "reason": "Reply 2 provides practical details like showing the cost calculations and noting realistic travel logistics with kids."}
+{"item": "j00333", "prefer": "1", "ai_like": "same", "reason": "Reply 1 uses clear headings and consistent bulleting for inputs, outputs, and ATP yield, making it much easier to turn into flashcards."}
+{"item": "j02343", "prefer": "2", "ai_like": "same", "reason": "Reply 2 uses clean, scannable section headers that clearly highlight progress and the action item needed from the client."}
+{"item": "j01542", "prefer": "1", "ai_like": "same", "reason": "Reply 1 formats the reconciliation steps into a clear, numbered list that is much easier to read than Reply 2's dense paragraph."}

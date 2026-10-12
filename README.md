@@ -20,9 +20,22 @@ Or copy the `plain-voice` folder into your agent's personal skills folder:
 
 The skill applies to routine replies on its own. In Claude Code you can also call it with `/plain-voice`.
 
+## Stress test
+
+The skill was stress-tested in October 2026 on 10 models from 5 families (Claude, GPT, Gemini, Grok and MAI), using 88 new prompts and 6 eight-turn conversations, many of them real messages from the WildChat dataset. Hypotheses and pass marks were written down before any replies were generated. Full results are in [eval/RESULTS.md](eval/RESULTS.md), and everything needed to rerun the test is in [eval/](eval/).
+
+- Replies written with the skill had a tenth as many counted tells as replies written without it, and a sixth as many as replies written with a one-line placebo ("Write plainly and naturally."). The result held on a second set of prompts that stayed sealed until the end.
+- Judges from other model families found the skill's reply less like stock AI in 93% of pairs. The skill's author, rating blind, did in 12 of 13 pairs where he picked a side, and the judges agreed with his calls 92% of the time.
+- The skill doesn't make replies better on average. Judges preferred its replies about half the time: more often for emails, status updates and posts, less often for summaries, how-tos and format requests, where they valued complete, easy-to-scan lists.
+- Replies were a third shorter, followed explicit format requests 98% of the time and invented fewer details. They missed up to 2 points more of the facts the user supplied.
+- The effect held over 8-turn conversations. MAI-Code-1.1-Flash changed least, and GPT-5 mini and Grok 4.5 kept some em dashes.
+- A revised version with two more rules (use a real list for steps and action items; never drop a fact while shortening) didn't beat this one on the sealed prompts, so the skill is unchanged.
+
+Limits: every reply came from one agent harness, which holds back some chat-app habits such as emoji. Most measures come from models, which agree with a person on what sounds like stock AI but not on which reply is better. The one human rater was the skill's author, who reported fatigue. House styles shift with each model release.
+
 ## How the list was built
 
-The first version came from watching Claude's habits. Extending it to other model families drew on two kinds of evidence: published research, and a side-by-side test of 13 models.
+The first version came from watching Claude's habits. Extending it to other model families drew on two kinds of evidence: published research, and a side-by-side test of 13 models. The stress test above then checked the result on new prompts.
 
 ### Published research
 
@@ -66,48 +79,6 @@ Most tells showed up across several families, so the skill keeps one list instea
 - Gemini puts headers on short answers, leads lists with "Here is why:", and offers "Option 1, 2, 3" when you asked for one draft.
 - Grok uses em dashes, quips and scare quotes, and staccato slogans ("Default to the monolith. Earn the split.").
 - Claude has its own vocabulary: load-bearing, quietly, the shape of, lean into.
-
-### Validation
-
-Five of the models then answered the same prompts with a draft of the skill applied: GPT-6.1 Sol (the newest GPT), GPT-5 mini (the heaviest em dash user), Gemini 3.8 Flash, Grok 4.5 and MAI-Code-1.1-Flash. Counted tells fell from 277 to 16, and replies got 42% shorter on average (166 words down to 97).
-
-<details>
-<summary>Counts by tell, five models, 40 replies each way</summary>
-
-| Tell | Without skill | With skill |
-| --- | ---: | ---: |
-| Em dashes | 55 | 5 |
-| Markdown headers | 12 | 0 |
-| Bold spans | 88 | 0 |
-| Bold lines used as headers | 17 | 0 |
-| Answer labels ("Short answer:") | 4 | 0 |
-| Reframing the question | 1 | 0 |
-| Signposts ("Here's how/why") | 14 | 0 |
-| Praise openers | 2 | 0 |
-| Contrast formula | 15 | 3 |
-| "X beats Y" slogans | 2 | 0 |
-| Offer closers | 7 | 0 |
-| Scare quotes | 6 | 1 |
-| Slash and arrow shorthand | 15 | 0 |
-| Option menus | 2 | 0 |
-| Filler and sincerity adverbs | 25 | 3 |
-| Listed vocabulary | 12 | 4 |
-| Total | 277 | 16 |
-
-</details>
-
-Every email and status update kept all the facts from its prompt. Four of the five models added promises the user never made (for example, "I'll send the agenda before the meeting"), and two dropped contractions and read stiffly. Those findings led to a last round of additions: contractions, padding in drafts, "real" as an intensifier, and a few more words. Those additions haven't been retested yet.
-
-GPT-6.1 Sol, Gemini and Grok followed the skill closely. GPT-5 mini kept five em dashes, and MAI kept some "It's not X, it's Y" lines.
-
-### Limits
-
-- One reply per prompt per model. Eight replies per model make for noisy rates, and there are no confidence intervals.
-- The same eight prompts were used to find tells and to check the skill, so the drop from 277 to 16 probably overstates how well it generalizes.
-- The models ran in an agent harness, not their own chat apps. The harness holds back some chat-app habits such as emoji, so the entries for those rest on the published research.
-- The counters look for the listed patterns. Fewer counted tells shows the models complied; it doesn't show that readers prefer the result. Pattern matching also misses paraphrases and sometimes counts the user's own words quoted back.
-- The reading and pattern-finding were done with an AI model (Claude Opus 5.5). No human raters have checked the results yet.
-- Model versions are as of October 2026, and house styles shift with each release.
 
 ## Sources
 

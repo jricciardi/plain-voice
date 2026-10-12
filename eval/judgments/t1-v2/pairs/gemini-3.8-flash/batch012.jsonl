@@ -1,0 +1,15 @@
+{"item": "j00740", "prefer": "2", "ai_like": "1", "reason": "Reply 2 sounds like a natural group chat message, whereas Reply 1 relies on stiff formatting and excessive bolding."}
+{"item": "j00200", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives a direct, practical answer without the formulaic section headers and fluff in Reply 1."}
+{"item": "j00696", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides clean audio production steps without Reply 2's heavy bolding and robotic formatting."}
+{"item": "j00505", "prefer": "1", "ai_like": "2", "reason": "Reply 1 offers practical immediate advice, while Reply 2 hallucinates agent actions by claiming it logged a todo."}
+{"item": "j01011", "prefer": "1", "ai_like": "1", "reason": "Reply 1 helpfully addresses both interpretations of the question instead of opening with a pedantic correction."}
+{"item": "j00607", "prefer": "2", "ai_like": "1", "reason": "Reply 2 focuses sharply on client outcomes rather than generic consulting pillars."}
+{"item": "j00654", "prefer": "1", "ai_like": "same", "reason": "Reply 1 includes a greeting and a necessary call to action, making it a complete email."}
+{"item": "j00462", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides a compelling conference abstract tailored to parks staff, whereas Reply 2 feels generic."}
+{"item": "j00986", "prefer": "2", "ai_like": "1", "reason": "Reply 1 contradicts itself by saying it will take a break to do the same thing, while Reply 2 is coherent."}
+{"item": "j01018", "prefer": "1", "ai_like": "2", "reason": "Reply 1 tailors its advice to the Sacramento context and avoids confusing shifts in perspective."}
+{"item": "j00714", "prefer": "1", "ai_like": "same", "reason": "Reply 1 directly addresses vehicle conflict and dispatch without adding unnecessary operational overhead."}
+{"item": "j00511", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is straightforward and avoids the conversational padding and trailing prompts in Reply 2."}
+{"item": "j00044", "prefer": "2", "ai_like": "1", "reason": "Reply 2 reads like authentic executive reflections rather than a templated bulleted post."}
+{"item": "j00474", "prefer": "1", "ai_like": "2", "reason": "Reply 1 provides a clean, well-organized summary that immediately answers what broke and confirms zero data loss."}
+{"item": "j00673", "prefer": "1", "ai_like": "same", "reason": "Reply 1 integrates the sale announcement smoothly rather than isolating it in a choppy one-line paragraph."}

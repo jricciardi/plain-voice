@@ -1,0 +1,15 @@
+{"item": "j00945", "prefer": "2", "ai_like": "2", "reason": "Reply 2 adds one more transition and keeps more of the original detail, though it retains buzzwords like 'seamlessly'."}
+{"item": "j00494", "prefer": "2", "ai_like": "1", "reason": "Reply 2 answers the single-or-date question directly in plain language with a concrete next step, while Reply 1 is long, padded, and heavily formatted."}
+{"item": "j01276", "prefer": "2", "ai_like": "2", "reason": "Reply 2 adds evaluation criteria and parallel case-study sections, though it tacks on a stock closing line."}
+{"item": "j01372", "prefer": "2", "ai_like": "2", "reason": "Reply 2 lays out a concrete workflow with synonyms, cleaning, and georeferencing, though its lists and closing offer feel more templated."}
+{"item": "j01324", "prefer": "1", "ai_like": "2", "reason": "Reply 1 correctly frames the cogito as an immediate intuition, while Reply 2 adds a muddled claim that it is invalid in classical logic."}
+{"item": "j00404", "prefer": "1", "ai_like": "1", "reason": "Reply 1 explicitly covers the differences plus more pitfalls, though its label-colon bullets read more templated."}
+{"item": "j00561", "prefer": "1", "ai_like": "2", "reason": "Reply 1 gives a clean, correct table and good extra factors, while Reply 2 adds guesswork and a shaky 'middle ground' recommendation."}
+{"item": "j00687", "prefer": "1", "ai_like": "2", "reason": "Reply 2 pastes the user's question back verbatim and garbles the top-plate check, while Reply 1 covers the same checks cleanly and suggests an engineer."}
+{"item": "j01000", "prefer": "1", "ai_like": "2", "reason": "Reply 1 treats APR vs. interest rate as a comparison and warns earnest money can be lost, while Reply 2 gives a circular interest-rate definition."}
+{"item": "j00303", "prefer": "2", "ai_like": "same", "reason": "Reply 2 has a stronger hook and avoids Reply 1's invented 'dozens of new patients' claim and 'I answer, answer' typo."}
+{"item": "j01332", "prefer": "1", "ai_like": "2", "reason": "Reply 1 is tight and adds the key collaboration caveat, while Reply 2 repeats Mercurial and makes a shaky claim about Pijul."}
+{"item": "j00656", "prefer": "2", "ai_like": "1", "reason": "Reply 2 gives a clear, sensible verdict to leave it on unless problems appear, while Reply 1 hedges toward disabling on weak grounds despite useful commands."}
+{"item": "j00297", "prefer": "2", "ai_like": "1", "reason": "Both are accurate, but Reply 2 is tighter and plainer, while Reply 1 adds a stock intro and wordier definitions."}
+{"item": "j00542", "prefer": "2", "ai_like": "2", "reason": "Reply 2 is far richer with examples, the ladder of inference, and stress-test questions, though its headers, table, and dividers are classic chatbot formatting."}
+{"item": "j00831", "prefer": "2", "ai_like": "2", "reason": "Reply 2 correctly identifies clearance as the real risk and offers a smaller-run fallback, while Reply 1 implies filing will catch problems in time."}
