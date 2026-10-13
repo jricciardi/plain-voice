@@ -6,23 +6,23 @@ Use whichever fits. No head-to-head test between plain-voice and any of these ha
 
 ## At a glance
 
-Stars are for the whole hosting repository on October 13, 2026. Size is the main skill file in tokens (OpenAI's o200k tokenizer); some skills also load reference files or run scripts. "No" means no test of the skill's own output was found in its skill file or README.
+plain-voice is in the first row for reference. The other rows are sorted by the testing they publish, then by size. Size is the main skill file in tokens (OpenAI's o200k tokenizer), and a plus sign means that file also points the agent to reference files or scripts. "No" in the testing columns means nothing was found in the skill file or README. Stars are for the whole hosting repository on October 13, 2026.
 
-| Skill | Stars | Size | Aim | When it runs | Tells by model family | Tested its own output |
-|---|---:|---:|---|---|---|---|
-| plain-voice | new | 1,321 | Fewer tells in everyday replies | Every reply | Claude, GPT, Gemini, Grok | 10 models, with a placebo |
-| [blader/humanizer] | 56,490 | 7,056 | Make AI text sound like a person wrote it | On a draft | General list | Judges preferred its rewrite 16 of 16 times |
-| [hardikpandya/stop-slop] | 17,977 | 615 | Fewer tells | Drafting or editing | General list | No |
-| [conorbronsdon/avoid-ai-writing] | 4,989 | 6,703 | Find and fix tells, with a scoring engine | On a draft | General list | Tests of its scorer |
-| [Nanako0129/sepia] | 3,151 | 3,197 | Fewer tells in fiction and professional prose | On request | Claude, GPT, Gemini, DeepSeek, Kimi | No |
-| [pstack's unslop][pstack unslop] | 1,742 | 1,400 | Fewer tells | Only when called by name | General list | No |
-| [realrossmanngroup/no_ai_slop_writing_rules] | 699 | 1,318 | Fewer tells | Before writing prose | General list | No |
-| [jalaalrd/anti-ai-slop-writing] | 532 | 1,666 | Avoid detectable AI patterns | Every writing task | General list | No |
-| [theclaymethod/unslop] | 529 | 1,649 | Fewer tells, or writing in your voice | On a draft | General list | Yes; latest result was "no-ship" |
-| [MohamedAbdallah-14/unslop] | 158 | 3,747 | Read as human, with an anti-detector mode | Every reply | General list | Blind judges and a detector |
-| [ilien-dev/quiron] | 58 | 7,235 | Read as human, checked by measurement | Writing or rewriting | General, some Claude | Claude judges |
-| [ama-zingco/anti-ai-writing-skill] | 35 | 3,428 | Fewer tells in copy | While writing copy | Claude, GPT, Gemini, Grok | No; built on two studies |
-| [Avinashricky211/writ] | 28 | 1,331 | Fewer tells | Silent final pass | General list | No |
+| Skill | Size | Aim | Tested its own output | Human judges | When it runs | Tells by model family | Stars |
+|---|---:|---|---|---|---|---|---:|
+| plain-voice | 1,321 | Fewer tells in everyday replies | Yes: 10 models, against no skill and a placebo | Yes: the author, 40 blind pairs | Every reply | Claude, GPT, Gemini, Grok | new |
+| [theclaymethod/unslop] | 1,649+ | Fewer tells, or writing in your voice | Yes: a GPT judge; latest result was "no-ship" | No | On a draft | General list | 529 |
+| [MohamedAbdallah-14/unslop] | 3,747 | Read as human, with an anti-detector mode | Yes: an LLM judge and a detector | No | Every reply | General list | 158 |
+| [blader/humanizer] | 7,056 | Make AI text sound like a person wrote it | An outside study with model judges | No | On a draft | General list | 56,490 |
+| [ilien-dev/quiron] | 7,235+ | Read as human, checked by measurement | Yes: Claude judges | No | Writing or rewriting | General, some Claude | 58 |
+| [conorbronsdon/avoid-ai-writing] | 6,703+ | Find and fix tells, with a scoring engine | Only its scorer | No | On a draft | General list | 4,989 |
+| [hardikpandya/stop-slop] | 615+ | Fewer tells | No | No | Drafting or editing | General list | 17,977 |
+| [realrossmanngroup/no_ai_slop_writing_rules] | 1,318+ | Fewer tells | No | No | Before writing prose | General list | 699 |
+| [Avinashricky211/writ] | 1,331 | Fewer tells | No | No | Silent final pass | General list | 28 |
+| [pstack's unslop][pstack unslop] | 1,400 | Fewer tells | No | No | Only when called by name | General list | 1,742 |
+| [jalaalrd/anti-ai-slop-writing] | 1,666+ | Avoid detectable AI patterns | No | No | Every writing task | General list | 532 |
+| [Nanako0129/sepia] | 3,197+ | Fewer tells in fiction and professional prose | No | No | On request | Claude, GPT, Gemini, DeepSeek, Kimi | 3,151 |
+| [ama-zingco/anti-ai-writing-skill] | 3,428 | Fewer tells in copy | No; built on two studies | No | While writing copy | Claude, GPT, Gemini, Grok | 35 |
 
 ## How plain-voice compares
 
@@ -30,7 +30,7 @@ Stars are for the whole hosting repository on October 13, 2026. Size is the main
 
 plain-voice is meant to make an assistant's replies less tiring to read. It isn't meant to pass AI writing off as a person's, and the README asks people not to use it that way.
 
-The most-starred skill, blader/humanizer, "makes AI-written text sound like a person wrote it, without changing what it says." A few aim at AI detectors. [drpedapati/sciclaw]'s humanizer lists "bypass AI detection" among its triggers and labels each rewrite with a detection risk. jalaalrd's skill "avoids detectable AI writing patterns." [numen-tech/slopornot] pairs a humanizer with an on-device AI detector. [lynote-ai/humanize-text], the open version of a paid service, keeps an older pipeline that passes text through Japanese and Finnish translations, and its README reports the paid version's "detector-bypass rate." MohamedAbdallah-14/unslop has an anti-detector mode, but its README reports that surface rewriting moved a detector's score by 0.0 to 0.2 percentage points.
+The most-starred skill, blader/humanizer, "makes AI-written text sound like a person wrote it, without changing what it says," and its README adds that getting past AI detectors is not a goal. A few others do aim at detectors. [drpedapati/sciclaw]'s humanizer lists "bypass AI detection" among its triggers and labels each rewrite with a detection risk. jalaalrd's skill "avoids detectable AI writing patterns." [numen-tech/slopornot] pairs a humanizer with an on-device AI detector. [lynote-ai/humanize-text], the open version of a paid service, keeps an older pipeline that passes text through Japanese and Finnish translations, and its README reports the paid version's "detector-bypass rate." MohamedAbdallah-14/unslop has an anti-detector mode, but its README reports that surface rewriting moved a detector's score by 0.0 to 0.2 percentage points.
 
 Projects that checked found that surface fixes don't hide AI writing from readers either. quiron had four Claude Opus judges estimate how likely each post was to be AI-written, and all 12 posts rewritten with the skill were judged AI, at an average of 82%. Adding the writer's own notes ("what happened, names, links, opinions") helped more, though across three rounds 18 of 32 of those posts were still judged AI. [asavvin-pixel/unslop]'s launch post, written with the skill, was "identified as AI within the hour" on r/ClaudeAI.
 
@@ -56,11 +56,11 @@ Several skills take on one or the other. [jzOcb/writing-style-skill] learns rule
 
 ### Evidence
 
-plain-voice was tested before release on 10 models from 5 families, against no skill and against a placebo, with the hypotheses written down first and the failures published ([eval/RESULTS.md](eval/RESULTS.md)).
+plain-voice was tested before release on 10 models from 5 families, against no skill and against a placebo, with the hypotheses written down first and the failures published ([eval/RESULTS.md](eval/RESULTS.md)). It's also the only skill in the table whose test included a human rater. Its author rated 40 pairs of replies blind, and when both picked a side, the model judges agreed with him 92% of the time on which reply sounded more like stock AI. That's a single rater who also wrote the skill, a limit the README's [Limitations](README.md#limitations-and-opportunities) section covers.
 
-Most of the skills reviewed publish no test of their own output. Of those that do, theclaymethod/unslop runs a benchmark with separate scoreboards and published its latest result as a "no-ship." MohamedAbdallah-14/unslop reports that blind LLM judges preferred its rewrite in 21 of 21 runs, along with the detector result above. [MrGeDiao/shuorenhua] keeps a 123-case benchmark and reports how often it changed text that was already fine. im-not-ai fixed false positives that an outside review found, then measured again on 532 human-written texts. mizchi's natural-writing-en measured four widely cited tells and says not to build on them. blader/humanizer cites judges preferring its rewrite 16 times out of 16, with few details.
+Most of the skills reviewed publish no test of their own output. Of those that do, theclaymethod/unslop runs a benchmark with separate scoreboards, scored by a GPT judge, and published its latest result as a "no-ship." MohamedAbdallah-14/unslop reports that a blind LLM judge preferred its rewrite in 21 of 21 runs, along with the detector result above. blader/humanizer's README cites an outside study in which judges, all language models from one family, preferred its rewrite 16 times out of 16. [MrGeDiao/shuorenhua] keeps a 123-case benchmark and reports how often it changed text that was already fine. im-not-ai fixed false positives that an outside review found, then measured again on 532 human-written texts. mizchi's natural-writing-en measured four widely cited tells and says not to build on them.
 
-None of the 47 skill files or READMEs mentions a placebo. In plain-voice's test, a one-line placebo cut counted tells by a third on its own, so a test against no skill alone would have overstated the effect.
+theclaymethod/unslop is the only other one found that tests against something like a placebo: the same model given neutral editing instructions. In plain-voice's test, a one-line placebo cut counted tells by a third on its own, so a test against no skill alone would have overstated the effect.
 
 ### License
 
