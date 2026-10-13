@@ -21,7 +21,7 @@ v1's main result replicated on the sealed prompts: 0.10 of the no-skill tell cou
 Mean counted tells per reply: 8.8 with no skill, 5.9 with the placebo, 1.4 with the original skill and 0.9 with v1.
 
 | Family | v1 against placebo | v1 against no skill | v1 against original skill |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Claude | 0.06 (0.03–0.10) | 0.03 (0.02–0.05) | 0.45 (0.29–0.60) |
 | GPT | 0.20 (0.17–0.25) | 0.17 (0.14–0.21) | 0.57 (0.48–0.68) |
 | Gemini | 0.02 (0.01–0.04) | 0.01 (0.01–0.03) | 0.40 (0.25–0.54) |
@@ -46,7 +46,7 @@ Models didn't swap listed tells for unlisted ones. Semicolons, parentheticals, e
 Four judges (Claude Opus 5.5, GPT-6.1 Sol, Gemini 3.8 Flash, Grok 4.7) compared replies blind, two per pair, never judging their own family's writing, with the order randomized. Each answered two questions: which reply would you rather receive, and which sounds more like stock AI.
 
 | Comparison | Judgments | Find v1 less AI-like | Prefer v1 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | v1 against no skill | 1,087 | 93% (92–95) | 49% (46–52) |
 | v1 against placebo | 1,077 | 87% (85–89) | 45% (42–48) |
 | v1 against original skill | 1,060 | 68% (64–72) | 46% (43–49) |
@@ -69,7 +69,7 @@ The skill's author rated 40 blind pairs (25 against no skill, 15 against the pla
 Graders from other families checked 1,280 replies against the facts the user supplied and any format they asked for (15% were graded twice).
 
 | Condition | Required facts missing | Stated wrongly | Invented details per reply | Format requests followed |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | No skill | 8.3% | 0.5% | 0.82 | 100% |
 | v1 | 10.1% | 1.1% | 0.72 | 98% |
 | Placebo | 8.4% | 0.6% | 0.84 | 98% |
@@ -88,7 +88,7 @@ v1 missed 1.8 more points of required facts than no skill, just inside the 2-poi
 Removing one section at a time (12 prompts, 10 models):
 
 | Removed | Tells against the full skill | What came back |
-|---|---|---|
+| --- | --- | --- |
 | Defaults | 2.02 (1.53–2.85) | Bold through prose (0 to 47), bold headers (3 to 24), em dashes |
 | Structure | 1.27 (0.92–1.56) | Bold labels, bold through prose, scare quotes |
 | Punctuation and cadence | 1.07 (0.81–1.41) | Em dashes (25 to 45) |
@@ -107,7 +107,7 @@ In 8-turn conversations, v1 held steady: about 0.7 tells per reply in the first 
 10 models, 35 sealed prompts, 3 conditions (no skill, v1, v2) and 2 repeats: 2,100 single-turn replies, plus 320 multi-turn replies. Judges and graders scored repeat 1.
 
 | Hypothesis | Result | Evidence |
-|---|---|---|
+| --- | --- | --- |
 | 1. v2 has at most half the tells of no skill, in every family | fail | MAI 0.59 (v1 was 0.51 on the same prompts); other families 0.02 to 0.17 |
 | 2. Judges find v2 less AI-like than no skill in over 75% of decisive pairs, and over 60% in every family | pass | 94% overall; MAI lowest at 86% |
 | 3. No regression from v1 | pass | Judged more AI-like than v1 in 46% of pairs; tells 0.86 of v1's |

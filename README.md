@@ -1,9 +1,21 @@
 # plain-voice
+Over the past two years, I have gotten fed up with the ai 'voice'. The ai voice is present in, seemingly, 90% of all written content on the internet, which is a true crisis for the quality of the written word as the democratization of voices on the web is reduced to a handul of uncannily consistent AI model's voices. This is a bad thing. And I do believe those who train models should be held responsible for effectively nuking variety and diversity from the written word online. 
 
-An agent skill that keeps an AI assistant's everyday replies from reading like stock AI. It covers the house-style tells of Claude, GPT, Gemini and Grok: em dashes, "It's not X, it's Y," "Great question," "Here is why:" lead-ins, bolded slogans in bullet lists, "If you want, I can…" closers, and the rest.
+We now live in a written word environment where, despite the profile picture next to the byline, it seems like most things are actually just written by Claude. 
 
-It's meant for routine replies and working docs. It doesn't imitate your voice, so pair it with a voice-matching skill for anything that should sound like you.
+I made this skill because I am also sick of hearing that voice AT WORK, where I am required to use AI on a daily basis to improve operational systems. I do find LLMs to be practical and useful in the work place. But, god, they still all sound like themselves and I'm sick of hearing how they write.
 
+So, this skill is designed to be a lightweight set of guidelines to keep my AI assistants' everyday replies from reading like stock AI. It covers the house-style tells of Claude, GPT, Gemini and Grok (I wish I didn't have to mention Grok, but here we are). In this skill, you'll find a remedy to the over-used em dashes, "It's not X, it's Y," "Great question," "Here is why:" lead-ins, bolded slogans in bullet lists, "If you want, I can…" closers, "That's worth sitting with", and rest. And "genuinely" — I loathe that I now loathe the word 'genuinely', Claude.
+
+This skill is meant for routine replies and working docs. It doesn't imitate a particular voice, it just strips out the most annoying tells of the LLMs house-styles. It does very little to address the structural assumptions and judgements and ordering of ideas and flow.
+
+This skill is not meant to be used to "fool" human readers if you attempt to use it as such. Trust me, people will still be able to tell. AI generated writing has many structural elements that will absolutely and crystal-clearly identify it as AI generated. If you are considering using this skill to that end: don't. Go write for yourself and learn the skill and craft of writing and make your communication to other people from you. You are what matters in good writing.
+
+Instead, please use this skill for things like AI-generated private documentation, personal queries, interfacing with AI in the workplace, personal projects, etc.
+
+For transparency's sake: The rest of this readme is written using this skill.
+
+-Jay
 ## Install
 
 With the GitHub CLI, which asks which agent to install it for:
@@ -22,16 +34,16 @@ The skill applies to routine replies on its own. In Claude Code you can also cal
 
 ## Stress test
 
-The skill was stress-tested in October 2026 on 10 models from 5 families (Claude, GPT, Gemini, Grok and MAI), using 88 new prompts and 6 eight-turn conversations, many of them real messages from the WildChat dataset. Hypotheses and pass marks were written down before any replies were generated. Full results are in [eval/RESULTS.md](eval/RESULTS.md), and everything needed to rerun the test is in [eval/](eval/).
+The skill was stress-tested in October 2026 on 10 models from 5 families (Claude, GPT, Gemini, Grok and MAI), using 88 new prompts and 6 eight-turn conversations, many of them real messages from the WildChat dataset. Hypotheses and pass marks were written down before any replies were generated. Full results are in [eval/RESULTS.md](eval/RESULTS.md), and everything needed to rerun the test is in [eval/](eval/). A human grader (the author of this skill) was presented with pairs of AI generated replies and sorted them based on how much they sounded like stock AI responses.
 
-- Replies written with the skill had a tenth as many counted tells as replies written without it, and a sixth as many as replies written with a one-line placebo ("Write plainly and naturally."). The result held on a second set of prompts that stayed sealed until the end.
+- Replies written with the skill had a tenth as many counted tells as replies written without it, and a sixth as many as replies written with a one-line placebo ("Write plainly and naturally."). The result held on a second set of prompts.
 - Judges from other model families found the skill's reply less like stock AI in 93% of pairs. The skill's author, rating blind, did in 12 of 13 pairs where he picked a side, and the judges agreed with his calls 92% of the time.
-- The skill doesn't make replies better on average. Judges preferred its replies about half the time: more often for emails, status updates and posts, less often for summaries, how-tos and format requests, where they valued complete, easy-to-scan lists.
+- Note: response type matters. The skill doesn't make replies better on average. Judges preferred its replies about half the time: more often for emails, status updates and posts, less often for summaries, how-tos and format requests, where they valued complete, easy-to-scan lists. (For example: This readme document has more AI tells, but that is deemed ok because readme documentation benefits from the extra structure that AI is good at generating.)
 - Replies were a third shorter, followed explicit format requests 98% of the time and invented fewer details. They missed up to 2 points more of the facts the user supplied.
 - The effect held over 8-turn conversations. MAI-Code-1.1-Flash changed least, and GPT-5 mini and Grok 4.5 kept some em dashes.
-- A revised version with two more rules (use a real list for steps and action items; never drop a fact while shortening) didn't beat this one on the sealed prompts, so the skill is unchanged.
+- A revised version with two more rules (use a real list for steps and action items; never drop a fact while shortening) didn't beat this current version on a second round of iterative improvements.
 
-Limits: every reply came from one agent harness, which holds back some chat-app habits such as emoji. Most measures come from models, which agree with a person on what sounds like stock AI but not on which reply is better. The one human rater was the skill's author, who reported fatigue. House styles shift with each model release.
+Limits: every reply came from one agent harness (the GitHub Copilot App), which already holds back some chat-app habits such as emoji. Most measures come from models, which agree with a person on what sounds like stock AI but not on which reply is better. The one human rater was the skill's author, who reported fatigue during rating. Rating dozens of AI generated responses is an awful and fatiguing process. House styles shift with each model release.
 
 ## How the list was built
 
@@ -79,6 +91,27 @@ Most tells showed up across several families, so the skill keeps one list instea
 - Gemini puts headers on short answers, leads lists with "Here is why:", and offers "Option 1, 2, 3" when you asked for one draft.
 - Grok uses em dashes, quips and scare quotes, and staccato slogans ("Default to the monolith. Earn the split.").
 - Claude has its own vocabulary: load-bearing, quietly, the shape of, lean into.
+
+## Limitations and Opportunities
+
+### Testing
+
+- Only one person rated replies: the skill's author, in a single sitting. He got tired partway through, and ties rose as the session went on. A tie also meant either "both bad" or "both fine". More raters who didn't write the skill, in shorter sessions with separate "both good" and "both bad" choices, would give cleaner data.
+- The list came from 8 prompts. Thirteen models answered 8 everyday prompts once each, and published research filled in the rest. The stress test checked the list on 88 new prompts, but a tell that only appears in other kinds of writing, such as fiction, code comments or long reports, wouldn't have been found.
+- Every reply came from one harness, the GitHub Copilot app. Chat apps like ChatGPT, Claude.ai and Gemini add their own system prompts and formatting, so results there could differ. Running the same prompts through each vendor's API and chat app would close that gap.
+- The skill was always loaded. Every test placed its text directly in the model's instructions. In normal use an agent decides when to load a skill, and how reliably that happens wasn't measured.
+- Models did most of the measuring. A script counted tells, and models judged and fact-checked replies. When both picked a side, the judges matched the human rater 92% of the time on which reply sounded more like stock AI, and only 53% of the time on which reply was better. The counting script also misfires on some patterns: only 9% of the phrases it flagged as offer closers were offers.
+- The research left out a lot. It drew on Wikipedia, academic word-frequency studies, xAI's published prompts, AI-detection companies and one engineer's blog. Most of what writers, editors and Substack authors have published about the AI voice wasn't included, and The Economist's 2026 analysis of AI writing was read only through secondhand coverage. Those writers could add tells, and better judgment about which ones bother readers most.
+- Prompts were English only, and replies averaged about 150 to 220 words. Other languages and long working documents, which the skill is meant for, weren't tested.
+- Open-weight models weren't tested. Llama, Mistral, DeepSeek and Qwen have house styles of their own.
+- The results are a snapshot of October 2026 models. House styles change with each release, and the [eval](eval/) folder can rerun the whole test on new ones.
+
+### The skill
+
+- It works on surface tells and leaves the structure, judgments and ordering of ideas alone. A classifier could still name the model family from 63% of replies written with the skill (chance is 20%). Rules about structure would need a different kind of test.
+- It can cost completeness. Judges preferred the no-skill reply for summaries, how-tos and format-heavy answers, where they wanted complete lists that are easy to scan. Replies with the skill also missed up to 2 points more of the facts users supplied. Two rules aimed at this didn't help in testing, so it's still open.
+- It avoids its own word list too eagerly. When a user wrote a listed word, like "landscape" or "leverage", replies with the skill reused it 36% of the time, against 54% without it, even though the skill says the user's words are fine. An extra sentence tried during tuning didn't change that.
+- Some models follow it less. MAI-Code-1.1-Flash changed least, and GPT-5 mini and Grok 4.5 kept using em dashes. Model-specific notes, or a shorter version for smaller models, could be tested next.
 
 ## Sources
 
