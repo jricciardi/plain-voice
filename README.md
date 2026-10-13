@@ -1,21 +1,21 @@
 # plain-voice
 Over the past two years, I have gotten fed up with the ai 'voice'. The ai voice is present in, seemingly, 90% of all written content on the internet, which is a true crisis for the quality of the written word as the democratization of voices on the web is reduced to a handful of uncannily consistent AI model's voices. This is a bad thing. And I do believe those who train models should be held responsible for effectively nuking variety and diversity from the written word online. 
 
-We now live in a written word environment where, despite the profile picture next to the byline, it seems like most things are actually just written by Claude. 
+We now live in a written word environment where, despite the profile picture next to the byline, it seems like most things are actually just written by Claude or ChatGPT. 
 
-I made this skill because I am also sick of hearing that voice AT WORK, where I am required to use AI on a daily basis to improve operational systems. I do find LLMs to be practical and useful in the work place. But, god, they still all sound like themselves and I'm sick of hearing how they write.
+I made this skill because I have grown sick of hearing that voice AT WORK too, where I am required to use AI on a daily basis to improve operational systems. To be clear: I do find LLMs to be practical and useful in the work place. But, god, they still all sound like themselves and I'm sick of hearing how they write.
 
-So, this skill is designed to be a lightweight set of guidelines to keep my AI assistants' everyday replies from reading like stock AI. It covers the house-style tells of Claude, GPT, Gemini and Grok (I wish I didn't have to mention Grok, but here we are). In this skill, you'll find a remedy to the over-used em dashes, "It's not X, it's Y," "Great question," "Here is why:" lead-ins, bolded slogans in bullet lists, "If you want, I can…" closers, "That's worth sitting with", and rest. And "genuinely" — I loathe that I now loathe the word 'genuinely', Claude.
+So, this skill is designed to be a lightweight set of guidelines to keep my AI assistants' everyday replies from reading like stock AI. It covers the house-style tells of Claude, GPT, Gemini and Grok (I wish I didn't have to mention Grok, but here we are). In this skill, you'll find a remedy to the over-used em dashes, "It's not X, it's Y," "Great question," "Here is why:" lead-ins, bolded slogans in bullet lists, "If you want, I can…" closers, "That's worth sitting with", "That's the whole thing", and rest. And "genuinely" — I loathe that I now loathe the word 'genuinely', Claude.
 
 This skill is meant for routine replies and working docs. It doesn't imitate a particular voice, it just strips out the most annoying tells of the LLMs house-styles. It does very little to address the structural assumptions and judgements and ordering of ideas and flow.
 
-This skill is not meant to be used to "fool" human readers if you attempt to use it as such. Trust me, people will still be able to tell. AI generated writing has many structural elements that will absolutely and crystal-clearly identify it as AI generated. If you are considering using this skill to that end: don't. Go write for yourself and learn the skill and craft of writing and make your communication to other people from you. You are what matters in good writing.
+This skill is not meant to be used to fool human readers nor bypass AI detection. If you attempt to use it as such, it will fail. Trust me, people are still able to tell. AI generated writing has many structural elements that will absolutely and crystal-clearly identify it as AI generated. If you are considering using this skill to that end: don't. Go write for yourself and learn the skill and craft of writing and make your communication to other people from you. You are what matters in good writing.
 
-Instead, please use this skill for things like AI-generated private documentation, personal queries, interfacing with AI in the workplace, personal projects, et cetera.
+Instead, please use this skill for your own sanity when working on things like AI-generated private documentation, personal queries, interfacing with AI in the workplace, personal projects, et cetera.
 
 Got it? Good.
 
-Love ya,
+You got this, buddy,
 
 -Jay
 
@@ -24,14 +24,14 @@ Love ya,
 Why would I bother making this skill when there are nearly 300 public skill files on GitHub alone all trying to make AI sound less like AI?
 
 A few reasons.
-Most important is the goal of the skill, so let's start there. Then I'm going to call out some bad behavior.
+Most important is the goal of the skill, so let's start there. Then I am going to call out some bad behavior.
 
-1. This skill is meant to make using AI/LLMs less frustrating for the user to read and interact with. Many of the other skills explicitly attempt to make AI "sound like a human wrote it", the most popular and most-copied being called 'humanizer'. A handful (6 of the 47 I looked at) go further and are **designed to deceive** human readers and AI-detectors, with stated goals like "bypass AI detection".
-2. Most of those skills are also much larger than this one, and cost significantly more tokens to call and run (about a quarter are 3x bigger or more, and the biggest are 5x-7x this skill). Several *appear* small, but actually have large reference files. This skill is designed to be token and cost efficient.
-3. None of the skills I found appear to have actually tested their outputs with a human judge! Wild! What the hell? A few check quality with AI judges, but not even the authors of the skills appear to be judging their skills' outputs themselves.
-4. Most of those skills do not name the specific models and model versions they were tested on. plain-voice was tested on 10 models against no skill and a placebo (with only one other skill I could find that uses anything like a placebo). All the details are in the eval folder.
+1. This skill is meant to make using AI/LLMs less frustrating for the user to read and interact with. Many of the other skills explicitly attempt to make AI "sound like a human wrote it", the most popular and most-copied being called 'humanizer'. Several popular skills go further and are **designed to deceive** human readers and AI-detectors, with stated goals like "bypass AI detection".
+2. Most of those skills are quite large, and cost significantly more tokens to call and run (most are anywhere from 3x-7x the token load of this skill). Several appear small, but actually in fact have large reference files. This skill is designed to be effective while being token and cost efficient.
+3. None of the skills I found appear to have actually quality tested their outputs with a human judge! Wild!  A few check quality with AI judges judging the AI-generated content (as does this one), but not even the authors of the skills appear to be judging their skills' outputs themselves. 
+4. Most of those skills do not name the specific models and model versions they were tested on. plain-voice was tested on 10 models against no skill and a placebo (with only one other skill I could find that uses anything like a placebo). All the details are broken down in the eval folder.
 5. (Because I'm a stickler for numbers: that '300 skills' number above is actually very much inflated because many are actually forks or copies of a handful of the most-starred repos.)
-6. Finally, most if not all do not state the cost of creating the skill. This should be included. In today's usage based cost landscape (Oct 2026), this skill cost approximately $690 worth of tokens to build and test. If you want a skill that feels more customized to your own preferences, I strongly recommend using this skill as a starting point and saving yourself the tokens. Remember to try to search for existing solutions before spending a bunch of tokens building something that already exists. (Full token cost and model breakdown in [COST.md](COST.md))
+6. Finally, most if not all do not state the cost of creating the skill. This should be included. In today's usage based cost landscape (Oct 2026), this skill cost nearly $700 worth of tokens to build and test. Really. If you want a skill that feels more customized to your own preferences, I strongly recommend using this skill as a starting point and saving yourself the tokens. Remember to try to search for existing solutions before spending a bunch of tokens building something that already exists. (Full token cost and model breakdown in [COST.md](COST.md))
 
 
 P.P.S. For transparency's sake: The rest of this repo is written using this skill, with minimal human edits for clarity and emphasis.
