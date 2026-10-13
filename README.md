@@ -102,7 +102,7 @@ Most tells showed up across several families, so the skill keeps one list instea
 - The skill was always loaded. Every test placed its text directly in the model's instructions. In normal use an agent decides when to load a skill, and how reliably that happens wasn't measured.
 - Models did most of the measuring. A script counted tells, and models judged and fact-checked replies. When both picked a side, the judges matched the human rater 92% of the time on which reply sounded more like stock AI, and only 53% of the time on which reply was better. The counting script also misfires on some patterns: only 9% of the phrases it flagged as offer closers were offers.
 - The research left out a lot. It drew on Wikipedia, academic word-frequency studies, xAI's published prompts, AI-detection companies and one engineer's blog. Most of what writers, editors and Substack authors have published about the AI voice wasn't included, and The Economist's 2026 analysis of AI writing was read only through secondhand coverage. Those writers could add tells, and better judgment about which ones bother readers most.
-- Prompts were English only, and replies averaged about 150 to 220 words. Other languages and long working documents, which the skill is meant for, weren't tested.
+- Prompts were English only, and replies averaged about 150 to 220 words. Other languages and long working documents, which the skill is meant to also cover, weren't tested.  
 - Open-weight models weren't tested. Llama, Mistral, DeepSeek and Qwen have house styles of their own.
 - The results are a snapshot of October 2026 models. House styles change with each release, and the [eval](eval/) folder can rerun the whole test on new ones.
 
