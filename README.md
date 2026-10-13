@@ -1,5 +1,5 @@
 # plain-voice
-Over the past two years, I have gotten fed up with the ai 'voice'. The ai voice is present in, seemingly, 90% of all written content on the internet, which is a true crisis for the quality of the written word as the democratization of voices on the web is reduced to a handul of uncannily consistent AI model's voices. This is a bad thing. And I do believe those who train models should be held responsible for effectively nuking variety and diversity from the written word online. 
+Over the past two years, I have gotten fed up with the ai 'voice'. The ai voice is present in, seemingly, 90% of all written content on the internet, which is a true crisis for the quality of the written word as the democratization of voices on the web is reduced to a handful of uncannily consistent AI model's voices. This is a bad thing. And I do believe those who train models should be held responsible for effectively nuking variety and diversity from the written word online. 
 
 We now live in a written word environment where, despite the profile picture next to the byline, it seems like most things are actually just written by Claude. 
 
@@ -21,20 +21,20 @@ Love ya,
 
 **P.S. A Note On Other Similar Skills (more detail in** [SIMILAR-SKILLS.md](SIMILAR-SKILLS.md)**):**
 
-Why would I bother making this skill where there are over 300 public skill files on GitHub alone all trying to make AI sound less like AI?
+Why would I bother making this skill when there are nearly 300 public skill files on GitHub alone all trying to make AI sound less like AI?
 
 A few reasons.
 Most important is the goal of the skill, so let's start there. Then I'm going to call out some bad behavior.
 
-1. This skill is meant to make using AI/LLMs less frustrating for the user to read and interact with. Most of the other skills explicitly attempt to make AI "sound like a human wrote it", the most popular and most-copied being called 'humanizer'; many explicitly are **designed  to decieve** human readers and AI-detectors with stated goals to "bypass detection". 
-2. Most of those skills are also much larger than this one, and cost signifigantly more tokens to call and run (often 5x-7x more than this skill). Several *appear* small, but actually have large reference files. This skill is designed to be token and cost effecient.
-3. None of the skills I found appear to have actually tested their outputs with a human judge! Wild! What the hell? Not even the authors of the skills appear to be checking the quality of their skills' outputs.
+1. This skill is meant to make using AI/LLMs less frustrating for the user to read and interact with. Many of the other skills explicitly attempt to make AI "sound like a human wrote it", the most popular and most-copied being called 'humanizer'. A handful (6 of the 47 I looked at) go further and are **designed to deceive** human readers and AI-detectors, with stated goals like "bypass AI detection".
+2. Most of those skills are also much larger than this one, and cost significantly more tokens to call and run (about a quarter are 3x bigger or more, and the biggest are 5x-7x this skill). Several *appear* small, but actually have large reference files. This skill is designed to be token and cost efficient.
+3. None of the skills I found appear to have actually tested their outputs with a human judge! Wild! What the hell? A few check quality with AI judges, but not even the authors of the skills appear to be judging their skills' outputs themselves.
 4. Most of those skills do not name the specific models and model versions they were tested on. plain-voice was tested on 10 models against no skill and a placebo (with only one other skill I could find that uses anything like a placebo). All the details are in the eval folder.
-5. (Because I'm a stickler for numbers: that '300 skills' number above is actually very much inflated because most are actually forks or copies of handful of the most-starred repos.)
-6. Finally, most if not all do not state the cost of creating the skill. This should be included. In today's usage based cost landscape (Oct 2026), this skill cost  approximately $680 worth of tokens to build and test. If you want a skill that feels more customized to your own preferences, I strongly recommend using this skill as a starting point and saving yourself the tokens.  Remember to try to search for existing solutions before spending a bunch of tokens building something that already exists. (Full token cost and model breakdown in [COST.md](COST.md))
+5. (Because I'm a stickler for numbers: that '300 skills' number above is actually very much inflated because many are actually forks or copies of a handful of the most-starred repos.)
+6. Finally, most if not all do not state the cost of creating the skill. This should be included. In today's usage based cost landscape (Oct 2026), this skill cost approximately $690 worth of tokens to build and test. If you want a skill that feels more customized to your own preferences, I strongly recommend using this skill as a starting point and saving yourself the tokens. Remember to try to search for existing solutions before spending a bunch of tokens building something that already exists. (Full token cost and model breakdown in [COST.md](COST.md))
 
 
-P.P.S For transparency's sake: The rest of this repo is written using this skill, with minimal human edits for clarity and emphasis.
+P.P.S. For transparency's sake: The rest of this repo is written using this skill, with minimal human edits for clarity and emphasis.
 
 ## Install
 
