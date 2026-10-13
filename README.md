@@ -11,11 +11,31 @@ This skill is meant for routine replies and working docs. It doesn't imitate a p
 
 This skill is not meant to be used to "fool" human readers if you attempt to use it as such. Trust me, people will still be able to tell. AI generated writing has many structural elements that will absolutely and crystal-clearly identify it as AI generated. If you are considering using this skill to that end: don't. Go write for yourself and learn the skill and craft of writing and make your communication to other people from you. You are what matters in good writing.
 
-Instead, please use this skill for things like AI-generated private documentation, personal queries, interfacing with AI in the workplace, personal projects, etc.
+Instead, please use this skill for things like AI-generated private documentation, personal queries, interfacing with AI in the workplace, personal projects, et cetera.
 
-For transparency's sake: The rest of this readme is written using this skill.
+Got it? Good.
+
+Love ya,
 
 -Jay
+
+**P.S. A Note On Other Similar Skills (more detail in** [SIMILAR-SKILLS.md](SIMILAR-SKILLS.md)**):**
+
+Why would I bother making this skill where there are over 300 public skill files on GitHub alone all trying to make AI sound less like AI?
+
+A few reasons.
+Most important is the goal of the skill, so let's start there. Then I'm going to call out some bad behavior.
+
+1. This skill is meant to make using AI/LLMs less frustrating for the user to read and interact with. Most of the other skills explicitly attempt to make AI "sound like a human wrote it", the most popular and most-copied being called 'humanizer'; many explicitly are **designed  to decieve** human readers and AI-detectors with stated goals to "bypass detection". 
+2. Most of those skills are also much larger than this one, and cost signifigantly more tokens to call and run (often 5x-7x more than this skill). Several *appear* small, but actually have large reference files. This skill is designed to be token and cost effecient.
+3. None of the skills I found appear to have actually tested their outputs with a human judge! Wild! What the hell? Not even the authors of the skills appear to be checking the quality of their skills' outputs.
+4. Most of those skills do not name the specific models and model versions they were tested on. plain-voice was tested on 10 models against no skill and a placebo (with only one other skill I could find that uses anything like a placebo). All the details are in the eval folder.
+5. (Because I'm a stickler for numbers: that '300 skills' number above is actually very much inflated because most are actually forks or copies of handful of the most-starred repos.)
+6. Finally, most if not all do not state the cost of creating the skill. This should be included. In today's usage based cost landscape (Oct 2026), this skill cost  approximately $680 worth of tokens to build and test. If you want a skill that feels more customized to your own preferences, I strongly recommend using this skill as a starting point and saving yourself the tokens.  Remember to try to search for existing solutions before spending a bunch of tokens building something that already exists. (Full token cost and model breakdown in [COST.md](COST.md))
+
+
+P.P.S For transparency's sake: The rest of this repo is written using this skill, with minimal human edits for clarity and emphasis.
+
 ## Install
 
 With the GitHub CLI, which asks which agent to install it for:
