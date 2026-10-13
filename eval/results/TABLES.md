@@ -343,13 +343,13 @@ Pairs answered: 44. Phrase checks answered: 32.
 
 Self-consistency on repeated pairs: preference 50%, AI-like 100%.
 
-Judge agreement with the human:
+Judge agreement with the human. Raw agreement counts ties, which the human used on 40% of pairs and the judges almost never did; the decisive columns use only pairs where both picked a side.
 
-| Judge | Pairs | Same preference | Same AI-like call |
-|---|---:|---:|---:|
-| claude-opus-5.5 | 32 | 25% | 50% |
-| gemini-3.8-flash | 32 | 31% | 41% |
-| gpt-6.1-sol | 28 | 36% | 57% |
-| grok-4.7 | 32 | 38% | 47% |
+| Judge | Pairs | Same preference (raw) | Same AI-like call (raw) | Same preference (decisive) | Same AI-like call (decisive) |
+|---|---:|---:|---:|---:|---:|
+| claude-opus-5.5 | 32 | 25% | 50% | 40% of 20 | 94% of 16 |
+| gemini-3.8-flash | 32 | 31% | 41% | 56% of 18 | 83% of 12 |
+| gpt-6.1-sol | 28 | 36% | 57% | 57% of 14 | 93% of 15 |
+| grok-4.7 | 32 | 38% | 47% | 60% of 20 | 94% of 16 |
 
 Human-checked pattern precision overall: 67% (45–83).

@@ -45,6 +45,8 @@ The skill was stress-tested in October 2026 on 10 models from 5 families (Claude
 
 Limits: every reply came from one agent harness (the GitHub Copilot App), which already holds back some chat-app habits such as emoji. Most measures come from models, which agree with a person on what sounds like stock AI but not on which reply is better. The one human rater was the skill's author, who reported fatigue during rating. Rating dozens of AI generated responses is an awful and fatiguing process. House styles shift with each model release.
 
+Building and testing the skill cost about $689 in model usage. In chat-style use it more than pays for its own tokens on 9 of the 10 models tested, because replies come out shorter. [COST.md](COST.md) has the breakdown.
+
 ## How the list was built
 
 The first version came from watching Claude's habits. Extending it to other model families drew on two kinds of evidence: published research, and a side-by-side test of 13 models. The stress test above then checked the result on new prompts.
@@ -112,6 +114,10 @@ Most tells showed up across several families, so the skill keeps one list instea
 - It can cost completeness. Judges preferred the no-skill reply for summaries, how-tos and format-heavy answers, where they wanted complete lists that are easy to scan. Replies with the skill also missed up to 2 points more of the facts users supplied. Two rules aimed at this didn't help in testing, so it's still open.
 - It avoids its own word list too eagerly. When a user wrote a listed word, like "landscape" or "leverage", replies with the skill reused it 36% of the time, against 54% without it, even though the skill says the user's words are fine. An extra sentence tried during tuning didn't change that.
 - Some models follow it less. MAI-Code-1.1-Flash changed least, and GPT-5 mini and Grok 4.5 kept using em dashes. Model-specific notes, or a shorter version for smaller models, could be tested next.
+
+## Similar skills
+
+Many other skills go after AI writing tells, from short rule lists to rewrite tools aimed at AI detectors. [SIMILAR-SKILLS.md](SIMILAR-SKILLS.md) compares the main ones with plain-voice and explains how to find and judge others.
 
 ## Sources
 

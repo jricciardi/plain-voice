@@ -1860,22 +1860,38 @@
    "claude-opus-5.5": {
     "n": 32,
     "prefer_agreement": 0.25,
-    "ai_like_agreement": 0.5
+    "ai_like_agreement": 0.5,
+    "prefer_agreement_decisive": 0.4,
+    "ai_like_agreement_decisive": 0.938,
+    "n_prefer_decisive": 20,
+    "n_ai_like_decisive": 16
    },
    "gemini-3.8-flash": {
     "n": 32,
     "prefer_agreement": 0.312,
-    "ai_like_agreement": 0.406
+    "ai_like_agreement": 0.406,
+    "prefer_agreement_decisive": 0.556,
+    "ai_like_agreement_decisive": 0.833,
+    "n_prefer_decisive": 18,
+    "n_ai_like_decisive": 12
    },
    "gpt-6.1-sol": {
     "n": 28,
     "prefer_agreement": 0.357,
-    "ai_like_agreement": 0.571
+    "ai_like_agreement": 0.571,
+    "prefer_agreement_decisive": 0.571,
+    "ai_like_agreement_decisive": 0.933,
+    "n_prefer_decisive": 14,
+    "n_ai_like_decisive": 15
    },
    "grok-4.7": {
     "n": 32,
     "prefer_agreement": 0.375,
-    "ai_like_agreement": 0.469
+    "ai_like_agreement": 0.469,
+    "prefer_agreement_decisive": 0.6,
+    "ai_like_agreement_decisive": 0.938,
+    "n_prefer_decisive": 20,
+    "n_ai_like_decisive": 16
    }
   },
   "pattern_precision_human": {
