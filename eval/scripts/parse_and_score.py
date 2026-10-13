@@ -9,6 +9,11 @@ sys.path.insert(0, str(Path(__file__).parent))
 import tells  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def _resolve(path):
+    """Committed manifests write the eval folder as <eval>; map it to this checkout."""
+    return str(path).replace("<eval>", str(ROOT))
 FAMILY = {"claude": "Claude", "gpt": "GPT", "gemini": "Gemini", "grok": "Grok", "mai": "MAI"}
 
 
@@ -47,10 +52,10 @@ def main():
     rows, missing = [], []
     for j in jobs:
         if j["kind"] == "batch":
-            if not Path(j["out_path"]).exists():
+            if not Path(_resolve(j["out_path"])).exists():
                 missing.append(j["id"])
                 continue
-            got = parse_batch(j["out_path"], j["rids"])
+            got = parse_batch(_resolve(j["out_path"]), j["rids"])
             for pos, (rid, pid) in enumerate(zip(j["rids"], j["prompt_ids"])):
                 text = got.get(rid)
                 if not text:
@@ -65,7 +70,7 @@ def main():
             convo = convos[j["convo"]]
             fr_turn = convo.get("format_request_turn")
             for n in range(1, j["turns"] + 1):
-                f = Path(j["dir"]) / f"reply-{n}.md"
+                f = Path(_resolve(j["dir"])) / f"reply-{n}.md"
                 if not f.exists() or not f.read_text().strip():
                     missing.append(f"{j['id']}#turn{n}")
                     continue

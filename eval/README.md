@@ -13,7 +13,7 @@ How the skill was stress-tested, with everything needed to rerun it.
 |---|---|
 | `prompts/` | Dev, test-1 and sealed test-2 prompt sets, multi-turn scripts, their SHA-256 hashes, and the drafts and WildChat filter they were built from. Sources and licenses are in [prompts/README.md](prompts/README.md). |
 | `conditions/` | The text placed in each model's instructions: none, skill v1, placebo, the original Claude-only skill, six versions with one section removed, and the v2 candidates. |
-| `manifest.json`, `manifest_round2.json` | Every generation job: model, condition, repeat, batch and full instructions. |
+| `manifest*.json` | Every generation job: model, condition, repeat, batch and the full instructions sent. File paths are written as `<eval>`, meaning this folder; the scripts map it to wherever the repo is checked out. |
 | `scripts/` | Prompt assembly, manifests, the tell-counting suite and its tests, scoring, judging, analysis and reporting. |
 | `review-app/` | The local app used for the blind human review. |
 | `human/` | Review tasks, the answer key used to unblind them, the responses, and superseded files kept for the record. |

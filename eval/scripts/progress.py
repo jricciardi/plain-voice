@@ -10,10 +10,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def _resolve(path):
+    """Committed manifests write the eval folder as <eval>; map it to this checkout."""
+    return str(path).replace("<eval>", str(ROOT))
+
+
 def done(j):
     if j["kind"] == "multiturn":
-        return all(os.path.isfile(os.path.join(j["dir"], f"reply-{n}.md")) for n in range(1, j["turns"] + 1))
-    p = j["out_path"]
+        return all(os.path.isfile(os.path.join(_resolve(j["dir"]), f"reply-{n}.md")) for n in range(1, j["turns"] + 1))
+    p = _resolve(j["out_path"])
     if not os.path.isfile(p):
         return False
     got = set(int(x) for x in re.findall(r"^===\s*r0*(\d+)\s*===\s*$", open(p, errors="replace").read(), flags=re.M))
@@ -24,7 +29,7 @@ def main():
     manifest = sys.argv[1] if len(sys.argv) > 1 else str(ROOT / "manifest.json")
     jobs = json.load(open(manifest))
     for j in jobs:
-        paths = [j["out_path"]] if j["kind"] == "batch" else [os.path.join(j["dir"], f"reply-{n}.md") for n in range(1, j["turns"] + 1)]
+        paths = [_resolve(j["out_path"])] if j["kind"] == "batch" else [os.path.join(_resolve(j["dir"]), f"reply-{n}.md") for n in range(1, j["turns"] + 1)]
         for p in paths:
             if os.path.isdir(p) and not os.listdir(p):
                 os.rmdir(p)
