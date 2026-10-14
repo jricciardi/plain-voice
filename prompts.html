@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Send a few real prompts</title>
+<style>
+:root { --bg: #f6f5f2; --card: #ffffff; --ink: #1d1d1f; --muted: #6b6b70; --line: #e3e1dc; --accent: #2f5bd3; --btn: #efeeea; }
+@media (prefers-color-scheme: dark) { :root { --bg: #151517; --card: #1f1f22; --ink: #ececee; --muted: #a0a0a8; --line: #333338; --accent: #8aa9ff; --btn: #2a2a2e; } }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-text-size-adjust: 100%; }
+main { max-width: 700px; margin: 0 auto; padding: 14px 14px 60px; }
+h1 { font-size: 1.45rem; margin: 10px 0 6px; }
+p { margin: 0 0 10px; }
+.muted { color: var(--muted); }
+.small { font-size: 0.88rem; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 12px 0; }
+.label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+input[type=text], textarea { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; width: 100%; }
+textarea { min-height: 84px; resize: vertical; }
+label.check { display: flex; gap: 8px; align-items: flex-start; margin: 6px 0; }
+label.check input { margin-top: 5px; width: 18px; height: 18px; flex: none; }
+.uses { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+button { font: inherit; color: var(--ink); background: var(--btn); border: 1px solid var(--line); border-radius: 10px; min-height: 46px; padding: 8px 14px; cursor: pointer; }
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+button.primary:disabled { opacity: 0.4; cursor: default; }
+button.link { background: none; border: none; color: var(--accent); min-height: 0; padding: 4px 0; text-decoration: underline; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.row button { flex: 1; }
+.prompt { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 12px; }
+.prompt:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.err { color: #c0392b; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Send a few real prompts</h1>
+  <p>The reading test works best on real messages. Please add 5 to 10 things you asked an AI recently, in ChatGPT, Claude, Gemini, Copilot or anything else.</p>
+  <div class="card">
+    <div class="label">What works</div>
+    <p>Messages that make sense on their own, like the first message of a chat. Everyday things are perfect: a question, an email or text to draft, advice, an explanation, a plan, feedback on something short.</p>
+    <p class="muted small">Skip anything that needs a file or a long paste to make sense.</p>
+  </div>
+  <div class="card">
+    <div class="label">What happens to them</div>
+    <p><span class="contact">Jay</span> sends them to several AI models (from Anthropic, OpenAI, Google, xAI and Microsoft) through GitHub Copilot, to get replies with and without the skill. You'll rate some of those replies later.</p>
+    <p>They stay private. Only totals get published, unless you tick "OK to publish" for a prompt, which lets that prompt and its replies appear in the public test data.</p>
+    <p><strong>Leave out anything confidential</strong>: work secrets, customer details, or anyone's personal information. Rewording a prompt to remove details is fine.</p>
+  </div>
+  <div class="card">
+    <div class="label">Your name</div>
+    <input type="text" id="name" autocomplete="given-name" placeholder="First name">
+    <div class="label" style="margin-top:14px">Which AI do you use most?</div>
+    <div class="uses" id="uses"></div>
+  </div>
+  <div class="card"><div class="label">Your prompts</div><div id="prompts"></div>
+    <p style="margin-top:10px"><button class="link" id="add">Add another</button></p>
+  </div>
+  <div class="card">
+    <label class="check"><input type="checkbox" id="consent"> <span>I understand these prompts will be sent to AI models to get replies, and I've left out anything confidential.</span></label>
+  </div>
+  <p class="err small" id="err"></p>
+  <button class="primary" id="ready" style="width:100%">Get my prompts ready to send</button>
+  <div id="send" hidden>
+    <div class="card">
+      <p>Send this to <span class="contact">Jay</span> however is easiest: copy it into a message, or download the file and attach it.</p>
+      <div class="row"><button class="primary" id="copy">Copy</button><button id="dl">Download file</button></div>
+      <p class="small muted" id="copied" style="margin-top:8px"></p>
+      <textarea id="raw" readonly hidden></textarea>
+    </div>
+  </div>
+</main>
+<script>
+(function () {
+  'use strict';
+  var KEY = 'pv-intake';
+  var CONTACT = 'Jay';
+  try { CONTACT = new URLSearchParams(window.location.search).get('to') || CONTACT; } catch (e) { /* keep default */ }
+  Array.prototype.forEach.call(document.querySelectorAll('.contact'), function (x) { x.textContent = CONTACT; });
+  var USES = ['ChatGPT', 'Claude', 'Gemini', 'Copilot', 'Grok', 'Other'];
+  var state;
+  try { state = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { state = null; }
+  state = state || {name: '', uses: [], prompts: [{text: '', publish: false}, {text: '', publish: false}, {text: '', publish: false}, {text: '', publish: false}, {text: '', publish: false}], consent: false};
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* not saved */ } }
+  function el(id) { return document.getElementById(id); }
+
+  el('name').value = state.name;
+  el('name').addEventListener('input', function () { state.name = el('name').value.trim(); save(); });
+  el('uses').innerHTML = USES.map(function (u) {
+    return '<label class="check"><input type="checkbox" value="' + u + '"' + (state.uses.indexOf(u) >= 0 ? ' checked' : '') + '> <span>' + u + '</span></label>';
+  }).join('');
+  el('uses').addEventListener('change', function () {
+    state.uses = Array.prototype.filter.call(el('uses').querySelectorAll('input'), function (x) { return x.checked; }).map(function (x) { return x.value; });
+    save();
+  });
+  el('consent').checked = !!state.consent;
+  el('consent').addEventListener('change', function () { state.consent = el('consent').checked; save(); });
+
+  function renderPrompts() {
+    el('prompts').innerHTML = state.prompts.map(function (p, i) {
+      return '<div class="prompt"><textarea data-i="' + i + '" placeholder="Prompt ' + (i + 1) + '"></textarea>' +
+        '<label class="check small"><input type="checkbox" data-pub="' + i + '"' + (p.publish ? ' checked' : '') + '> <span>OK to publish this one</span></label></div>';
+    }).join('');
+    Array.prototype.forEach.call(el('prompts').querySelectorAll('textarea'), function (t) {
+      t.value = state.prompts[Number(t.getAttribute('data-i'))].text;
+    });
+    el('add').hidden = state.prompts.length >= 10;
+  }
+  renderPrompts();
+  el('prompts').addEventListener('input', function (e) {
+    var i = e.target.getAttribute('data-i');
+    if (i != null) { state.prompts[Number(i)].text = e.target.value; save(); }
+  });
+  el('prompts').addEventListener('change', function (e) {
+    var i = e.target.getAttribute('data-pub');
+    if (i != null) { state.prompts[Number(i)].publish = e.target.checked; save(); }
+  });
+  el('add').addEventListener('click', function () {
+    if (state.prompts.length < 10) { state.prompts.push({text: '', publish: false}); save(); renderPrompts(); }
+  });
+
+  var text = '';
+  el('ready').addEventListener('click', function () {
+    var filled = state.prompts.filter(function (p) { return p.text.trim(); });
+    var err = !state.name ? 'Add your name.' : filled.length < 3 ? 'Add at least 3 prompts (5 to 10 is ideal).' : !state.consent ? 'Tick the box above to confirm.' : '';
+    el('err').textContent = err;
+    if (err) return;
+    text = JSON.stringify({app: 'plain-voice-intake', v: 1, name: state.name, uses: state.uses, consent: true, at: new Date().toISOString(),
+      prompts: filled.map(function (p) { return {text: p.text.trim(), publish: !!p.publish}; })});
+    el('raw').value = text;
+    el('send').hidden = false;
+    el('send').scrollIntoView({behavior: 'smooth'});
+  });
+  el('copy').addEventListener('click', function () {
+    function fallback() {
+      el('raw').hidden = false; el('raw').focus(); el('raw').select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      el('copied').textContent = ok ? 'Copied. Paste it into a message to ' + CONTACT + '.' : 'Select the text below and copy it.';
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(function () { el('copied').textContent = 'Copied. Paste it into a message to ' + CONTACT + '.'; }, fallback);
+    else fallback();
+  });
+  el('dl').addEventListener('click', function () {
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text], {type: 'application/json'}));
+    a.download = 'plain-voice-prompts-' + (state.name || 'rater').toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.json';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Reading test</title>
+<style>
+:root {
+  --bg: #f6f5f2; --card: #ffffff; --ink: #1d1d1f; --muted: #6b6b70; --line: #e3e1dc;
+  --accent: #2f5bd3; --flag: #ffe27a; --flag-ink: #1d1d1f; --btn: #efeeea; --on: #1d1d1f; --on-ink: #ffffff;
+  --bubble: #eef2fb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151517; --card: #1f1f22; --ink: #ececee; --muted: #a0a0a8; --line: #333338;
+    --accent: #8aa9ff; --flag: #6b5a00; --flag-ink: #fff4c2; --btn: #2a2a2e; --on: #ececee; --on-ink: #151517;
+    --bubble: #232838;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-text-size-adjust: 100%; }
+main { max-width: 700px; margin: 0 auto; padding: 14px 14px 110px; }
+h1 { font-size: 1.45rem; margin: 10px 0 6px; }
+h2.screen { font-size: 1.2rem; margin: 6px 0 12px; }
+p { margin: 0 0 10px; }
+.muted { color: var(--muted); }
+.small { font-size: 0.88rem; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 12px 0; }
+.label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--muted); }
+.dots { display: flex; gap: 4px; }
+.dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--line); }
+.dots span.done { background: var(--muted); }
+.dots span.now { background: var(--accent); }
+.banner { background: var(--bubble); border-radius: 10px; padding: 10px 12px; font-size: 0.92rem; margin: 10px 0; }
+.prompt-body { position: relative; }
+.prompt-body.clip { max-height: 7.5em; overflow: hidden; }
+.prompt-body.clip::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2.5em; background: linear-gradient(transparent, var(--card)); }
+.md p, .md ul, .md ol, .md pre, .md blockquote { margin: 0 0 10px; }
+.md p:last-child { margin-bottom: 0; }
+.md ul, .md ol { padding-left: 1.4em; }
+.md li { margin: 2px 0; }
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6 { margin: 12px 0 6px; line-height: 1.3; }
+.md h1, .md h2 { font-size: 1.2em; }
+.md h3, .md h4, .md h5, .md h6 { font-size: 1.05em; }
+.md code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--btn); padding: 1px 4px; border-radius: 4px; }
+.md pre { background: var(--btn); padding: 10px; border-radius: 8px; overflow-x: auto; white-space: pre-wrap; }
+.md pre code { background: none; padding: 0; }
+.md blockquote { border-left: 3px solid var(--line); margin-left: 0; padding-left: 12px; color: var(--muted); }
+.md hr { border: none; border-top: 1px solid var(--line); margin: 6px 0; }
+.md .table-wrap { overflow-x: auto; margin: 0 0 10px; }
+.md table { border-collapse: collapse; font-size: 0.93em; }
+.md th, .md td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
+.fake-link { color: var(--accent); text-decoration: underline; }
+.u { cursor: pointer; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; -webkit-tap-highlight-color: transparent; }
+.u.on, tr.u.on td, tr.u.on th { background: var(--flag); color: var(--flag-ink); }
+div.u.hr { padding: 8px 0; }
+@media (hover: hover) { .u:hover { outline: 2px solid var(--flag); } }
+.hint { font-size: 0.9rem; color: var(--muted); margin: 0 0 8px; }
+.q { margin: 18px 0 6px; font-weight: 600; }
+.scale { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.choices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.choices.four { grid-template-columns: repeat(2, 1fr); }
+button { font: inherit; color: var(--ink); background: var(--btn); border: 1px solid var(--line); border-radius: 10px; min-height: 46px; padding: 8px 12px; cursor: pointer; }
+button.sel { background: var(--on); color: var(--on-ink); border-color: var(--on); }
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+button.primary:disabled { opacity: 0.4; cursor: default; }
+button.link { background: none; border: none; color: var(--accent); min-height: 0; padding: 4px 0; text-decoration: underline; }
+.ends { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+.navbar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--bg); border-top: 1px solid var(--line); padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); }
+.navbar .inner { max-width: 700px; margin: 0 auto; display: flex; gap: 10px; }
+.navbar .inner button { flex: 1; }
+.navbar .inner button.back { flex: 0 0 30%; }
+input[type=text], textarea { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; width: 100%; }
+textarea { min-height: 90px; resize: vertical; }
+.sessions { list-style: none; padding: 0; margin: 0; }
+.sessions li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.sessions li:last-child { border-bottom: none; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.row button { flex: 1; }
+.kbd { display: none; }
+@media (hover: hover) and (pointer: fine) { .kbd { display: inline; font-size: 0.78rem; color: var(--muted); font-weight: 400; } }
+</style>
+</head>
+<body>
+<main id="app"></main>
+<div class="navbar" id="navbar" hidden><div class="inner" id="navinner"></div></div>
+<script>
+var KIT = {"kit_id":"1ec6786ea4","rater":"","contact":"Jay","sessions":[{"id":"s1","blocks":[{"id":"s1b1","items":[{"id":"aedc8p","prompt":"Should i enable or disable superfetch in windows 11 when i have 2 nvme drives and 64gb ram","doc":[{"t":"p","lines":[[{"k":0,"r":"**Leave it enabled (default).**"}]]},{"t":"p","lines":[[{"k":1,"r":"In modern versions of Windows 10 and 11, Superfetch was renamed to **SysMain**."},{"k":2,"r":"With 64 GB of RAM and two fast NVMe SSDs, there is no practical reason to disable it, and turning it off will not improve performance."}]]},{"t":"p","lines":[[{"k":3,"r":"Here is why:"}]]},{"t":"list","ordered":true,"items":[{"lines":[[{"k":4,"r":"**How SysMain uses 64 GB of RAM:** SysMain tracks your most frequently used programs and pre-caches their files into otherwise unused system RAM."},{"k":5,"r":"Because you have 64 GB, you have ample memory sitting idle."},{"k":6,"r":"Unused RAM does nothing for you; SysMain simply uses that excess capacity to make app launches nearly instantaneous."},{"k":7,"r":"If a heavy application or game needs that memory, Windows discards the cached data instantly with zero performance penalty."}]],"c":[]},{"lines":[[{"k":8,"r":"**NVMe durability is not an issue:** There is an outdated myth from early SATA SSD days (around 2011–2014) that Superfetch causes excess writes that wear out drives."},{"k":9,"r":"Modern NVMe drives have massive endurance ratings (hundreds of Terabytes Written) and sophisticated controllers; the tiny background read/write activity from SysMain has zero measurable impact on drive lifespan."}]],"c":[]},{"lines":[[{"k":10,"r":"**CPU overhead is negligible:** On modern multi-core processors, SysMain runs as a low-priority background thread and consumes virtually zero CPU resources."}]],"c":[]}],"start":1},{"t":"p","lines":[[{"k":11,"r":"**The only exception:** You should only consider disabling SysMain if you open Task Manager and identify a known Windows bug where `Service Host: SysMain` is causing sustained 100% disk or CPU usage."},{"k":12,"r":"If your system is running normally, let Windows handle memory management."}]]}]},{"id":"8kzuxg","prompt":"Write a professional email on this  scenario \"Dear sir, i hope this email find you well, i want confirmation about my invoices from your side, did you send these invoices to finance for payment or not? if  you not sent yet kindly send as soon as possible or if you having any kind of query and question please let me know.\"","doc":[{"t":"p","lines":[[{"k":0,"r":"Subject: Follow-up regarding invoice submission for payment"}]]},{"t":"p","lines":[[{"k":1,"r":"Dear [Recipient's Name],"}]]},{"t":"p","lines":[[{"k":2,"r":"I hope this email finds you well."}]]},{"t":"p","lines":[[{"k":3,"r":"I am writing to follow up on the status of my recent invoice(s) [Invoice Number(s) / reference]."},{"k":4,"r":"Could you please confirm if these have been reviewed and forwarded to the finance department for payment processing?"}]]},{"t":"p","lines":[[{"k":5,"r":"If they have not been submitted yet, I would appreciate it if you could forward them at your earliest convenience."},{"k":6,"r":"Please let me know if you need any additional information or have any questions regarding the invoice details."}]]},{"t":"p","lines":[[{"k":7,"r":"Thank you for your assistance, and I look forward to hearing from you."}]]},{"t":"p","lines":[[{"k":8,"r":"Best regards,"}]]},{"t":"p","lines":[[{"k":9,"r":"[Your Name]"}],[{"k":10,"r":"[Your Title / Company]"}],[{"k":11,"r":"[Your Contact Information]"}]]}]},{"id":"cy5rdj","prompt":"delve a little, not a whole history of cookware. my cast iron goes orange after tomato sauce even when i oil it warm. hearth & mill, 12 inch, three years of normal weeknight use. is the pan finished or is it the acid?","doc":[{"t":"p","lines":[[{"k":0,"r":"Your pan is completely fine—it is definitely the acid, not a ruined pan."}]]},{"t":"p","lines":[[{"k":1,"r":"Here is what is happening:"}]]},{"t":"list","ordered":true,"items":[{"lines":[[{"k":2,"r":"**Acid breakdown:** High-acid foods like tomato sauce (especially if simmered for more than 15–20 minutes) chemically react with the polymerized oil layer that makes up your seasoning."},{"k":3,"r":"It essentially eats away the top micro-layers of protective patina."}]],"c":[]},{"lines":[[{"k":4,"r":"**Flash rust:** Once that raw iron is exposed to moisture and heat, it oxidizes almost instantaneously."},{"k":5,"r":"When you apply oil to a warm pan that already has micro-rust formed on bare iron, the wipe picks up iron oxide, giving you that telltale bright orange smear on a paper towel."}]],"c":[]}],"start":1},{"t":"h","level":3,"u":{"k":6,"r":"How to fix it right now:"}},{"t":"list","ordered":false,"items":[{"lines":[[{"k":7,"r":"**Scrub:** Take a chainmail scrubber or stiff bristle brush with warm water and a tiny bit of dish soap to scour off all the rust and loose, degraded seasoning."}]],"c":[]},{"lines":[[{"k":8,"r":"**Dry thoroughly:** Put it on the stovetop over medium-low heat for 3–5 minutes until bone dry."}]],"c":[]},{"lines":[[{"k":9,"r":"**Stovetop re-season:** Add a tiny dab of high-smoke-point oil (grapeseed, canola, or Crisco), rub it completely over the interior, then use a clean cloth to wipe it off as if you made a mistake putting it on (you want only a microscopic layer)."},{"k":10,"r":"Let it smoke lightly for 5–10 minutes, then turn off the heat."}]],"c":[]}]},{"t":"p","lines":[[{"k":11,"r":"For Hearth & Mill or any standard cast iron: save the long-simmered marinara for enameled cast iron or stainless steel, and your skillet will easily last another lifetime."}]]}]},{"id":"5grbcu","prompt":"can u walk me thru solving 2x^2 + 12x - 14 = 0 by completeing the square? numbered steps pls, my teacher takes points off if we skip steps and i alwyas mess up when theres a number in front of the x^2","doc":[{"t":"p","lines":[[{"k":0,"r":"Here is the step-by-step solution to solve **$2x^2 + 12x - 14 = 0$** by completing the square without skipping any steps:"}]]},{"t":"hr","u":{"k":1,"r":""}},{"t":"h","level":3,"u":{"k":2,"r":"**Step 1: Divide every term by the leading coefficient ($a = 2$)**"}},{"t":"p","lines":[[{"k":3,"r":"When there is a number in front of $x^2$, you must first divide the entire equation by that number:"}],[{"k":4,"r":"$$\\frac{2x^2}{2} + \\frac{12x}{2} - \\frac{14}{2} = \\frac{0}{2}$$"}],[{"k":5,"r":"$$x^2 + 6x - 7 = 0$$"}]]},{"t":"hr","u":{"k":6,"r":""}},{"t":"h","level":3,"u":{"k":7,"r":"**Step 2: Move the constant term to the right side**"}},{"t":"p","lines":[[{"k":8,"r":"Add $7$ to both sides of the equation:"}],[{"k":9,"r":"$$x^2 + 6x = 7$$"}]]},{"t":"hr","u":{"k":10,"r":""}},{"t":"h","level":3,"u":{"k":11,"r":"**Step 3: Calculate the value needed to complete the square**"}},{"t":"p","lines":[[{"k":12,"r":"Take half of the $x$-coefficient ($b = 6$) and square it:"}],[{"k":13,"r":"$$\\left(\\frac{b}{2}\\right)^2 = \\left(\\frac{6}{2}\\right)^2 = (3)^2 = 9$$"}]]},{"t":"hr","u":{"k":14,"r":""}},{"t":"h","level":3,"u":{"k":15,"r":"**Step 4: Add that value ($9$) to both sides of the equation**"}},{"t":"p","lines":[[{"k":16,"r":"$$x^2 + 6x + 9 = 7 + 9$$"}],[{"k":17,"r":"$$x^2 + 6x + 9 = 16$$"}]]},{"t":"hr","u":{"k":18,"r":""}},{"t":"h","level":3,"u":{"k":19,"r":"**Step 5: Factor the left side as a perfect square**"}},{"t":"p","lines":[[{"k":20,"r":"The left side factors into $\\left(x + \\frac{b}{2}\\right)^2$:"}],[{"k":21,"r":"$$(x + 3)^2 = 16$$"}]]},{"t":"hr","u":{"k":22,"r":""}},{"t":"h","level":3,"u":{"k":23,"r":"**Step 6: Take the square root of both sides**"}},{"t":"p","lines":[[{"k":24,"r":"Remember to include the plus/minus ($\\pm$) sign on the constant side:"}],[{"k":25,"r":"$$\\sqrt{(x + 3)^2} = \\pm \\sqrt{16}$$"}],[{"k":26,"r":"$$x + 3 = \\pm 4$$"}]]},{"t":"hr","u":{"k":27,"r":""}},{"t":"h","level":3,"u":{"k":28,"r":"**Step 7: Isolate $x$**"}},{"t":"p","lines":[[{"k":29,"r":"Subtract $3$ from both sides:"}],[{"k":30,"r":"$$x = -3 \\pm 4$$"}]]},{"t":"hr","u":{"k":31,"r":""}},{"t":"h","level":3,"u":{"k":32,"r":"**Step 8: Solve for both individual values of $x$**"}},{"t":"list","ordered":false,"items":[{"lines":[[{"k":33,"r":"**First solution:**"}],[{"k":34,"r":"$$x = -3 + 4 = 1$$"}]],"c":[]},{"lines":[[{"k":35,"r":"**Second solution:**"}],[{"k":36,"r":"$$x = -3 - 4 = -7$$"}]],"c":[]}]},{"t":"p","lines":[[{"k":37,"r":"**Final Answer:**"}],[{"k":38,"r":"$$x = 1 \\quad \\text{or} \\quad x = -7$$"}]]}]}]},{"id":"s1b2","items":[{"id":"gp7gzb","prompt":"Need a product launch email. Pebble Route is releasing Homing Pebble, a gps collar for elderly cats who wander off. $129, ships November 3, battery lasts 8 days, uses the same app as our dog tracker. Send it to people who already bought the dog collar. Sign it Lila Chen. Casual, not a press release.","doc":[{"t":"p","lines":[[{"k":0,"r":"Subject: A GPS collar for older cats"}]]},{"t":"p","lines":[[{"k":1,"r":"Hi,"}]]},{"t":"p","lines":[[{"k":2,"r":"If you have an older cat at home alongside your dog, we built something for them."}]]},{"t":"p","lines":[[{"k":3,"r":"It's called Homing Pebble, a lightweight GPS collar designed for elderly cats who wander off."},{"k":4,"r":"It connects directly to the Pebble Route app you already use for your dog, so you can track both pets in one place."}]]},{"t":"p","lines":[[{"k":5,"r":"The collar costs $129, the battery lasts 8 days between charges, and orders ship November 3."}]]},{"t":"p","lines":[[{"k":6,"r":"You can order yours on our site now."}]]},{"t":"p","lines":[[{"k":7,"r":"Lila Chen"}]]}]},{"id":"vq9xyc","prompt":"You need to very politely remind the person that they promised to reply to my message.","doc":[{"t":"p","lines":[[{"k":0,"r":"Hi [Name],"}]]},{"t":"p","lines":[[{"k":1,"r":"I wanted to follow up on our earlier conversation."},{"k":2,"r":"You mentioned you would be able to get back to me on this, so I am checking in to see if you have an update."}]]},{"t":"p","lines":[[{"k":3,"r":"Thank you,"}],[{"k":4,"r":"[Your Name]"}]]}]},{"id":"pjpwmc","prompt":"We're first-time homebuyers and just got our Loan Estimate from Wrenfield Mortgage. Half of it is jargon. Could you give me a short glossary with each term in bold and a plain-English definition (1-2 sentences each)? The ones that confused us: escrow, PMI, discount points, APR vs. interest rate, rate lock, cash to close, earnest money, debt-to-income ratio.","doc":[{"t":"p","lines":[[{"k":0,"r":"**Escrow**"}],[{"k":1,"r":"A holding account where your lender sets aside part of your monthly mortgage payment to pay property taxes and homeowners insurance for you when those bills come due."}]]},{"t":"p","lines":[[{"k":2,"r":"**PMI (Private Mortgage Insurance)**"}],[{"k":3,"r":"A monthly fee added to your payment if you put down less than 20 percent on a conventional loan."},{"k":4,"r":"It protects the lender if you stop paying your mortgage."}]]},{"t":"p","lines":[[{"k":5,"r":"**Discount points**"}],[{"k":6,"r":"Upfront fees paid to the lender at closing to lower your interest rate over the life of the loan."},{"k":7,"r":"One point costs 1 percent of your loan amount."}]]},{"t":"p","lines":[[{"k":8,"r":"**APR vs. interest rate**"}],[{"k":9,"r":"The interest rate is the percentage you pay each year on your loan balance."},{"k":10,"r":"The annual percentage rate (APR) includes that rate plus lender fees, closing costs, and points, giving a fuller picture of the total loan cost."}]]},{"t":"p","lines":[[{"k":11,"r":"**Rate lock**"}],[{"k":12,"r":"An agreement guaranteeing that your interest rate will not change before closing, provided your loan closes within a specified time."},{"k":13,"r":"It protects you from rate increases while your paperwork is processed."}]]},{"t":"p","lines":[[{"k":14,"r":"**Cash to close**"}],[{"k":15,"r":"The total amount of money you need to bring on closing day."},{"k":16,"r":"It includes your down payment minus your earnest money, plus loan fees, taxes, and prepaid insurance."}]]},{"t":"p","lines":[[{"k":17,"r":"**Earnest money**"}],[{"k":18,"r":"A deposit made when your purchase offer is accepted to prove to the seller that you intend to buy the home."},{"k":19,"r":"If the purchase goes through, the deposit applies toward your down payment or closing costs."}]]},{"t":"p","lines":[[{"k":20,"r":"**Debt-to-income ratio (DTI)**"}],[{"k":21,"r":"The percentage of your gross monthly income used to pay existing debts, including auto loans, student loans, credit cards, and your future mortgage."},{"k":22,"r":"Lenders use it to judge whether you can take on another monthly payment."}]]}]},{"id":"eh7676","prompt":"ok i never post but my brother said a linkedin post about this would get shared. i quit a pm job at a regional bank last march and now it's just me, answering missed new-patient calls for dental offices. first client is dr. amira solis at bright molar in tucson. they were missing about 30% of those calls, and now they basically don't. my name is joon park. around 150 words, something people might actually pass on.","doc":[{"t":"p","lines":[[{"k":0,"r":"Last March, I quit my job as a product manager at a regional bank to try something much simpler."}]]},{"t":"p","lines":[[{"k":1,"r":"Dental offices miss a lot of phone calls from people trying to book their first appointment."},{"k":2,"r":"When someone has a toothache or just moved to town, they rarely leave a voicemail."},{"k":3,"r":"They just call the next dentist on the list."}]]},{"t":"p","lines":[[{"k":4,"r":"Now it is just me answering those missed calls."}]]},{"t":"p","lines":[[{"k":5,"r":"My first client was Dr. Amira Solis at Bright Molar in Tucson."},{"k":6,"r":"Before we started working together, her front desk was missing about 30% of new-patient calls because the staff was busy checking people in or handling insurance questions."},{"k":7,"r":"Today, almost none of those calls go unanswered."}]]},{"t":"p","lines":[[{"k":8,"r":"Front desks are overwhelmed, and automating phones with bots usually just frustrates patients."},{"k":9,"r":"Having a person pick up right away turns out to fix most of the problem."}]]},{"t":"p","lines":[[{"k":10,"r":"If you run a practice or know a clinic dealing with this, let's talk."}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":11,"r":"Joon Park"}]],"c":[]}]}]}]}]},{"id":"s2","blocks":[{"id":"s2b1","items":[{"id":"hdzfxp","prompt":"how should a 6-person studio think about the landscape right now? copperline audio records podcasts for trade associations, and cheaper home setups are everywhere. what can we actually leverage on a one-pager, the live room, the engineer in the session, or something else?","doc":[{"t":"p","lines":[[{"k":0,"r":"Put the engineer in the session on the one-pager."},{"k":1,"r":"The live room belongs there as a photo and a sentence, because a guest can hear a bad room immediately."},{"k":2,"r":"Lead with the person."}]]},{"t":"p","lines":[[{"k":3,"r":"Copperline records for trade associations."},{"k":4,"r":"Cheaper home setups compete for a host who records alone and likes doing it."},{"k":5,"r":"They are a weak substitute when the client is an association booking a board member or a staff director who will do this once and needs to sound like the last episode."},{"k":6,"r":"That guest is not going to run their own session."},{"k":7,"r":"Someone has to."}]]},{"t":"p","lines":[[{"k":8,"r":"A six-person studio can say that plainly: you record the series, you handle the guest who has never done this, and the episodes match."},{"k":9,"r":"The room is how you keep that promise when they come to you."},{"k":10,"r":"Show it."},{"k":11,"r":"Don't open with the gear or the square footage."}]]},{"t":"p","lines":[[{"k":12,"r":"Home setups took the easy solo work."},{"k":13,"r":"What still needs a studio is the association episode: a producer in the room, a guest who has never recorded, and a file that matches the series."},{"k":14,"r":"Put that on the page, and name the client it is for."}]]}]},{"id":"stn2ay","prompt":"Are Noctua's cooling fan blades made of rubber?","doc":[{"t":"p","lines":[[{"k":0,"r":"No. Noctua's fan blades are not rubber."},{"k":1,"r":"Current fans use Sterrox, a liquid-crystal polymer, which is a stiff plastic."},{"k":2,"r":"Older Noctua fans mostly used fiberglass-reinforced PBT, also a plastic."},{"k":3,"r":"The blades can flex a little, which is probably why they feel soft, but the material is not rubber."},{"k":4,"r":"The soft parts in the box are the silicone anti-vibration pads and mounts."}]]}]},{"id":"wyzdm9","prompt":"What was the most commonly used numeral system in ancient Semitic societies like the Phoenicians, the Hebrews, and the Carthaginians?","doc":[{"t":"p","lines":[[{"k":0,"r":"Alphabetic numerals."},{"k":1,"r":"Letters of the alphabet stood for numbers, in tens: the first letters for 1 through 9, the next for 10, 20, and so on through 90, and the later letters for hundreds."},{"k":2,"r":"You add the values."},{"k":3,"r":"Twelve is the letter for 10 plus the letter for 2."},{"k":4,"r":"There is no zero and no place value."},{"k":5,"r":"A mark was often added so the letters would be read as a number rather than a word."}]]},{"t":"p","lines":[[{"k":6,"r":"Hebrew used this in coins, dates, and accounts from at least the Hellenistic period."},{"k":7,"r":"Phoenician and Punic, the language of Carthage, used that same alphabet, and the same letter-values are the numeral system associated with them."},{"k":8,"r":"Stroke counts, and signs adapted from Egyptian numerals, also show up in some Phoenician and Punic inscriptions."},{"k":9,"r":"The letter system is the one all three have in common."}]]},{"t":"p","lines":[[{"k":10,"r":"Mesopotamian Semitic states used a different system, sexagesimal cuneiform with place value."},{"k":11,"r":"Phoenicians, Hebrews, and Carthaginians did not."}]]}]},{"id":"hzm32y","prompt":"Opening paragraph only of a college application essay, about 120 words. Student is Mateo Ruiz, applying to state schools for civil engineering. He spent two summers rebuilding a footbridge on his grandparents' farm in New Mexico after a flood, with his grandfather Ramon, a retired welder who is particular about every joint.","doc":[{"t":"p","lines":[[{"k":0,"r":"The second summer, my grandfather made me cut the weld out and do it again."},{"k":1,"r":"Ramon had already walked the creek, marked the posts the flood had kicked sideways, and set new stringers where the footbridge used to be."},{"k":2,"r":"He is a retired welder."},{"k":3,"r":"\"Close\" is not a word he uses for a joint."},{"k":4,"r":"I stood there with the grinder while a bead I liked became a groove of bare metal."},{"k":5,"r":"The bridge only had to carry us, the dog, and a wheelbarrow across a ditch on my grandparents' farm in New Mexico."},{"k":6,"r":"He still checked every joint after it cooled."},{"k":7,"r":"Two summers of that, and I stopped thinking of the bridge as a chore."},{"k":8,"r":"I started noticing where it would fail."}]]}]}]},{"id":"s2b2","items":[{"id":"yf2y2a","prompt":"My dishwasher has been broken for 3 weeks and my landlord keeps saying he'll \"get someone out\" and then nothing happens. Can you write two versions of a message to him, one formal I can email and keep for my records and one more casual for texting? I want to mention that the lease says appliance repairs are his responsibility (section 9) and ask him to confirm a repair date by this Friday. His name is Greg, I'm Priya in unit 4B.","doc":[{"t":"p","lines":[[{"k":0,"r":"Send both if you want, but keep the email."},{"k":1,"r":"That's the one you'll want later."},{"k":2,"r":"I left Friday undated so you can put the actual date in before you send."}]]},{"t":"p","lines":[[{"k":3,"r":"**Email**"}]]},{"t":"p","lines":[[{"k":4,"r":"Subject: Unit 4B — dishwasher still unrepaired; please confirm a date by Friday"}]]},{"t":"p","lines":[[{"k":5,"r":"Dear Greg,"}]]},{"t":"p","lines":[[{"k":6,"r":"I am writing about the dishwasher in unit 4B."},{"k":7,"r":"It has been broken for three weeks."},{"k":8,"r":"I have already reported it."},{"k":9,"r":"You have said you would get someone out, but no visit has been scheduled and no one has come."}]]},{"t":"p","lines":[[{"k":10,"r":"Section 9 of the lease makes appliance repairs your responsibility."},{"k":11,"r":"Please confirm in writing, by this Friday, the date a technician will be here to repair or replace it."},{"k":12,"r":"If you have already booked someone, send the company name and the arrival window so I can be home."}]]},{"t":"p","lines":[[{"k":13,"r":"Please treat this as my formal request that the repair be scheduled."}]]},{"t":"p","lines":[[{"k":14,"r":"Thank you,"}],[{"k":15,"r":"Priya"}],[{"k":16,"r":"Unit 4B"}]]},{"t":"p","lines":[[{"k":17,"r":"**Text**"}]]},{"t":"p","lines":[[{"k":18,"r":"Hey Greg, it's Priya in 4B."},{"k":19,"r":"The dishwasher has been broken for 3 weeks."},{"k":20,"r":"You said you'd get someone out, but no one has come."},{"k":21,"r":"Appliance repairs are yours under section 9 of the lease."},{"k":22,"r":"Can you confirm a repair date by this Friday?"},{"k":23,"r":"Thanks."}]]},{"t":"p","lines":[[{"k":24,"r":"If he texts back another \"I'll get someone out,\" don't argue the lease in the text thread."},{"k":25,"r":"Reply on email and ask for the date."}]]}]},{"id":"j65nsv","prompt":"be straight with me. is it crucial that red kettle hot sauce has the trademark filed before we print 5,000 labels on thursday, or can i print and file next month? i'm rosa mendes. the llc is done. the domain is ours.","doc":[{"t":"p","lines":[[{"k":0,"r":"No. It is not crucial that the trademark be filed before you print on Thursday."}]]},{"t":"p","lines":[[{"k":1,"r":"Filing is not what lets you put Red Kettle on a label."},{"k":2,"r":"You can use the name now."},{"k":3,"r":"The LLC being done and the domain being yours are good."},{"k":4,"r":"They are not a trademark registration, and you do not need them to become one before the printer runs."}]]},{"t":"p","lines":[[{"k":5,"r":"Print."},{"k":6,"r":"File next month."},{"k":7,"r":"Use ™ on the labels, not ®."},{"k":8,"r":"The ® is for a mark that's already registered."},{"k":9,"r":"You are not there. ™ is the honest mark for a name you're using and haven't registered."}]]},{"t":"p","lines":[[{"k":10,"r":"The risk that actually matters is not \"we printed before we filed.\""},{"k":11,"r":"It's \"we printed a name a food brand already owns.\""},{"k":12,"r":"If you haven't had someone search the name, that hour is worth more than the filing."},{"k":13,"r":"If a search comes back clean enough that you're willing to own it, Thursday is fine."},{"k":14,"r":"First use is what starts your common-law rights."},{"k":15,"r":"The application starts the federal clock."},{"k":16,"r":"Different things."}]]},{"t":"p","lines":[[{"k":17,"r":"I am not your lawyer."},{"k":18,"r":"If a search turns up someone already selling food under Red Kettle, stop the printer."},{"k":19,"r":"If it doesn't, print."}]]}]},{"id":"pvrghg","prompt":"wedding toast for saturday, under 2 minutes, i have to memorize it. my sister priya is marrying andre. they met 8 years ago when his food truck broke down outside the clinic where she does intake, and she waited with him until the tow came. i'm the brother, dev. i'll probably cry, that's fine.","doc":[{"t":"p","lines":[[{"k":0,"r":"About 90 seconds if you don't rush, shorter if you do."},{"k":1,"r":"Short lines so it's easier to memorize."},{"k":2,"r":"You can cry on \"She stays.\""},{"k":3,"r":"That's the line."}]]},{"t":"p","lines":[[{"k":4,"r":"I'm Dev, Priya's brother."}]]},{"t":"p","lines":[[{"k":5,"r":"They asked me to keep this under two minutes."},{"k":6,"r":"I have been practicing not crying since Tuesday."},{"k":7,"r":"We'll see."}]]},{"t":"p","lines":[[{"k":8,"r":"Eight years ago Andre's food truck broke down outside the clinic where Priya does intake."},{"k":9,"r":"She could have pointed him to a phone number."},{"k":10,"r":"She waited with him until the tow came."}]]},{"t":"p","lines":[[{"k":11,"r":"That is how they met."},{"k":12,"r":"It is also how she loves people."},{"k":13,"r":"She stays."}]]},{"t":"p","lines":[[{"k":14,"r":"Andre, you broke down in the right parking lot."},{"k":15,"r":"You have shown up for her ever since."},{"k":16,"r":"That is all I ever wanted for my sister, and more than I knew how to ask for."}]]},{"t":"p","lines":[[{"k":17,"r":"Priya, you have always been the one who doesn't leave."},{"k":18,"r":"I am so glad you found someone who won't either."}]]},{"t":"p","lines":[[{"k":19,"r":"I love you both."},{"k":20,"r":"Welcome to the family, Andre."},{"k":21,"r":"I'm going to sit down now, while I still can."}]]}]},{"id":"8que3z","prompt":"I want to create a portfolio website to showcase my web dev skills and knowledge. Last year I wanted to use next.js as it was the recent development and I wanted to host at vercel.com. I am not sure why, but I guess github pages did not have a next.js support ? This year I learned about astro which I think is the latest frontier of web dev, isn't it ? Which also can be deployed to github pages. So should I let go of vercel.com since I won't be using next.js and move to github pages with astro ?","doc":[{"t":"p","lines":[[{"k":0,"r":"No. Don't drop Vercel just because you're not using Next, and don't pick Astro because it feels like the latest frontier."},{"k":1,"r":"Those are two separate decisions."}]]},{"t":"p","lines":[[{"k":2,"r":"Your memory of last year is basically right."},{"k":3,"r":"GitHub Pages only serves static files."},{"k":4,"r":"Next.js was built to run on a server — page rendering, API routes, image optimization — so a normal Next app had nowhere to live on Pages."},{"k":5,"r":"You can export a static Next site and put that on Pages, but then you've turned off most of the reasons people chose Next."},{"k":6,"r":"Vercel was the easy host."},{"k":7,"r":"That part wasn't superstition."}]]},{"t":"p","lines":[[{"k":8,"r":"Astro is a good fit for a portfolio."},{"k":9,"r":"It's built for content sites, it ships very little JavaScript unless you ask for it, and a showcase of your work is exactly that kind of site."},{"k":10,"r":"It is not \"the\" frontier of web dev."},{"k":11,"r":"It's a strong current tool for pages."},{"k":12,"r":"Next is still the usual choice if you're building an app with accounts, dashboards, or server logic."},{"k":13,"r":"For this site, Astro is the better default."},{"k":14,"r":"Use it because the site is a portfolio, not because it's newer."}]]},{"t":"p","lines":[[{"k":15,"r":"Hosting doesn't follow from that."},{"k":16,"r":"Astro deploys cleanly to GitHub Pages and to Vercel."},{"k":17,"r":"Leaving Next does not force you off Vercel."}]]},{"t":"p","lines":[[{"k":18,"r":"Pick the host for what you want day to day:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":19,"r":"GitHub Pages if you want it free, simple, and sitting next to the repo."},{"k":20,"r":"A custom domain works."},{"k":21,"r":"For a static portfolio, that's enough, and \"I deployed it myself\" is a fine thing to show."}]],"c":[]},{"lines":[[{"k":22,"r":"Vercel if you want a preview link on every push, less fiddling with the domain, and an easy place to add a contact form later without moving the site."},{"k":23,"r":"Still free at portfolio scale."},{"k":24,"r":"Astro is happy there."}]],"c":[]}]},{"t":"p","lines":[[{"k":25,"r":"If I were building it to show skill, I'd use Astro, and I'd only \"let go\" of Vercel if you actually prefer Pages."},{"k":26,"r":"Either host is credible."},{"k":27,"r":"The projects on the site will matter more than the logo in the footer."}]]}]}]}]},{"id":"s3","blocks":[{"id":"s3b1","items":[{"id":"a3me54","prompt":"in the context of critical thinking, differences between assumptions vs facts. when to assume and when not to. what else should I know about assumptions.","doc":[{"t":"p","lines":[[{"k":0,"r":"A fact is something that can be checked and is generally accepted as true based on evidence."},{"k":1,"r":"An assumption is something you accept as true without sufficient proof, often as a working belief that helps you move forward."}]]},{"t":"p","lines":[[{"k":2,"r":"A simple way to think about it:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":3,"r":"Fact: “The report says sales fell 12% this quarter.”"}]],"c":[]},{"lines":[[{"k":4,"r":"Assumption: “The drop happened because customers were unhappy with the price.”"}]],"c":[]}]},{"t":"p","lines":[[{"k":5,"r":"The second statement may be plausible, but it is not a fact unless it is tested."}]]},{"t":"p","lines":[[{"k":6,"r":"When to assume:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":7,"r":"When you need a working model to proceed and the decision is not high-risk."}]],"c":[]},{"lines":[[{"k":8,"r":"When the assumption is clearly labeled as temporary and can be checked."}]],"c":[]},{"lines":[[{"k":9,"r":"When you are making a plan under uncertainty and need to keep moving."}]],"c":[]}]},{"t":"p","lines":[[{"k":10,"r":"When not to assume:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":11,"r":"When the decision is important and the assumption could materially change the outcome."}]],"c":[]},{"lines":[[{"k":12,"r":"When the assumption affects safety, money, trust, or ethics."}]],"c":[]},{"lines":[[{"k":13,"r":"When you are confusing uncertainty with certainty."}]],"c":[]}]},{"t":"p","lines":[[{"k":14,"r":"A few things to know about assumptions:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":15,"r":"They are often hidden: we don’t always know we’re making them."}]],"c":[]},{"lines":[[{"k":16,"r":"They can be helpful or harmful: good assumptions are tested; bad assumptions are treated as facts."}]],"c":[]},{"lines":[[{"k":17,"r":"They often come from experience, culture, bias, or fear."}]],"c":[]},{"lines":[[{"k":18,"r":"The goal is not to eliminate assumptions entirely — that’s impossible — but to make them explicit and testable."}]],"c":[]}]},{"t":"p","lines":[[{"k":19,"r":"A good habit is to ask: What am I assuming here?"},{"k":20,"r":"What evidence supports it?"},{"k":21,"r":"What would change my mind?"},{"k":22,"r":"That one question will improve critical thinking more than almost anything else."}]]}]},{"id":"wfrghy","prompt":"can you unpack how to tell if a wall is load-bearing? it's the wall between the kitchen and the living room, 1952 one-story ranch in akron, runs perpendicular to the ceiling joists. what should i look at before a contractor says we can't touch it?","doc":[{"t":"p","lines":[[{"k":0,"r":"Yes — with the information you’ve got, a wall running perpendicular to the ceiling joists is often a strong sign it is load-bearing, especially in a 1950s ranch-style house."},{"k":1,"r":"In a one-story home, a wall that supports the roof or transfers weight to a beam or foundation wall is usually the thing that matters most, and perpendicular walls are often the ones doing that job."}]]},{"t":"p","lines":[[{"k":2,"r":"Before you touch it, I’d check these things:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":3,"r":"Look in the attic: are the joists framing into the wall, or does the wall align with a beam, girder, or ceiling ridge?"}]],"c":[]},{"lines":[[{"k":4,"r":"Check the wall above or below: is it stacked over another wall, a beam, or a column in the basement or crawlspace?"}]],"c":[]},{"lines":[[{"k":5,"r":"Look for a double top plate or larger framing members; those can indicate the wall is carrying structural load."}]],"c":[]},{"lines":[[{"k":6,"r":"See whether the wall is aligned with a foundation wall, beam, or structural support under it."}]],"c":[]},{"lines":[[{"k":7,"r":"If the wall is in the middle of the house and runs across the joists, that’s a big clue it may be helping support the roof."}]],"c":[]}]},{"t":"p","lines":[[{"k":8,"r":"The key question is not just “is it perpendicular?” but “does it line up with the roof framing or a beam below?”"},{"k":9,"r":"If you can’t answer that confidently, don’t rely on a casual guess — have a contractor or structural engineer verify it before the wall comes down."},{"k":10,"r":"In a ranch like yours, a wrong call can be expensive."}]]}]},{"id":"waf3d2","prompt":"I am boy and 23 years old and i have never been in serious relationship, what should i do? Continue being single or find some partner, help me","doc":[{"t":"p","lines":[[{"k":0,"r":"Honestly?"},{"k":1,"r":"I’d say don’t keep waiting passively for “the right person” to magically appear."},{"k":2,"r":"You don’t need to force a relationship, but you also probably shouldn’t stay in a mode where you’re avoiding dating altogether because you’re scared, unsure, or overthinking it."}]]},{"t":"p","lines":[[{"k":3,"r":"At 23, not having had a serious relationship is not a failure."},{"k":4,"r":"It just means you haven’t had the right experience yet."},{"k":5,"r":"The goal is not to “be in a relationship” just to have one."},{"k":6,"r":"The goal is to become someone who is ready for one — emotionally, socially, and practically."}]]},{"t":"p","lines":[[{"k":7,"r":"What I’d do:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":8,"r":"Stop treating being single as a problem to be fixed immediately."}]],"c":[]},{"lines":[[{"k":9,"r":"Start meeting more people through friends, hobbies, groups, and dating apps, without putting your whole identity into it."}]],"c":[]},{"lines":[[{"k":10,"r":"Learn basic social skills: how to talk, how to flirt, how to ask someone out, how to handle rejection without spiraling."}]],"c":[]},{"lines":[[{"k":11,"r":"Be honest about what kind of relationship you want instead of just hoping someone “likes you.”"}]],"c":[]},{"lines":[[{"k":12,"r":"Don’t stay in a cycle of fear and avoidance; some risk is necessary if you want connection."}]],"c":[]}]},{"t":"p","lines":[[{"k":13,"r":"Don’t rush into a relationship just because you feel pressure."},{"k":14,"r":"But don’t hide from the possibility of one either."},{"k":15,"r":"A good relationship usually starts with a little courage, not perfection."}]]},{"t":"p","lines":[[{"k":16,"r":"If you want, I can help you make a simple plan for meeting people and dating without feeling awkward or insecure."}]]}]},{"id":"6kgph4","prompt":"What is the Korean character for the /Θ/ sound?","doc":[{"t":"p","lines":[[{"k":0,"r":"There isn’t a standard Korean character that directly represents the English /θ/ sound."}]]},{"t":"p","lines":[[{"k":1,"r":"The closest Korean approximation is usually ㅅ (s) or ㅆ (ss), depending on the word and context."},{"k":2,"r":"In other words, Korean speakers typically approximate /θ/ with an s-like sound rather than a distinct letter."},{"k":3,"r":"So if you’re asking which Hangul character matches /θ/, the honest answer is: there isn’t one in standard Korean."}]]}]}]},{"id":"s3b2","items":[{"id":"a5y746","prompt":"I have 15 minutes at our all-hands next Tuesday to present Q3 results for the customer support team at Marrowfield Home Goods. Can you give me an outline with sections and roughly how many minutes for each? Main points I need to hit:\n- ticket volume up 22% vs Q2\n- first response time down from 9 hrs to 4.5 hrs\n- CSAT went from 86% to 91%\n- launched the self-serve help center in August, it's already deflecting ~300 tickets a month\n- weekends are still a problem and I want to make the case for 2 weekend hires\n\nAudience is the whole company (~120 people) so I don't want to get too in the weeds.","doc":[{"t":"p","lines":[[{"k":0,"r":"Here’s a 15-minute outline that keeps it high-level but still covers the key results and the staffing ask:"}]]},{"t":"list","ordered":true,"items":[{"lines":[[{"k":1,"r":"Opening and purpose (2 minutes)"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":2,"r":"Thank everyone for the work this quarter"}]],"c":[]},{"lines":[[{"k":3,"r":"Set the context: support is a big part of customer experience and business health"}]],"c":[]}]}]},{"lines":[[{"k":4,"r":"Q3 snapshot: what changed (3 minutes)"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":5,"r":"Ticket volume up 22% vs. Q2"}]],"c":[]},{"lines":[[{"k":6,"r":"First response time improved from 9 hours to 4.5 hours"}]],"c":[]},{"lines":[[{"k":7,"r":"CSAT up from 86% to 91%"}]],"c":[]},{"lines":[[{"k":8,"r":"Emphasize that this is a strong quarter overall"}]],"c":[]}]}]},{"lines":[[{"k":9,"r":"What drove the improvement (4 minutes)"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":10,"r":"Launch of the self-serve help center in August"}]],"c":[]},{"lines":[[{"k":11,"r":"It is already deflecting about 300 tickets a month"}]],"c":[]},{"lines":[[{"k":12,"r":"Explain why this matters: faster responses, lower ticket load, more efficient support operations"}]],"c":[]}]}]},{"lines":[[{"k":13,"r":"Where we still need help (3 minutes)"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":14,"r":"Weekends remain a pain point"}]],"c":[]},{"lines":[[{"k":15,"r":"Peak demand is still outpacing coverage on weekends"}]],"c":[]},{"lines":[[{"k":16,"r":"Present the case for two weekend hires as a targeted fix, not a broad hiring push"}]],"c":[]}]}]},{"lines":[[{"k":17,"r":"Closing and ask (3 minutes)"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":18,"r":"Thank the team and recap the wins"}]],"c":[]},{"lines":[[{"k":19,"r":"Ask for support for weekend staffing to keep the gains moving"}]],"c":[]},{"lines":[[{"k":20,"r":"End with a clear, positive message about the team’s momentum"}]],"c":[]}]}]}],"start":1},{"t":"p","lines":[[{"k":21,"r":"This keeps the presentation focused on the headline numbers and the operational takeaway, without getting too deep into ticket queues or staffing mechanics."}]]}]},{"id":"qsunx3","prompt":"what is prctical lifetime of tesla y battery","doc":[{"t":"p","lines":[[{"k":0,"r":"A Tesla Model Y battery is usually good for roughly 8 to 15 years of real-world use, or about 150,000 to 250,000 miles depending on charging habits, climate, and how hard you drive it."},{"k":1,"r":"In normal use, many owners see only moderate degradation, and the battery still functions well long after the warranty period."}]]},{"t":"p","lines":[[{"k":2,"r":"If you’re asking for the practical life before it feels noticeably weaker, think in the range of 8 to 12 years for most owners, with some going much longer if they charge carefully and avoid heavy daily fast charging."}]]}]},{"id":"q2dmtp","prompt":"draft an incident update for #incident-payments:\n\n- INC-502 severity downgraded Sev1 -> Sev2 as of 14:10 UTC\n- root cause: bad redis cluster failover caused dropped authorization tokens\n- hotfix deployed to prod at 13:55 UTC, error rates dropped from 22% to <0.3%\n- transactions processing normally again, queue drain at ~95%\n- still monitoring: background sync worker lag is elevated (~8 min behind)\n- next status update in 30 mins (14:45 UTC)","doc":[{"t":"p","lines":[[{"k":0,"r":"Status: payment processing is back to normal after the Redis failover issue."}]]},{"t":"p","lines":[[{"k":1,"r":"We’ve downgraded the incident from Sev1 to Sev2 as of 14:10 UTC."},{"k":2,"r":"The root cause was a bad Redis cluster failover that dropped authorization tokens."},{"k":3,"r":"A hotfix was deployed to production at 13:55 UTC, and error rates dropped from 22% to under 0.3%."}]]},{"t":"p","lines":[[{"k":4,"r":"Transactions are processing normally again, and the queue is draining at roughly 95%."},{"k":5,"r":"We’re still monitoring one remaining issue: the background sync worker is lagging by about 8 minutes."},{"k":6,"r":"The incident remains under active monitoring, and we’ll provide the next update in 30 minutes at 14:45 UTC."}]]}]},{"id":"c5rpu4","prompt":"how do I make a voice in an audio sound like its moving as if someone is falling away from the microphone into a pit?","doc":[{"t":"p","lines":[[{"k":0,"r":"Use a “falling away” motion, not just a quieter voice."},{"k":1,"r":"The easiest way is to automate the sound so it gets farther from the mic over time."}]]},{"t":"p","lines":[[{"k":2,"r":"Start with a close, dry take."},{"k":3,"r":"Then:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":4,"r":"automate the volume down gradually so it fades away"}]],"c":[]},{"lines":[[{"k":5,"r":"add a high-pass or low-pass filter as it moves back, so the voice loses some low end and feels more distant"}]],"c":[]},{"lines":[[{"k":6,"r":"add a longer, darker reverb tail or room tone so it feels like it’s receding into space"}]],"c":[]},{"lines":[[{"k":7,"r":"push a little bit of pitch down or use a slow, subtle detune for the “falling” effect"}]],"c":[]},{"lines":[[{"k":8,"r":"add subtle rumble or air noise near the end to suggest depth and distance"}]],"c":[]},{"lines":[[{"k":9,"r":"end with a quick cutoff or a very soft fade, like the sound drops below the listener"}]],"c":[]}]},{"t":"p","lines":[[{"k":10,"r":"If you want it to feel like the speaker is literally falling into a pit, make the reverb tail longer, the volume drop steeper, and the filtering more extreme near the end."},{"k":11,"r":"A good trick is to automate the voice from “close and bright” to “far and muddy” in 2–4 seconds."}]]}]}]}]},{"id":"s4","blocks":[{"id":"s4b1","items":[{"id":"j6g5uv","prompt":"Is there a version control system that is simpler than git?","doc":[{"t":"p","lines":[[{"k":0,"r":"Yes, a few."},{"k":1,"r":"The right one depends mostly on whether you need to work with people or sites that use git."}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":2,"r":"Jujutsu (jj) is the one I'd try first if you do."},{"k":3,"r":"It runs on top of an ordinary git repo, so you can still push to GitHub."},{"k":4,"r":"It has no staging area and can undo any operation, which removes most of the ways people get stuck."}]],"c":[]},{"lines":[[{"k":5,"r":"Mercurial (hg) works like git but with more consistent commands that are harder to misuse."},{"k":6,"r":"Fewer sites host it now; GitHub never did, and Bitbucket dropped it in 2020."}]],"c":[]},{"lines":[[{"k":7,"r":"Fossil is a single program that includes version control, a wiki, a bug tracker and a web interface."},{"k":8,"r":"It was written by the creator of SQLite, which still uses it, and it suits solo or small-team projects."}]],"c":[]},{"lines":[[{"k":9,"r":"Subversion (SVN) is centralized, with one server and a simple numbered history."},{"k":10,"r":"That's easier to understand, but you need a server, and branching is clunkier."}]],"c":[]}]},{"t":"p","lines":[[{"k":11,"r":"If you're working alone and the command line is what makes git hard, a GUI like GitHub Desktop hides most of it and may be all you need."}]]}]},{"id":"9je8md","prompt":"farewell slack message, short. last day friday. 7 years at fieldnote insurance, started on the phones, leaving to do vocational counseling. thank my manager otto and grace, who trained me on the claims desk. from malik.","doc":[{"t":"p","lines":[[{"k":0,"r":"Hi everyone, Friday is my last day at Fieldnote."},{"k":1,"r":"I started here on the phones seven years ago, and I'm leaving to work in vocational counseling."}]]},{"t":"p","lines":[[{"k":2,"r":"Otto, thank you for being a great manager."},{"k":3,"r":"Grace, thank you for training me on the claims desk."},{"k":4,"r":"I learned a lot from both of you."}]]},{"t":"p","lines":[[{"k":5,"r":"Thank you all for seven good years."},{"k":6,"r":"If you want to stay in touch, I'm at [email or LinkedIn]."}]]}]},{"id":"3hffhg","prompt":"scholarship letter for my niece lila owens, about 200 words. the prompt wants a testament to leadership. what she actually did was restock the community fridge at the eastside library every week for a year and not tell anyone. can you keep that tension instead of turning her into a club president?","doc":[{"t":"p","lines":[[{"k":0,"r":"To the Scholarship Committee,"}]]},{"t":"p","lines":[[{"k":1,"r":"I'm writing to recommend my niece, Lila Owens, for [scholarship name]."}]]},{"t":"p","lines":[[{"k":2,"r":"The prompt asks for a testament to leadership, and I want to be straightforward about what that looks like in Lila's case."},{"k":3,"r":"She hasn't been a club president or a team captain."},{"k":4,"r":"Every week for a year, she restocked the community fridge at the Eastside Library."},{"k":5,"r":"A community fridge only helps people if someone keeps filling it, and Lila kept filling this one."},{"k":6,"r":"Nobody assigned her the job or checked whether she did it, and she didn't mention it to anyone, family included."}]]},{"t":"p","lines":[[{"k":7,"r":"I've asked myself whether that counts as leadership, since nobody was following her."},{"k":8,"r":"I think it does."},{"k":9,"r":"She decided that something other people depended on was her responsibility, and she kept that responsibility every week with no audience and no thanks."},{"k":10,"r":"She could have stopped after a month and no one would have known."}]]},{"t":"p","lines":[[{"k":11,"r":"I would trust Lila with any responsibility you could give her, and I recommend her for this scholarship without reservation."}]]},{"t":"p","lines":[[{"k":12,"r":"Sincerely,"}]]},{"t":"p","lines":[[{"k":13,"r":"[Your name]"}]]},{"t":"p","lines":[[{"k":14,"r":"If you know a concrete detail, like what she stocked or how she got there each week, adding a sentence about it would make the letter stronger."}]]}]},{"id":"5vxkfu","prompt":"how to add page in ppt online without powerpoit","doc":[{"t":"p","lines":[[{"k":0,"r":"You can do it free in Google Slides:"}]]},{"t":"list","ordered":true,"items":[{"lines":[[{"k":1,"r":"Go to drive.google.com and sign in with a Google account."}]],"c":[]},{"lines":[[{"k":2,"r":"Click New, then File upload, and choose your PowerPoint file."}]],"c":[]},{"lines":[[{"k":3,"r":"Double-click the file in Drive, then click Open with Google Slides at the top."}]],"c":[]},{"lines":[[{"k":4,"r":"In the left panel, click the slide you want the new one to come after, then press Ctrl+M (Cmd+M on a Mac)."},{"k":5,"r":"You can also right-click that slide and choose New slide."}]],"c":[]},{"lines":[[{"k":6,"r":"When you're done, open the File menu, choose Download, and pick Microsoft PowerPoint (.pptx)."}]],"c":[]}],"start":1},{"t":"p","lines":[[{"k":7,"r":"If you meant you don't have PowerPoint installed, the free web version at office.com also works: upload the file to OneDrive, open it, and click New Slide on the Home tab."}]]}]}]},{"id":"s4b2","items":[{"id":"ctses4","prompt":"should burnt sugar lean into the name or change it? bakery, open 14 months. people remember it. a few of them think we burn the food. we don't. it's about the dessert with the torched top. yes or no, i don't have time for a brand workshop.","doc":[{"t":"p","lines":[[{"k":0,"r":"Lean in."},{"k":1,"r":"Keep the name."}]]},{"t":"p","lines":[[{"k":2,"r":"People remembering you after 14 months is the hard part, and you already have it."},{"k":3,"r":"A few people thinking you burn the food is a messaging problem, not a naming problem, and it's cheap to fix:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":4,"r":"**Add a tagline** wherever the name appears, something like \"Burnt Sugar — torched on purpose.\""}]],"c":[]},{"lines":[[{"k":5,"r":"**Make the torched-top dessert the star.**"},{"k":6,"r":"First thing on the menu, in the window, in every photo."}]],"c":[]},{"lines":[[{"k":7,"r":"**Torch it where people can see it.**"},{"k":8,"r":"At the counter, in short videos."},{"k":9,"r":"Once someone watches the sugar crackle, the name explains itself."}]],"c":[]}]},{"t":"p","lines":[[{"k":10,"r":"Renaming would throw away recognition you've already earned to fix something a tagline can handle."}]]}]},{"id":"76vghn","prompt":"Can you turn these notes into a short email to our weekend shelter volunteers?\n\n- 42 dogs and 19 cats adopted during last saturday's pet fair!\n- food pantry supplies low on wet kitten food and grain-free dog kibble\n- new shift check-in tablet installed by front desk, pin is 4092\n- orientation for new dog walkers is sunday oct 18 at 10am in community room\n- need 4 more volunteers for the morning cleaning shift this saturday (8am-11am)","doc":[{"t":"p","lines":[[{"k":0,"r":"Here's a short, friendly version:"}]]},{"t":"p","lines":[[{"k":1,"r":"**Subject:** 61 adoptions! 🎉 Plus a few quick updates"}]]},{"t":"p","lines":[[{"k":2,"r":"Hi everyone,"}]]},{"t":"p","lines":[[{"k":3,"r":"First, the big news: last Saturday's pet fair was a huge success!"},{"k":4,"r":"**42 dogs and 19 cats** found new homes."},{"k":5,"r":"That's 61 adoptions in one day!"},{"k":6,"r":"Thank you to everyone who helped make it happen. 🐶🐱"}]]},{"t":"p","lines":[[{"k":7,"r":"A few quick updates:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":8,"r":"**Help needed this Saturday:** We still need **4 more volunteers** for the morning cleaning shift (**8–11am**)."},{"k":9,"r":"If you can make it, just reply to this email."}]],"c":[]},{"lines":[[{"k":10,"r":"**Pantry is running low:** We're short on **wet kitten food** and **grain-free dog kibble**."},{"k":11,"r":"If you're able to pick some up or spread the word, it would be a huge help."}]],"c":[]},{"lines":[[{"k":12,"r":"**New check-in tablet:** There's a new tablet by the front desk for checking in to your shift."},{"k":13,"r":"The PIN is **4092**."}]],"c":[]},{"lines":[[{"k":14,"r":"**Dog walker orientation:** Orientation for new dog walkers is **Sunday, Oct 18 at 10am** in the community room."},{"k":15,"r":"Know someone who'd love to walk dogs?"},{"k":16,"r":"Send them our way!"}]],"c":[]}]},{"t":"p","lines":[[{"k":17,"r":"Thanks for all you do."},{"k":18,"r":"We couldn't do it without you!"}]]},{"t":"p","lines":[[{"k":19,"r":"[Your name]"}]]}]},{"id":"hd4dq6","prompt":"Write for linkedIn profile in section About shortly and succinct about me and my profession. I am development manager in sales of chemicals and chemical raw materials for different markets","doc":[{"t":"p","lines":[[{"k":0,"r":"Here are two options you can paste straight in:"}]]},{"t":"p","lines":[[{"k":1,"r":"**Short**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":2,"r":"Business Development Manager specializing in the sale of chemicals and chemical raw materials across diverse markets."},{"k":3,"r":"I connect customers with reliable supply, build long-term partnerships, and turn market opportunities into lasting business growth."}]]}]},{"t":"p","lines":[[{"k":4,"r":"**A bit more personal**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":5,"r":"I'm a Business Development Manager in the chemical industry, focused on selling chemicals and chemical raw materials to customers across a wide range of markets."}]]},{"t":"p","lines":[[{"k":6,"r":"My work is about understanding what customers really need, finding the right products and supply solutions, and building partnerships that last."},{"k":7,"r":"I enjoy opening up new markets and turning opportunities into long-term business."}]]},{"t":"p","lines":[[{"k":8,"r":"Always happy to connect with buyers, suppliers, and professionals across the chemical industry."}]]}]},{"t":"p","lines":[[{"k":9,"r":"If you tell me which industries or regions you sell into (e.g., coatings, plastics, agriculture, Europe, Asia) or how many years of experience you have, I can make it more specific."},{"k":10,"r":"And swap in your exact job title if it's different."}]]}]},{"id":"wvqx6f","prompt":"I don't feel like writing these days...// One friend of Twitter wrote that 4 days ago .  I wanna start a conversation but send positive vibes as well. What should I write","doc":[{"t":"p","lines":[[{"k":0,"r":"Since it's been a few days, I'd send a DM (or reply with something like \"late to this, but...\")."},{"k":1,"r":"Keep it warm and low-pressure, and end with a question so they have an easy way to respond."},{"k":2,"r":"A few options:"}]]},{"t":"p","lines":[[{"k":3,"r":"**Gentle and supportive**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":4,"r":"Hey, saw your post about not feeling like writing lately."},{"k":5,"r":"Just wanted to say that's totally okay."},{"k":6,"r":"Sometimes the well just needs time to refill."},{"k":7,"r":"How are you doing otherwise? 💛"}]]}]},{"t":"p","lines":[[{"k":8,"r":"**Encouraging (if you enjoy their writing)**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":9,"r":"I really love reading your stuff, so just know I'll be here whenever the words come back."},{"k":10,"r":"No rush at all."},{"k":11,"r":"Rest is part of the process too ✨"}]]}]},{"t":"p","lines":[[{"k":12,"r":"**Light and casual**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":13,"r":"Late to this, but sending good vibes your way 🌱 Writing breaks happen to everyone."},{"k":14,"r":"What's been keeping you busy (or keeping you sane) lately?"}]]}]},{"t":"p","lines":[[{"k":15,"r":"**Curious, to get a real conversation going**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":16,"r":"I totally get that feeling."},{"k":17,"r":"Is it more of a \"nothing to say\" slump or a \"too tired to say it\" slump?"},{"k":18,"r":"Either way, hope you're being kind to yourself 🙂"}]]}]},{"t":"p","lines":[[{"k":19,"r":"A few tips:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":20,"r":"**Don't push them to write.**"},{"k":21,"r":"Skip advice like \"just write anyway!\" unless they ask for it."}]],"c":[]},{"lines":[[{"k":22,"r":"**Be specific if you can.**"},{"k":23,"r":"Mentioning a post or piece of theirs you liked is the best encouragement there is."}]],"c":[]},{"lines":[[{"k":24,"r":"**Keep it short.**"},{"k":25,"r":"A few warm lines feel caring; a long message can feel like pressure to reply with the same energy."}]],"c":[]}]},{"t":"p","lines":[[{"k":26,"r":"Want me to tailor one based on what your friend usually writes about?"}]]}]}]}]}]};
+(function () {
+  'use strict';
+  var APP = 'plain-voice-rating';
+  var VERSION = 1;
+  var main = document.getElementById('app');
+  var CONTACT = (KIT && KIT.contact) || 'the person who sent you this';
+  var navbar = document.getElementById('navbar');
+  var navinner = document.getElementById('navinner');
+
+  if (!KIT) {
+    main.innerHTML = '<h1>Reading test</h1><p>No kit is loaded in this file. Build kits with <code>eval/scripts/build_rater_kits.py</code>.</p>';
+    return;
+  }
+
+  // ------------------------------------------------------------ markdown
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c];
+    });
+  }
+  function inline(text) {
+    var s = esc(text);
+    var code = [];
+    s = s.replace(/`([^`]+)`/g, function (_, inner) { code.push('<code>' + inner + '</code>'); return '\u0000' + (code.length - 1) + '\u0000'; });
+    s = s.replace(/\[([^\]\n]+)\]\(([^)\n]+)\)/g, '<span class="fake-link">$1</span>');
+    s = s.replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/__([^_\n]+)__/g, '<strong>$1</strong>');
+    s = s.replace(/~~([^~\n]+)~~/g, '<del>$1</del>');
+    s = s.replace(/(^|[^*])\*([^*\s](?:[^*\n]*[^*\s])?)\*/g, '$1<em>$2</em>');
+    s = s.replace(/(^|[^\w])_([^_\s](?:[^_\n]*[^_\s])?)_(?=$|[^\w])/g, '$1<em>$2</em>');
+    return s.replace(/\u0000(\d+)\u0000/g, function (_, i) { return code[Number(i)]; });
+  }
+  function plainMarkdown(src) {
+    var lines = String(src || '').replace(/\r\n?/g, '\n').split('\n');
+    var out = [], para = [], list = null;
+    function flushPara() { if (para.length) { out.push('<p>' + para.map(inline).join('<br>') + '</p>'); para = []; } }
+    function flushList() { if (list) { out.push('<' + list.tag + '>' + list.items.map(function (t) { return '<li>' + inline(t) + '</li>'; }).join('') + '</' + list.tag + '>'); list = null; } }
+    lines.forEach(function (line) {
+      var m = /^\s*([-*+]|\d+[.)])\s+(.*)$/.exec(line);
+      if (!line.trim()) { flushPara(); flushList(); return; }
+      if (m) {
+        flushPara();
+        var tag = /\d/.test(m[1]) ? 'ol' : 'ul';
+        if (!list || list.tag !== tag) { flushList(); list = {tag: tag, items: []}; }
+        list.items.push(m[2]);
+        return;
+      }
+      flushList();
+      para.push(line.replace(/^#{1,6}\s+/, ''));
+    });
+    flushPara(); flushList();
+    return out.join('');
+  }
+  function unitSpan(u) { return '<span class="u" data-u="' + u.k + '">' + inline(u.r) + '</span>'; }
+  function renderLines(lines) {
+    return lines.map(function (line) { return line.map(unitSpan).join(' '); }).join('<br>');
+  }
+  function renderDoc(blocks) { return blocks.map(renderBlock).join(''); }
+  function renderBlock(b) {
+    switch (b.t) {
+      case 'p': return '<p>' + renderLines(b.lines) + '</p>';
+      case 'h': return '<h' + b.level + '>' + unitSpan(b.u) + '</h' + b.level + '>';
+      case 'hr': return '<div class="u hr" data-u="' + b.u.k + '"><hr></div>';
+      case 'code': return '<pre class="u" data-u="' + b.u.k + '"><code>' + esc(b.u.r) + '</code></pre>';
+      case 'quote': return '<blockquote>' + renderDoc(b.c) + '</blockquote>';
+      case 'table':
+        var row = function (u, cell) {
+          return '<tr class="u" data-u="' + u.k + '">' + u.cells.map(function (c) { return '<' + cell + '>' + inline(c) + '</' + cell + '>'; }).join('') + '</tr>';
+        };
+        return '<div class="table-wrap"><table><thead>' + row(b.head, 'th') + '</thead><tbody>' + b.rows.map(function (u) { return row(u, 'td'); }).join('') + '</tbody></table></div>';
+      case 'list':
+        var tag = b.ordered ? 'ol' : 'ul';
+        var start = b.ordered && b.start && b.start !== 1 ? ' start="' + b.start + '"' : '';
+        return '<' + tag + start + '>' + b.items.map(function (it) {
+          return '<li>' + renderLines(it.lines) + renderDoc(it.c || []) + '</li>';
+        }).join('') + '</' + tag + '>';
+    }
+    return '';
+  }
+
+  // ------------------------------------------------------------ state
+  var KEY = 'pv-rating:' + KIT.kit_id;
+  var canSave = true;
+  function load() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { canSave = false; return null; }
+  }
+  var state = load() || {rater: KIT.rater || '', s: {}};
+  function save() {
+    try { window.localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { canSave = false; }
+  }
+  function sessionIndex(id) { for (var i = 0; i < KIT.sessions.length; i++) if (KIT.sessions[i].id === id) return i; return -1; }
+  function sstate(id) {
+    if (!state.s[id]) state.s[id] = {start: null, end: null, step: 0, items: {}, blocks: {}, p: '', n: ''};
+    return state.s[id];
+  }
+  function steps(session) {
+    var out = [];
+    session.blocks.forEach(function (b, bi) {
+      b.items.forEach(function (it, ii) { out.push({kind: 'item', b: bi, i: ii}); });
+      out.push({kind: 'block', b: bi});
+    });
+    out.push({kind: 'end'});
+    return out;
+  }
+  function nextSession() {
+    for (var i = 0; i < KIT.sessions.length; i++) { var st = state.s[KIT.sessions[i].id]; if (!st || !st.end) return KIT.sessions[i]; }
+    return null;
+  }
+  function results() {
+    var out = {app: APP, v: VERSION, kit_id: KIT.kit_id, rater: state.rater, exported_at: new Date().toISOString(), sessions: {}};
+    KIT.sessions.forEach(function (sess) {
+      var st = state.s[sess.id];
+      if (!st || !st.start) return;
+      out.sessions[sess.id] = {start: st.start, end: st.end, p: st.p, n: st.n, blocks: st.blocks, items: st.items};
+    });
+    return out;
+  }
+
+  // ------------------------------------------------------------ timing
+  var timer = null;
+  function startTimer(rec) {
+    stopTimer();
+    timer = {rec: rec, t0: document.visibilityState === 'visible' ? Date.now() : null};
+  }
+  function stopTimer() {
+    if (timer && timer.t0 != null) timer.rec.ms = (timer.rec.ms || 0) + (Date.now() - timer.t0);
+    timer = null;
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (!timer) return;
+    if (document.visibilityState === 'visible') timer.t0 = Date.now();
+    else if (timer.t0 != null) { timer.rec.ms = (timer.rec.ms || 0) + (Date.now() - timer.t0); timer.t0 = null; save(); }
+  });
+
+  // ------------------------------------------------------------ screens
+  var keyHandler = null;
+  function setNav(buttons) {
+    if (!buttons || !buttons.length) { navbar.hidden = true; navinner.innerHTML = ''; return; }
+    navbar.hidden = false;
+    navinner.innerHTML = '';
+    buttons.forEach(function (b) {
+      var el = document.createElement('button');
+      el.textContent = b.label;
+      el.className = b.cls || '';
+      if (b.id) el.id = b.id;
+      el.disabled = !!b.disabled;
+      el.addEventListener('click', b.onClick);
+      navinner.appendChild(el);
+    });
+  }
+  function scaleHtml(name, value, low, high) {
+    var h = '<div class="scale" data-q="' + name + '">';
+    for (var v = 1; v <= 5; v++) h += '<button type="button" data-v="' + v + '" class="' + (value === v ? 'sel' : '') + '">' + v + '</button>';
+    return h + '</div><div class="ends"><span>1 = ' + low + '</span><span>5 = ' + high + '</span></div>';
+  }
+  function choicesHtml(name, value, opts, cls) {
+    return '<div class="choices ' + (cls || '') + '" data-q="' + name + '">' + opts.map(function (o) {
+      return '<button type="button" data-v="' + o[0] + '" class="' + (value === o[0] ? 'sel' : '') + '">' + esc(o[1]) + '</button>';
+    }).join('') + '</div>';
+  }
+  function wireChoices(root, onPick) {
+    Array.prototype.forEach.call(root.querySelectorAll('[data-q]'), function (group) {
+      group.addEventListener('click', function (e) {
+        var btn = e.target.closest('button[data-v]');
+        if (!btn) return;
+        Array.prototype.forEach.call(group.querySelectorAll('button'), function (x) { x.classList.toggle('sel', x === btn); });
+        var v = btn.getAttribute('data-v');
+        onPick(group.getAttribute('data-q'), /^\d+$/.test(v) ? Number(v) : v);
+      });
+    });
+  }
+  function pick(name, value) {
+    var btn = main.querySelector('[data-q="' + name + '"] button[data-v="' + value + '"]');
+    if (btn) btn.click();
+  }
+
+  function home() {
+    stopTimer();
+    keyHandler = null;
+    window.scrollTo(0, 0);
+    var nxt = nextSession();
+    var anyDone = KIT.sessions.some(function (s) { return state.s[s.id] && state.s[s.id].end; });
+    var list = KIT.sessions.map(function (s, i) {
+      var st = state.s[s.id];
+      var status = !st || !st.start ? 'not started' : st.end ? 'done' : 'in progress';
+      return '<li><span>Session ' + (i + 1) + '</span><span class="muted">' + status + '</span></li>';
+    }).join('');
+    main.innerHTML =
+      '<h1>Reading test</h1>' +
+      '<p>Thanks for helping. Each session takes about 10 minutes. You\'ll read 8 replies an AI wrote to messages people sent it, in two batches of four.</p>' +
+      '<div class="card"><div class="label">For each reply</div>' +
+      '<p>Tap any sentence that bugs you. Tap it again to undo.</p>' +
+      '<p>Then say how tiring it was to read, and whether it would do the job.</p>' +
+      '<p class="muted small">After each batch you\'ll say how worn out it left you, and at the end which batch you\'d rather keep getting. There are no right answers. Read the way you normally would, skimming included.</p></div>' +
+      '<div class="card"><div class="label">Your name</div><input type="text" id="name" autocomplete="given-name" value="' + esc(state.rater) + '" placeholder="First name"></div>' +
+      '<div class="card"><div class="label">Sessions</div><ul class="sessions">' + list + '</ul>' +
+      (anyDone ? '<p class="small" style="margin-top:10px"><button class="link" id="send">Send your results</button></p>' : '') + '</div>' +
+      (canSave ? '' : '<div class="banner">This browser isn\'t saving progress, so finish each session in one go.</div>') +
+      '<p class="small muted"><button class="link" id="reset">Start over</button> (deletes your answers in this browser)</p>';
+    var name = document.getElementById('name');
+    name.addEventListener('input', function () {
+      state.rater = name.value.trim();
+      save();
+      var b = document.getElementById('start');
+      if (b && nxt) b.disabled = !state.rater;
+    });
+    if (anyDone) document.getElementById('send').addEventListener('click', function () { done(null); });
+    document.getElementById('reset').addEventListener('click', function () {
+      if (window.confirm('Delete all your answers in this browser and start over?')) {
+        state = {rater: KIT.rater || '', s: {}};
+        save();
+        home();
+      }
+    });
+    if (nxt) {
+      var started = state.s[nxt.id] && state.s[nxt.id].start;
+      setNav([{label: (started ? 'Continue' : 'Start') + ' session ' + (sessionIndex(nxt.id) + 1), cls: 'primary', id: 'start', disabled: !state.rater, onClick: function () {
+        if (!state.rater) return;
+        var st = sstate(nxt.id);
+        if (!st.start) st.start = new Date().toISOString();
+        save();
+        show(nxt);
+      }}]);
+    } else {
+      setNav([{label: 'Send your results', cls: 'primary', id: 'start', onClick: function () { done(null); }}]);
+    }
+  }
+
+  function show(session) {
+    var st = sstate(session.id);
+    var all = steps(session);
+    var step = all[Math.min(st.step, all.length - 1)];
+    if (step.kind === 'item') itemScreen(session, st, step);
+    else if (step.kind === 'block') blockScreen(session, st, step);
+    else endScreen(session, st);
+  }
+  function go(session, delta) {
+    var st = sstate(session.id);
+    stopTimer();
+    st.step = Math.max(0, st.step + delta);
+    save();
+    window.scrollTo(0, 0);
+    show(session);
+  }
+
+  function itemScreen(session, st, step) {
+    var block = session.blocks[step.b];
+    var item = block.items[step.i];
+    var rec = st.items[item.id] || (st.items[item.id] = {f: [], t: null, j: null, ms: 0});
+    var nb = session.blocks.length;
+    var dots = block.items.map(function (_, i) { return '<span class="' + (i < step.i ? 'done' : i === step.i ? 'now' : '') + '"></span>'; }).join('');
+    var mins = st.start ? (Date.now() - Date.parse(st.start)) / 60000 : 0;
+    var longPrompt = item.prompt.split(/\s+/).length > 60;
+    main.innerHTML =
+      '<div class="topbar"><span>Session ' + (sessionIndex(session.id) + 1) + ' · Batch ' + (step.b + 1) + ' of ' + nb + ' · Reply ' + (step.i + 1) + ' of ' + block.items.length + '</span><span class="dots">' + dots + '</span></div>' +
+      (mins >= 10 ? '<div class="banner">You\'ve been at this for 10 minutes. Your progress is saved, so you can stop after this batch and finish later.</div>' : '') +
+      '<div class="card"><div class="label">Their message</div><div class="md prompt-body' + (longPrompt ? ' clip' : '') + '" id="prompt">' + plainMarkdown(item.prompt) + '</div>' +
+      (longPrompt ? '<button class="link small" id="more">Show the whole message</button>' : '') + '</div>' +
+      '<div class="card"><div class="label">The AI\'s reply</div><p class="hint">Tap anything that bugs you.</p><div class="md" id="reply">' + renderDoc(item.doc) + '</div>' +
+      '<p class="small muted" id="count" style="margin:10px 0 0"></p></div>' +
+      '<div class="q">How tiring was this one to read? <span class="kbd">(keys 1-5)</span></div>' + scaleHtml('t', rec.t, 'not at all', 'very') +
+      '<div class="q">Would it do the job? <span class="kbd">(Y, M, N)</span></div>' + choicesHtml('j', rec.j, [['yes', 'Yes'], ['mostly', 'Mostly'], ['no', 'No']]);
+    var reply = document.getElementById('reply');
+    rec.f.forEach(function (k) { var el = reply.querySelector('[data-u="' + k + '"]'); if (el) el.classList.add('on'); });
+    function count() {
+      document.getElementById('count').textContent = rec.f.length ? rec.f.length + (rec.f.length === 1 ? ' part flagged' : ' parts flagged') : '';
+    }
+    count();
+    reply.addEventListener('click', function (e) {
+      var u = e.target.closest('.u');
+      if (!u || !reply.contains(u)) return;
+      var k = Number(u.getAttribute('data-u'));
+      var at = rec.f.indexOf(k);
+      if (at >= 0) rec.f.splice(at, 1); else rec.f.push(k);
+      u.classList.toggle('on', at < 0);
+      count();
+      save();
+    });
+    var more = document.getElementById('more');
+    if (more) more.addEventListener('click', function () { document.getElementById('prompt').classList.remove('clip'); more.remove(); });
+    function ready() { return rec.t != null && rec.j != null; }
+    wireChoices(main, function (q, v) { rec[q] = v; save(); var n = document.getElementById('next'); if (n) n.disabled = !ready(); });
+    var firstInBlock = step.i === 0;
+    var nav = [];
+    if (!firstInBlock) nav.push({label: 'Back', cls: 'back', onClick: function () { go(session, -1); }});
+    nav.push({label: 'Next', cls: 'primary', id: 'next', disabled: !ready(), onClick: function () { if (ready()) go(session, 1); }});
+    setNav(nav);
+    startTimer(rec);
+    keyHandler = function (e) {
+      if (/^[1-5]$/.test(e.key)) pick('t', Number(e.key));
+      else if (/^[ymn]$/i.test(e.key)) pick('j', {y: 'yes', m: 'mostly', n: 'no'}[e.key.toLowerCase()]);
+      else if ((e.key === 'Enter' || e.key === 'ArrowRight') && ready()) go(session, 1);
+      else if (e.key === 'ArrowLeft' && !firstInBlock) go(session, -1);
+    };
+  }
+
+  function blockScreen(session, st, step) {
+    var block = session.blocks[step.b];
+    var rec = st.blocks[block.id] || (st.blocks[block.id] = {w: null});
+    var nb = session.blocks.length;
+    main.innerHTML =
+      '<h2 class="screen">That\'s batch ' + (step.b + 1) + ' of ' + nb + '.</h2>' +
+      '<div class="q">How worn out do those ' + block.items.length + ' replies leave you? <span class="kbd">(keys 1-5)</span></div>' + scaleHtml('w', rec.w, 'not at all', 'very') +
+      '<p class="small muted" style="margin-top:14px">Think about the batch as a whole, as if these were replies you got in a row.</p>';
+    wireChoices(main, function (q, v) { rec.w = v; save(); document.getElementById('next').disabled = false; });
+    setNav([{label: step.b + 1 < nb ? 'Next batch' : 'Next', cls: 'primary', id: 'next', disabled: rec.w == null, onClick: function () { if (rec.w != null) go(session, 1); }}]);
+    keyHandler = function (e) {
+      if (/^[1-5]$/.test(e.key)) pick('w', Number(e.key));
+      else if (e.key === 'Enter' && rec.w != null) go(session, 1);
+    };
+  }
+
+  function endScreen(session, st) {
+    var opts = session.blocks.map(function (b, i) { return [b.id, 'Batch ' + (i + 1)]; }).concat([['both_fine', 'Both were fine'], ['both_bad', 'Both were bad']]);
+    main.innerHTML =
+      '<h2 class="screen">Last question for this session</h2>' +
+      '<div class="q">Which batch would you rather keep getting replies like? <span class="kbd">(keys 1-4)</span></div>' + choicesHtml('p', st.p, opts, 'four') +
+      '<div class="q">Anything stand out? <span class="muted small">(optional)</span></div><textarea id="note" placeholder="A sentence or two is plenty.">' + esc(st.n) + '</textarea>';
+    var note = document.getElementById('note');
+    note.addEventListener('input', function () { st.n = note.value; save(); });
+    wireChoices(main, function (q, v) { st.p = v; save(); document.getElementById('next').disabled = false; });
+    setNav([
+      {label: 'Back', cls: 'back', onClick: function () { go(session, -1); }},
+      {label: 'Finish session', cls: 'primary', id: 'next', disabled: !st.p, onClick: function () {
+        if (!st.p) return;
+        st.end = new Date().toISOString();
+        save();
+        done(session);
+      }}
+    ]);
+    keyHandler = function (e) {
+      if (document.activeElement === note) return;
+      if (/^[1-4]$/.test(e.key)) pick('p', opts[Number(e.key) - 1][0]);
+    };
+  }
+
+  function done(session) {
+    stopTimer();
+    keyHandler = null;
+    window.scrollTo(0, 0);
+    var nxt = nextSession();
+    var text = JSON.stringify(results());
+    var who = (state.rater || 'rater').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    var left = nxt ? KIT.sessions.length - sessionIndex(nxt.id) : 0;
+    main.innerHTML =
+      (session ? '<h1>Session ' + (sessionIndex(session.id) + 1) + ' done. Thank you!</h1>' : '<h1>Send your results</h1>') +
+      '<p>Send your results to ' + esc(CONTACT) + ' however is easiest: copy them into a message, or download the file and attach it.</p>' +
+      '<div class="row"><button class="primary" id="copy">Copy results</button><button id="dl">Download file</button></div>' +
+      '<p class="small muted" id="copied" style="margin-top:8px"></p>' +
+      '<p class="small"><button class="link" id="show">Show the results text</button></p>' +
+      '<textarea id="raw" readonly hidden></textarea>' +
+      (nxt ? '<div class="card"><p>' + (left === 1 ? 'One session is left.' : left + ' sessions are left.') + ' Come back another day for the next one, so your eyes are fresh.</p></div>'
+           : '<div class="card"><p>That\'s every session. Thanks a lot for doing this.</p></div>');
+    var raw = document.getElementById('raw');
+    raw.value = text;
+    document.getElementById('show').addEventListener('click', function () { raw.hidden = !raw.hidden; if (!raw.hidden) { raw.focus(); raw.select(); } });
+    document.getElementById('copy').addEventListener('click', function () {
+      var msg = document.getElementById('copied');
+      function fallback() {
+        raw.hidden = false; raw.focus(); raw.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+        msg.textContent = ok ? 'Copied. Paste it into a message to ' + CONTACT + '.' : 'Select the text below and copy it.';
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () { msg.textContent = 'Copied. Paste it into a message to ' + CONTACT + '.'; }, fallback);
+      } else fallback();
+    });
+    document.getElementById('dl').addEventListener('click', function () {
+      var blob = new Blob([text], {type: 'application/json'});
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'plain-voice-ratings-' + who + '-' + new Date().toISOString().slice(0, 10) + '.json';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+    });
+    setNav([{label: 'Back to start', onClick: home}]);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (!keyHandler || e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = (document.activeElement && document.activeElement.tagName) || '';
+    if (tag === 'INPUT' || (tag === 'TEXTAREA' && e.key !== 'Enter')) return;
+    keyHandler(e);
+  });
+
+  home();
+})();
+</script>
+</body>
+</html>

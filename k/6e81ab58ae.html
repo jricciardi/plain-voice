@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Reading test</title>
+<style>
+:root {
+  --bg: #f6f5f2; --card: #ffffff; --ink: #1d1d1f; --muted: #6b6b70; --line: #e3e1dc;
+  --accent: #2f5bd3; --flag: #ffe27a; --flag-ink: #1d1d1f; --btn: #efeeea; --on: #1d1d1f; --on-ink: #ffffff;
+  --bubble: #eef2fb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151517; --card: #1f1f22; --ink: #ececee; --muted: #a0a0a8; --line: #333338;
+    --accent: #8aa9ff; --flag: #6b5a00; --flag-ink: #fff4c2; --btn: #2a2a2e; --on: #ececee; --on-ink: #151517;
+    --bubble: #232838;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-text-size-adjust: 100%; }
+main { max-width: 700px; margin: 0 auto; padding: 14px 14px 110px; }
+h1 { font-size: 1.45rem; margin: 10px 0 6px; }
+h2.screen { font-size: 1.2rem; margin: 6px 0 12px; }
+p { margin: 0 0 10px; }
+.muted { color: var(--muted); }
+.small { font-size: 0.88rem; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 12px 0; }
+.label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--muted); }
+.dots { display: flex; gap: 4px; }
+.dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--line); }
+.dots span.done { background: var(--muted); }
+.dots span.now { background: var(--accent); }
+.banner { background: var(--bubble); border-radius: 10px; padding: 10px 12px; font-size: 0.92rem; margin: 10px 0; }
+.prompt-body { position: relative; }
+.prompt-body.clip { max-height: 7.5em; overflow: hidden; }
+.prompt-body.clip::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2.5em; background: linear-gradient(transparent, var(--card)); }
+.md p, .md ul, .md ol, .md pre, .md blockquote { margin: 0 0 10px; }
+.md p:last-child { margin-bottom: 0; }
+.md ul, .md ol { padding-left: 1.4em; }
+.md li { margin: 2px 0; }
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6 { margin: 12px 0 6px; line-height: 1.3; }
+.md h1, .md h2 { font-size: 1.2em; }
+.md h3, .md h4, .md h5, .md h6 { font-size: 1.05em; }
+.md code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--btn); padding: 1px 4px; border-radius: 4px; }
+.md pre { background: var(--btn); padding: 10px; border-radius: 8px; overflow-x: auto; white-space: pre-wrap; }
+.md pre code { background: none; padding: 0; }
+.md blockquote { border-left: 3px solid var(--line); margin-left: 0; padding-left: 12px; color: var(--muted); }
+.md hr { border: none; border-top: 1px solid var(--line); margin: 6px 0; }
+.md .table-wrap { overflow-x: auto; margin: 0 0 10px; }
+.md table { border-collapse: collapse; font-size: 0.93em; }
+.md th, .md td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
+.fake-link { color: var(--accent); text-decoration: underline; }
+.u { cursor: pointer; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; -webkit-tap-highlight-color: transparent; }
+.u.on, tr.u.on td, tr.u.on th { background: var(--flag); color: var(--flag-ink); }
+div.u.hr { padding: 8px 0; }
+@media (hover: hover) { .u:hover { outline: 2px solid var(--flag); } }
+.hint { font-size: 0.9rem; color: var(--muted); margin: 0 0 8px; }
+.q { margin: 18px 0 6px; font-weight: 600; }
+.scale { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.choices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.choices.four { grid-template-columns: repeat(2, 1fr); }
+button { font: inherit; color: var(--ink); background: var(--btn); border: 1px solid var(--line); border-radius: 10px; min-height: 46px; padding: 8px 12px; cursor: pointer; }
+button.sel { background: var(--on); color: var(--on-ink); border-color: var(--on); }
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+button.primary:disabled { opacity: 0.4; cursor: default; }
+button.link { background: none; border: none; color: var(--accent); min-height: 0; padding: 4px 0; text-decoration: underline; }
+.ends { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+.navbar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--bg); border-top: 1px solid var(--line); padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); }
+.navbar .inner { max-width: 700px; margin: 0 auto; display: flex; gap: 10px; }
+.navbar .inner button { flex: 1; }
+.navbar .inner button.back { flex: 0 0 30%; }
+input[type=text], textarea { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; width: 100%; }
+textarea { min-height: 90px; resize: vertical; }
+.sessions { list-style: none; padding: 0; margin: 0; }
+.sessions li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.sessions li:last-child { border-bottom: none; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.row button { flex: 1; }
+.kbd { display: none; }
+@media (hover: hover) and (pointer: fine) { .kbd { display: inline; font-size: 0.78rem; color: var(--muted); font-weight: 400; } }
+</style>
+</head>
+<body>
+<main id="app"></main>
+<div class="navbar" id="navbar" hidden><div class="inner" id="navinner"></div></div>
+<script>
+var KIT = {"kit_id":"6e81ab58ae","rater":"","contact":"Jay","sessions":[{"id":"s1","blocks":[{"id":"s1b1","items":[{"id":"p4u7jq","prompt":"I want to create a portfolio website to showcase my web dev skills and knowledge. Last year I wanted to use next.js as it was the recent development and I wanted to host at vercel.com. I am not sure why, but I guess github pages did not have a next.js support ? This year I learned about astro which I think is the latest frontier of web dev, isn't it ? Which also can be deployed to github pages. So should I let go of vercel.com since I won't be using next.js and move to github pages with astro ?","doc":[{"t":"p","lines":[[{"k":0,"r":"No. Don't drop Vercel just because you're not using Next, and don't pick Astro because it feels like the latest frontier."},{"k":1,"r":"Those are two separate decisions."}]]},{"t":"p","lines":[[{"k":2,"r":"Your memory of last year is basically right."},{"k":3,"r":"GitHub Pages only serves static files."},{"k":4,"r":"Next.js was built to run on a server — page rendering, API routes, image optimization — so a normal Next app had nowhere to live on Pages."},{"k":5,"r":"You can export a static Next site and put that on Pages, but then you've turned off most of the reasons people chose Next."},{"k":6,"r":"Vercel was the easy host."},{"k":7,"r":"That part wasn't superstition."}]]},{"t":"p","lines":[[{"k":8,"r":"Astro is a good fit for a portfolio."},{"k":9,"r":"It's built for content sites, it ships very little JavaScript unless you ask for it, and a showcase of your work is exactly that kind of site."},{"k":10,"r":"It is not \"the\" frontier of web dev."},{"k":11,"r":"It's a strong current tool for pages."},{"k":12,"r":"Next is still the usual choice if you're building an app with accounts, dashboards, or server logic."},{"k":13,"r":"For this site, Astro is the better default."},{"k":14,"r":"Use it because the site is a portfolio, not because it's newer."}]]},{"t":"p","lines":[[{"k":15,"r":"Hosting doesn't follow from that."},{"k":16,"r":"Astro deploys cleanly to GitHub Pages and to Vercel."},{"k":17,"r":"Leaving Next does not force you off Vercel."}]]},{"t":"p","lines":[[{"k":18,"r":"Pick the host for what you want day to day:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":19,"r":"GitHub Pages if you want it free, simple, and sitting next to the repo."},{"k":20,"r":"A custom domain works."},{"k":21,"r":"For a static portfolio, that's enough, and \"I deployed it myself\" is a fine thing to show."}]],"c":[]},{"lines":[[{"k":22,"r":"Vercel if you want a preview link on every push, less fiddling with the domain, and an easy place to add a contact form later without moving the site."},{"k":23,"r":"Still free at portfolio scale."},{"k":24,"r":"Astro is happy there."}]],"c":[]}]},{"t":"p","lines":[[{"k":25,"r":"If I were building it to show skill, I'd use Astro, and I'd only \"let go\" of Vercel if you actually prefer Pages."},{"k":26,"r":"Either host is credible."},{"k":27,"r":"The projects on the site will matter more than the logo in the footer."}]]}]},{"id":"wpu84e","prompt":"Can you turn these notes into a short email to our weekend shelter volunteers?\n\n- 42 dogs and 19 cats adopted during last saturday's pet fair!\n- food pantry supplies low on wet kitten food and grain-free dog kibble\n- new shift check-in tablet installed by front desk, pin is 4092\n- orientation for new dog walkers is sunday oct 18 at 10am in community room\n- need 4 more volunteers for the morning cleaning shift this saturday (8am-11am)","doc":[{"t":"p","lines":[[{"k":0,"r":"Here's a version you can send:"}]]},{"t":"p","lines":[[{"k":1,"r":"Subject: A few notes before the weekend"}]]},{"t":"p","lines":[[{"k":2,"r":"Hi everyone,"}]]},{"t":"p","lines":[[{"k":3,"r":"Thank you for another big Saturday."},{"k":4,"r":"The pet fair sent 42 dogs and 19 cats home."},{"k":5,"r":"That does not happen without you."}]]},{"t":"p","lines":[[{"k":6,"r":"A few things for this weekend:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":7,"r":"The food pantry is low on wet kitten food and grain-free dog kibble."},{"k":8,"r":"If you can bring either, or spot a deal while you're out, it would help."}]],"c":[]},{"lines":[[{"k":9,"r":"There's a new shift check-in tablet at the front desk."},{"k":10,"r":"The PIN is 4092."}]],"c":[]},{"lines":[[{"k":11,"r":"Orientation for new dog walkers is Sunday, October 18, at 10am in the community room."}]],"c":[]},{"lines":[[{"k":12,"r":"We still need 4 more people for the morning cleaning shift this Saturday, 8am to 11am."},{"k":13,"r":"Reply if you can take a slot."}]],"c":[]}]},{"t":"p","lines":[[{"k":14,"r":"See you this weekend, and thank you again."}]]}]},{"id":"qyqydu","prompt":"be straight with me. is it crucial that red kettle hot sauce has the trademark filed before we print 5,000 labels on thursday, or can i print and file next month? i'm rosa mendes. the llc is done. the domain is ours.","doc":[{"t":"p","lines":[[{"k":0,"r":"No. It is not crucial that the trademark be filed before you print on Thursday."}]]},{"t":"p","lines":[[{"k":1,"r":"Filing is not what lets you put Red Kettle on a label."},{"k":2,"r":"You can use the name now."},{"k":3,"r":"The LLC being done and the domain being yours are good."},{"k":4,"r":"They are not a trademark registration, and you do not need them to become one before the printer runs."}]]},{"t":"p","lines":[[{"k":5,"r":"Print."},{"k":6,"r":"File next month."},{"k":7,"r":"Use ™ on the labels, not ®."},{"k":8,"r":"The ® is for a mark that's already registered."},{"k":9,"r":"You are not there. ™ is the honest mark for a name you're using and haven't registered."}]]},{"t":"p","lines":[[{"k":10,"r":"The risk that actually matters is not \"we printed before we filed.\""},{"k":11,"r":"It's \"we printed a name a food brand already owns.\""},{"k":12,"r":"If you haven't had someone search the name, that hour is worth more than the filing."},{"k":13,"r":"If a search comes back clean enough that you're willing to own it, Thursday is fine."},{"k":14,"r":"First use is what starts your common-law rights."},{"k":15,"r":"The application starts the federal clock."},{"k":16,"r":"Different things."}]]},{"t":"p","lines":[[{"k":17,"r":"I am not your lawyer."},{"k":18,"r":"If a search turns up someone already selling food under Red Kettle, stop the printer."},{"k":19,"r":"If it doesn't, print."}]]}]},{"id":"76aaqr","prompt":"wedding toast for saturday, under 2 minutes, i have to memorize it. my sister priya is marrying andre. they met 8 years ago when his food truck broke down outside the clinic where she does intake, and she waited with him until the tow came. i'm the brother, dev. i'll probably cry, that's fine.","doc":[{"t":"p","lines":[[{"k":0,"r":"About 90 seconds if you don't rush, shorter if you do."},{"k":1,"r":"Short lines so it's easier to memorize."},{"k":2,"r":"You can cry on \"She stays.\""},{"k":3,"r":"That's the line."}]]},{"t":"p","lines":[[{"k":4,"r":"I'm Dev, Priya's brother."}]]},{"t":"p","lines":[[{"k":5,"r":"They asked me to keep this under two minutes."},{"k":6,"r":"I have been practicing not crying since Tuesday."},{"k":7,"r":"We'll see."}]]},{"t":"p","lines":[[{"k":8,"r":"Eight years ago Andre's food truck broke down outside the clinic where Priya does intake."},{"k":9,"r":"She could have pointed him to a phone number."},{"k":10,"r":"She waited with him until the tow came."}]]},{"t":"p","lines":[[{"k":11,"r":"That is how they met."},{"k":12,"r":"It is also how she loves people."},{"k":13,"r":"She stays."}]]},{"t":"p","lines":[[{"k":14,"r":"Andre, you broke down in the right parking lot."},{"k":15,"r":"You have shown up for her ever since."},{"k":16,"r":"That is all I ever wanted for my sister, and more than I knew how to ask for."}]]},{"t":"p","lines":[[{"k":17,"r":"Priya, you have always been the one who doesn't leave."},{"k":18,"r":"I am so glad you found someone who won't either."}]]},{"t":"p","lines":[[{"k":19,"r":"I love you both."},{"k":20,"r":"Welcome to the family, Andre."},{"k":21,"r":"I'm going to sit down now, while I still can."}]]}]}]},{"id":"s1b2","items":[{"id":"5s98ub","prompt":"how to email customer that your shift will end on 16 sast so you will turnover the case or you will work for an extra hour to perform the action plan myself","doc":[{"t":"p","lines":[[{"k":0,"r":"If you hand the case over, send this:"}]]},{"t":"p","lines":[[{"k":1,"r":"Subject: Case handover at 16:00 SAST"}]]},{"t":"p","lines":[[{"k":2,"r":"Hi,"}]]},{"t":"p","lines":[[{"k":3,"r":"My shift ends at 16:00 SAST, so I will turn your case over to the next person on shift before I log off."},{"k":4,"r":"They will have the notes and can continue from there."}]]},{"t":"p","lines":[[{"k":5,"r":"If you stay and do the action plan yourself, send this:"}]]},{"t":"p","lines":[[{"k":6,"r":"Subject: Staying an extra hour on your case"}]]},{"t":"p","lines":[[{"k":7,"r":"Hi,"}]]},{"t":"p","lines":[[{"k":8,"r":"My shift ends at 16:00 SAST."},{"k":9,"r":"I will stay an extra hour and complete the action plan myself, so it does not wait for the next shift."}]]}]},{"id":"jxztxr","prompt":"Write a professional email on this  scenario \"Dear sir, i hope this email find you well, i want confirmation about my invoices from your side, did you send these invoices to finance for payment or not? if  you not sent yet kindly send as soon as possible or if you having any kind of query and question please let me know.\"","doc":[{"t":"p","lines":[[{"k":0,"r":"Subject: Confirmation on invoices sent to finance"}]]},{"t":"p","lines":[[{"k":1,"r":"Dear [Name],"}]]},{"t":"p","lines":[[{"k":2,"r":"I hope you're well."},{"k":3,"r":"Could you confirm whether you have sent my invoices to finance for payment?"}]]},{"t":"p","lines":[[{"k":4,"r":"If they have not gone across yet, please send them as soon as you can."},{"k":5,"r":"If anything is unclear, or you have a question about any of the invoices, let me know and I will get you what you need."}]]},{"t":"p","lines":[[{"k":6,"r":"Thank you,"}],[{"k":7,"r":"[Your name]"}]]}]},{"id":"48pdjv","prompt":"What scripture should I read for the Hope candle for Advent?","doc":[{"t":"p","lines":[[{"k":0,"r":"For the Hope candle, read Isaiah 9:2-7 and Romans 15:13."}]]},{"t":"p","lines":[[{"k":1,"r":"That candle is the first of Advent, lit for the promise that light is coming."},{"k":2,"r":"Isaiah 9 is a standard passage for it: people walking in darkness see a great light, and a child is born who will carry the government."},{"k":3,"r":"Romans 15:13 asks the God of hope to fill you with joy and peace, so that you abound in hope."},{"k":4,"r":"If you want a third, Jeremiah 33:14-16 is the promise of a righteous branch, and many churches read it on the first Sunday of Advent."}]]}]},{"id":"2nqzpy","prompt":"how to add page in ppt online without powerpoit","doc":[{"t":"p","lines":[[{"k":0,"r":"In PowerPoint on the web, a page is a slide."},{"k":1,"r":"Open the file in a browser at powerpoint.office.com or office.com, from OneDrive."},{"k":2,"r":"You don't need the desktop app installed."}]]},{"t":"p","lines":[[{"k":3,"r":"Click the slide that should come just before the new one."},{"k":4,"r":"On the Home tab, choose New Slide."},{"k":5,"r":"You can also right-click that slide's thumbnail in the left panel and choose New Slide."},{"k":6,"r":"In the Windows browser version, Ctrl+M does the same thing."}]]}]}]}]},{"id":"s2","blocks":[{"id":"s2b1","items":[{"id":"zyc4m6","prompt":"draft an incident update for #incident-payments:\n\n- INC-502 severity downgraded Sev1 -> Sev2 as of 14:10 UTC\n- root cause: bad redis cluster failover caused dropped authorization tokens\n- hotfix deployed to prod at 13:55 UTC, error rates dropped from 22% to <0.3%\n- transactions processing normally again, queue drain at ~95%\n- still monitoring: background sync worker lag is elevated (~8 min behind)\n- next status update in 30 mins (14:45 UTC)","doc":[{"t":"p","lines":[[{"k":0,"r":"Status: payment processing is back to normal after the Redis failover issue."}]]},{"t":"p","lines":[[{"k":1,"r":"We’ve downgraded the incident from Sev1 to Sev2 as of 14:10 UTC."},{"k":2,"r":"The root cause was a bad Redis cluster failover that dropped authorization tokens."},{"k":3,"r":"A hotfix was deployed to production at 13:55 UTC, and error rates dropped from 22% to under 0.3%."}]]},{"t":"p","lines":[[{"k":4,"r":"Transactions are processing normally again, and the queue is draining at roughly 95%."},{"k":5,"r":"We’re still monitoring one remaining issue: the background sync worker is lagging by about 8 minutes."},{"k":6,"r":"The incident remains under active monitoring, and we’ll provide the next update in 30 minutes at 14:45 UTC."}]]}]},{"id":"m7z2yv","prompt":"how do I make a voice in an audio sound like its moving as if someone is falling away from the microphone into a pit?","doc":[{"t":"p","lines":[[{"k":0,"r":"Use a “falling away” motion, not just a quieter voice."},{"k":1,"r":"The easiest way is to automate the sound so it gets farther from the mic over time."}]]},{"t":"p","lines":[[{"k":2,"r":"Start with a close, dry take."},{"k":3,"r":"Then:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":4,"r":"automate the volume down gradually so it fades away"}]],"c":[]},{"lines":[[{"k":5,"r":"add a high-pass or low-pass filter as it moves back, so the voice loses some low end and feels more distant"}]],"c":[]},{"lines":[[{"k":6,"r":"add a longer, darker reverb tail or room tone so it feels like it’s receding into space"}]],"c":[]},{"lines":[[{"k":7,"r":"push a little bit of pitch down or use a slow, subtle detune for the “falling” effect"}]],"c":[]},{"lines":[[{"k":8,"r":"add subtle rumble or air noise near the end to suggest depth and distance"}]],"c":[]},{"lines":[[{"k":9,"r":"end with a quick cutoff or a very soft fade, like the sound drops below the listener"}]],"c":[]}]},{"t":"p","lines":[[{"k":10,"r":"If you want it to feel like the speaker is literally falling into a pit, make the reverb tail longer, the volume drop steeper, and the filtering more extreme near the end."},{"k":11,"r":"A good trick is to automate the voice from “close and bright” to “far and muddy” in 2–4 seconds."}]]}]},{"id":"9m5zzn","prompt":"I have 15 minutes at our all-hands next Tuesday to present Q3 results for the customer support team at Marrowfield Home Goods. Can you give me an outline with sections and roughly how many minutes for each? Main points I need to hit:\n- ticket volume up 22% vs Q2\n- first response time down from 9 hrs to 4.5 hrs\n- CSAT went from 86% to 91%\n- launched the self-serve help center in August, it's already deflecting ~300 tickets a month\n- weekends are still a problem and I want to make the case for 2 weekend hires\n\nAudience is the whole company (~120 people) so I don't want to get too in the weeds.","doc":[{"t":"p","lines":[[{"k":0,"r":"Here’s a 15-minute outline that keeps it high-level but still covers the key results and the staffing ask:"}]]},{"t":"list","ordered":true,"items":[{"lines":[[{"k":1,"r":"Opening and purpose (2 minutes)"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":2,"r":"Thank everyone for the work this quarter"}]],"c":[]},{"lines":[[{"k":3,"r":"Set the context: support is a big part of customer experience and business health"}]],"c":[]}]}]},{"lines":[[{"k":4,"r":"Q3 snapshot: what changed (3 minutes)"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":5,"r":"Ticket volume up 22% vs. Q2"}]],"c":[]},{"lines":[[{"k":6,"r":"First response time improved from 9 hours to 4.5 hours"}]],"c":[]},{"lines":[[{"k":7,"r":"CSAT up from 86% to 91%"}]],"c":[]},{"lines":[[{"k":8,"r":"Emphasize that this is a strong quarter overall"}]],"c":[]}]}]},{"lines":[[{"k":9,"r":"What drove the improvement (4 minutes)"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":10,"r":"Launch of the self-serve help center in August"}]],"c":[]},{"lines":[[{"k":11,"r":"It is already deflecting about 300 tickets a month"}]],"c":[]},{"lines":[[{"k":12,"r":"Explain why this matters: faster responses, lower ticket load, more efficient support operations"}]],"c":[]}]}]},{"lines":[[{"k":13,"r":"Where we still need help (3 minutes)"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":14,"r":"Weekends remain a pain point"}]],"c":[]},{"lines":[[{"k":15,"r":"Peak demand is still outpacing coverage on weekends"}]],"c":[]},{"lines":[[{"k":16,"r":"Present the case for two weekend hires as a targeted fix, not a broad hiring push"}]],"c":[]}]}]},{"lines":[[{"k":17,"r":"Closing and ask (3 minutes)"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":18,"r":"Thank the team and recap the wins"}]],"c":[]},{"lines":[[{"k":19,"r":"Ask for support for weekend staffing to keep the gains moving"}]],"c":[]},{"lines":[[{"k":20,"r":"End with a clear, positive message about the team’s momentum"}]],"c":[]}]}]}],"start":1},{"t":"p","lines":[[{"k":21,"r":"This keeps the presentation focused on the headline numbers and the operational takeaway, without getting too deep into ticket queues or staffing mechanics."}]]}]},{"id":"ke9peg","prompt":"scholarship letter for my niece lila owens, about 200 words. the prompt wants a testament to leadership. what she actually did was restock the community fridge at the eastside library every week for a year and not tell anyone. can you keep that tension instead of turning her into a club president?","doc":[{"t":"p","lines":[[{"k":0,"r":"Lila Owens did not become a leader by winning office or collecting titles."},{"k":1,"r":"She became a leader by quietly doing the work no one was asking her to do, week after week, without any applause and without turning it into a performance."},{"k":2,"r":"For a year, she restocked the community fridge at the Eastside Library every Friday, making sure shelves were filled, food stayed usable, and neighbors who needed it had a reliable place to turn."},{"k":3,"r":"That is leadership in its most useful form: creating stability for other people, noticing what was missing, and fixing it without waiting to be invited or praised."}]]},{"t":"p","lines":[[{"k":4,"r":"What makes her story compelling is that she did it in a way that stayed humble."},{"k":5,"r":"She did not campaign for recognition."},{"k":6,"r":"She did not ask for credit."},{"k":7,"r":"She simply kept showing up, and in doing so she gave the library a quieter kind of care that made the whole neighborhood feel steadier."},{"k":8,"r":"Her leadership was not about being seen; it was about being dependable."},{"k":9,"r":"In a world that often mistakes visibility for value, Lila’s example matters because she showed that real leadership can be practical, unglamorous, and deeply generous."}]]}]}]},{"id":"s2b2","items":[{"id":"c39rhc","prompt":"Opening paragraph only of a college application essay, about 120 words. Student is Mateo Ruiz, applying to state schools for civil engineering. He spent two summers rebuilding a footbridge on his grandparents' farm in New Mexico after a flood, with his grandfather Ramon, a retired welder who is particular about every joint.","doc":[{"t":"p","lines":[[{"k":0,"r":"Mateo Ruiz grew up learning that a bridge is only as strong as the craftsmanship behind it."},{"k":1,"r":"After a flood tore through his grandparents’ farm in New Mexico, he spent two summers rebuilding a footbridge that had washed away, working side by side with his grandfather, Ramon, a retired welder whose standards are exacting enough to make a bad joint impossible to miss."},{"k":2,"r":"Together they measured, cut, and welded each piece with care, transforming damaged timber and steel into something steady enough for his family to cross again."},{"k":3,"r":"That work taught Mateo how engineering is not just math or design; it is patience, problem-solving, and the responsibility of building something that safely carries the weight of other people’s lives."}]]}]},{"id":"7fksjx","prompt":"should burnt sugar lean into the name or change it? bakery, open 14 months. people remember it. a few of them think we burn the food. we don't. it's about the dessert with the torched top. yes or no, i don't have time for a brand workshop.","doc":[{"t":"p","lines":[[{"k":0,"r":"Yes — lean into it, but fix the clarity problem."}]]},{"t":"p","lines":[[{"k":1,"r":"A memorable name is a real asset, especially when people already remember it."},{"k":2,"r":"The issue isn’t that the name is bad; it’s that a few people hear “burnt” and assume the food is burnt, which is why the meaning needs to be obvious."},{"k":3,"r":"Keep the name, but make the story clear everywhere: signage, menu language, packaging, and your social posts."},{"k":4,"r":"“Burnt sugar” is a brand cue, not a problem, as long as people understand it’s about the caramelized, torched top."}]]}]},{"id":"j4jh9p","prompt":"Quiz on cellular respiration Friday. Can you explain glycolysis, the Krebs cycle, and the electron transport chain (where each one happens, what goes in and out, how much ATP)? Bold the key terms so I can make flashcards from it.","doc":[{"t":"p","lines":[[{"k":0,"r":"Sure — here’s a quick breakdown of cellular respiration:"}]]},{"t":"p","lines":[[{"k":1,"r":"**1) Glycolysis**"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":2,"r":"**Where it happens:** in the **cytoplasm** of the cell"}]],"c":[]},{"lines":[[{"k":3,"r":"**What goes in:** **glucose** (a 6-carbon sugar), **2 ATP**, and **2 NAD+**"}]],"c":[]},{"lines":[[{"k":4,"r":"**What comes out:** **2 pyruvate**, **2 ATP** (net gain), and **2 NADH**"}]],"c":[]},{"lines":[[{"k":5,"r":"**What it does:** splits glucose into smaller molecules so the cell can extract more energy later"}]],"c":[]}]},{"t":"p","lines":[[{"k":6,"r":"**2) The Krebs cycle** (also called the **citric acid cycle**)"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":7,"r":"**Where it happens:** in the **mitochondrial matrix**"}]],"c":[]},{"lines":[[{"k":8,"r":"**What goes in:** **2 pyruvate** (after they are converted into acetyl-CoA), **NAD+**, **FAD**, and **ADP**"}]],"c":[]},{"lines":[[{"k":9,"r":"**What comes out:** **CO2**, **NADH**, **FADH2**, and a small amount of **ATP**"}]],"c":[]},{"lines":[[{"k":10,"r":"**What it does:** releases stored energy from the breakdown products and produces electron carriers for the final stage"}]],"c":[]}]},{"t":"p","lines":[[{"k":11,"r":"**3) Electron transport chain (ETC)**"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":12,"r":"**Where it happens:** in the **inner mitochondrial membrane**"}]],"c":[]},{"lines":[[{"k":13,"r":"**What goes in:** **NADH**, **FADH2**, **O2**"}]],"c":[]},{"lines":[[{"k":14,"r":"**What comes out:** **ATP**, **H2O**, and **NAD+ / FAD**"}]],"c":[]},{"lines":[[{"k":15,"r":"**What it does:** uses the electrons carried by NADH and FADH2 to create a proton gradient that powers **ATP synthase** to make most of the cell’s ATP"}]],"c":[]}]},{"t":"p","lines":[[{"k":16,"r":"**ATP totals**"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":17,"r":"**Glycolysis:** about **2 ATP** net"}]],"c":[]},{"lines":[[{"k":18,"r":"**Krebs cycle:** about **2 ATP**"}]],"c":[]},{"lines":[[{"k":19,"r":"**Electron transport chain:** about **26–28 ATP**"}]],"c":[]},{"lines":[[{"k":20,"r":"**Total:** roughly **30–32 ATP** per glucose molecule"}]],"c":[]}]},{"t":"p","lines":[[{"k":21,"r":"A simple way to remember it: **glycolysis** starts the process in the cytoplasm, the **Krebs cycle** finishes extracting energy in the mitochondria, and the **electron transport chain** makes most of the ATP."}]]}]},{"id":"mjr8fe","prompt":"can you turn this into a quick slack update for my manager?\n\n- auth migration done for checkout flow\n- stripe webhooks throwing 500s randomly on staging (around 4% fail rate) -> marcos digging in today\n- android release pushed thurs -> next mon oct 19\n- blocker: still need sarahs signoff on privacy copy by tmrw eod","doc":[{"t":"p","lines":[[{"k":0,"r":"Quick update:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":1,"r":"Auth migration for the checkout flow is complete."}]],"c":[]},{"lines":[[{"k":2,"r":"Stripe webhooks are intermittently returning 500s in staging (about a 4% failure rate); Marcos is digging in today."}]],"c":[]},{"lines":[[{"k":3,"r":"The Android release went out Thursday; the next target is Monday, Oct 19."}]],"c":[]},{"lines":[[{"k":4,"r":"Blocker: we still need Sarah’s signoff on the privacy copy by EOD tomorrow."}]],"c":[]}]}]}]}]},{"id":"s3","blocks":[{"id":"s3b1","items":[{"id":"62dnuf","prompt":"Write for linkedIn profile in section About shortly and succinct about me and my profession. I am development manager in sales of chemicals and chemical raw materials for different markets","doc":[{"t":"p","lines":[[{"k":0,"r":"Here are two options you can paste straight in:"}]]},{"t":"p","lines":[[{"k":1,"r":"**Short**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":2,"r":"Business Development Manager specializing in the sale of chemicals and chemical raw materials across diverse markets."},{"k":3,"r":"I connect customers with reliable supply, build long-term partnerships, and turn market opportunities into lasting business growth."}]]}]},{"t":"p","lines":[[{"k":4,"r":"**A bit more personal**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":5,"r":"I'm a Business Development Manager in the chemical industry, focused on selling chemicals and chemical raw materials to customers across a wide range of markets."}]]},{"t":"p","lines":[[{"k":6,"r":"My work is about understanding what customers really need, finding the right products and supply solutions, and building partnerships that last."},{"k":7,"r":"I enjoy opening up new markets and turning opportunities into long-term business."}]]},{"t":"p","lines":[[{"k":8,"r":"Always happy to connect with buyers, suppliers, and professionals across the chemical industry."}]]}]},{"t":"p","lines":[[{"k":9,"r":"If you tell me which industries or regions you sell into (e.g., coatings, plastics, agriculture, Europe, Asia) or how many years of experience you have, I can make it more specific."},{"k":10,"r":"And swap in your exact job title if it's different."}]]}]},{"id":"tbyhnr","prompt":"I don't feel like writing these days...// One friend of Twitter wrote that 4 days ago .  I wanna start a conversation but send positive vibes as well. What should I write","doc":[{"t":"p","lines":[[{"k":0,"r":"Since it's been a few days, I'd send a DM (or reply with something like \"late to this, but...\")."},{"k":1,"r":"Keep it warm and low-pressure, and end with a question so they have an easy way to respond."},{"k":2,"r":"A few options:"}]]},{"t":"p","lines":[[{"k":3,"r":"**Gentle and supportive**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":4,"r":"Hey, saw your post about not feeling like writing lately."},{"k":5,"r":"Just wanted to say that's totally okay."},{"k":6,"r":"Sometimes the well just needs time to refill."},{"k":7,"r":"How are you doing otherwise? 💛"}]]}]},{"t":"p","lines":[[{"k":8,"r":"**Encouraging (if you enjoy their writing)**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":9,"r":"I really love reading your stuff, so just know I'll be here whenever the words come back."},{"k":10,"r":"No rush at all."},{"k":11,"r":"Rest is part of the process too ✨"}]]}]},{"t":"p","lines":[[{"k":12,"r":"**Light and casual**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":13,"r":"Late to this, but sending good vibes your way 🌱 Writing breaks happen to everyone."},{"k":14,"r":"What's been keeping you busy (or keeping you sane) lately?"}]]}]},{"t":"p","lines":[[{"k":15,"r":"**Curious, to get a real conversation going**"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":16,"r":"I totally get that feeling."},{"k":17,"r":"Is it more of a \"nothing to say\" slump or a \"too tired to say it\" slump?"},{"k":18,"r":"Either way, hope you're being kind to yourself 🙂"}]]}]},{"t":"p","lines":[[{"k":19,"r":"A few tips:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":20,"r":"**Don't push them to write.**"},{"k":21,"r":"Skip advice like \"just write anyway!\" unless they ask for it."}]],"c":[]},{"lines":[[{"k":22,"r":"**Be specific if you can.**"},{"k":23,"r":"Mentioning a post or piece of theirs you liked is the best encouragement there is."}]],"c":[]},{"lines":[[{"k":24,"r":"**Keep it short.**"},{"k":25,"r":"A few warm lines feel caring; a long message can feel like pressure to reply with the same energy."}]],"c":[]}]},{"t":"p","lines":[[{"k":26,"r":"Want me to tailor one based on what your friend usually writes about?"}]]}]},{"id":"usxnyj","prompt":"ok i never post but my brother said a linkedin post about this would get shared. i quit a pm job at a regional bank last march and now it's just me, answering missed new-patient calls for dental offices. first client is dr. amira solis at bright molar in tucson. they were missing about 30% of those calls, and now they basically don't. my name is joon park. around 150 words, something people might actually pass on.","doc":[{"t":"p","lines":[[{"k":0,"r":"Here's a draft:"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":1,"r":"Last March, I quit my product manager job at a regional bank."},{"k":2,"r":"Now I answer phones for dental offices."}]]},{"t":"p","lines":[[{"k":3,"r":"That sounds like a step down."},{"k":4,"r":"Here's why it isn't."}]]},{"t":"p","lines":[[{"k":5,"r":"When someone calls a dental office for the first time, they're usually ready to book."},{"k":6,"r":"If no one picks up, a lot of them don't leave a voicemail."},{"k":7,"r":"They just call the next office on the list."}]]},{"t":"p","lines":[[{"k":8,"r":"My first client is Dr. Amira Solis at Bright Molar in Tucson."},{"k":9,"r":"Her office was missing about 30% of new-patient calls."},{"k":10,"r":"Not because anyone was careless."},{"k":11,"r":"Front desks are busy helping the patients who are already there."}]]},{"t":"p","lines":[[{"k":12,"r":"Now they basically don't miss those calls."}]]},{"t":"p","lines":[[{"k":13,"r":"That's the whole business: me, answering the new-patient calls a practice would otherwise miss."}]]},{"t":"p","lines":[[{"k":14,"r":"If you know a dental office that's losing patients to an unanswered phone, I'd love an intro."},{"k":15,"r":"And if you're sitting on an idea that sounds too small, it might not be."}]]}]},{"t":"p","lines":[[{"k":16,"r":"Before you post, make sure Dr. Solis is comfortable being named alongside that 30% number."},{"k":17,"r":"If she is, tag her and Bright Molar."},{"k":18,"r":"That's the easiest way to get it in front of other dentists."}]]}]},{"id":"gfqc8w","prompt":"Should i enable or disable superfetch in windows 11 when i have 2 nvme drives and 64gb ram","doc":[{"t":"p","lines":[[{"k":0,"r":"**Leave it enabled.**"},{"k":1,"r":"In Windows 11, Superfetch is called **SysMain**, and the default (on) is the right choice for your setup."}]]},{"t":"p","lines":[[{"k":2,"r":"Honestly, the benefit on your system is small: with NVMe drives, apps already load so fast that preloading them into RAM saves very little."},{"k":3,"r":"But it doesn't cost you anything either:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":4,"r":"**It only uses RAM you aren't using.**"},{"k":5,"r":"Preloaded data sits in \"standby\" memory and is released instantly when a program needs it."},{"k":6,"r":"With 64 GB, it won't crowd out anything you're actually running."}]],"c":[]},{"lines":[[{"k":7,"r":"**The old reason to disable it doesn't apply.**"},{"k":8,"r":"Turning off Superfetch was popular advice back when it caused heavy background disk activity on hard drives."},{"k":9,"r":"On NVMe, that activity is negligible."}]],"c":[]}]},{"t":"p","lines":[[{"k":10,"r":"**When disabling makes sense:** if Task Manager shows SysMain constantly using a lot of CPU or disk, or you have a specific problem (like stuttering) that goes away when it's off."},{"k":11,"r":"Otherwise, disabling it is a tweak with no measurable benefit."}]]},{"t":"p","lines":[[{"k":12,"r":"If you want to try it anyway, it's easy to undo: press **Win + R**, type `services.msc`, double-click **SysMain**, set **Startup type** to **Disabled**, and click **Stop**."},{"k":13,"r":"To revert, set it back to **Automatic** and click **Start**."}]]},{"t":"p","lines":[[{"k":14,"r":"One more thing: if Task Manager shows a lot of memory as \"Cached,\" that's normal."},{"k":15,"r":"It's Windows (partly SysMain) putting idle RAM to work, not memory being wasted."}]]}]}]},{"id":"s3b2","items":[{"id":"8wgav3","prompt":"write a detailed paragraph on monolithic kernal vs microkernal based operating sysytems","doc":[{"t":"p","lines":[[{"k":0,"r":"A monolithic kernel runs almost the entire operating system in kernel mode as one large program."},{"k":1,"r":"Process scheduling, memory management, file systems, device drivers and networking all share a single address space and call each other directly, so one part of the kernel can ask another for something at about the cost of an ordinary function call."},{"k":2,"r":"That makes monolithic kernels fast, and it's the design used by Linux and the BSD family."},{"k":3,"r":"The downside is that every one of those components runs with full hardware privileges, so a bug in a single driver can crash or compromise the whole machine, and the kernel grows into millions of lines of code that are hard to test as a whole."},{"k":4,"r":"Linux adds flexibility with loadable modules, but modules still run inside the kernel with full privileges, so they don't change this."},{"k":5,"r":"A microkernel keeps only the minimum in kernel mode, typically address space management, thread scheduling and inter-process communication (IPC), and runs drivers, file systems and network stacks as separate user-space processes that talk to each other by passing messages through the kernel."},{"k":6,"r":"Because those services are isolated, a crashed driver can be restarted without bringing down the system, and the kernel is small enough to verify formally: seL4, for example, has a machine-checked proof that its code matches its specification."},{"k":7,"r":"The cost is performance, since every message adds context switches and often data copying, which made early microkernels like Mach noticeably slower, although later designs such as L4 cut that overhead dramatically."},{"k":8,"r":"Microkernels are popular in systems that can't afford to crash, such as QNX in cars and industrial equipment, while Windows and macOS use hybrid kernels that borrow microkernel ideas but keep most services in kernel space for speed."}]]}]},{"id":"bt7fea","prompt":"Please correct the grammar: Only our store & warehouse have the supplies. Actually our scaffolder might also  have supply since they are using that. Unfortunately, they already left.","doc":[{"t":"p","lines":[[{"k":0,"r":"Only our store and warehouse have the supplies."},{"k":1,"r":"Actually, our scaffolder might also have some, since they're using them."},{"k":2,"r":"Unfortunately, they've already left."}]]},{"t":"p","lines":[[{"k":3,"r":"I changed \"&\" to \"and,\" added a comma after \"Actually,\" and used \"some\" and \"them\" so they match the plural \"supplies.\""},{"k":4,"r":"\"They already left\" is fine in casual American English, but \"they've already left\" is the standard form."}]]}]},{"id":"368umx","prompt":"fundraising email for harbor kids chess. nonprofit, after-school chess in mobile, alabama. helen voss is the director and she'll be the one sending it. last year 86 kids at 4 schools. ask is $40, a chess set and snacks for one kid for the semester. audience already donated last year.","doc":[{"t":"p","lines":[[{"k":0,"r":"Subject: Thanks to you, 86 kids played chess last year"}]]},{"t":"p","lines":[[{"k":1,"r":"Hi [First name],"}]]},{"t":"p","lines":[[{"k":2,"r":"Thank you for supporting Harbor Kids Chess last year."},{"k":3,"r":"Your gift helped 86 kids at four schools here in Mobile spend their afternoons learning and playing chess with us."}]]},{"t":"p","lines":[[{"k":4,"r":"I'm hoping you'll give again this year. $40 covers a chess set and snacks for one kid for the whole semester, and if you'd like to cover more than one kid, each extra $40 adds another."}]]},{"t":"p","lines":[[{"k":5,"r":"[Donate link]"}]]},{"t":"p","lines":[[{"k":6,"r":"With thanks,"}],[{"k":7,"r":"Helen Voss"}],[{"k":8,"r":"Director, Harbor Kids Chess"}]]},{"t":"p","lines":[[{"k":9,"r":"If Helen has a short story about one of last year's kids, it would fit well after the first paragraph."}]]}]},{"id":"3gyxz5","prompt":"can u walk me thru solving 2x^2 + 12x - 14 = 0 by completeing the square? numbered steps pls, my teacher takes points off if we skip steps and i alwyas mess up when theres a number in front of the x^2","doc":[{"t":"list","ordered":true,"items":[{"lines":[[{"k":0,"r":"Move the constant to the right side by adding 14 to both sides: 2x² + 12x = 14"}]],"c":[]},{"lines":[[{"k":1,"r":"Divide every term on both sides by 2, the number in front of x²."},{"k":2,"r":"The 14 gets divided too: x² + 6x = 7"}]],"c":[]},{"lines":[[{"k":3,"r":"Take half of the number in front of x (that's 6) and square it: half of 6 is 3, and 3² = 9"}]],"c":[]},{"lines":[[{"k":4,"r":"Add 9 to both sides: x² + 6x + 9 = 7 + 9, so x² + 6x + 9 = 16"}]],"c":[]},{"lines":[[{"k":5,"r":"Write the left side as a perfect square."},{"k":6,"r":"The number inside is the 3 from step 3: (x + 3)² = 16"}]],"c":[]},{"lines":[[{"k":7,"r":"Take the square root of both sides, and don't forget the ±: x + 3 = ±4"}]],"c":[]},{"lines":[[{"k":8,"r":"Subtract 3 from both sides: x = -3 ± 4"}]],"c":[]},{"lines":[[{"k":9,"r":"Split it into two answers: x = -3 + 4 = 1 and x = -3 - 4 = -7"}]],"c":[]},{"lines":[[{"k":10,"r":"Check both in the original equation:"}]],"c":[{"t":"list","ordered":false,"items":[{"lines":[[{"k":11,"r":"x = 1: 2(1)² + 12(1) - 14 = 2 + 12 - 14 = 0"}]],"c":[]},{"lines":[[{"k":12,"r":"x = -7: 2(-7)² + 12(-7) - 14 = 98 - 84 - 14 = 0"}]],"c":[]}]}]}],"start":1},{"t":"p","lines":[[{"k":13,"r":"So x = 1 or x = -7."}]]},{"t":"p","lines":[[{"k":14,"r":"The usual mistake with a number in front of x² is taking half of 12 instead of half of 6."},{"k":15,"r":"Divide by that number first (step 2), and make sure the right side gets divided too."}]]}]}]}]},{"id":"s4","blocks":[{"id":"s4b1","items":[{"id":"7k32d7","prompt":"short caption for our item Fettuccini crepe topped with gelato and desired sauce","doc":[{"t":"p","lines":[[{"k":0,"r":"Fettuccini crepe topped with gelato and your choice of sauce."}]]}]},{"id":"fbbks5","prompt":"What does someone who says \"Poland is the Mexico of Europe\" mean? What about \"Texas of Europe\"?","doc":[{"t":"p","lines":[[{"k":0,"r":"“The Mexico of Europe” often compares Poland’s relationship with wealthier Western European countries, particularly Germany, to Mexico’s relationship with the U.S. The speaker may be thinking of wage differences, manufacturing ties, or migration for work."},{"k":1,"r":"Some also mean shared Catholic traditions."},{"k":2,"r":"Used dismissively, it can carry a sneer about poverty or immigrants."}]]},{"t":"p","lines":[[{"k":3,"r":"“The Texas of Europe” often points to a reputation for social conservatism, religious influence, and strong national pride."},{"k":4,"r":"It could be meant admiringly or as a criticism."},{"k":5,"r":"It doesn’t imply that Poland has Texas-style gun laws, for example."}]]},{"t":"p","lines":[[{"k":6,"r":"Neither phrase has a fixed meaning, and both rely heavily on stereotypes."},{"k":7,"r":"The surrounding sentence would help tell you which comparison the person intended."}]]}]},{"id":"67twun","prompt":"what is prctical lifetime of tesla y battery","doc":[{"t":"p","lines":[[{"k":0,"r":"A Tesla Model Y battery may give you 10 to 15 years of use and 150,000 to 250,000 miles (240,000 to 400,000 km), but treat that as a rough estimate."},{"k":1,"r":"The model launched in 2020, so its long-term lifespan hasn't been demonstrated yet."}]]},{"t":"p","lines":[[{"k":2,"r":"Age-related wear usually shows up as reduced range."},{"k":3,"r":"A battery with 80% of its original capacity can still be useful; it doesn't automatically need replacing."},{"k":4,"r":"A pack fault can require repair or replacement much sooner."}]]},{"t":"p","lines":[[{"k":5,"r":"In the U.S., Tesla's battery warranty is generally 8 years or 100,000 to 120,000 miles, depending on the version, whichever comes first."},{"k":6,"r":"It includes a minimum 70% capacity-retention guarantee."}]]},{"t":"p","lines":[[{"k":7,"r":"For longevity, follow the daily charging limit your car recommends and avoid leaving it fully charged in hot conditions for long periods."}]]}]},{"id":"xufn2v","prompt":"Can you put these in a comparison table for me? Trying to decide where to keep my emergency fund (about $12k).\n\nKestrel Point Bank: 4.10% APY, $500 minimum to open, no monthly fee, transfers out take 2-3 business days\nNovalin Direct: 4.35% APY, no minimum, no fees, max 6 withdrawals a month, app only (no branches)\nPinewick Community Credit Union: 3.75% APY, $5 membership share, branch 10 min from my house, instant transfers to my checking since that's already there\n\nColumns for APY, minimums/fees, access, transfer speed, and roughly what $12k would earn in a year at each. Add anything else you think I should be comparing.","doc":[{"t":"table","head":{"k":0,"r":"","cells":["Account","APY","Minimums/fees","Access","Transfer speed","Approx. yearly earnings on $12k"]},"rows":[{"k":1,"r":"","cells":["Kestrel Point Bank","4.10%","$500 to open; no monthly fee","Access methods not specified","2–3 business days for transfers out","$492"]},{"k":2,"r":"","cells":["Novalin Direct","4.35%","No minimum; no fees","App only; maximum 6 withdrawals a month","Not specified","$522"]},{"k":3,"r":"","cells":["Pinewick Community Credit Union","3.75%","$5 membership share; other fees not specified","Branch 10 minutes away; existing checking account there","Instant to your Pinewick checking","$450"]}]},{"t":"p","lines":[[{"k":4,"r":"These estimates assume $12,000 stays deposited for a full year, the APY doesn't change, and you leave the interest in the account."},{"k":5,"r":"They're before taxes."}]]},{"t":"p","lines":[[{"k":6,"r":"I'd also check:"}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":7,"r":"FDIC or NCUA deposit insurance, including which institution holds your money."}]],"c":[]},{"lines":[[{"k":8,"r":"Whether the APY is promotional or has balance requirements."}]],"c":[]},{"lines":[[{"k":9,"r":"Novalin's transfer time, what counts toward its withdrawal limit, and what happens when you reach it."}]],"c":[]},{"lines":[[{"k":10,"r":"Any Pinewick account fees, and how you'd access money if an app or online banking were unavailable."}]],"c":[]}]},{"t":"p","lines":[[{"k":11,"r":"Novalin earns $72 more per year than Pinewick at these rates."},{"k":12,"r":"I'd favor Pinewick's instant access for an emergency fund, assuming its fees and deposit insurance check out."}]]}]}]},{"id":"s4b2","items":[{"id":"ays72p","prompt":"what are some of the best and most reliable brands for side by side type refrigerators?","doc":[{"t":"p","lines":[[{"k":0,"r":"For a U.S. buyer, I’d start with **Whirlpool and GE**, then compare Frigidaire if price is a priority."}]]},{"t":"list","ordered":false,"items":[{"lines":[[{"k":1,"r":"**Whirlpool:** A good starting point for straightforward side-by-side models, with generally broad parts and repair availability."}]],"c":[]},{"lines":[[{"k":2,"r":"**GE:** Another solid brand to shortlist, with plenty of side-by-side options and an established service network."}]],"c":[]},{"lines":[[{"k":3,"r":"**Frigidaire:** Worth considering for a simpler, lower-priced refrigerator."}]],"c":[]},{"lines":[[{"k":4,"r":"**KitchenAid:** Worth a look if you want a more upscale finish."},{"k":5,"r":"It’s part of Whirlpool, but paying more doesn’t necessarily buy better reliability."}]],"c":[]}]},{"t":"p","lines":[[{"k":6,"r":"The **specific model matters more than the badge**."},{"k":7,"r":"Reliability can vary within a brand, and local service availability matters when something does break."}]]},{"t":"p","lines":[[{"k":8,"r":"If minimizing repairs is your priority, favor a simpler model."},{"k":9,"r":"Through-door ice and water dispensers are convenient, but they add mechanisms that can leak or fail."},{"k":10,"r":"Compare the exact model’s warranty and recurring complaints, not just its overall star rating."}]]},{"t":"p","lines":[[{"k":11,"r":"What’s your budget, and do you want an ice/water dispenser?"}]]}]},{"id":"fd7frc","prompt":"Why  “I think, therefore I am” isn't the Syllogism？","doc":[{"t":"p","lines":[[{"k":0,"r":"It **can be rewritten as a syllogism**, but that isn’t how Descartes intended its certainty to work."}]]},{"t":"p","lines":[[{"k":1,"r":"A syllogistic version would be:"}]]},{"t":"list","ordered":true,"items":[{"lines":[[{"k":2,"r":"All things that think exist."}]],"c":[]},{"lines":[[{"k":3,"r":"I am a thing that thinks."}]],"c":[]},{"lines":[[{"k":4,"r":"Therefore, I exist."}]],"c":[]}],"start":1},{"t":"p","lines":[[{"k":5,"r":"Here, the conclusion follows by applying a general rule to a particular case."}]]},{"t":"p","lines":[[{"k":6,"r":"Descartes’s point is different: **in the very act of doubting my existence, I recognize that I exist.**"},{"k":7,"r":"Doubting is itself a kind of thinking."},{"k":8,"r":"Even if everything I believe is false—even if a deceiver is misleading me—I must exist to be doing that thinking."}]]},{"t":"p","lines":[[{"k":9,"r":"He doesn’t first establish the universal premise “all thinking things exist” and then deduce his existence from it."},{"k":10,"r":"He recognizes his existence directly in the act of thinking."}]]},{"t":"p","lines":[[{"k":11,"r":"So the word **“therefore”** makes the statement sound like a syllogistic deduction, but Descartes treats it as an immediate recognition."},{"k":12,"r":"The distinction is between a logical form we can give the statement and the way its truth becomes certain to him."}]]}]},{"id":"m5csuw","prompt":"i'm andres. my brother and i would leave union electrical work to start ramirez line co, residential only. three builders say they'll call. nothing is signed. it feels pivotal. is it the move, or do we stay until there's a contract?","doc":[{"t":"p","lines":[[{"k":0,"r":"Andres, **I wouldn’t have both of you leave union work on three “we’ll call” promises.**"},{"k":1,"r":"That’s encouraging interest, but it isn’t booked work."}]]},{"t":"p","lines":[[{"k":2,"r":"This could be the right move."},{"k":3,"r":"I’d make the next step proving the business, not giving up both paychecks."}]]},{"t":"p","lines":[[{"k":4,"r":"Before you leave:"}]]},{"t":"list","ordered":true,"items":[{"lines":[[{"k":5,"r":"**Turn those conversations into actual jobs.**"},{"k":6,"r":"Ask each builder for a specific project, scope, pricing process, start date, and payment terms."},{"k":7,"r":"A written agreement is much stronger than a verbal expression of interest."}]],"c":[]},{"lines":[[{"k":8,"r":"**Work out the cash needs, not just the sales potential.**"},{"k":9,"r":"Include materials, tools, vehicles, insurance, taxes, and replacing union benefits."},{"k":10,"r":"Can you cover household bills and business expenses if a job starts late or a builder pays slowly?"}]],"c":[]},{"lines":[[{"k":11,"r":"**Check the practical requirements.**"},{"k":12,"r":"Confirm the licensing, permits, insurance, and any union or employer restrictions that apply."},{"k":13,"r":"Don’t assume side work is permitted."}]],"c":[]},{"lines":[[{"k":14,"r":"**Put the brother-to-brother agreement in writing.**"},{"k":15,"r":"Ownership, responsibilities, pay, and how you’ll handle disagreements matter before money gets tight."}]],"c":[]}],"start":1},{"t":"p","lines":[[{"k":16,"r":"A signed contract alone isn’t a magic green light: it needs to be profitable, have workable payment terms, and be backed by enough cash to get the job done."},{"k":17,"r":"If permitted and financially workable, having one of you keep the union job during the initial transition could reduce the risk."}]]},{"t":"p","lines":[[{"k":18,"r":"**My recommendation: stay for now while you secure real work and set a clear launch threshold.**"},{"k":19,"r":"You can take Ramirez Line Co seriously without putting both incomes on the line before the builders commit."}]]}]},{"id":"xdagqe","prompt":"what's a good north star for a neighborhood tool library? the board wants member count to go up. we have 220 members and maybe 40 who borrow anything. i'm pete alvarez, volunteer coordinator at borrow & return in sacramento.","doc":[{"t":"p","lines":[[{"k":0,"r":"Pete, I’d use **active borrowers: the number of unique members who borrow at least one tool in a rolling 90-day period.**"}]]},{"t":"p","lines":[[{"k":1,"r":"It’s simple enough for volunteers to track, and it measures whether neighbors actually use Borrow & Return."},{"k":2,"r":"Member count still matters, but it measures potential reach rather than use."}]]},{"t":"p","lines":[[{"k":3,"r":"With 220 members and roughly 40 borrowing, I’d put at least as much effort into helping existing members take their first loan as into recruiting new ones."},{"k":4,"r":"Before setting a target, confirm what time period that “40” covers—you don’t yet have a quarterly baseline."}]]},{"t":"p","lines":[[{"k":5,"r":"For the board, I’d frame it this way:"}]]},{"t":"quote","c":[{"t":"p","lines":[[{"k":6,"r":"“Our goal is to help more neighbors get things done."},{"k":7,"r":"Membership tells us who could use the library; active borrowing tells us who is using it.”"}]]}]},{"t":"p","lines":[[{"k":8,"r":"Keep two guardrails alongside that number: **on-time returns** and **whether requested tools are available**."},{"k":9,"r":"More borrowing shouldn’t come at the expense of a library people can depend on."}]]},{"t":"p","lines":[[{"k":10,"r":"A practical first experiment: invite non-borrowing members to a volunteer-led tool introduction and help them arrange their first loan."},{"k":11,"r":"Track whether they borrow afterward, not just whether they attend."}]]}]}]}]}]};
+(function () {
+  'use strict';
+  var APP = 'plain-voice-rating';
+  var VERSION = 1;
+  var main = document.getElementById('app');
+  var CONTACT = (KIT && KIT.contact) || 'the person who sent you this';
+  var navbar = document.getElementById('navbar');
+  var navinner = document.getElementById('navinner');
+
+  if (!KIT) {
+    main.innerHTML = '<h1>Reading test</h1><p>No kit is loaded in this file. Build kits with <code>eval/scripts/build_rater_kits.py</code>.</p>';
+    return;
+  }
+
+  // ------------------------------------------------------------ markdown
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c];
+    });
+  }
+  function inline(text) {
+    var s = esc(text);
+    var code = [];
+    s = s.replace(/`([^`]+)`/g, function (_, inner) { code.push('<code>' + inner + '</code>'); return '\u0000' + (code.length - 1) + '\u0000'; });
+    s = s.replace(/\[([^\]\n]+)\]\(([^)\n]+)\)/g, '<span class="fake-link">$1</span>');
+    s = s.replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/__([^_\n]+)__/g, '<strong>$1</strong>');
+    s = s.replace(/~~([^~\n]+)~~/g, '<del>$1</del>');
+    s = s.replace(/(^|[^*])\*([^*\s](?:[^*\n]*[^*\s])?)\*/g, '$1<em>$2</em>');
+    s = s.replace(/(^|[^\w])_([^_\s](?:[^_\n]*[^_\s])?)_(?=$|[^\w])/g, '$1<em>$2</em>');
+    return s.replace(/\u0000(\d+)\u0000/g, function (_, i) { return code[Number(i)]; });
+  }
+  function plainMarkdown(src) {
+    var lines = String(src || '').replace(/\r\n?/g, '\n').split('\n');
+    var out = [], para = [], list = null;
+    function flushPara() { if (para.length) { out.push('<p>' + para.map(inline).join('<br>') + '</p>'); para = []; } }
+    function flushList() { if (list) { out.push('<' + list.tag + '>' + list.items.map(function (t) { return '<li>' + inline(t) + '</li>'; }).join('') + '</' + list.tag + '>'); list = null; } }
+    lines.forEach(function (line) {
+      var m = /^\s*([-*+]|\d+[.)])\s+(.*)$/.exec(line);
+      if (!line.trim()) { flushPara(); flushList(); return; }
+      if (m) {
+        flushPara();
+        var tag = /\d/.test(m[1]) ? 'ol' : 'ul';
+        if (!list || list.tag !== tag) { flushList(); list = {tag: tag, items: []}; }
+        list.items.push(m[2]);
+        return;
+      }
+      flushList();
+      para.push(line.replace(/^#{1,6}\s+/, ''));
+    });
+    flushPara(); flushList();
+    return out.join('');
+  }
+  function unitSpan(u) { return '<span class="u" data-u="' + u.k + '">' + inline(u.r) + '</span>'; }
+  function renderLines(lines) {
+    return lines.map(function (line) { return line.map(unitSpan).join(' '); }).join('<br>');
+  }
+  function renderDoc(blocks) { return blocks.map(renderBlock).join(''); }
+  function renderBlock(b) {
+    switch (b.t) {
+      case 'p': return '<p>' + renderLines(b.lines) + '</p>';
+      case 'h': return '<h' + b.level + '>' + unitSpan(b.u) + '</h' + b.level + '>';
+      case 'hr': return '<div class="u hr" data-u="' + b.u.k + '"><hr></div>';
+      case 'code': return '<pre class="u" data-u="' + b.u.k + '"><code>' + esc(b.u.r) + '</code></pre>';
+      case 'quote': return '<blockquote>' + renderDoc(b.c) + '</blockquote>';
+      case 'table':
+        var row = function (u, cell) {
+          return '<tr class="u" data-u="' + u.k + '">' + u.cells.map(function (c) { return '<' + cell + '>' + inline(c) + '</' + cell + '>'; }).join('') + '</tr>';
+        };
+        return '<div class="table-wrap"><table><thead>' + row(b.head, 'th') + '</thead><tbody>' + b.rows.map(function (u) { return row(u, 'td'); }).join('') + '</tbody></table></div>';
+      case 'list':
+        var tag = b.ordered ? 'ol' : 'ul';
+        var start = b.ordered && b.start && b.start !== 1 ? ' start="' + b.start + '"' : '';
+        return '<' + tag + start + '>' + b.items.map(function (it) {
+          return '<li>' + renderLines(it.lines) + renderDoc(it.c || []) + '</li>';
+        }).join('') + '</' + tag + '>';
+    }
+    return '';
+  }
+
+  // ------------------------------------------------------------ state
+  var KEY = 'pv-rating:' + KIT.kit_id;
+  var canSave = true;
+  function load() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { canSave = false; return null; }
+  }
+  var state = load() || {rater: KIT.rater || '', s: {}};
+  function save() {
+    try { window.localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { canSave = false; }
+  }
+  function sessionIndex(id) { for (var i = 0; i < KIT.sessions.length; i++) if (KIT.sessions[i].id === id) return i; return -1; }
+  function sstate(id) {
+    if (!state.s[id]) state.s[id] = {start: null, end: null, step: 0, items: {}, blocks: {}, p: '', n: ''};
+    return state.s[id];
+  }
+  function steps(session) {
+    var out = [];
+    session.blocks.forEach(function (b, bi) {
+      b.items.forEach(function (it, ii) { out.push({kind: 'item', b: bi, i: ii}); });
+      out.push({kind: 'block', b: bi});
+    });
+    out.push({kind: 'end'});
+    return out;
+  }
+  function nextSession() {
+    for (var i = 0; i < KIT.sessions.length; i++) { var st = state.s[KIT.sessions[i].id]; if (!st || !st.end) return KIT.sessions[i]; }
+    return null;
+  }
+  function results() {
+    var out = {app: APP, v: VERSION, kit_id: KIT.kit_id, rater: state.rater, exported_at: new Date().toISOString(), sessions: {}};
+    KIT.sessions.forEach(function (sess) {
+      var st = state.s[sess.id];
+      if (!st || !st.start) return;
+      out.sessions[sess.id] = {start: st.start, end: st.end, p: st.p, n: st.n, blocks: st.blocks, items: st.items};
+    });
+    return out;
+  }
+
+  // ------------------------------------------------------------ timing
+  var timer = null;
+  function startTimer(rec) {
+    stopTimer();
+    timer = {rec: rec, t0: document.visibilityState === 'visible' ? Date.now() : null};
+  }
+  function stopTimer() {
+    if (timer && timer.t0 != null) timer.rec.ms = (timer.rec.ms || 0) + (Date.now() - timer.t0);
+    timer = null;
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (!timer) return;
+    if (document.visibilityState === 'visible') timer.t0 = Date.now();
+    else if (timer.t0 != null) { timer.rec.ms = (timer.rec.ms || 0) + (Date.now() - timer.t0); timer.t0 = null; save(); }
+  });
+
+  // ------------------------------------------------------------ screens
+  var keyHandler = null;
+  function setNav(buttons) {
+    if (!buttons || !buttons.length) { navbar.hidden = true; navinner.innerHTML = ''; return; }
+    navbar.hidden = false;
+    navinner.innerHTML = '';
+    buttons.forEach(function (b) {
+      var el = document.createElement('button');
+      el.textContent = b.label;
+      el.className = b.cls || '';
+      if (b.id) el.id = b.id;
+      el.disabled = !!b.disabled;
+      el.addEventListener('click', b.onClick);
+      navinner.appendChild(el);
+    });
+  }
+  function scaleHtml(name, value, low, high) {
+    var h = '<div class="scale" data-q="' + name + '">';
+    for (var v = 1; v <= 5; v++) h += '<button type="button" data-v="' + v + '" class="' + (value === v ? 'sel' : '') + '">' + v + '</button>';
+    return h + '</div><div class="ends"><span>1 = ' + low + '</span><span>5 = ' + high + '</span></div>';
+  }
+  function choicesHtml(name, value, opts, cls) {
+    return '<div class="choices ' + (cls || '') + '" data-q="' + name + '">' + opts.map(function (o) {
+      return '<button type="button" data-v="' + o[0] + '" class="' + (value === o[0] ? 'sel' : '') + '">' + esc(o[1]) + '</button>';
+    }).join('') + '</div>';
+  }
+  function wireChoices(root, onPick) {
+    Array.prototype.forEach.call(root.querySelectorAll('[data-q]'), function (group) {
+      group.addEventListener('click', function (e) {
+        var btn = e.target.closest('button[data-v]');
+        if (!btn) return;
+        Array.prototype.forEach.call(group.querySelectorAll('button'), function (x) { x.classList.toggle('sel', x === btn); });
+        var v = btn.getAttribute('data-v');
+        onPick(group.getAttribute('data-q'), /^\d+$/.test(v) ? Number(v) : v);
+      });
+    });
+  }
+  function pick(name, value) {
+    var btn = main.querySelector('[data-q="' + name + '"] button[data-v="' + value + '"]');
+    if (btn) btn.click();
+  }
+
+  function home() {
+    stopTimer();
+    keyHandler = null;
+    window.scrollTo(0, 0);
+    var nxt = nextSession();
+    var anyDone = KIT.sessions.some(function (s) { return state.s[s.id] && state.s[s.id].end; });
+    var list = KIT.sessions.map(function (s, i) {
+      var st = state.s[s.id];
+      var status = !st || !st.start ? 'not started' : st.end ? 'done' : 'in progress';
+      return '<li><span>Session ' + (i + 1) + '</span><span class="muted">' + status + '</span></li>';
+    }).join('');
+    main.innerHTML =
+      '<h1>Reading test</h1>' +
+      '<p>Thanks for helping. Each session takes about 10 minutes. You\'ll read 8 replies an AI wrote to messages people sent it, in two batches of four.</p>' +
+      '<div class="card"><div class="label">For each reply</div>' +
+      '<p>Tap any sentence that bugs you. Tap it again to undo.</p>' +
+      '<p>Then say how tiring it was to read, and whether it would do the job.</p>' +
+      '<p class="muted small">After each batch you\'ll say how worn out it left you, and at the end which batch you\'d rather keep getting. There are no right answers. Read the way you normally would, skimming included.</p></div>' +
+      '<div class="card"><div class="label">Your name</div><input type="text" id="name" autocomplete="given-name" value="' + esc(state.rater) + '" placeholder="First name"></div>' +
+      '<div class="card"><div class="label">Sessions</div><ul class="sessions">' + list + '</ul>' +
+      (anyDone ? '<p class="small" style="margin-top:10px"><button class="link" id="send">Send your results</button></p>' : '') + '</div>' +
+      (canSave ? '' : '<div class="banner">This browser isn\'t saving progress, so finish each session in one go.</div>') +
+      '<p class="small muted"><button class="link" id="reset">Start over</button> (deletes your answers in this browser)</p>';
+    var name = document.getElementById('name');
+    name.addEventListener('input', function () {
+      state.rater = name.value.trim();
+      save();
+      var b = document.getElementById('start');
+      if (b && nxt) b.disabled = !state.rater;
+    });
+    if (anyDone) document.getElementById('send').addEventListener('click', function () { done(null); });
+    document.getElementById('reset').addEventListener('click', function () {
+      if (window.confirm('Delete all your answers in this browser and start over?')) {
+        state = {rater: KIT.rater || '', s: {}};
+        save();
+        home();
+      }
+    });
+    if (nxt) {
+      var started = state.s[nxt.id] && state.s[nxt.id].start;
+      setNav([{label: (started ? 'Continue' : 'Start') + ' session ' + (sessionIndex(nxt.id) + 1), cls: 'primary', id: 'start', disabled: !state.rater, onClick: function () {
+        if (!state.rater) return;
+        var st = sstate(nxt.id);
+        if (!st.start) st.start = new Date().toISOString();
+        save();
+        show(nxt);
+      }}]);
+    } else {
+      setNav([{label: 'Send your results', cls: 'primary', id: 'start', onClick: function () { done(null); }}]);
+    }
+  }
+
+  function show(session) {
+    var st = sstate(session.id);
+    var all = steps(session);
+    var step = all[Math.min(st.step, all.length - 1)];
+    if (step.kind === 'item') itemScreen(session, st, step);
+    else if (step.kind === 'block') blockScreen(session, st, step);
+    else endScreen(session, st);
+  }
+  function go(session, delta) {
+    var st = sstate(session.id);
+    stopTimer();
+    st.step = Math.max(0, st.step + delta);
+    save();
+    window.scrollTo(0, 0);
+    show(session);
+  }
+
+  function itemScreen(session, st, step) {
+    var block = session.blocks[step.b];
+    var item = block.items[step.i];
+    var rec = st.items[item.id] || (st.items[item.id] = {f: [], t: null, j: null, ms: 0});
+    var nb = session.blocks.length;
+    var dots = block.items.map(function (_, i) { return '<span class="' + (i < step.i ? 'done' : i === step.i ? 'now' : '') + '"></span>'; }).join('');
+    var mins = st.start ? (Date.now() - Date.parse(st.start)) / 60000 : 0;
+    var longPrompt = item.prompt.split(/\s+/).length > 60;
+    main.innerHTML =
+      '<div class="topbar"><span>Session ' + (sessionIndex(session.id) + 1) + ' · Batch ' + (step.b + 1) + ' of ' + nb + ' · Reply ' + (step.i + 1) + ' of ' + block.items.length + '</span><span class="dots">' + dots + '</span></div>' +
+      (mins >= 10 ? '<div class="banner">You\'ve been at this for 10 minutes. Your progress is saved, so you can stop after this batch and finish later.</div>' : '') +
+      '<div class="card"><div class="label">Their message</div><div class="md prompt-body' + (longPrompt ? ' clip' : '') + '" id="prompt">' + plainMarkdown(item.prompt) + '</div>' +
+      (longPrompt ? '<button class="link small" id="more">Show the whole message</button>' : '') + '</div>' +
+      '<div class="card"><div class="label">The AI\'s reply</div><p class="hint">Tap anything that bugs you.</p><div class="md" id="reply">' + renderDoc(item.doc) + '</div>' +
+      '<p class="small muted" id="count" style="margin:10px 0 0"></p></div>' +
+      '<div class="q">How tiring was this one to read? <span class="kbd">(keys 1-5)</span></div>' + scaleHtml('t', rec.t, 'not at all', 'very') +
+      '<div class="q">Would it do the job? <span class="kbd">(Y, M, N)</span></div>' + choicesHtml('j', rec.j, [['yes', 'Yes'], ['mostly', 'Mostly'], ['no', 'No']]);
+    var reply = document.getElementById('reply');
+    rec.f.forEach(function (k) { var el = reply.querySelector('[data-u="' + k + '"]'); if (el) el.classList.add('on'); });
+    function count() {
+      document.getElementById('count').textContent = rec.f.length ? rec.f.length + (rec.f.length === 1 ? ' part flagged' : ' parts flagged') : '';
+    }
+    count();
+    reply.addEventListener('click', function (e) {
+      var u = e.target.closest('.u');
+      if (!u || !reply.contains(u)) return;
+      var k = Number(u.getAttribute('data-u'));
+      var at = rec.f.indexOf(k);
+      if (at >= 0) rec.f.splice(at, 1); else rec.f.push(k);
+      u.classList.toggle('on', at < 0);
+      count();
+      save();
+    });
+    var more = document.getElementById('more');
+    if (more) more.addEventListener('click', function () { document.getElementById('prompt').classList.remove('clip'); more.remove(); });
+    function ready() { return rec.t != null && rec.j != null; }
+    wireChoices(main, function (q, v) { rec[q] = v; save(); var n = document.getElementById('next'); if (n) n.disabled = !ready(); });
+    var firstInBlock = step.i === 0;
+    var nav = [];
+    if (!firstInBlock) nav.push({label: 'Back', cls: 'back', onClick: function () { go(session, -1); }});
+    nav.push({label: 'Next', cls: 'primary', id: 'next', disabled: !ready(), onClick: function () { if (ready()) go(session, 1); }});
+    setNav(nav);
+    startTimer(rec);
+    keyHandler = function (e) {
+      if (/^[1-5]$/.test(e.key)) pick('t', Number(e.key));
+      else if (/^[ymn]$/i.test(e.key)) pick('j', {y: 'yes', m: 'mostly', n: 'no'}[e.key.toLowerCase()]);
+      else if ((e.key === 'Enter' || e.key === 'ArrowRight') && ready()) go(session, 1);
+      else if (e.key === 'ArrowLeft' && !firstInBlock) go(session, -1);
+    };
+  }
+
+  function blockScreen(session, st, step) {
+    var block = session.blocks[step.b];
+    var rec = st.blocks[block.id] || (st.blocks[block.id] = {w: null});
+    var nb = session.blocks.length;
+    main.innerHTML =
+      '<h2 class="screen">That\'s batch ' + (step.b + 1) + ' of ' + nb + '.</h2>' +
+      '<div class="q">How worn out do those ' + block.items.length + ' replies leave you? <span class="kbd">(keys 1-5)</span></div>' + scaleHtml('w', rec.w, 'not at all', 'very') +
+      '<p class="small muted" style="margin-top:14px">Think about the batch as a whole, as if these were replies you got in a row.</p>';
+    wireChoices(main, function (q, v) { rec.w = v; save(); document.getElementById('next').disabled = false; });
+    setNav([{label: step.b + 1 < nb ? 'Next batch' : 'Next', cls: 'primary', id: 'next', disabled: rec.w == null, onClick: function () { if (rec.w != null) go(session, 1); }}]);
+    keyHandler = function (e) {
+      if (/^[1-5]$/.test(e.key)) pick('w', Number(e.key));
+      else if (e.key === 'Enter' && rec.w != null) go(session, 1);
+    };
+  }
+
+  function endScreen(session, st) {
+    var opts = session.blocks.map(function (b, i) { return [b.id, 'Batch ' + (i + 1)]; }).concat([['both_fine', 'Both were fine'], ['both_bad', 'Both were bad']]);
+    main.innerHTML =
+      '<h2 class="screen">Last question for this session</h2>' +
+      '<div class="q">Which batch would you rather keep getting replies like? <span class="kbd">(keys 1-4)</span></div>' + choicesHtml('p', st.p, opts, 'four') +
+      '<div class="q">Anything stand out? <span class="muted small">(optional)</span></div><textarea id="note" placeholder="A sentence or two is plenty.">' + esc(st.n) + '</textarea>';
+    var note = document.getElementById('note');
+    note.addEventListener('input', function () { st.n = note.value; save(); });
+    wireChoices(main, function (q, v) { st.p = v; save(); document.getElementById('next').disabled = false; });
+    setNav([
+      {label: 'Back', cls: 'back', onClick: function () { go(session, -1); }},
+      {label: 'Finish session', cls: 'primary', id: 'next', disabled: !st.p, onClick: function () {
+        if (!st.p) return;
+        st.end = new Date().toISOString();
+        save();
+        done(session);
+      }}
+    ]);
+    keyHandler = function (e) {
+      if (document.activeElement === note) return;
+      if (/^[1-4]$/.test(e.key)) pick('p', opts[Number(e.key) - 1][0]);
+    };
+  }
+
+  function done(session) {
+    stopTimer();
+    keyHandler = null;
+    window.scrollTo(0, 0);
+    var nxt = nextSession();
+    var text = JSON.stringify(results());
+    var who = (state.rater || 'rater').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    var left = nxt ? KIT.sessions.length - sessionIndex(nxt.id) : 0;
+    main.innerHTML =
+      (session ? '<h1>Session ' + (sessionIndex(session.id) + 1) + ' done. Thank you!</h1>' : '<h1>Send your results</h1>') +
+      '<p>Send your results to ' + esc(CONTACT) + ' however is easiest: copy them into a message, or download the file and attach it.</p>' +
+      '<div class="row"><button class="primary" id="copy">Copy results</button><button id="dl">Download file</button></div>' +
+      '<p class="small muted" id="copied" style="margin-top:8px"></p>' +
+      '<p class="small"><button class="link" id="show">Show the results text</button></p>' +
+      '<textarea id="raw" readonly hidden></textarea>' +
+      (nxt ? '<div class="card"><p>' + (left === 1 ? 'One session is left.' : left + ' sessions are left.') + ' Come back another day for the next one, so your eyes are fresh.</p></div>'
+           : '<div class="card"><p>That\'s every session. Thanks a lot for doing this.</p></div>');
+    var raw = document.getElementById('raw');
+    raw.value = text;
+    document.getElementById('show').addEventListener('click', function () { raw.hidden = !raw.hidden; if (!raw.hidden) { raw.focus(); raw.select(); } });
+    document.getElementById('copy').addEventListener('click', function () {
+      var msg = document.getElementById('copied');
+      function fallback() {
+        raw.hidden = false; raw.focus(); raw.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+        msg.textContent = ok ? 'Copied. Paste it into a message to ' + CONTACT + '.' : 'Select the text below and copy it.';
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () { msg.textContent = 'Copied. Paste it into a message to ' + CONTACT + '.'; }, fallback);
+      } else fallback();
+    });
+    document.getElementById('dl').addEventListener('click', function () {
+      var blob = new Blob([text], {type: 'application/json'});
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'plain-voice-ratings-' + who + '-' + new Date().toISOString().slice(0, 10) + '.json';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+    });
+    setNav([{label: 'Back to start', onClick: home}]);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (!keyHandler || e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = (document.activeElement && document.activeElement.tagName) || '';
+    if (tag === 'INPUT' || (tag === 'TEXTAREA' && e.key !== 'Enter')) return;
+    keyHandler(e);
+  });
+
+  home();
+})();
+</script>
+</body>
+</html>
