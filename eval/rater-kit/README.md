@@ -28,7 +28,11 @@ This writes one HTML file per rater and `key.json`. The key says which batch is 
 
 ## Send kits
 
-On a laptop, the HTML file opens in any browser and needs no internet. Phones don't run scripts in attached HTML files, so phone users need a link to the file on a website instead; any static host works, such as GitHub Pages. Progress saves in the browser, so a rater can stop and pick up later.
+On a laptop, the HTML file opens in any browser and needs no internet. Phones don't run scripts in attached HTML files, so phone users need a link instead. Round 3's shared-set kits are hosted with GitHub Pages from the `gh-pages` branch, each at `k/<kit id>.html` so links can't be guessed, with the prompt form at `prompts.html`. The pages ask search engines not to index them, and the answer key is never published. Progress saves in the browser, so a rater can stop and pick up later.
+
+To host a new set, copy each kit to `k/<kit id>.html` (the `kit_id` is in `key.json`) on the `gh-pages` branch and push. Kits built from raters' private prompts shouldn't be hosted; send those as files.
+
+The `gh-pages` branch is public, so a rater who browses it could open their partner's kit and see the same prompts with the other condition. Raters only get their own link.
 
 At the end of each session the app shows the results as a block of text to copy into a message, or a file to download. Each export includes everything so far, and the analysis keeps the latest one per kit.
 
