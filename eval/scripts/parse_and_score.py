@@ -46,7 +46,7 @@ def main():
         for p in read_jsonl(ROOT / "prompts" / f"{name}.jsonl"):
             prompts[p["id"]] = p
     convos = {}
-    for name in ("multiturn_test1", "multiturn_test2"):
+    for name in ("multiturn_test1", "multiturn_test2", "dev_multiturn_r3"):
         convos.update({c["id"]: c for c in read_jsonl(ROOT / "prompts" / f"{name}.jsonl")})
     jobs = json.loads(Path(args.manifest).read_text())
     rows, missing = [], []
@@ -80,7 +80,7 @@ def main():
                 p = {"text": ptxt, "format_request": fmt}
                 rows.append({"set": j["set"], "model": j["model"], "family": family(j["model"]), "cond": j["cond"],
                              "rep": 1, "batch": None, "position": None, "prompt_id": j["convo"], "category": "multiturn",
-                             "source": "drafted-gpt", "turn": n, "text": text, **tells.score(text, p)})
+                             "source": convo.get("source", "drafted-gpt"), "turn": n, "text": text, **tells.score(text, p)})
     Path(args.out).parent.mkdir(exist_ok=True)
     with open(args.out, "w") as f:
         for r in rows:
