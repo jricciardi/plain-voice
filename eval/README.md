@@ -4,7 +4,7 @@ How the skill was stress-tested, with everything needed to rerun it.
 
 - [RESULTS.md](RESULTS.md): what happened in both rounds and what it means for the skill.
 - [PREREGISTRATION.md](PREREGISTRATION.md): hypotheses, design and pass marks for each round, written before its replies existed, plus every later change and why.
-- [TUNING.md](TUNING.md): how the v2 candidate was chosen, and why it didn't ship.
+- [TUNING.md](TUNING.md): how the v2 candidate was chosen and why it didn't ship, and the round 3 dev test of two chat lines.
 - [results/TABLES.md](results/TABLES.md) (round 1) and [results/ROUND2.md](results/ROUND2.md) (round 2): every table.
 
 ## Layout
@@ -46,6 +46,11 @@ python scripts/parse_and_score.py --manifest manifest_round2.json --out results/
 python scripts/build_judging_round.py --replies results/replies_round2.jsonl --set test2 \
     --skill H-skill-v2 --against A-none C-skill-v1 --round t2   # run its jobs, then:
 python scripts/analyze_round2.py             # results/round2_summary.json and results/ROUND2.md
+
+# Round 3 dev: two chat lines (see TUNING.md)
+python scripts/build_manifest_round3_dev.py # run raw/round3-dev/manifest.run.json, then:
+python scripts/parse_and_score.py --manifest manifest_round3_dev.json --out results/replies_round3_dev.jsonl
+python scripts/analyze_chat_lines.py --out results/ROUND3_DEV.md
 
 # Round 3 (in progress): human reading test
 python scripts/build_rater_kits.py --out rater-kit/out --blank-names --raters "Rater 1,Rater 2,Jay"
