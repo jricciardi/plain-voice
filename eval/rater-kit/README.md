@@ -13,7 +13,7 @@ Each session has two batches of four replies from one model: one batch written w
 
 Raters work in pairs. Both people in a pair get the same prompts in the same positions with the conditions swapped, so every prompt is read both ways, and the order of conditions alternates between sessions. Put the skill's author last in the list of raters, so everyone else forms complete pairs and the analysis can leave the author out cleanly.
 
-The shared set uses public replies from the stress test (test-1 and test-2, repeat 1) by Claude Opus 5.5, GPT-6.1 Sol, Gemini 3.8 Flash, Grok 4.7 and MAI-Code-1.1-Flash. Prompts are under 120 words and replies under 400. It leaves out the two prompts the round 1 rater found stilted (wc-03 and wc-28) and any reply where the test agent leaked its own lines.
+The shared set uses public replies from the stress test (test-1 and test-2, repeat 1) by Claude Opus 5.5, GPT-6.1 Sol, Gemini 3.8 Flash, Grok 4.7 and MAI-Code-1.1-Flash. Prompts are under 120 words and replies under 400. It leaves out the two prompts the round 1 rater found stilted (wc-03 and wc-28) and any reply where the test agent leaked its own lines. Because the replies are public, a rater could look one up in this repo and see which condition wrote it, so the rater message doesn't point to the repo.
 
 ## Build kits
 
