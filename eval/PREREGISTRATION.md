@@ -112,3 +112,41 @@ Two other candidate edits (no offer as the closing step; use the user's word ins
 5. Format: v2 follows explicit format requests at least 95% of the time.
 
 v2 ships if hypotheses 1, 3, 4 and 5 hold. Otherwise v1 stays. Preference, length, reuse of the user's words and the multi-turn trend are reported as exploratory.
+
+# Round 3: people judge reader fatigue
+
+Written 2026-10-14, while the chat-lines dev test was generating and before any of its replies or any human rating had been seen. Round 1 showed that model judges agree with a person on which reply sounds more like stock AI (83 to 94% of decisive pairs) and don't agree on which reply is better to read (40 to 60%). Reader fatigue is the second kind of question, so round 3 asks people. Model judges keep the stock-AI question.
+
+## Part 1: chat lines, on the dev set
+
+Candidate `conditions/I-skill-v1-chat.md` is v1 plus two lines: say only what's new in a follow-up, and skip agreement or praise at the start of one (fix your own mistakes, and say so when the user is mistaken). It runs against no skill and v1 on one model per family (Claude Opus 5.5, GPT-6.1 Sol, Gemini 3.8 Flash, Grok 4.7, MAI-Code-1.1-Flash) over the five six-turn conversations in `prompts/dev_multiturn_r3.jsonl`, one repeat, 125 follow-ups per condition. This is tuning: it decides what goes into the candidate for the final test, and the final test decides what ships. Decision rules:
+
+- The agreement line stays if, against v1, follow-ups that open with agreement or praise fall by at least half and by at least 3, the candidate doesn't give way more often than v1 when the user is wrong (dmt-05, turn 2), and its counted tells are at most 1.15 times v1's. If v1 already has 2 or fewer such openers, the line is dropped as unneeded.
+- The repetition line stays if the share of five-word sequences repeated from earlier replies falls by at least a fifth against v1, and median follow-up length doesn't rise by more than 10%.
+- Openers are matched by pattern (`scripts/analyze_chat_lines.py`), and every probe-turn reply is read by hand before deciding.
+
+Generation change for round 3: job instructions tell agents to use only file reads and writes for their own files. In round 1, some agents followed an always-on todo rule in the harness and ended replies with lines like "Logged 4 todos." (under 1% of replies, in every condition).
+
+## Part 2: the human reading test, shared set
+
+Raters: up to six friends and coworkers of the author, in three pairs, plus the author. The primary analysis leaves the author out; his ratings are reported separately.
+
+Material: public test-1 and test-2 replies (repeat 1) from Claude Opus 5.5, GPT-6.1 Sol, Gemini 3.8 Flash, Grok 4.7 and MAI-Code-1.1-Flash, without the skill (A) and with v1 (C). Prompts under 120 words, replies under 400, leaving out the two prompts the round 1 rater flagged as stilted and any reply with a leaked agent line. Each rater does four sessions; each session has one model and two batches of four replies, one per condition, in alternating order. Both raters in a pair read the same prompts in the same positions with the conditions swapped. Kits are built by `scripts/build_rater_kits.py` with seed `round3-shared-v1`.
+
+For each reply, raters tap any sentence that bugs them, rate how tiring it was to read (1 to 5) and whether it would do the job (yes, mostly, no). After each batch they rate how worn out it left them (1 to 5), and at the end of a session they pick the batch they'd rather keep getting, with "both fine" and "both bad" as separate choices.
+
+Hypotheses, tested on raters other than the author:
+
+1. Replies with the skill are less tiring. For each prompt and model read both ways within a pair, take the skill reply's rating minus the no-skill reply's. Passes if the upper end of the 95% bootstrap interval of the mean is below 0.
+2. Replies with the skill do the job as well. Scoring yes 2, mostly 1 and no 0, the same difference must have a 95% interval whose lower end is above -0.25.
+3. Batches with the skill are less wearing. Within each session, the skill batch's rating minus the no-skill batch's; passes if the upper end of the 95% bootstrap interval is below 0.
+
+Exploratory: which batch raters would keep, flags per 100 words, how often readers flag each tell the skill lists, flagged sentences that contain no listed tell, and results by model family, by rater and for the author.
+
+How the results get used:
+
+- The README reports hypotheses 1 to 3 as they come out, passing or failing.
+- The slim version keeps entries that readers flag, and becomes a candidate to cut entries that both models rarely produce and readers rarely flag. Flagged sentences with no listed tell are candidates to add.
+- If hypothesis 2 fails, keeping replies useful becomes the first job of the next version, ahead of cutting words.
+
+Results are analyzed once: when every kit is back, or three weeks after the kits go out, whichever comes first. Until then, returned files are only checked to be readable.
