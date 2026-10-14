@@ -152,7 +152,7 @@ Many other skills go after AI writing tells, from short rule lists to rewrite to
 
 ## Contributing
 
-Spotted a tell that isn't listed? Open an issue with an example and the model that wrote it. Samples from chat apps, rather than agent tools, are especially useful.
+Spotted a tell that isn't listed? Open an issue with the [New tell form](https://github.com/jricciardi/plain-voice/issues/new?template=new-tell.yml), which asks for an example and the model that wrote it. Samples from chat apps, rather than agent tools, are especially useful.
 
 ## License
 
